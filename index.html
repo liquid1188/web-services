@@ -405,8 +405,9 @@
     /* ── FAQ ACCORDION ── */
     .faq-section{background:var(--white);padding:var(--section-pad)}
     .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 5rem;align-items:start}
-    @media(max-width:820px){.faq-grid{grid-template-columns:1fr}}
+    @media(max-width:820px){.faq-grid{grid-template-columns:1fr;gap:0}}
     .faq-intro{position:sticky;top:100px}
+    @media(max-width:820px){.faq-intro{position:static;margin-bottom:2rem}}
     .faq-list{display:flex;flex-direction:column;gap:0}
     .faq-item{border-bottom:1px solid var(--border-light)}
     .faq-item:first-child{border-top:1px solid var(--border-light)}
