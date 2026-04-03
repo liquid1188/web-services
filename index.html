@@ -150,7 +150,15 @@
     .for-title{font-family:var(--font-head);font-size:.65rem;font-weight:700;color:var(--text-primary);letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;flex-shrink:0;line-height:1.6}
     .for-title::after{content:' —';color:var(--accent);font-weight:400}
     .for-desc{font-family:var(--font-body);font-size:.75rem;color:var(--text-secondary);line-height:1.6;min-width:0}
-    @media(max-width:500px){.for-title{font-size:.6rem}.for-desc{font-size:.7rem}.for-card{padding:.8rem 1rem}}
+    @media(max-width:600px){
+      .for-grid{grid-template-columns:1fr}
+      .for-card{flex-direction:column;gap:.2rem;align-items:flex-start}
+      .for-card:nth-child(3n){border-right:none}
+      .for-card:nth-child(2n){border-right:none}
+      .for-title{white-space:normal;font-size:.7rem}
+      .for-title::after{content:''}
+      .for-desc{font-size:.78rem}
+    }
 
     /* ── STATS COUNTER ── */
     .stats-section{background:var(--navy);padding:5rem 6vw}
@@ -582,7 +590,7 @@
     <div class="for-card"><div class="for-title">Retail &amp; Boutiques</div><div class="for-desc">Hours, location, featured products, social feeds.</div></div>
     <div class="for-card"><div class="for-title">Creatives &amp; Artists</div><div class="for-desc">Portfolio sites, booking pages, press kits.</div></div>
     <div class="for-card"><div class="for-title">Medical &amp; Wellness</div><div class="for-desc">Appointment booking, provider bios, credible design.</div></div>
-    <div class="for-card"><div class="for-title">Any Local Business</div><div class="for-desc">If you serve Baltimore and don't have a site that works — I can fix that.</div></div>
+    <div class="for-card" style="grid-column:span 3;background:var(--parchment)"><div class="for-title" style="white-space:normal">Any Local Business</div><div class="for-desc">If you serve Baltimore and don't have a site that works — I can fix that.</div></div>
   </div>
 </section>
 
