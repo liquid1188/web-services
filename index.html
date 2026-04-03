@@ -182,21 +182,25 @@
     .p-dot.r{background:#ff5f57}.p-dot.y{background:#febc2e}.p-dot.g{background:#28c840}
     .p-url{flex:1;background:rgba(255,255,255,.06);border-radius:3px;padding:.25rem .75rem;font-family:var(--font-ui);font-size:.6rem;color:rgba(255,255,255,.3)}
     .port-screen{height:240px;overflow:hidden}
-    .mv-llf{height:100%;background:linear-gradient(160deg,#1a1208,#2d1e0a)}
-    .mv-llf-nav{display:flex;justify-content:space-between;align-items:center;padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.06)}
-    .mv-llf-logo{font-size:.6rem;font-weight:700;color:#d4a843;font-family:'Lora',serif}
-    .mv-llf-links{display:flex;gap:.4rem}
-    .mv-llf-link{width:18px;height:2.5px;background:rgba(255,255,255,.15);border-radius:1px}
-    .mv-llf-body{padding:1.2rem 1rem}
-    .mv-llf-eyebrow{font-size:.44rem;letter-spacing:.15em;text-transform:uppercase;color:#d4a843;margin-bottom:.4rem;font-weight:600}
-    .mv-llf-h1{font-size:1rem;font-weight:700;color:#fff;line-height:1.1;margin-bottom:.4rem;font-family:'Lora',serif}
-    .mv-llf-sub{font-size:.5rem;color:rgba(255,255,255,.35);line-height:1.5;margin-bottom:.8rem;max-width:160px}
-    .mv-llf-btn{display:inline-block;background:#d4a843;color:#1a1208;font-size:.48rem;padding:.28rem .7rem;border-radius:2px;font-weight:700;margin-bottom:.8rem}
-    .mv-llf-grid{display:grid;grid-template-columns:1fr 1fr;gap:.35rem}
-    .mv-llf-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:3px;height:42px;padding:.5rem .6rem}
-    .mv-llf-card-tag{height:3px;width:30%;background:rgba(212,168,67,.4);border-radius:1px;margin-bottom:.35rem}
-    .mv-llf-card-line{height:2.5px;background:rgba(255,255,255,.1);border-radius:1px;margin-top:.25rem}
-    .mv-llf-card-line.s{width:55%}
+    /* LLF accurate mock — real colors: navy #0e1b2e, gold #c8a96e, cream #f4ede0 */
+    .mv-llf{height:100%;background:#0e1b2e;font-family:'Lora',serif;display:flex;flex-direction:column}
+    .mv-llf-nav{display:flex;justify-content:space-between;align-items:center;padding:.6rem 1rem;border-bottom:1px solid rgba(200,169,110,.15);flex-shrink:0}
+    .mv-llf-logo{font-size:.58rem;font-weight:400;color:#c8a96e;letter-spacing:.05em}
+    .mv-llf-links{display:flex;gap:.5rem;align-items:center}
+    .mv-llf-link{width:20px;height:2px;background:rgba(244,237,224,.2);border-radius:1px}
+    .mv-llf-hero{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1rem 1.2rem;position:relative}
+    .mv-llf-eyebrow{font-family:'DM Sans',sans-serif;font-size:.42rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,169,110,.7);margin-bottom:.7rem;font-weight:500}
+    .mv-llf-h1{font-size:1.1rem;font-weight:300;color:#f4ede0;line-height:1.1;margin-bottom:.5rem}
+    .mv-llf-h1 em{font-style:italic;color:#e0c992}
+    .mv-llf-sub{font-size:.5rem;color:rgba(244,237,224,.45);line-height:1.6;margin-bottom:1rem;max-width:180px;font-style:italic}
+    .mv-llf-btns{display:flex;gap:.4rem;margin-bottom:.8rem}
+    .mv-llf-btn-p{background:#c8a96e;color:#0e1b2e;font-size:.48rem;padding:.32rem .85rem;font-weight:700;font-family:'DM Sans',sans-serif;letter-spacing:.06em}
+    .mv-llf-btn-o{border:1px solid rgba(200,169,110,.4);color:rgba(244,237,224,.7);font-size:.48rem;padding:.32rem .85rem;font-family:'DM Sans',sans-serif}
+    .mv-llf-cards{display:grid;grid-template-columns:1fr 1fr;gap:.35rem;padding:.6rem 1rem;flex-shrink:0;background:#162236}
+    .mv-llf-card{background:rgba(200,169,110,.06);border:1px solid rgba(200,169,110,.12);height:38px;padding:.45rem .6rem}
+    .mv-llf-card-tag{height:2.5px;width:35%;background:rgba(200,169,110,.4);border-radius:1px;margin-bottom:.3rem}
+    .mv-llf-card-line{height:2px;background:rgba(244,237,224,.1);border-radius:1px;margin-top:.2rem}
+    .mv-llf-card-line.s{width:60%}
     .mv-phone-ana{height:100%;background:linear-gradient(180deg,#0e1f3d,#162d58);padding:.4rem .3rem}
     .mv-phone-nav-row{display:flex;justify-content:space-between;margin-bottom:.4rem}
     .mv-phone-logo{width:16px;height:10px;background:#fff;border-radius:1px;opacity:.8}
@@ -634,18 +638,24 @@
         <div class="port-chrome"><div class="p-dots"><div class="p-dot r"></div><div class="p-dot y"></div><div class="p-dot g"></div></div><div class="p-url">likoudislegacy.com</div></div>
         <div class="port-screen">
           <div class="mv-llf" style="height:100%">
-            <div class="mv-llf-nav"><div class="mv-llf-logo">Likoudis Legacy Foundation</div><div class="mv-llf-links"><div class="mv-llf-link"></div><div class="mv-llf-link"></div><div class="mv-llf-link"></div></div></div>
-            <div class="mv-llf-body">
-              <div class="mv-llf-eyebrow">Baltimore · Catholic Scholarship</div>
-              <div class="mv-llf-h1">Scholarship for<br>the Catholic Tradition</div>
-              <div class="mv-llf-sub">Advancing ecumenical scholarship through publishing, research, and formation.</div>
-              <div class="mv-llf-btn">Support Our Mission</div>
-              <div class="mv-llf-grid">
-                <div class="mv-llf-card"><div class="mv-llf-card-tag"></div><div class="mv-llf-card-line"></div><div class="mv-llf-card-line s"></div></div>
-                <div class="mv-llf-card"><div class="mv-llf-card-tag"></div><div class="mv-llf-card-line"></div><div class="mv-llf-card-line s"></div></div>
-                <div class="mv-llf-card"><div class="mv-llf-card-tag"></div><div class="mv-llf-card-line"></div><div class="mv-llf-card-line s"></div></div>
-                <div class="mv-llf-card"><div class="mv-llf-card-tag"></div><div class="mv-llf-card-line"></div><div class="mv-llf-card-line s"></div></div>
+            <div class="mv-llf-nav">
+              <div class="mv-llf-logo"><em>Likoudis</em> Legacy Foundation</div>
+              <div class="mv-llf-links"><div class="mv-llf-link"></div><div class="mv-llf-link"></div><div class="mv-llf-link"></div></div>
+            </div>
+            <div class="mv-llf-hero">
+              <div class="mv-llf-eyebrow">Catholic Scholarship &amp; Ecumenism · Baltimore</div>
+              <div class="mv-llf-h1"><em>Likoudis</em> Legacy<br>Foundation</div>
+              <div class="mv-llf-sub">A 501(c)(3) dedicated to ecumenical dialogue, Catholic apologetics, and the theological legacy of James Likoudis.</div>
+              <div class="mv-llf-btns">
+                <div class="mv-llf-btn-p">Support the Foundation</div>
+                <div class="mv-llf-btn-o">Our Mission</div>
               </div>
+            </div>
+            <div class="mv-llf-cards">
+              <div class="mv-llf-card"><div class="mv-llf-card-tag"></div><div class="mv-llf-card-line"></div><div class="mv-llf-card-line s"></div></div>
+              <div class="mv-llf-card"><div class="mv-llf-card-tag"></div><div class="mv-llf-card-line"></div><div class="mv-llf-card-line s"></div></div>
+              <div class="mv-llf-card"><div class="mv-llf-card-tag"></div><div class="mv-llf-card-line"></div><div class="mv-llf-card-line s"></div></div>
+              <div class="mv-llf-card"><div class="mv-llf-card-tag"></div><div class="mv-llf-card-line"></div><div class="mv-llf-card-line s"></div></div>
             </div>
           </div>
         </div>
