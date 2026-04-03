@@ -372,8 +372,10 @@
 
     /* ── ABOUT ── */
     .about-section{background:var(--white)}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
-    @media(max-width:820px){.about-grid{grid-template-columns:1fr;gap:3rem}}
+    .about-grid{display:grid;grid-template-columns:280px 1fr 1fr;gap:3rem;align-items:start}
+    @media(max-width:1000px){.about-grid{grid-template-columns:1fr 1fr;gap:2.5rem}}
+    @media(max-width:640px){.about-grid{grid-template-columns:1fr;gap:2rem}}
+    .about-photo-col{display:flex;flex-direction:column;gap:0}.about-photo{width:100%;display:block;filter:grayscale(10%);box-shadow:var(--shadow-lg)}.about-photo-cap{background:var(--charcoal);padding:.65rem 1rem;font-family:var(--font-head);font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
     .cred-list{display:flex;flex-direction:column;gap:.8rem}
     .cred{display:flex;align-items:flex-start;gap:1rem;padding:1.2rem;border:1px solid var(--border-light);background:var(--parchment)}
     .cred-icon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
@@ -946,15 +948,15 @@
 <!-- ABOUT -->
 <section class="about-section" id="about">
   <div class="about-grid">
+    <div class="about-photo-col">
+      <img src="andrew.jpg" alt="Andrew Likoudis" class="about-photo"/>
+      <div class="about-photo-cap">Andrew Likoudis · Baltimore</div>
+    </div>
     <div>
       <div class="eyebrow">Who You're Hiring</div>
       <h2>Not an agency.<br><span class="serif">A craftsman.</span></h2>
       <p class="section-body">I'm Andrew Likoudis — Baltimore-based writer, scholar, and founder of Lickity Split Web Design. Every site is built by hand, by me. No junior developers, no page builders, no outsourcing.</p>
-      <div class="about-links">
-        <a href="https://www.andrewlikoudis.com" target="_blank" class="about-link">Personal Site</a>
-        <a href="https://www.likoudislegacy.com" target="_blank" class="about-link">LLF</a>
-        <a href="mailto:andrewlikoudis@gmail.com" class="about-link">Email</a>
-      </div>
+      <a href="mailto:andrewlikoudis@gmail.com" class="about-link">Get in touch</a>
     </div>
     <div class="cred-list">
       <div class="cred"><div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><strong>Founder, Likoudis Legacy Foundation</strong><span>Baltimore nonprofit — full organizational site built and maintained by me since launch.</span></div></div>
@@ -1092,9 +1094,7 @@
 <footer>
   <div class="footer-brand">Lickity Split Web Design<span>By Andrew Likoudis · Baltimore, MD</span></div>
   <div class="footer-links">
-    <a href="https://www.andrewlikoudis.com" target="_blank">Personal Site</a>
-    <a href="https://www.likoudislegacy.com" target="_blank">LLF</a>
-    <a href="mailto:andrewlikoudis@gmail.com">Email</a>
+    <a href="mailto:andrewlikoudis@gmail.com">andrewlikoudis@gmail.com</a>
   </div>
   <div class="footer-copy">2026 Lickity Split Web Design · Andrew Likoudis</div>
 </footer>
