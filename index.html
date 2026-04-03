@@ -110,10 +110,10 @@
     .perf-bar{background:var(--charcoal-mid);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:1.8rem 6vw;overflow:hidden}
     .perf-inner{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid rgba(255,255,255,.07)}
     @media(max-width:900px){.perf-inner{grid-template-columns:1fr 1fr}}
-    @media(max-width:480px){.perf-inner{grid-template-columns:1fr}}
+    @media(max-width:480px){.perf-inner{grid-template-columns:1fr 1fr}}
     .perf-item{padding:1.4rem 1.6rem;border-right:1px solid rgba(255,255,255,.07);display:flex;flex-direction:column;gap:.4rem;position:relative}
     .perf-item:last-child{border-right:none}
-    @media(max-width:900px){.perf-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}}
+    @media(max-width:900px){.perf-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}.perf-item:nth-child(2n+1){border-right:1px solid rgba(255,255,255,.07)}}
     .perf-score-row{display:flex;align-items:flex-end;gap:.5rem}
     .perf-score{font-family:var(--font-head);font-size:2rem;font-weight:900;color:var(--white);line-height:1;letter-spacing:-.04em}
     .perf-score.green{color:#4ade80}
@@ -156,10 +156,9 @@
     .stats-section{background:var(--navy);padding:5rem 6vw}
     .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(255,255,255,.07)}
     @media(max-width:860px){.stats-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:480px){.stats-grid{grid-template-columns:1fr}}
-    .stat-item{padding:2.2rem 2rem;border-right:1px solid rgba(255,255,255,.07);text-align:center}
+    .stat-item{padding:1.6rem 1.4rem;border-right:1px solid rgba(255,255,255,.07);text-align:center}
     .stat-item:last-child{border-right:none}
-    @media(max-width:860px){.stat-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}}
+    @media(max-width:860px){.stat-item:nth-child(2n){border-right:none}.stat-item:nth-child(1),.stat-item:nth-child(2){border-bottom:1px solid rgba(255,255,255,.07)}}
     .stat-num{font-family:var(--font-head);font-size:3rem;font-weight:900;color:var(--white);line-height:1;letter-spacing:-.04em;margin-bottom:.4rem}
     .stat-num span{color:var(--accent)}
     .stat-label{font-family:var(--font-head);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:700;margin-bottom:.3rem}
@@ -592,7 +591,7 @@
   <div class="stats-grid">
     <div class="stat-item"><div class="stat-num"><span data-counter="100" data-suffix="+">0</span></div><div class="stat-label">PageSpeed Score</div><div class="stat-desc">Every site shipped at 100/100. Not a goal — the baseline.</div></div>
     <div class="stat-item"><div class="stat-num"><span data-counter="48">0</span><span style="color:var(--accent)">hr</span></div><div class="stat-label">Starter Delivery</div><div class="stat-desc">From assets received to live URL. Timed. Guaranteed.</div></div>
-    <div class="stat-item"><div class="stat-num"><span style="color:var(--accent)">$</span><span data-counter="0">0</span><span style="font-size:1.4rem;color:rgba(255,255,255,.4)">/mo</span></div><div class="stat-label">Platform Fees</div><div class="stat-desc">No WordPress, no Squarespace, no recurring platform tax. You own the code.</div></div>
+    <div class="stat-item"><div class="stat-num"><span style="color:var(--accent)">~$</span><span data-counter="12">0</span><span style="font-size:1.4rem;color:rgba(255,255,255,.4)">/yr</span></div><div class="stat-label">Total Annual Cost</div><div class="stat-desc">Domain name only (~$12/yr). Hosting on GitHub Pages is free. No platform fees ever.</div></div>
     <div class="stat-item"><div class="stat-num"><span data-counter="30">0</span><span style="color:var(--accent)">%</span></div><div class="stat-label">Avg. Mobile Lift</div><div class="stat-desc">Increase in mobile-driven inquiries across client sites in the first 60 days.</div></div>
   </div>
 </section>
@@ -739,18 +738,18 @@
               <div class="ba-metric"><div class="ba-metric-label">Site Speed</div><div class="ba-metric-val">0.7s load</div></div>
               <div class="ba-metric"><div class="ba-metric-label">Mobile Score</div><div class="ba-metric-val">100/100</div></div>
               <div class="ba-metric"><div class="ba-metric-label">Donor Inquiries</div><div class="ba-metric-val">11/mo avg</div></div>
-              <div class="ba-metric"><div class="ba-metric-label">Platform Cost</div><div class="ba-metric-val">$0/yr</div></div>
+              <div class="ba-metric"><div class="ba-metric-label">Annual Cost</div><div class="ba-metric-val">~$12/yr</div></div>
             </div>
           </div>
         </div>
         <div class="story-content">
           <div class="story-client">Likoudis Legacy Foundation · Baltimore</div>
-          <div class="story-headline">12x faster. Zero platform fees. More donors.</div>
+          <div class="story-headline">12x faster. ~$12/yr total. More donors.</div>
           <div class="story-quote">The old WordPress site was slow and we were paying for hosting and plugins every year. The new site loads instantly, we own it outright, and donor inquiries tripled in the first month.</div>
           <div class="story-attribution">Likoudis Legacy Foundation · Baltimore, MD</div>
           <div class="story-result-pills">
             <span class="result-pill green">12x Faster Load</span>
-            <span class="result-pill gold">$0 Platform Fees</span>
+            <span class="result-pill gold">~$12/yr domain only</span>
             <span class="result-pill green">3x Donor Inquiries</span>
           </div>
         </div>
@@ -889,7 +888,7 @@
           </div>
           <div class="manifesto-item">
             <div class="manifesto-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
-            <div><div class="manifesto-item-title">No Recurring Platform Fees</div><div class="manifesto-item-body">WordPress, Squarespace, and Wix charge you monthly forever. A hand-coded site costs nothing to host on GitHub Pages — zero.</div></div>
+            <div><div class="manifesto-item-title">~$12/Year. That's It.</div><div class="manifesto-item-body">Hosting on GitHub Pages is free. Your only ongoing cost is a domain name — about $12/year on Namecheap. Full Build clients get the first year included. Wix runs $204/year and you never own the code.</div></div>
           </div>
           <div class="manifesto-item">
             <div class="manifesto-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
@@ -1020,7 +1019,7 @@
           <span class="faq-q-text">What are the ongoing hosting costs?</span>
           <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner"><strong>Zero.</strong> Sites are hosted on GitHub Pages, which is free for public repositories. The only ongoing cost is your domain name — typically $12–$15/year through Namecheap or Google Domains. That's it. No Squarespace subscription, no WordPress hosting, no plugin fees. Most of my clients pay less per year than they'd pay per month on a platform.</div></div>
+        <div class="faq-a"><div class="faq-a-inner"><strong>About $12/year.</strong> That's it. Hosting is on GitHub Pages — genuinely free, no catch. The only cost is your domain name, about $12–15/year through Namecheap. <strong>Full Build clients get the first year's domain included in the price.</strong> Compare that to Wix at $204/year, Squarespace at $192/year, or WordPress hosting at $100+/year — and those platforms charge you forever while you never own the code.</div></div>
       </div>
 
       <div class="faq-item">
