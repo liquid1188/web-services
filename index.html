@@ -4,321 +4,826 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lickity Split Web Design — Baltimore Small Business Websites</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --ink:#0f0d0a;
-      --parchment:#f8f4ee;
-      --warm:#f2ece2;
+      --ink:#0d0b08;
+      --parchment:#f9f5ef;
+      --warm:#f3ede3;
+      --white:#ffffff;
       --gold:#b8912a;
       --gold-light:#d4a843;
-      --navy:#0e1f3d;
+      --gold-pale:#f5e9cc;
+      --navy:#0c1c38;
+      --navy-mid:#162d54;
       --mid:#4a3f30;
       --muted:#8a7a65;
+      --border:#e2d9cc;
+      --shadow:0 2px 24px rgba(13,11,8,.07);
+      --shadow-lg:0 8px 48px rgba(13,11,8,.12);
     }
     html{scroll-behavior:smooth}
-    body{font-family:'Outfit',sans-serif;background:var(--parchment);color:var(--ink);overflow-x:hidden}
+    body{font-family:'Outfit',sans-serif;background:var(--parchment);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
+    /* ── NAV ── */
     nav{
       position:fixed;top:0;left:0;right:0;z-index:100;
       display:flex;justify-content:space-between;align-items:center;
-      padding:.9rem 6vw;background:rgba(14,31,61,.96);backdrop-filter:blur(10px);
+      padding:1rem 5vw;
+      background:rgba(12,28,56,.97);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.06);
     }
-    .nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;color:#fff;letter-spacing:.02em;text-decoration:none;line-height:1.1}
-    .nav-brand span{color:var(--gold-light);display:block;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;font-weight:400;font-family:'Outfit',sans-serif}
+    .nav-brand{text-decoration:none;line-height:1}
+    .nav-brand-main{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:#fff;letter-spacing:.01em}
+    .nav-brand-sub{display:block;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);margin-top:.1rem;font-weight:400}
     .nav-links{display:flex;gap:2rem;align-items:center}
-    .nav-links a{color:rgba(255,255,255,.65);text-decoration:none;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;transition:color .2s}
-    .nav-links a:hover{color:var(--gold-light)}
-    .nav-cta{background:var(--gold)!important;color:#fff!important;padding:.5rem 1.3rem;font-size:.75rem!important;transition:background .2s,transform .15s!important}
-    .nav-cta:hover{background:#9a7820!important;transform:translateY(-1px)!important}
-    @media(max-width:640px){.nav-links a:not(.nav-cta){display:none}}
-
-    .hero{
-      min-height:100vh;background:var(--navy);
-      display:grid;grid-template-columns:1fr 1fr;align-items:center;
-      padding:8rem 6vw 5rem;gap:4rem;position:relative;overflow:hidden;
+    .nav-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;transition:color .2s}
+    .nav-links a:hover{color:rgba(255,255,255,.95)}
+    .nav-cta{
+      background:var(--gold)!important;color:#fff!important;
+      padding:.55rem 1.4rem!important;letter-spacing:.08em!important;
+      transition:background .2s,transform .15s!important;border-radius:2px;
     }
-    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(184,145,42,.12) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(14,31,61,.4) 0%,transparent 50%)}
-    .hero-text{position:relative;z-index:1}
-    .hero-eyebrow{display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-light);font-weight:500;margin-bottom:1.5rem;padding:.4rem 1rem;border:1px solid rgba(184,145,42,.35)}
-    h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,4.2rem);font-weight:700;color:#fff;line-height:1.05;margin-bottom:1.4rem}
+    .nav-cta:hover{background:#9a7820!important;transform:translateY(-1px)!important;color:#fff!important}
+    @media(max-width:680px){.nav-links a:not(.nav-cta){display:none}}
+
+    /* ── HERO ── */
+    .hero{
+      min-height:100vh;
+      background:var(--navy);
+      display:grid;grid-template-columns:1fr 1fr;
+      align-items:center;gap:5rem;
+      padding:9rem 5vw 6rem;
+      position:relative;overflow:hidden;
+    }
+    .hero::after{
+      content:'';position:absolute;
+      width:600px;height:600px;border-radius:50%;
+      background:radial-gradient(circle,rgba(184,145,42,.1) 0%,transparent 70%);
+      top:-100px;right:-100px;pointer-events:none;
+    }
+    .hero-kicker{
+      display:inline-flex;align-items:center;gap:.6rem;
+      font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;
+      color:var(--gold-light);font-weight:600;margin-bottom:1.8rem;
+    }
+    .hero-kicker-dot{width:5px;height:5px;border-radius:50%;background:var(--gold-light);flex-shrink:0}
+    h1{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(3rem,5.5vw,4.8rem);
+      font-weight:700;color:#fff;line-height:.98;
+      letter-spacing:-.02em;margin-bottom:1.6rem;
+    }
     h1 em{font-style:italic;color:var(--gold-light)}
-    .hero-sub{font-size:1rem;font-weight:300;color:rgba(255,255,255,.72);line-height:1.8;max-width:440px;margin-bottom:2.2rem}
-    .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
-    .btn-primary{background:var(--gold);color:#fff;text-decoration:none;padding:.9rem 2rem;font-size:.88rem;font-weight:500;letter-spacing:.05em;transition:background .2s,transform .15s;display:inline-block}
-    .btn-primary:hover{background:#9a7820;transform:translateY(-2px)}
-    .btn-ghost{border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.8);text-decoration:none;padding:.9rem 2rem;font-size:.88rem;font-weight:400;letter-spacing:.05em;transition:border-color .2s,transform .15s;display:inline-block}
-    .btn-ghost:hover{border-color:var(--gold-light);color:var(--gold-light);transform:translateY(-2px)}
+    .hero-body{font-size:1.05rem;font-weight:300;color:rgba(255,255,255,.65);line-height:1.85;max-width:420px;margin-bottom:2.4rem}
+    .hero-actions{display:flex;gap:.9rem;flex-wrap:wrap;align-items:center}
+    .btn-primary{
+      background:var(--gold);color:#fff;text-decoration:none;
+      padding:.95rem 2.2rem;font-size:.85rem;font-weight:600;
+      letter-spacing:.06em;text-transform:uppercase;
+      transition:background .2s,transform .15s,box-shadow .2s;
+      display:inline-block;border-radius:2px;
+      box-shadow:0 4px 20px rgba(184,145,42,.3);
+    }
+    .btn-primary:hover{background:#9a7820;transform:translateY(-2px);box-shadow:0 8px 28px rgba(184,145,42,.4)}
+    .btn-outline{
+      border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);
+      text-decoration:none;padding:.95rem 2.2rem;font-size:.85rem;font-weight:500;
+      letter-spacing:.06em;text-transform:uppercase;
+      transition:border-color .2s,color .2s,transform .15s;
+      display:inline-block;border-radius:2px;
+    }
+    .btn-outline:hover{border-color:var(--gold-light);color:var(--gold-light);transform:translateY(-2px)}
+    .hero-trust{display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap}
+    .trust-item{display:flex;align-items:center;gap:.5rem;font-size:.72rem;color:rgba(255,255,255,.4);letter-spacing:.05em}
+    .trust-item svg{width:13px;height:13px;fill:var(--gold);opacity:.7;flex-shrink:0}
 
-    .hero-card{position:relative;z-index:1}
-    .verticals-frame{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:2rem;position:relative}
-    .verticals-label{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light);font-weight:500;margin-bottom:1.4rem}
-    .verticals-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
-    .vertical-pill{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);padding:.7rem 1rem;display:flex;align-items:center;gap:.6rem;font-size:.82rem;color:rgba(255,255,255,.8);font-weight:300;transition:background .2s,border-color .2s}
-    .vertical-pill:hover{background:rgba(184,145,42,.12);border-color:rgba(184,145,42,.3)}
-    .frame-corner{position:absolute;top:-1px;right:-1px;width:0;height:0;border-left:40px solid transparent;border-top:40px solid var(--gold)}
-    @media(max-width:768px){.hero{grid-template-columns:1fr;padding:7rem 6vw 4rem}.hero-card{display:none}}
+    /* HERO — Browser Mockup */
+    .hero-visual{position:relative;z-index:1}
+    .browser-mockup{
+      background:#1a2d50;border-radius:10px;
+      box-shadow:0 24px 80px rgba(0,0,0,.5);
+      overflow:hidden;border:1px solid rgba(255,255,255,.08);
+    }
+    .browser-bar{
+      background:#152440;padding:.7rem 1rem;
+      display:flex;align-items:center;gap:.8rem;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .browser-dots{display:flex;gap:.35rem}
+    .browser-dot{width:10px;height:10px;border-radius:50%}
+    .browser-dot.r{background:#ff5f57}
+    .browser-dot.y{background:#febc2e}
+    .browser-dot.g{background:#28c840}
+    .browser-url{
+      flex:1;background:rgba(255,255,255,.07);border-radius:4px;
+      padding:.3rem .8rem;font-size:.68rem;color:rgba(255,255,255,.4);
+      letter-spacing:.03em;font-family:'Outfit',sans-serif;
+    }
+    .browser-screen{
+      height:320px;overflow:hidden;position:relative;
+      background:linear-gradient(160deg,#0e1f3d 0%,#162d54 50%,#0e1f3d 100%);
+    }
+    .mock-site-hero{
+      padding:2.5rem 2rem 1.5rem;
+      border-bottom:1px solid rgba(255,255,255,.07);
+    }
+    .mock-site-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem}
+    .mock-logo{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:var(--gold-light)}
+    .mock-nav-items{display:flex;gap:.8rem}
+    .mock-nav-item{width:28px;height:4px;background:rgba(255,255,255,.15);border-radius:2px}
+    .mock-nav-cta{width:44px;height:16px;background:var(--gold);border-radius:2px;opacity:.8}
+    .mock-headline{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:#fff;line-height:1.1;margin-bottom:.7rem}
+    .mock-headline em{color:var(--gold-light);font-style:italic}
+    .mock-sub{font-size:.62rem;color:rgba(255,255,255,.4);line-height:1.6;max-width:260px;margin-bottom:1.2rem}
+    .mock-btns{display:flex;gap:.5rem}
+    .mock-btn{padding:.4rem .9rem;font-size:.6rem;border-radius:2px;font-weight:600}
+    .mock-btn.p{background:var(--gold);color:#fff}
+    .mock-btn.o{border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.7)}
+    .mock-band{background:var(--gold);padding:.5rem 2rem;display:flex;gap:2rem}
+    .mock-band-item{font-size:.55rem;color:var(--navy);font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+    .mock-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.6rem;padding:1rem 2rem}
+    .mock-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:4px;height:60px}
+    .mockup-label{
+      position:absolute;bottom:-1.5rem;left:50%;transform:translateX(-50%);
+      font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
+      color:rgba(255,255,255,.3);white-space:nowrap;
+    }
+    @media(max-width:900px){.hero{grid-template-columns:1fr;padding:8rem 5vw 4rem}.hero-visual{display:none}}
 
-    .band{background:var(--gold);padding:.85rem 6vw;display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap}
-    .band-item{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);font-weight:600}
+    /* ── BAND ── */
+    .band{
+      background:var(--gold);padding:.9rem 5vw;
+      display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;
+    }
+    .band-item{
+      display:flex;align-items:center;gap:.55rem;
+      font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+      color:var(--navy);font-weight:700;
+    }
+    .band-item svg{width:14px;height:14px;fill:var(--navy);opacity:.6}
 
-    section{padding:6rem 6vw}
-    .section-label{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.8rem}
-    h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;line-height:1.1;color:var(--ink);margin-bottom:1.2rem}
-    .section-intro{font-size:1rem;font-weight:300;color:var(--mid);line-height:1.8;max-width:560px;margin-bottom:3rem}
+    /* ── SHARED ── */
+    section{padding:6.5rem 5vw}
+    .section-eyebrow{
+      font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;
+      color:var(--gold);font-weight:700;margin-bottom:.9rem;
+      display:flex;align-items:center;gap:.6rem;
+    }
+    .section-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold)}
+    h2{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(2.2rem,4vw,3.2rem);
+      font-weight:700;line-height:1.05;color:var(--ink);
+      letter-spacing:-.02em;margin-bottom:1.2rem;
+    }
+    .section-lead{font-size:1rem;font-weight:300;color:var(--mid);line-height:1.85;max-width:520px;margin-bottom:3.5rem}
 
-    .for-section{background:var(--warm)}
-    .for-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:3rem}
-    @media(max-width:900px){.for-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:540px){.for-grid{grid-template-columns:1fr}}
-    .for-card{background:#fff;border:1px solid rgba(0,0,0,.07);padding:1.6rem 1.4rem;transition:box-shadow .2s,transform .2s}
-    .for-card:hover{box-shadow:0 8px 28px rgba(0,0,0,.08);transform:translateY(-3px)}
-    .for-icon{font-size:1.8rem;margin-bottom:.8rem}
-    .for-title{font-weight:600;font-size:.92rem;margin-bottom:.4rem}
-    .for-desc{font-size:.8rem;color:var(--muted);font-weight:300;line-height:1.6}
+    /* ── WHO IT'S FOR — 3-col grid ── */
+    .for-section{background:var(--white)}
+    .for-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+    @media(max-width:860px){.for-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:520px){.for-grid{grid-template-columns:1fr}}
+    .for-card{
+      background:var(--white);padding:2rem 1.8rem;
+      transition:background .2s;position:relative;
+    }
+    .for-card:hover{background:var(--parchment)}
+    .for-card-icon{
+      width:44px;height:44px;margin-bottom:1.2rem;
+      display:flex;align-items:center;justify-content:center;
+    }
+    .for-card-icon svg{width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .for-card-title{font-weight:600;font-size:.92rem;color:var(--ink);margin-bottom:.45rem;letter-spacing:-.01em}
+    .for-card-desc{font-size:.8rem;color:var(--muted);font-weight:300;line-height:1.65}
 
+    /* ── PORTFOLIO — Device mockups ── */
     .portfolio{background:var(--parchment)}
-    .portfolio-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;margin-top:3rem}
-    @media(max-width:900px){.portfolio-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:540px){.portfolio-grid{grid-template-columns:1fr}}
-    .portfolio-card{background:#fff;border:1px solid rgba(0,0,0,.07);overflow:hidden;transition:transform .25s,box-shadow .25s;text-decoration:none;color:inherit;display:block}
-    .portfolio-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.1)}
-    .portfolio-card-img{height:180px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;position:relative;overflow:hidden;text-align:center;padding:1rem}
-    .portfolio-card-img.ana{background:linear-gradient(135deg,#0e1f3d,#1a3a6e);color:#d4a843}
-    .portfolio-card-img.llf{background:linear-gradient(135deg,#1a1208,#3d2b10);color:#d4a843}
-    .portfolio-card-img.andrew{background:linear-gradient(135deg,#0d1f0d,#1e3d1e);color:#8db87a}
-    .portfolio-card-img::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(255,255,255,.08),transparent 60%)}
-    .portfolio-card-body{padding:1.2rem 1.4rem}
-    .portfolio-card-type{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.3rem}
-    .portfolio-card-name{font-weight:600;font-size:.95rem;margin-bottom:.3rem}
-    .portfolio-card-desc{font-size:.8rem;color:var(--muted);font-weight:300;line-height:1.5}
-    .portfolio-card-link{display:inline-block;margin-top:.8rem;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600}
+    .portfolio-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:1rem;align-items:start}
+    @media(max-width:780px){.portfolio-grid{grid-template-columns:1fr}}
+    .portfolio-item{}
+    .device-frame{
+      background:var(--navy);border-radius:12px;
+      box-shadow:var(--shadow-lg);overflow:hidden;
+      border:1px solid rgba(255,255,255,.06);
+      margin-bottom:1.8rem;position:relative;
+    }
+    .device-bar{
+      background:#0a1628;padding:.6rem 1rem;
+      display:flex;align-items:center;gap:.7rem;
+      border-bottom:1px solid rgba(255,255,255,.05);
+    }
+    .device-dots{display:flex;gap:.3rem}
+    .device-dot{width:8px;height:8px;border-radius:50%}
+    .device-dot.r{background:#ff5f57}.device-dot.y{background:#febc2e}.device-dot.g{background:#28c840}
+    .device-url-bar{
+      flex:1;background:rgba(255,255,255,.06);border-radius:3px;
+      padding:.25rem .7rem;font-size:.62rem;color:rgba(255,255,255,.35);
+    }
+    .device-screen{height:260px;overflow:hidden;position:relative}
 
+    /* Ana Restaurant mock screen */
+    .mock-ana{background:linear-gradient(160deg,#0e1f3d,#1a3a6e)}
+    .mock-ana-flag{height:6px;background:linear-gradient(90deg,#002d62 25%,#fff 25% 28%,#c8102e 28% 72%,#fff 72% 75%,#002d62 75%)}
+    .mock-ana-body{padding:1.5rem}
+    .mock-ana-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem}
+    .mock-ana-logo{display:flex;align-items:center;gap:.4rem}
+    .mock-ana-logo-box{width:28px;height:18px;background:#fff;border-radius:2px}
+    .mock-ana-nav-links{display:flex;gap:.6rem}
+    .mock-ana-link{width:22px;height:3px;background:rgba(255,255,255,.2);border-radius:1px}
+    .mock-ana-cta-btn{width:36px;height:12px;background:#c8102e;border-radius:2px}
+    .mock-ana-hero-text{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:#fff;line-height:1.1;margin-bottom:.5rem}
+    .mock-ana-hero-text em{color:#d4a843;font-style:italic}
+    .mock-ana-sub{font-size:.55rem;color:rgba(255,255,255,.4);margin-bottom:1rem}
+    .mock-ana-btns{display:flex;gap:.4rem}
+    .mock-ana-btn-p{background:#c8102e;color:#fff;font-size:.52rem;padding:.3rem .7rem;border-radius:2px;font-weight:600}
+    .mock-ana-btn-o{border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.7);font-size:.52rem;padding:.3rem .7rem;border-radius:2px}
+    .mock-ana-band{background:#002d62;padding:.4rem 1.5rem;display:flex;gap:1.5rem;margin-top:.5rem}
+    .mock-ana-band-item{font-size:.48rem;color:rgba(255,255,255,.6);letter-spacing:.06em;text-transform:uppercase}
+    .mock-ana-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.4rem;padding:.7rem 1.5rem}
+    .mock-ana-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:3px;height:40px}
+
+    /* LLF mock screen */
+    .mock-llf{background:linear-gradient(160deg,#1a1208,#2d1e0a)}
+    .mock-llf-body{padding:1.5rem}
+    .mock-llf-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem}
+    .mock-llf-logo{font-family:'Cormorant Garamond',serif;font-size:.75rem;font-weight:700;color:#d4a843}
+    .mock-llf-links{display:flex;gap:.4rem}
+    .mock-llf-link{width:20px;height:3px;background:rgba(255,255,255,.15);border-radius:1px}
+    .mock-llf-hl{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#fff;line-height:1.1;margin-bottom:.4rem}
+    .mock-llf-sub{font-size:.52rem;color:rgba(255,255,255,.35);line-height:1.5;margin-bottom:1rem;max-width:180px}
+    .mock-llf-btn{display:inline-block;background:#d4a843;color:#1a1208;font-size:.52rem;padding:.3rem .8rem;border-radius:2px;font-weight:600;margin-bottom:.8rem}
+    .mock-llf-grid{display:grid;grid-template-columns:1fr 1fr;gap:.4rem}
+    .mock-llf-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:3px;height:50px;padding:.5rem;display:flex;flex-direction:column;justify-content:flex-end}
+    .mock-llf-card-line{height:3px;background:rgba(255,255,255,.1);border-radius:1px;margin-top:.2rem}
+    .mock-llf-card-line.short{width:60%}
+
+    .portfolio-item-meta{}
+    .portfolio-item-tag{
+      font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;
+      color:var(--gold);font-weight:700;margin-bottom:.4rem;
+    }
+    .portfolio-item-name{
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.5rem;font-weight:700;color:var(--ink);margin-bottom:.5rem;
+    }
+    .portfolio-item-desc{font-size:.82rem;color:var(--muted);font-weight:300;line-height:1.7;margin-bottom:1rem}
+    .portfolio-item-link{
+      font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--navy);font-weight:600;text-decoration:none;
+      display:inline-flex;align-items:center;gap:.4rem;
+      border-bottom:1px solid var(--navy);padding-bottom:.15rem;
+      transition:color .2s,border-color .2s;
+    }
+    .portfolio-item-link:hover{color:var(--gold);border-color:var(--gold)}
+    .portfolio-item-link svg{width:12px;height:12px;fill:currentColor}
+    .portfolio-third{
+      margin-top:3rem;padding-top:3rem;border-top:1px solid var(--border);
+      display:grid;grid-template-columns:1fr 2fr;gap:2rem;align-items:center;
+    }
+    @media(max-width:600px){.portfolio-third{grid-template-columns:1fr}}
+    .portfolio-third-visual{
+      background:linear-gradient(135deg,#0d1f0d,#1e3d1e);
+      border-radius:10px;height:120px;
+      display:flex;align-items:center;justify-content:center;
+      font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#8db87a;
+      border:1px solid rgba(141,184,122,.1);
+    }
+
+    /* ── PRICING ── */
     .pricing{background:var(--warm)}
-    .pricing-top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:2rem;margin-bottom:3rem}
-    .pricing-top-text h2{margin-bottom:.5rem}
-    .agency-note{background:rgba(14,31,61,.06);border-left:3px solid var(--navy);padding:.9rem 1.2rem;font-size:.82rem;color:var(--mid);font-weight:300;line-height:1.6;max-width:320px}
-    .agency-note strong{color:var(--navy);font-weight:600}
+    .pricing-header{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end;margin-bottom:3.5rem;flex-wrap:wrap}
+    @media(max-width:700px){.pricing-header{grid-template-columns:1fr}}
+    .agency-callout{
+      background:rgba(12,28,56,.06);border-left:3px solid var(--navy);
+      padding:1rem 1.3rem;font-size:.8rem;color:var(--mid);
+      font-weight:300;line-height:1.7;max-width:300px;
+    }
+    .agency-callout strong{color:var(--navy);font-weight:600}
 
-    .pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;align-items:start}
-    @media(max-width:1100px){.pricing-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:600px){.pricing-grid{grid-template-columns:1fr}}
+    .pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);align-items:stretch}
+    @media(max-width:1080px){.pricing-grid{grid-template-columns:1fr 1fr;border:none;gap:1px;background:var(--border)}}
+    @media(max-width:560px){.pricing-grid{grid-template-columns:1fr}}
 
-    .pricing-card{border:1px solid rgba(0,0,0,.1);background:#fff;padding:2rem 1.6rem;position:relative;transition:box-shadow .25s,transform .25s}
-    .pricing-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.09);transform:translateY(-3px)}
-    .pricing-card.featured{background:var(--navy);color:#fff;border-color:var(--navy)}
-    .pricing-card.retainer{border:2px solid var(--gold);background:var(--parchment)}
+    .pricing-card{
+      background:var(--white);padding:2.2rem 1.8rem;
+      position:relative;border-right:1px solid var(--border);
+      display:flex;flex-direction:column;
+    }
+    .pricing-card:last-child{border-right:none}
+    @media(max-width:1080px){.pricing-card{border-right:none;border:none}}
 
-    .pricing-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;padding:.28rem .9rem;white-space:nowrap}
-    .pricing-badge.popular{background:var(--gold);color:#fff}
-    .pricing-badge.best-value{background:var(--navy);color:#fff}
-    .pricing-badge.retainer-badge{background:var(--gold);color:#fff}
+    /* Growth — elevated */
+    .pricing-card.growth{
+      background:var(--navy);color:#fff;
+      transform:scaleY(1.02);
+      box-shadow:0 0 0 2px var(--gold),var(--shadow-lg);
+      z-index:2;border-right:none;margin:-1px;
+    }
+    .pricing-card.growth .pricing-tier{color:var(--gold-light)}
+    .pricing-card.growth .pricing-price{color:#fff}
+    .pricing-card.growth .pricing-was{color:rgba(255,255,255,.3)}
+    .pricing-card.growth .pricing-save{background:rgba(212,168,67,.2);color:var(--gold-light)}
+    .pricing-card.growth .pricing-turnaround{color:rgba(255,255,255,.45)}
+    .pricing-card.growth .pricing-divider{border-top-color:rgba(255,255,255,.1)}
+    .pricing-card.growth .pricing-features li{color:rgba(255,255,255,.75)}
+    .pricing-card.growth .pricing-features li::before{color:var(--gold-light)}
+    .pricing-card.growth .pricing-cta{background:var(--gold);border-color:var(--gold);color:#fff}
+    .pricing-card.growth .pricing-cta:hover{background:#9a7820}
+    @media(max-width:1080px){.pricing-card.growth{transform:none;margin:0}}
 
-    .pricing-tier{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.6rem}
-    .pricing-card.featured .pricing-tier{color:var(--gold-light)}
+    .pricing-badge{
+      position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+      font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;
+      padding:.3rem 1rem;white-space:nowrap;border-radius:20px;
+    }
+    .badge-popular{background:var(--gold);color:#fff}
+    .badge-value{background:var(--navy);color:#fff}
+    .badge-ongoing{background:var(--gold);color:#fff}
 
-    .pricing-price{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;line-height:1;margin-bottom:.2rem}
-    .pricing-card.featured .pricing-price{color:#fff}
-
-    .pricing-was{font-size:.73rem;color:var(--muted);text-decoration:line-through;margin-bottom:.15rem;font-weight:300}
-    .pricing-card.featured .pricing-was{color:rgba(255,255,255,.35)}
-
-    .pricing-save{display:inline-block;font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;background:rgba(184,145,42,.15);color:var(--gold);padding:.2rem .5rem;margin-bottom:.5rem}
-    .pricing-card.featured .pricing-save{background:rgba(212,168,67,.2);color:var(--gold-light)}
-
-    .pricing-turnaround{font-size:.72rem;color:var(--muted);margin-bottom:1.2rem;font-weight:300}
-    .pricing-card.featured .pricing-turnaround{color:rgba(255,255,255,.45)}
-
-    .pricing-divider{border:none;border-top:1px solid rgba(0,0,0,.08);margin-bottom:1.3rem}
-    .pricing-card.featured .pricing-divider{border-top-color:rgba(255,255,255,.1)}
-    .pricing-card.retainer .pricing-divider{border-top-color:rgba(184,145,42,.25)}
-
-    .pricing-features{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.8rem}
-    .pricing-features li{font-size:.81rem;font-weight:300;color:var(--mid);display:flex;align-items:flex-start;gap:.55rem;line-height:1.4}
-    .pricing-card.featured .pricing-features li{color:rgba(255,255,255,.75)}
-    .pricing-features li::before{content:'✓';color:var(--gold);font-weight:600;font-size:.78rem;flex-shrink:0;margin-top:.1rem}
-    .pricing-card.featured .pricing-features li::before{color:var(--gold-light)}
-
-    .pricing-cta{display:block;text-align:center;text-decoration:none;padding:.8rem;font-size:.8rem;font-weight:500;letter-spacing:.06em;border:1px solid var(--navy);color:var(--navy);transition:background .2s,color .2s}
+    .pricing-tier{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:.7rem}
+    .pricing-price{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;line-height:1;margin-bottom:.25rem;color:var(--ink)}
+    .pricing-was{font-size:.7rem;color:var(--muted);text-decoration:line-through;margin-bottom:.2rem;font-weight:300}
+    .pricing-save{display:inline-block;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;background:var(--gold-pale);color:var(--gold);padding:.2rem .55rem;margin-bottom:.6rem;border-radius:2px}
+    .pricing-turnaround{font-size:.7rem;color:var(--muted);margin-bottom:1.4rem;font-weight:300}
+    .pricing-divider{border:none;border-top:1px solid var(--border);margin-bottom:1.4rem}
+    .pricing-features{list-style:none;display:flex;flex-direction:column;gap:.65rem;margin-bottom:2rem;flex:1}
+    .pricing-features li{
+      font-size:.8rem;font-weight:300;color:var(--mid);
+      display:flex;align-items:flex-start;gap:.55rem;line-height:1.4;
+    }
+    .pricing-features li::before{content:'';width:16px;height:16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8l3.5 3.5L13 4.5' stroke='%23b8912a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/contain no-repeat;flex-shrink:0;margin-top:.1rem}
+    .pricing-cta{
+      display:block;text-align:center;text-decoration:none;
+      padding:.85rem;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+      border:1.5px solid var(--navy);color:var(--navy);
+      transition:background .2s,color .2s,border-color .2s;border-radius:2px;
+    }
     .pricing-cta:hover{background:var(--navy);color:#fff}
-    .pricing-card.featured .pricing-cta{background:var(--gold);border-color:var(--gold);color:#fff}
-    .pricing-card.featured .pricing-cta:hover{background:#9a7820;border-color:#9a7820}
     .pricing-card.retainer .pricing-cta{background:var(--gold);border-color:var(--gold);color:#fff}
-    .pricing-card.retainer .pricing-cta:hover{background:#9a7820;border-color:#9a7820}
+    .pricing-card.retainer .pricing-cta:hover{background:#9a7820}
 
-    .edit-callout{margin-top:2.5rem;border:1px solid rgba(0,0,0,.08);background:#fff;padding:2rem 2.2rem;display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center}
-    @media(max-width:700px){.edit-callout{grid-template-columns:1fr;gap:1.5rem}}
-    .edit-callout-label{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.4rem}
-    .edit-callout h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--ink);margin-bottom:.4rem}
-    .edit-callout p{font-size:.82rem;color:var(--muted);font-weight:300;line-height:1.6;max-width:280px}
-    .edit-tiers{display:flex;gap:1rem;flex-wrap:wrap}
-    .edit-tier{border:1px solid rgba(0,0,0,.08);padding:1.1rem 1.3rem;text-align:center;flex:1;min-width:120px;transition:box-shadow .2s,transform .2s}
-    .edit-tier:hover{box-shadow:0 6px 20px rgba(0,0,0,.07);transform:translateY(-2px)}
-    .edit-tier-name{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.3rem}
-    .edit-tier-price{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--navy);line-height:1;margin-bottom:.4rem}
-    .edit-tier-desc{font-size:.72rem;color:var(--muted);font-weight:300;line-height:1.4}
+    /* Edit sessions */
+    .edit-row{
+      margin-top:2rem;background:var(--white);border:1px solid var(--border);
+      display:grid;grid-template-columns:1fr auto;gap:2rem;padding:1.8rem 2rem;align-items:center;
+    }
+    @media(max-width:680px){.edit-row{grid-template-columns:1fr;gap:1rem}}
+    .edit-row-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:.4rem}
+    .edit-row-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--ink);margin-bottom:.3rem}
+    .edit-row-desc{font-size:.8rem;color:var(--muted);font-weight:300;line-height:1.6}
+    .edit-tiers{display:flex;gap:1px;background:var(--border);border:1px solid var(--border)}
+    .edit-tier{background:var(--white);padding:1.1rem 1.5rem;text-align:center;flex:1;transition:background .2s}
+    .edit-tier:hover{background:var(--parchment)}
+    .edit-tier-name{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:.3rem}
+    .edit-tier-price{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--navy);line-height:1;margin-bottom:.3rem}
+    .edit-tier-desc{font-size:.7rem;color:var(--muted);font-weight:300;line-height:1.4}
 
-    .about-section{background:var(--navy);color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;padding:6rem 6vw}
-    @media(max-width:768px){.about-section{grid-template-columns:1fr;gap:3rem}}
-    .about-section .section-label{color:var(--gold-light)}
-    .about-section h2{color:#fff}
-    .about-section .section-intro{color:rgba(255,255,255,.65);max-width:100%}
-    .about-credentials{display:flex;flex-direction:column;gap:.9rem}
-    .credential{display:flex;align-items:flex-start;gap:1rem;padding:1rem 1.2rem;background:rgba(255,255,255,.05);border-left:2px solid var(--gold)}
-    .credential-icon{font-size:1.2rem;flex-shrink:0;margin-top:.1rem}
-    .credential-text{font-size:.85rem;color:rgba(255,255,255,.7);line-height:1.5;font-weight:300}
-    .credential-text strong{color:#fff;font-weight:500;display:block;margin-bottom:.2rem}
+    /* ── LEAD FORM ── */
+    .lead-section{background:var(--navy);padding:6.5rem 5vw}
+    .lead-section .section-eyebrow{color:var(--gold-light)}
+    .lead-section .section-eyebrow::before{background:var(--gold-light)}
+    .lead-section h2{color:#fff}
+    .lead-section .section-lead{color:rgba(255,255,255,.6)}
+    .lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+    @media(max-width:800px){.lead-grid{grid-template-columns:1fr;gap:3rem}}
+    .lead-reasons{display:flex;flex-direction:column;gap:1.2rem}
+    .lead-reason{display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 1.3rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07)}
+    .lead-reason-icon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+    .lead-reason-icon svg{width:20px;height:20px;stroke:var(--gold-light);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .lead-reason-text strong{display:block;font-size:.82rem;font-weight:600;color:#fff;margin-bottom:.2rem}
+    .lead-reason-text span{font-size:.75rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.5}
+
+    /* Form */
+    .lead-form{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:2.2rem}
+    .form-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:.4rem}
+    .form-sub{font-size:.78rem;color:rgba(255,255,255,.45);margin-bottom:2rem;line-height:1.6}
+    .form-row{margin-bottom:1.2rem}
+    .form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem}
+    @media(max-width:480px){.form-row-2{grid-template-columns:1fr}}
+    label{display:block;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:600;margin-bottom:.45rem}
+    input,select,textarea{
+      width:100%;background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      color:#fff;padding:.75rem 1rem;font-size:.85rem;
+      font-family:'Outfit',sans-serif;font-weight:300;
+      outline:none;transition:border-color .2s,background .2s;
+      -webkit-appearance:none;border-radius:2px;
+    }
+    input::placeholder,textarea::placeholder{color:rgba(255,255,255,.25)}
+    input:focus,select:focus,textarea:focus{border-color:var(--gold);background:rgba(255,255,255,.09)}
+    select option{background:#0c1c38;color:#fff}
+    textarea{resize:vertical;min-height:80px}
+    .form-submit{
+      width:100%;background:var(--gold);color:#fff;
+      border:none;padding:1rem;font-size:.82rem;font-weight:600;
+      letter-spacing:.1em;text-transform:uppercase;cursor:pointer;
+      font-family:'Outfit',sans-serif;transition:background .2s,transform .15s;
+      border-radius:2px;margin-top:.4rem;
+      box-shadow:0 4px 20px rgba(184,145,42,.3);
+    }
+    .form-submit:hover{background:#9a7820;transform:translateY(-1px)}
+    .form-note{font-size:.68rem;color:rgba(255,255,255,.3);text-align:center;margin-top:.8rem;line-height:1.5}
+    .form-success{display:none;text-align:center;padding:2rem;color:#fff}
+    .form-success h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;margin-bottom:.6rem;color:var(--gold-light)}
+    .form-success p{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.7}
+
+    /* ── ABOUT ── */
+    .about-section{background:var(--white)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+    @media(max-width:800px){.about-grid{grid-template-columns:1fr;gap:3rem}}
+    .about-credentials{display:flex;flex-direction:column;gap:.8rem}
+    .credential{display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 1.3rem;border:1px solid var(--border);background:var(--parchment)}
+    .credential-icon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+    .credential-icon svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .credential-text strong{display:block;font-size:.82rem;font-weight:600;color:var(--ink);margin-bottom:.2rem}
+    .credential-text span{font-size:.75rem;color:var(--muted);font-weight:300;line-height:1.5}
     .about-links{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap}
-    .about-link{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-light);text-decoration:none;font-weight:500;border-bottom:1px solid rgba(184,145,42,.3);padding-bottom:.2rem;transition:border-color .2s}
-    .about-link:hover{border-color:var(--gold-light)}
+    .about-link{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);text-decoration:none;font-weight:600;border-bottom:1.5px solid var(--navy);padding-bottom:.15rem;transition:color .2s,border-color .2s}
+    .about-link:hover{color:var(--gold);border-color:var(--gold)}
 
+    /* ── PROCESS ── */
     .process{background:var(--parchment)}
-    .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3rem}
-    @media(max-width:900px){.process-steps{grid-template-columns:1fr 1fr}}
-    @media(max-width:540px){.process-steps{grid-template-columns:1fr}}
-    .step{padding:1.8rem;border:1px solid rgba(0,0,0,.08);background:#fff}
-    .step-num{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:700;color:rgba(184,145,42,.15);line-height:1;margin-bottom:.8rem}
-    .step-title{font-weight:600;font-size:.9rem;margin-bottom:.5rem}
-    .step-desc{font-size:.82rem;color:var(--muted);font-weight:300;line-height:1.6}
+    .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);margin-top:1rem}
+    @media(max-width:860px){.process-steps{grid-template-columns:1fr 1fr}}
+    @media(max-width:480px){.process-steps{grid-template-columns:1fr}}
+    .step{padding:2rem 1.8rem;border-right:1px solid var(--border);background:var(--white)}
+    .step:last-child{border-right:none}
+    @media(max-width:860px){.step{border-right:none;border-bottom:1px solid var(--border)}}
+    .step-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:rgba(184,145,42,.18);line-height:1;margin-bottom:1rem}
+    .step-icon{margin-bottom:1rem}
+    .step-icon svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .step-title{font-weight:600;font-size:.9rem;color:var(--ink);margin-bottom:.5rem;letter-spacing:-.01em}
+    .step-desc{font-size:.8rem;color:var(--muted);font-weight:300;line-height:1.65}
 
-    .cta-section{background:var(--gold);padding:5rem 6vw;text-align:center}
-    .cta-section h2{color:#fff;font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem}
-    .cta-section p{color:rgba(255,255,255,.85);font-size:1rem;font-weight:300;max-width:480px;margin:0 auto 2rem;line-height:1.7}
-    .cta-email{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;padding:1rem 2.5rem;font-size:.9rem;font-weight:500;letter-spacing:.06em;transition:background .2s,transform .15s}
-    .cta-email:hover{background:#1a3465;transform:translateY(-2px)}
-    .cta-note{margin-top:1.2rem;font-size:.75rem;color:rgba(255,255,255,.65)}
+    /* ── CTA ── */
+    .cta-section{background:var(--gold);padding:5.5rem 5vw;text-align:center}
+    .cta-section h2{color:#fff;font-size:clamp(2.2rem,4.5vw,3.4rem);margin-bottom:1rem;font-family:'Cormorant Garamond',serif;letter-spacing:-.02em}
+    .cta-section p{color:rgba(255,255,255,.82);font-size:1rem;font-weight:300;max-width:460px;margin:0 auto 2.2rem;line-height:1.8}
+    .cta-btn{
+      display:inline-block;background:var(--navy);color:#fff;
+      text-decoration:none;padding:1.1rem 2.8rem;
+      font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+      transition:background .2s,transform .15s;border-radius:2px;
+    }
+    .cta-btn:hover{background:#1a3465;transform:translateY(-2px)}
+    .cta-note{margin-top:1.2rem;font-size:.72rem;color:rgba(255,255,255,.6)}
 
-    footer{background:var(--ink);color:rgba(255,255,255,.5);padding:2.5rem 6vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-    .footer-brand{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:rgba(255,255,255,.8)}
-    .footer-brand span{display:block;font-family:'Outfit',sans-serif;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:.15rem}
+    /* ── FOOTER ── */
+    footer{background:var(--ink);color:rgba(255,255,255,.4);padding:2.5rem 5vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .footer-brand{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:rgba(255,255,255,.7)}
+    .footer-brand span{display:block;font-family:'Outfit',sans-serif;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-top:.15rem}
     .footer-links{display:flex;gap:1.5rem}
-    .footer-links a{font-size:.75rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+    .footer-links a{font-size:.72rem;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
     .footer-links a:hover{color:var(--gold-light)}
-    .footer-copy{font-size:.72rem;width:100%}
+    .footer-copy{font-size:.68rem;width:100%}
 
-    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-    .hero-text{animation:fadeUp .9s ease both}
-    .hero-card{animation:fadeUp .9s ease .2s both}
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .hero-text{animation:fadeUp 1s ease both}
+    .hero-visual{animation:fadeUp 1s ease .15s both}
   </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <a href="#" class="nav-brand">Lickity Split Web Design<span>By Andrew Likoudis · Baltimore</span></a>
+  <a href="#" class="nav-brand">
+    <span class="nav-brand-main">Lickity Split Web Design</span>
+    <span class="nav-brand-sub">By Andrew Likoudis · Baltimore</span>
+  </a>
   <div class="nav-links">
-    <a href="#who">Who It's For</a>
+    <a href="#who">Services</a>
     <a href="#portfolio">Work</a>
     <a href="#pricing">Pricing</a>
     <a href="#about">About</a>
-    <a href="mailto:andrewlikoudis@gmail.com" class="nav-cta">Get a Quote</a>
+    <a href="#contact" class="nav-cta">Get a Quote</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <div class="hero-eyebrow">Lickity Split Web Design · Baltimore</div>
-    <h1>Your business deserves a site that <em>works as hard as you do.</em></h1>
-    <p class="hero-sub">Hand-built websites for Baltimore small businesses — no templates, no agencies, no bloat. A real site, at a fair price, fast.</p>
-    <div class="hero-ctas">
-      <a href="mailto:andrewlikoudis@gmail.com?subject=Website Quote" class="btn-primary">Get a Free Quote</a>
-      <a href="#portfolio" class="btn-ghost">See Live Work</a>
+    <div class="hero-kicker"><span class="hero-kicker-dot"></span>Baltimore Small Business Web Design</div>
+    <h1>Sites that load fast.<br>Look sharp.<br><em>Win customers.</em></h1>
+    <p class="hero-body">Hand-built websites for Baltimore small businesses — no templates, no agencies, no bloat. Fair prices, real results, delivered in days.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Get a Free Quote</a>
+      <a href="#portfolio" class="btn-outline">See Live Work</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+        48-hour starter delivery
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+        No subscriptions
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+        Baltimore-based
+      </div>
     </div>
   </div>
-  <div class="hero-card">
-    <div class="verticals-frame">
-      <div class="frame-corner"></div>
-      <div class="verticals-label">Built for businesses like yours</div>
-      <div class="verticals-grid">
-        <div class="vertical-pill"><span>🍽️</span> Restaurants</div>
-        <div class="vertical-pill"><span>✂️</span> Barbershops</div>
-        <div class="vertical-pill"><span>⚖️</span> Law Offices</div>
-        <div class="vertical-pill"><span>🏗️</span> Contractors</div>
-        <div class="vertical-pill"><span>💆</span> Salons & Spas</div>
-        <div class="vertical-pill"><span>🏥</span> Medical Practices</div>
-        <div class="vertical-pill"><span>🎵</span> Creatives & Artists</div>
-        <div class="vertical-pill"><span>🏛️</span> Nonprofits</div>
-        <div class="vertical-pill"><span>🛒</span> Retail Shops</div>
-        <div class="vertical-pill"><span>🔧</span> Tradespeople</div>
+  <div class="hero-visual">
+    <div class="browser-mockup">
+      <div class="browser-bar">
+        <div class="browser-dots">
+          <div class="browser-dot r"></div>
+          <div class="browser-dot y"></div>
+          <div class="browser-dot g"></div>
+        </div>
+        <div class="browser-url">liquid1188.github.io/ana-restaurant</div>
+      </div>
+      <div class="browser-screen">
+        <div class="mock-ana">
+          <div class="mock-ana-flag"></div>
+          <div class="mock-ana-body">
+            <div class="mock-ana-nav">
+              <div class="mock-ana-logo"><div class="mock-ana-logo-box"></div></div>
+              <div class="mock-ana-nav-links">
+                <div class="mock-ana-link"></div>
+                <div class="mock-ana-link"></div>
+                <div class="mock-ana-link"></div>
+                <div class="mock-ana-cta-btn"></div>
+              </div>
+            </div>
+            <div class="mock-ana-hero-text">Authentic Dominican<br><em>Food &amp; Community</em></div>
+            <div class="mock-ana-sub">3314 Eastern Ave · Highlandtown, Baltimore · Open daily</div>
+            <div class="mock-ana-btns">
+              <div class="mock-ana-btn-p">Order Online</div>
+              <div class="mock-ana-btn-o">View Menu</div>
+            </div>
+          </div>
+          <div class="mock-ana-band">
+            <div class="mock-ana-band-item">Mon–Sat 11–10</div>
+            <div class="mock-ana-band-item">Sun 12–8</div>
+            <div class="mock-ana-band-item">(443) 555-0192</div>
+          </div>
+          <div class="mock-ana-cards">
+            <div class="mock-ana-card"></div>
+            <div class="mock-ana-card"></div>
+            <div class="mock-ana-card"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- BAND -->
 <div class="band">
-  <div class="band-item">⚡ 48-Hour Delivery on Starter Sites</div>
-  <div class="band-item">📱 Mobile-First, Google-Ready</div>
-  <div class="band-item">📍 Baltimore-Based, Local Focus</div>
+  <div class="band-item">
+    <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+    48-Hour Starter Delivery
+  </div>
+  <div class="band-item">
+    <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+    Mobile-First &amp; Google-Ready
+  </div>
+  <div class="band-item">
+    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+    Baltimore-Based
+  </div>
 </div>
 
+<!-- WHO IT'S FOR -->
 <section class="for-section" id="who">
-  <div class="section-label">Who This Is For</div>
-  <h2>If Google can't find you, neither can your customers.</h2>
-  <p class="section-intro">Most Baltimore small businesses either have no website, a broken one, or one a nephew built in 2014. This is the fix — professional, fast, and priced for the real world.</p>
+  <div class="section-eyebrow">Who This Is For</div>
+  <h2>If Google can't find you,<br>neither can your customers.</h2>
+  <p class="section-lead">Most Baltimore small businesses have no website, a broken one, or one a nephew built in 2014. This is the fix — professional, fast, and priced for the real world.</p>
   <div class="for-grid">
-    <div class="for-card"><div class="for-icon">🍽️</div><div class="for-title">Restaurants & Cafés</div><div class="for-desc">Menu display, hours, Google Maps, reservation links, bilingual support. Customers find you before they find someone else.</div></div>
-    <div class="for-card"><div class="for-icon">🔧</div><div class="for-title">Contractors & Trades</div><div class="for-desc">Show your work, collect leads, display your license and service area. Build trust before the first call.</div></div>
-    <div class="for-card"><div class="for-icon">⚖️</div><div class="for-title">Professional Services</div><div class="for-desc">Law offices, accountants, consultants. Credibility online means more calls. Your site should say "hire me" without saying it.</div></div>
-    <div class="for-card"><div class="for-icon">💆</div><div class="for-title">Salons, Spas & Studios</div><div class="for-desc">Booking links, service menus, photo galleries, staff bios. Look as good online as you do in person.</div></div>
-    <div class="for-card"><div class="for-icon">🏛️</div><div class="for-title">Nonprofits & Ministries</div><div class="for-desc">Mission, programs, donation pathways, events. Your cause deserves a site that moves people to act.</div></div>
-    <div class="for-card"><div class="for-icon">🛒</div><div class="for-title">Retail & Boutiques</div><div class="for-desc">Hours, location, featured products, social feeds. Turn foot traffic into repeat customers who find you online first.</div></div>
-    <div class="for-card"><div class="for-icon">🎵</div><div class="for-title">Creatives & Artists</div><div class="for-desc">Portfolio sites, booking pages, press kits. Your work deserves a frame worthy of it.</div></div>
-    <div class="for-card"><div class="for-icon">🏥</div><div class="for-title">Medical & Wellness</div><div class="for-desc">Patient trust starts online. Clean, credible design with appointment booking and provider bios.</div></div>
-  </div>
-</section>
 
-<section class="portfolio" id="portfolio">
-  <div class="section-label">Live Work</div>
-  <h2>Three different clients. Three very different sites.</h2>
-  <p class="section-intro">Every site is built from scratch for its specific client — a restaurant, a nonprofit, and a personal brand. The range is the point.</p>
-  <div class="portfolio-grid">
-    <a href="https://liquid1188.github.io/ana-restaurant/" target="_blank" class="portfolio-card">
-      <div class="portfolio-card-img ana">Ana Restaurant</div>
-      <div class="portfolio-card-body">
-        <div class="portfolio-card-type">Restaurant · Highlandtown</div>
-        <div class="portfolio-card-name">Ana Restaurant</div>
-        <div class="portfolio-card-desc">Dominican cuisine in East Baltimore. Full build with bilingual menu, photo gallery, Google Maps, and online ordering link.</div>
-        <span class="portfolio-card-link">View Site ↗</span>
+    <div class="for-card">
+      <div class="for-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
       </div>
-    </a>
-    <a href="https://www.likoudislegacy.com" target="_blank" class="portfolio-card">
-      <div class="portfolio-card-img llf">Likoudis Legacy Foundation</div>
-      <div class="portfolio-card-body">
-        <div class="portfolio-card-type">Nonprofit · Baltimore</div>
-        <div class="portfolio-card-name">Likoudis Legacy Foundation</div>
-        <div class="portfolio-card-desc">Scholarship nonprofit with programs, publications, events, and donor pathways. Full organizational presence online.</div>
-        <span class="portfolio-card-link">View Site ↗</span>
-      </div>
-    </a>
-    <a href="https://www.andrewlikoudis.com" target="_blank" class="portfolio-card">
-      <div class="portfolio-card-img andrew">Andrew Likoudis</div>
-      <div class="portfolio-card-body">
-        <div class="portfolio-card-type">Personal Brand · Author</div>
-        <div class="portfolio-card-name">AndrewLikoudis.com</div>
-        <div class="portfolio-card-desc">Author and scholar portfolio. Writing, speaking, media, and press — editorial design that builds credibility.</div>
-        <span class="portfolio-card-link">View Site ↗</span>
-      </div>
-    </a>
-  </div>
-</section>
-
-<section class="pricing" id="pricing">
-  <div class="pricing-top">
-    <div class="pricing-top-text">
-      <div class="section-label">Transparent Pricing</div>
-      <h2>More site, better rate.</h2>
-      <p class="section-intro" style="margin-bottom:0">Every tier delivers more value per dollar. The bigger the build, the better the deal — no agency markup, no retainer required to get started.</p>
+      <div class="for-card-title">Restaurants &amp; Cafés</div>
+      <div class="for-card-desc">Menu display, hours, Google Maps, reservation links, bilingual support. Customers find you first.</div>
     </div>
-    <div class="agency-note">
-      <strong>For context:</strong> A Baltimore agency charges $4,000–$10,000 for the same scope as a Full Build. You get the same quality — without the overhead, the account manager, or the 6-week timeline.
+
+    <div class="for-card">
+      <div class="for-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <div class="for-card-title">Contractors &amp; Trades</div>
+      <div class="for-card-desc">Show your work, collect leads, display your license and service area. Build trust before the first call.</div>
+    </div>
+
+    <div class="for-card">
+      <div class="for-card-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+      </div>
+      <div class="for-card-title">Professional Services</div>
+      <div class="for-card-desc">Law offices, accountants, consultants. Credibility online means more calls. Your site should say "hire me."</div>
+    </div>
+
+    <div class="for-card">
+      <div class="for-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      </div>
+      <div class="for-card-title">Salons, Spas &amp; Studios</div>
+      <div class="for-card-desc">Booking links, service menus, photo galleries, staff bios. Look as polished online as you do in person.</div>
+    </div>
+
+    <div class="for-card">
+      <div class="for-card-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <div class="for-card-title">Nonprofits &amp; Ministries</div>
+      <div class="for-card-desc">Mission, programs, donation pathways, events. Your cause deserves a site that moves people to act.</div>
+    </div>
+
+    <div class="for-card">
+      <div class="for-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      </div>
+      <div class="for-card-title">Retail &amp; Boutiques</div>
+      <div class="for-card-desc">Hours, location, featured products, social feeds. Turn foot traffic into repeat customers who find you first.</div>
+    </div>
+
+    <div class="for-card">
+      <div class="for-card-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
+      </div>
+      <div class="for-card-title">Creatives &amp; Artists</div>
+      <div class="for-card-desc">Portfolio sites, booking pages, press kits. Your work deserves a frame worthy of it.</div>
+    </div>
+
+    <div class="for-card">
+      <div class="for-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      </div>
+      <div class="for-card-title">Medical &amp; Wellness</div>
+      <div class="for-card-desc">Patient trust starts online. Clean, credible design with appointment booking and provider bios.</div>
+    </div>
+
+    <div class="for-card">
+      <div class="for-card-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <div class="for-card-title">Any Local Business</div>
+      <div class="for-card-desc">If you serve Baltimore and don't have a website that works, I can fix that — fast, and at a fair price.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="section-eyebrow">Live Work</div>
+  <h2>Built from scratch.<br>Every time.</h2>
+  <p class="section-lead">No templates. Three live examples — a restaurant, a nonprofit, and a personal brand — each purpose-built for its client.</p>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <div class="device-frame">
+        <div class="device-bar">
+          <div class="device-dots">
+            <div class="device-dot r"></div>
+            <div class="device-dot y"></div>
+            <div class="device-dot g"></div>
+          </div>
+          <div class="device-url-bar">liquid1188.github.io/ana-restaurant</div>
+        </div>
+        <div class="device-screen">
+          <div class="mock-ana" style="height:100%">
+            <div class="mock-ana-flag"></div>
+            <div class="mock-ana-body">
+              <div class="mock-ana-nav">
+                <div class="mock-ana-logo"><div class="mock-ana-logo-box"></div></div>
+                <div class="mock-ana-nav-links">
+                  <div class="mock-ana-link"></div>
+                  <div class="mock-ana-link"></div>
+                  <div class="mock-ana-cta-btn"></div>
+                </div>
+              </div>
+              <div class="mock-ana-hero-text">Authentic Dominican<br><em>Food &amp; Community</em></div>
+              <div class="mock-ana-sub">3314 Eastern Ave · Highlandtown, Baltimore</div>
+              <div class="mock-ana-btns">
+                <div class="mock-ana-btn-p">Order Online</div>
+                <div class="mock-ana-btn-o">View Menu</div>
+              </div>
+            </div>
+            <div class="mock-ana-band">
+              <div class="mock-ana-band-item">Hours</div>
+              <div class="mock-ana-band-item">Menu</div>
+              <div class="mock-ana-band-item">Gallery</div>
+              <div class="mock-ana-band-item">Contact</div>
+            </div>
+            <div class="mock-ana-cards">
+              <div class="mock-ana-card"></div>
+              <div class="mock-ana-card"></div>
+              <div class="mock-ana-card"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item-meta">
+        <div class="portfolio-item-tag">Restaurant · Highlandtown</div>
+        <div class="portfolio-item-name">Ana Restaurant</div>
+        <div class="portfolio-item-desc">Dominican cuisine in East Baltimore. Full build with bilingual menu, photo gallery, Google Maps, and online ordering link. Designed to serve both English and Spanish-speaking customers.</div>
+        <a href="https://liquid1188.github.io/ana-restaurant/" target="_blank" class="portfolio-item-link">
+          View Live Site
+          <svg viewBox="0 0 12 12"><path d="M3.5 8.5L8.5 3.5M8.5 3.5H5M8.5 3.5V7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <div class="device-frame">
+        <div class="device-bar">
+          <div class="device-dots">
+            <div class="device-dot r"></div>
+            <div class="device-dot y"></div>
+            <div class="device-dot g"></div>
+          </div>
+          <div class="device-url-bar">likoudislegacy.com</div>
+        </div>
+        <div class="device-screen">
+          <div class="mock-llf" style="height:100%">
+            <div class="mock-llf-body">
+              <div class="mock-llf-nav">
+                <div class="mock-llf-logo">Likoudis Legacy Foundation</div>
+                <div class="mock-llf-links">
+                  <div class="mock-llf-link"></div>
+                  <div class="mock-llf-link"></div>
+                  <div class="mock-llf-link"></div>
+                </div>
+              </div>
+              <div class="mock-llf-hl">Scholarship for<br>the Catholic Tradition</div>
+              <div class="mock-llf-sub">A Baltimore nonprofit advancing ecumenical scholarship through publishing, research, and formation.</div>
+              <div class="mock-llf-btn">Support Our Mission</div>
+              <div class="mock-llf-grid">
+                <div class="mock-llf-card">
+                  <div class="mock-llf-card-line"></div>
+                  <div class="mock-llf-card-line short"></div>
+                </div>
+                <div class="mock-llf-card">
+                  <div class="mock-llf-card-line"></div>
+                  <div class="mock-llf-card-line short"></div>
+                </div>
+                <div class="mock-llf-card">
+                  <div class="mock-llf-card-line"></div>
+                  <div class="mock-llf-card-line short"></div>
+                </div>
+                <div class="mock-llf-card">
+                  <div class="mock-llf-card-line"></div>
+                  <div class="mock-llf-card-line short"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item-meta">
+        <div class="portfolio-item-tag">Nonprofit · Baltimore</div>
+        <div class="portfolio-item-name">Likoudis Legacy Foundation</div>
+        <div class="portfolio-item-desc">Catholic ecumenical scholarship nonprofit. Full organizational site with programs, publications, conference listings, and donor pathways — built to serve both patrons and prospective funders.</div>
+        <a href="https://www.likoudislegacy.com" target="_blank" class="portfolio-item-link">
+          View Live Site
+          <svg viewBox="0 0 12 12"><path d="M3.5 8.5L8.5 3.5M8.5 3.5H5M8.5 3.5V7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-third">
+    <div class="portfolio-third-visual">AndrewLikoudis.com</div>
+    <div>
+      <div class="portfolio-item-tag">Personal Brand · Author</div>
+      <div class="portfolio-item-name" style="font-size:1.3rem">AndrewLikoudis.com</div>
+      <div class="portfolio-item-desc">Author and scholar portfolio. Writing, speaking, media, and press — editorial design built to establish credibility and drive inbound speaking and publishing inquiries.</div>
+      <a href="https://www.andrewlikoudis.com" target="_blank" class="portfolio-item-link">
+        View Live Site
+        <svg viewBox="0 0 12 12"><path d="M3.5 8.5L8.5 3.5M8.5 3.5H5M8.5 3.5V7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="pricing-header">
+    <div>
+      <div class="section-eyebrow">Transparent Pricing</div>
+      <h2>More site, better rate.</h2>
+      <p class="section-lead" style="margin-bottom:0">Every tier delivers more value per dollar. The bigger the build, the better the deal.</p>
+    </div>
+    <div class="agency-callout">
+      <strong>For context:</strong> A Baltimore agency charges $4,000–$10,000 for the same scope as a Full Build. Same quality — without the overhead or the 6-week timeline.
     </div>
   </div>
 
   <div class="pricing-grid">
+
     <div class="pricing-card">
       <div class="pricing-tier">Starter</div>
       <div class="pricing-price">$499</div>
-      <div class="pricing-turnaround">48-hr turnaround · $499 per page</div>
+      <div class="pricing-turnaround">48-hr turnaround · $499/page</div>
       <hr class="pricing-divider"/>
       <ul class="pricing-features">
         <li>One-page responsive site</li>
@@ -329,11 +834,11 @@
         <li>Social media links</li>
         <li>Basic SEO setup</li>
       </ul>
-      <a href="mailto:andrewlikoudis@gmail.com?subject=Starter Site — $499" class="pricing-cta">Get Started</a>
+      <a href="#contact" class="pricing-cta">Get Started</a>
     </div>
 
-    <div class="pricing-card">
-      <div class="pricing-badge popular">Most Popular</div>
+    <div class="pricing-card growth">
+      <div class="pricing-badge badge-popular">Most Popular</div>
       <div class="pricing-tier">Growth</div>
       <div class="pricing-price">$999</div>
       <div class="pricing-was">$1,497 at Starter rate</div>
@@ -349,11 +854,11 @@
         <li>Contact form + hours display</li>
         <li>One revision round included</li>
       </ul>
-      <a href="mailto:andrewlikoudis@gmail.com?subject=Growth Site — $999" class="pricing-cta">Get Started</a>
+      <a href="#contact" class="pricing-cta">Get Started</a>
     </div>
 
-    <div class="pricing-card featured">
-      <div class="pricing-badge best-value">Best Value</div>
+    <div class="pricing-card">
+      <div class="pricing-badge badge-value">Best Value</div>
       <div class="pricing-tier">Full Build</div>
       <div class="pricing-price">$1,999</div>
       <div class="pricing-was">$3,493 at Starter rate</div>
@@ -371,11 +876,11 @@
         <li>Two revision rounds included</li>
         <li>30-day post-launch support</li>
       </ul>
-      <a href="mailto:andrewlikoudis@gmail.com?subject=Full Build — $1,999" class="pricing-cta">Get Started</a>
+      <a href="#contact" class="pricing-cta">Get Started</a>
     </div>
 
     <div class="pricing-card retainer">
-      <div class="pricing-badge retainer-badge">Ongoing</div>
+      <div class="pricing-badge badge-ongoing">Ongoing</div>
       <div class="pricing-tier">Retainer</div>
       <div class="pricing-price">$150<span style="font-size:1rem;font-weight:400;font-family:'Outfit',sans-serif">/mo</span></div>
       <div class="pricing-turnaround">Month-to-month · cancel anytime</div>
@@ -387,85 +892,291 @@
         <li>Text, photo &amp; hours updates</li>
         <li>Minor layout tweaks included</li>
         <li>Direct line — no ticketing system</li>
-        <li>$1,800/yr vs. $3,600 à la carte</li>
+        <li>$1,800/yr vs. $3,600 la carte</li>
       </ul>
-      <a href="mailto:andrewlikoudis@gmail.com?subject=Retainer Inquiry" class="pricing-cta">Start Retainer</a>
+      <a href="#contact" class="pricing-cta">Start Retainer</a>
     </div>
+
   </div>
 
-  <div class="edit-callout">
+  <div class="edit-row">
     <div>
-      <div class="edit-callout-label">À La Carte Edits</div>
-      <h3>Need a one-time change?</h3>
-      <p>Not on retainer? Book a single edit session — scoped, completed, and delivered within 48 hours.</p>
+      <div class="edit-row-label">A La Carte Edits</div>
+      <div class="edit-row-title">Need a one-time change?</div>
+      <div class="edit-row-desc">Not on retainer? Book a single edit session — scoped, completed, and delivered within 48 hours.</div>
     </div>
     <div class="edit-tiers">
       <div class="edit-tier">
         <div class="edit-tier-name">Minor</div>
         <div class="edit-tier-price">$50</div>
-        <div class="edit-tier-desc">Text changes, photo swaps, hours or menu update</div>
+        <div class="edit-tier-desc">Text, photo, hours update</div>
       </div>
       <div class="edit-tier">
         <div class="edit-tier-name">Standard</div>
         <div class="edit-tier-price">$75</div>
-        <div class="edit-tier-desc">New section, layout tweak, embedded link or map update</div>
+        <div class="edit-tier-desc">New section or layout tweak</div>
       </div>
       <div class="edit-tier">
         <div class="edit-tier-name">Major</div>
         <div class="edit-tier-price">$100</div>
-        <div class="edit-tier-desc">New page, structural redesign, or new feature added</div>
+        <div class="edit-tier-desc">New page or feature added</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="about-section" id="about">
-  <div>
-    <div class="section-label">Who You're Hiring</div>
-    <h2>Not an agency. A craftsman.</h2>
-    <p class="section-intro">I'm Andrew Likoudis — Baltimore-based writer, scholar, and founder of Lickity Split Web Design. Every site is built by hand, by me. No junior developers, no page builders, no outsourcing. You get my full attention from first email to launch.</p>
-    <div class="about-links">
-      <a href="https://www.andrewlikoudis.com" target="_blank" class="about-link">AndrewLikoudis.com</a>
-      <a href="https://www.likoudislegacy.com" target="_blank" class="about-link">Likoudis Legacy Foundation</a>
-      <a href="mailto:andrewlikoudis@gmail.com" class="about-link">Email Me Directly</a>
+<!-- LEAD CAPTURE FORM -->
+<section class="lead-section" id="contact">
+  <div class="lead-grid">
+    <div>
+      <div class="section-eyebrow">Get a Free Quote</div>
+      <h2 style="color:#fff">Tell me about<br>your business.</h2>
+      <p class="section-lead" style="color:rgba(255,255,255,.6)">I'll respond within 24 hours with a clear recommendation and flat-rate quote. No pressure, no obligation.</p>
+      <div class="lead-reasons">
+        <div class="lead-reason">
+          <div class="lead-reason-icon">
+            <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <div class="lead-reason-text">
+            <strong>Fast turnaround</strong>
+            <span>Starter sites in 48 hours. Growth sites in 5 days. No waiting weeks for an agency to "scope the project."</span>
+          </div>
+        </div>
+        <div class="lead-reason">
+          <div class="lead-reason-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="lead-reason-text">
+            <strong>One flat price, no surprises</strong>
+            <span>You know the cost before work begins. No scope creep, no hidden fees, no monthly platform charges.</span>
+          </div>
+        </div>
+        <div class="lead-reason">
+          <div class="lead-reason-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="lead-reason-text">
+            <strong>Built by one person, for your business</strong>
+            <span>No junior developers, no handoffs. You work directly with me from quote to launch.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="lead-form" id="lead-form-wrapper">
+        <div class="form-title">Request a Quote</div>
+        <div class="form-sub">Fill out the form below — I'll get back to you within 24 hours with a recommendation and price.</div>
+        <form id="quote-form" onsubmit="handleSubmit(event)">
+          <div class="form-row-2">
+            <div>
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="Maria" required/>
+            </div>
+            <div>
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Rodriguez" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="maria@mybusiness.com" required/>
+          </div>
+          <div class="form-row">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="(410) 555-0100"/>
+          </div>
+          <div class="form-row">
+            <label for="biz-name">Business Name</label>
+            <input type="text" id="biz-name" name="biz-name" placeholder="Maria's Salon" required/>
+          </div>
+          <div class="form-row-2">
+            <div>
+              <label for="biz-type">Business Type</label>
+              <select id="biz-type" name="biz-type" required>
+                <option value="" disabled selected>Select...</option>
+                <option>Restaurant / Cafe</option>
+                <option>Barbershop / Salon</option>
+                <option>Contractor / Trade</option>
+                <option>Nonprofit / Ministry</option>
+                <option>Retail / Boutique</option>
+                <option>Professional Services</option>
+                <option>Medical / Wellness</option>
+                <option>Creative / Artist</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="budget">Budget Range</label>
+              <select id="budget" name="budget">
+                <option value="" disabled selected>Select...</option>
+                <option>$499 — Starter</option>
+                <option>$999 — Growth</option>
+                <option>$1,999 — Full Build</option>
+                <option>$150/mo — Retainer</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="current-url">Current Website URL (if any)</label>
+            <input type="url" id="current-url" name="current-url" placeholder="https://mysite.com or leave blank"/>
+          </div>
+          <div class="form-row">
+            <label for="message">Anything else I should know?</label>
+            <textarea id="message" name="message" placeholder="Tell me a bit about your business and what you're looking for..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send My Quote Request</button>
+          <div class="form-note">Response within 24 hours · No spam · No obligation</div>
+        </form>
+        <div class="form-success" id="form-success">
+          <h3>Got it — thank you.</h3>
+          <p>I'll review your request and get back to you within 24 hours with a clear recommendation and flat-rate quote.<br><br>— Andrew</p>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="about-credentials">
-    <div class="credential"><div class="credential-icon">🏛️</div><div class="credential-text"><strong>Founder, Likoudis Legacy Foundation</strong>Baltimore-based nonprofit — full organizational site built and maintained by me since launch.</div></div>
-    <div class="credential"><div class="credential-icon">✍️</div><div class="credential-text"><strong>Published Author &amp; Journalist</strong>Writer for NCR, Where Peter Is, and Patheos. Two published books. Words and design work together — I know how to use both.</div></div>
-    <div class="credential"><div class="credential-icon">⚡</div><div class="credential-text"><strong>Goldman Sachs 10KSB · Johns Hopkins Fellow</strong>Business and nonprofit training. Sites that serve a real goal, not just look good in a screenshot.</div></div>
-    <div class="credential"><div class="credential-icon">📍</div><div class="credential-text"><strong>Baltimore Local</strong>I live and work here. I know the neighborhoods, the business climate, and what Baltimore customers respond to.</div></div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="about-grid">
+    <div>
+      <div class="section-eyebrow">Who You're Hiring</div>
+      <h2>Not an agency.<br>A craftsman.</h2>
+      <p class="section-lead">I'm Andrew Likoudis — Baltimore-based writer, scholar, and founder of Lickity Split Web Design. Every site is built by hand, by me. No junior developers, no page builders, no outsourcing.</p>
+      <div class="about-links">
+        <a href="https://www.andrewlikoudis.com" target="_blank" class="about-link">AndrewLikoudis.com</a>
+        <a href="https://www.likoudislegacy.com" target="_blank" class="about-link">LLF</a>
+        <a href="mailto:andrewlikoudis@gmail.com" class="about-link">Email</a>
+      </div>
+    </div>
+    <div class="about-credentials">
+      <div class="credential">
+        <div class="credential-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="credential-text">
+          <strong>Founder, Likoudis Legacy Foundation</strong>
+          <span>Baltimore-based nonprofit — full organizational site built and maintained by me since launch.</span>
+        </div>
+      </div>
+      <div class="credential">
+        <div class="credential-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div class="credential-text">
+          <strong>Published Author &amp; Journalist</strong>
+          <span>Writer for NCR, Where Peter Is, and Patheos. Two published books. Words and design work together — I know how to use both.</span>
+        </div>
+      </div>
+      <div class="credential">
+        <div class="credential-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="credential-text">
+          <strong>Goldman Sachs 10KSB &middot; Johns Hopkins Fellow</strong>
+          <span>Business and nonprofit training. Sites that serve a real goal — not just look good in a screenshot.</span>
+        </div>
+      </div>
+      <div class="credential">
+        <div class="credential-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <div class="credential-text">
+          <strong>Baltimore Local</strong>
+          <span>I live and work here. I know the neighborhoods, the business climate, and what Baltimore customers respond to.</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- PROCESS -->
 <section class="process">
-  <div class="section-label">How It Works</div>
-  <h2>Simple from first email to launch day.</h2>
-  <p class="section-intro">Four steps. No jargon, no drawn-out process. You stay in control the whole time.</p>
+  <div class="section-eyebrow">How It Works</div>
+  <h2>Simple from first contact<br>to launch day.</h2>
   <div class="process-steps">
-    <div class="step"><div class="step-num">01</div><div class="step-title">Free Quote</div><div class="step-desc">Email or call. We talk about your business, your goals, and which tier fits. No commitment, no sales pitch.</div></div>
-    <div class="step"><div class="step-num">02</div><div class="step-title">You Send the Assets</div><div class="step-desc">Photos, logo, services, hours. That's it. I handle design, copy, code, and hosting setup — everything.</div></div>
-    <div class="step"><div class="step-num">03</div><div class="step-title">Preview &amp; Revisions</div><div class="step-desc">I send a live preview link. You give feedback. We get it exactly right before anything goes public.</div></div>
-    <div class="step"><div class="step-num">04</div><div class="step-title">Launch</div><div class="step-desc">Your site goes live. Full Build clients get 30 days of post-launch support — questions, tweaks, whatever you need.</div></div>
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+      <div class="step-title">Free Quote</div>
+      <div class="step-desc">Fill out the form above or email me. I'll respond within 24 hours with a clear recommendation and flat price. No commitment.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg></div>
+      <div class="step-title">You Send the Assets</div>
+      <div class="step-desc">Photos, logo, services list, hours. That's it. I handle design, copy, code, and hosting setup — everything else.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+      <div class="step-title">Preview &amp; Revisions</div>
+      <div class="step-desc">I send a live preview link. You give feedback. We get it exactly right before anything goes public.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+      <div class="step-title">Launch</div>
+      <div class="step-desc">Your site goes live. Full Build clients get 30 days of post-launch support — questions, tweaks, whatever you need.</div>
+    </div>
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta-section">
   <h2>Let's get your business online.</h2>
-  <p>Email me directly and get a quote within 24 hours. No forms, no intake process — just a real conversation.</p>
-  <a href="mailto:andrewlikoudis@gmail.com?subject=Website Quote" class="cta-email">andrewlikoudis@gmail.com</a>
-  <div class="cta-note">Response within 24 hours, guaranteed.</div>
+  <p>Fill out the form above or email me directly. Quote within 24 hours, guaranteed.</p>
+  <a href="#contact" class="cta-btn">Get a Free Quote</a>
+  <div class="cta-note">Or email: andrewlikoudis@gmail.com</div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <div class="footer-brand">Lickity Split Web Design<span>By Andrew Likoudis · Baltimore, MD</span></div>
+  <div class="footer-brand">
+    Lickity Split Web Design
+    <span>By Andrew Likoudis · Baltimore, MD</span>
+  </div>
   <div class="footer-links">
     <a href="https://www.andrewlikoudis.com" target="_blank">Personal Site</a>
     <a href="https://www.likoudislegacy.com" target="_blank">LLF</a>
     <a href="mailto:andrewlikoudis@gmail.com">Email</a>
   </div>
-  <div class="footer-copy">© 2026 Lickity Split Web Design · Andrew Likoudis</div>
+  <div class="footer-copy">2026 Lickity Split Web Design · Andrew Likoudis</div>
 </footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = document.getElementById('quote-form');
+  const success = document.getElementById('form-success');
+  // Build mailto with form data
+  const fname = document.getElementById('fname').value;
+  const lname = document.getElementById('lname').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const bizName = document.getElementById('biz-name').value;
+  const bizType = document.getElementById('biz-type').value;
+  const budget = document.getElementById('budget').value;
+  const url = document.getElementById('current-url').value;
+  const msg = document.getElementById('message').value;
+  const body = `New quote request from ${fname} ${lname}
+
+Email: ${email}
+Phone: ${phone || 'Not provided'}
+Business: ${bizName}
+Type: ${bizType}
+Budget: ${budget || 'Not specified'}
+Current URL: ${url || 'None'}
+
+Message:
+${msg || 'None'}`;
+  window.location.href = `mailto:andrewlikoudis@gmail.com?subject=Quote Request — ${bizName}&body=${encodeURIComponent(body)}`;
+  form.style.display = 'none';
+  success.style.display = 'block';
+}
+</script>
 
 </body>
 </html>
