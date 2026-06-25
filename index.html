@@ -471,6 +471,47 @@
     .footer-links a{font-family:var(--font-ui);font-size:.68rem;color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s}
     .footer-links a:hover{color:var(--accent)}
     .footer-copy{font-family:var(--font-ui);font-size:.62rem;width:100%}
+
+    /* ════ UX/UI POLISH ════ */
+    /* Keyboard focus — quality floor */
+    :focus{outline:none}
+    a:focus-visible,button:focus-visible,[role="button"]:focus-visible,.faq-q:focus-visible,.carousel-dot:focus-visible{outline:2.5px solid var(--accent);outline-offset:3px;border-radius:3px}
+    input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2.5px solid var(--accent);outline-offset:1px}
+    nav :focus-visible,.hero :focus-visible,.cta-final :focus-visible,.manifesto-section :focus-visible,.footer-magnet :focus-visible{outline-color:#e9c75c}
+
+    /* Tactile press feedback */
+    .btn-accent:active,.btn-ghost-light:active,.p-cta:active,.nav-cta:active,.form-btn:active,.magnet-btn:active{transform:translateY(0) scale(.99)}
+
+    /* Subtle card lift */
+    .port-more-item,.edit-tier{transition:transform .25s ease,border-color .25s ease}
+    .port-more-item:hover{transform:translateY(-3px)}
+    .edit-tier:hover{transform:translateY(-3px);border-color:var(--accent)}
+
+    /* Mobile nav toggle (hidden on desktop) */
+    .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:11px;margin-right:-11px;background:none;border:0;cursor:pointer;border-radius:6px;transition:background .2s}
+    .nav-toggle:hover{background:rgba(255,255,255,.08)}
+    .nav-toggle span{display:block;height:2px;width:100%;background:#fff;border-radius:2px;transition:transform .28s ease,opacity .2s ease}
+    nav.open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    nav.open .nav-toggle span:nth-child(2){opacity:0}
+    nav.open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+    @media(max-width:700px){
+      .nav-toggle{display:flex}
+      .nav-logo-sub{display:none}
+      .nav-items{position:fixed;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(22,20,18,.99);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 24px 48px rgba(0,0,0,.45);padding:.4rem 6vw 1.6rem;transform:translateY(-14px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .24s ease,transform .24s ease,visibility .24s}
+      nav.open .nav-items{transform:translateY(0);opacity:1;visibility:visible;pointer-events:auto}
+      .nav-items a:not(.nav-cta){display:block;padding:1rem .2rem;font-size:.82rem;letter-spacing:.06em;color:rgba(255,255,255,.78);border-bottom:1px solid rgba(255,255,255,.07)}
+      .nav-items a:not(.nav-cta):hover{color:#fff}
+      .nav-cta{margin-top:1.1rem;text-align:center;padding:.95rem 1.4rem!important;font-size:.74rem!important}
+    }
+
+    /* Respect reduced motion */
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+      [data-reveal]{opacity:1!important;transform:none!important}
+      .browser{transform:none!important}
+    }
   </style>
 </head>
 <body>
@@ -481,13 +522,16 @@
     <span class="nav-logo-name">Lickity Split Web Design</span>
     <span class="nav-logo-sub">By Andrew Likoudis · Baltimore</span>
   </a>
-  <div class="nav-items">
+  <div class="nav-items" id="nav-items">
     <a href="#services">Services</a>
     <a href="#work">Work</a>
     <a href="#pricing">Pricing</a>
     <a href="#faq">FAQ</a>
     <a href="#contact" class="nav-cta">Get a Quote</a>
   </div>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-items">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -865,31 +909,30 @@
     </div>
     <div class="pricing-card retainer" data-reveal>
       <div class="p-badge badge-ongoing">Ongoing</div>
-      <div class="p-tier">Retainer</div>
-      <div class="p-price">$150<span style="font-size:1.1rem;font-family:var(--font-ui);font-weight:300">/mo</span></div>
-      <div class="p-cadence">Month-to-month · cancel anytime<br>$1,800/yr vs. $3,600 la carte</div>
+      <div class="p-tier">Care Plan</div>
+      <div class="p-price">$50<span style="font-size:1.1rem;font-family:var(--font-ui);font-weight:300">/mo</span></div>
+      <div class="p-cadence">Monthly · cancel anytime<br>No contract, no setup fee</div>
       <hr class="p-divider"/>
       <ul class="p-features">
-        <li class="p-feature">Up to 3 edit sessions/month</li>
-        <li class="p-feature">Priority 24-hour turnaround</li>
-        <li class="p-feature">Site monitoring &amp; uptime checks</li>
-        <li class="p-feature">Text, photo &amp; hours updates</li>
-        <li class="p-feature">Minor layout tweaks included</li>
-        <li class="p-feature">Direct line — no ticketing system</li>
+        <li class="p-feature">Two quick edits a month, included</li>
+        <li class="p-feature">I watch the site — uptime &amp; monitoring</li>
+        <li class="p-feature">Priority: your changes jump the queue</li>
+        <li class="p-feature">A direct line to me — no tickets, no portal</li>
+        <li class="p-feature">Bigger jobs at your member rate (20% off)</li>
       </ul>
-      <a href="#contact" class="p-cta">Start Retainer</a>
+      <a href="#contact" class="p-cta">Start a Care Plan</a>
     </div>
   </div>
   <div class="edit-row">
     <div>
-      <div class="edit-label">A La Carte Edits</div>
-      <div class="edit-title">Need a one-time change?</div>
-      <div class="edit-desc">Not on retainer? Book a single session — scoped, completed, and delivered within 48 hours.</div>
+      <div class="edit-label">One-Time Edits</div>
+      <div class="edit-title">Just need a change?</div>
+      <div class="edit-desc">No plan required. Pick the size that fits — it's scoped, done, and live, usually within 48 hours.</div>
     </div>
     <div class="edit-tiers">
-      <div class="edit-tier"><div class="edit-tier-name">Minor</div><div class="edit-tier-price">$50</div><div class="edit-tier-desc">Text, photo or hours update</div></div>
-      <div class="edit-tier"><div class="edit-tier-name">Standard</div><div class="edit-tier-price">$75</div><div class="edit-tier-desc">New section or layout tweak</div></div>
-      <div class="edit-tier"><div class="edit-tier-name">Major</div><div class="edit-tier-price">$100</div><div class="edit-tier-desc">New page or feature added</div></div>
+      <div class="edit-tier"><div class="edit-tier-name">Quick Fix</div><div class="edit-tier-price">$25</div><div class="edit-tier-desc">One change — a photo, your hours, a price, a typo</div></div>
+      <div class="edit-tier"><div class="edit-tier-name">Edit Session</div><div class="edit-tier-price">$75</div><div class="edit-tier-desc">A batch of changes, knocked out in one sitting</div></div>
+      <div class="edit-tier"><div class="edit-tier-name">Edit Day</div><div class="edit-tier-price">$150</div><div class="edit-tier-desc">A full day on your site — bigger reworks</div></div>
     </div>
   </div>
 </section>
@@ -964,7 +1007,7 @@
         <div class="form-row"><label for="bizname">Business Name</label><input type="text" id="bizname" placeholder="Maria's Salon" required/></div>
         <div class="form-2">
           <div><label for="biztype">Business Type</label><select id="biztype" required><option value="" disabled selected>Select...</option><option>Restaurant / Cafe</option><option>Barbershop / Salon</option><option>Contractor / Trade</option><option>Nonprofit / Ministry</option><option>Retail / Boutique</option><option>Professional Services</option><option>Medical / Wellness</option><option>Creative / Artist</option><option>Other</option></select></div>
-          <div><label for="budget">Budget Range</label><select id="budget"><option value="" disabled selected>Select...</option><option>$299 — Starter</option><option>$599 — Growth</option><option>$999 — Full Build</option><option>$150/mo — Retainer</option><option>Not sure yet</option></select></div>
+          <div><label for="budget">Budget Range</label><select id="budget"><option value="" disabled selected>Select...</option><option>$299 — Starter</option><option>$599 — Growth</option><option>$999 — Full Build</option><option>$50/mo — Care Plan</option><option>Not sure yet</option></select></div>
         </div>
         <div class="form-row"><label for="currenturl">Current Website URL (if any)</label><input type="url" id="currenturl" placeholder="https://mysite.com or leave blank"/></div>
         <div class="form-row"><label for="message">Anything else?</label><textarea id="message" placeholder="Tell me about your business and what you need..."></textarea></div>
@@ -1061,7 +1104,7 @@
           <span class="faq-q-text">Can I update the site myself after launch?</span>
           <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">Yes, if you know basic HTML — and I can teach you in about 20 minutes. Otherwise, <strong>that's exactly what the Retainer and edit sessions are for.</strong> Most business owners find it easier to email me "update my hours" or "swap this photo" than to deal with a CMS. For $50–$75, it's done same day without you touching a file.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes, if you know basic HTML — and I can teach you in about 20 minutes. Otherwise, <strong>that's exactly what the Care Plan and one-time edits are for.</strong> Most business owners find it easier to email me "update my hours" or "swap this photo" than to deal with a CMS. For $25, it's done same day without you touching a file.</div></div>
       </div>
 
       <div class="faq-item">
@@ -1140,6 +1183,26 @@ window.addEventListener('scroll',()=>{
   document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>40);
 });
 
+/* ── Reduced-motion preference ── */
+const prefersReduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ── Mobile menu ── */
+(function(){
+  const nav=document.getElementById('main-nav');
+  const toggle=nav.querySelector('.nav-toggle');
+  const menu=document.getElementById('nav-items');
+  if(!toggle) return;
+  function setOpen(open){
+    nav.classList.toggle('open',open);
+    toggle.setAttribute('aria-expanded',open?'true':'false');
+    toggle.setAttribute('aria-label',open?'Close menu':'Open menu');
+  }
+  toggle.addEventListener('click',()=>setOpen(!nav.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false);});
+  window.addEventListener('resize',()=>{if(window.innerWidth>700)setOpen(false);});
+})();
+
 /* ── Scroll-reveal pricing ── */
 const revealObserver=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('revealed')});
@@ -1151,6 +1214,7 @@ function animateCounter(el){
   const target=parseFloat(el.dataset.counter);
   const suffix=el.dataset.suffix||'';
   const isDecimal=target<10;
+  if(prefersReduce){el.textContent=(isDecimal?target.toFixed(1):Math.round(target))+suffix;return;}
   const duration=1600;
   const start=performance.now();
   const update=now=>{
@@ -1178,6 +1242,7 @@ document.querySelectorAll('.perf-score[data-count]').forEach(el=>{
   const obs=new IntersectionObserver(entries=>{
     entries.forEach(e=>{
       if(e.isIntersecting){
+        if(prefersReduce){el.textContent=(target<10?target.toFixed(1):Math.round(target));obs.unobserve(e.target);return;}
         const isDecimal=target<10;
         const duration=1400;
         const start=performance.now();
