@@ -225,6 +225,12 @@
     .port-link:hover{color:var(--accent);border-color:var(--accent)}
     .port-link svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
     .port-link:hover svg{transform:translate(2px,-2px)}
+    .port-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem 3rem;margin-top:3.5rem}
+    @media(max-width:820px){.port-grid{grid-template-columns:1fr;gap:3rem}}
+    .port-card{display:flex;flex-direction:column}
+    .port-shot{display:block;border-radius:10px;overflow:hidden;text-decoration:none;margin-bottom:1.5rem;background:var(--charcoal-mid);box-shadow:var(--shadow-lg),0 0 0 1px rgba(0,0,0,.06);transition:transform .3s ease,box-shadow .3s ease}
+    .port-shot:hover{transform:translateY(-6px);box-shadow:var(--shadow-xl),0 0 0 1px rgba(0,0,0,.08)}
+    .port-img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top center}
     .port-third{margin-top:3.5rem;padding-top:3.5rem;border-top:1px solid var(--border-light);display:grid;grid-template-columns:200px 1fr;gap:2.5rem;align-items:center}
     @media(max-width:560px){.port-third{grid-template-columns:1fr}}
     .port-third-card{background:linear-gradient(145deg,#0d1f0d,#1a3a1a);border-radius:8px;height:130px;display:flex;align-items:center;justify-content:center;font-family:var(--font-body);font-size:.9rem;font-style:italic;color:rgba(141,184,122,.8);border:1px solid rgba(141,184,122,.1);box-shadow:var(--shadow-md)}
@@ -655,95 +661,69 @@
 <!-- PORTFOLIO -->
 <section class="portfolio" id="work">
   <div class="eyebrow">Client Portfolio · Live Sites</div>
-  <h2>Five real clients.<br><span class="serif">Five live websites you can visit right now.</span></h2>
-  <p class="section-body">Every site below was built for a real client and is live right now — click "View Live Site" to open it in your browser. Restaurants, nonprofits, an author site, an artist's storefront, and family brands. No mockups. No demos. Real work.</p>
-  <div class="portfolio-items">
-    <div class="port-item">
-      <div class="port-with-mobile">
-        <div class="port-browser-sm">
-          <div class="port-chrome"><div class="p-dots"><div class="p-dot r"></div><div class="p-dot y"></div><div class="p-dot g"></div></div><div class="p-url">liquid1188.github.io/ana-restaurant</div></div>
-          <div class="port-screen">
-            <div class="mv-ana" style="height:100%">
-              <div class="mv-ana-flag"></div>
-              <div class="mv-ana-nav"><div class="mv-logo-box">ANA</div><div class="mv-nav-r"><div class="mv-nav-link"></div><div class="mv-nav-link"></div><div class="mv-cta-btn">Order</div></div></div>
-              <div class="mv-hero-body"><div class="mv-eyebrow">Highlandtown · Baltimore</div><div class="mv-h1">Authentic Dominican<br><em>Food &amp; Community</em></div><div class="mv-sub">3314 Eastern Ave · Open Daily</div><div class="mv-btns"><div class="mv-btn-p">Order Online</div><div class="mv-btn-o">View Menu</div></div></div>
-              <div class="mv-band"><div class="mv-band-t">Menu</div><div class="mv-band-t">Hours</div><div class="mv-band-t">Gallery</div></div>
-              <div class="mv-cards"><div class="mv-card"></div><div class="mv-card"></div><div class="mv-card"></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="port-phone">
-          <div class="port-phone-notch"><div class="port-phone-notch-pill"></div></div>
-          <div class="port-phone-screen">
-            <div class="mv-phone-ana">
-              <div class="mv-phone-nav-row"><div class="mv-phone-logo"></div><div class="mv-phone-lines"><div class="mv-phone-line"></div><div class="mv-phone-line"></div><div class="mv-phone-line"></div></div></div>
-              <div class="mv-phone-hero">Dominican<br><em>Food &amp; Community</em></div>
-              <div class="mv-phone-btn">Order Online</div>
-              <div class="mv-phone-cards"><div class="mv-phone-card"></div><div class="mv-phone-card"></div><div class="mv-phone-card"></div><div class="mv-phone-card"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <h2>Six real clients.<br><span class="serif">Six live websites you can visit right now.</span></h2>
+  <p class="section-body">Every site below was built for a real client and is live right now — click any screenshot to open it in your browser. Restaurants, nonprofits, authors, an artist's storefront, and family brands. Real screenshots, real work.</p>
+  <div class="port-grid">
+    <article class="port-card">
+      <a class="port-shot" href="https://liquid1188.github.io/ana-restaurant/" target="_blank" rel="noopener" aria-label="Open Ana Restaurant in a new tab">
+        <div class="port-chrome"><div class="p-dots"><div class="p-dot r"></div><div class="p-dot y"></div><div class="p-dot g"></div></div><div class="p-url">liquid1188.github.io/ana-restaurant</div></div>
+        <img class="port-img" src="screenshots/ana.webp" alt="Ana Restaurant website homepage" width="1280" height="800" loading="lazy" decoding="async">
+      </a>
       <div class="port-tag">Restaurant · Highlandtown</div>
       <div class="port-name">Ana Restaurant</div>
-      <div class="port-desc">Dominican cuisine in East Baltimore. Full build with bilingual menu, photo gallery, Google Maps, and online ordering. Designed for English and Spanish-speaking customers.</div>
-      <a href="https://liquid1188.github.io/ana-restaurant/" target="_blank" class="port-link">View Live Site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-    </div>
-    <div class="port-item">
-      <div class="port-browser">
+      <div class="port-desc">Dominican cuisine in East Baltimore. Full build with bilingual menu, photo gallery, Google Maps, and online ordering — designed for English and Spanish-speaking customers.</div>
+      <a href="https://liquid1188.github.io/ana-restaurant/" target="_blank" rel="noopener" class="port-link">View Live Site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+    </article>
+    <article class="port-card">
+      <a class="port-shot" href="https://www.likoudislegacy.com" target="_blank" rel="noopener" aria-label="Open Likoudis Legacy Foundation in a new tab">
         <div class="port-chrome"><div class="p-dots"><div class="p-dot r"></div><div class="p-dot y"></div><div class="p-dot g"></div></div><div class="p-url">likoudislegacy.com</div></div>
-        <div class="port-screen">
-          <div class="mv-llf" style="height:100%">
-            <div class="mv-llf-nav">
-              <div class="mv-llf-logo"><em>Likoudis</em> Legacy Foundation</div>
-              <div class="mv-llf-links"><div class="mv-llf-link"></div><div class="mv-llf-link"></div><div class="mv-llf-link"></div></div>
-            </div>
-            <div class="mv-llf-hero">
-              <div class="mv-llf-eyebrow">Catholic Scholarship &amp; Ecumenism · Baltimore</div>
-              <div class="mv-llf-h1"><em>Likoudis</em> Legacy<br>Foundation</div>
-              <div class="mv-llf-sub">A 501(c)(3) dedicated to ecumenical dialogue, Catholic apologetics, and the theological legacy of James Likoudis.</div>
-              <div class="mv-llf-btns">
-                <div class="mv-llf-btn-p">Support the Foundation</div>
-                <div class="mv-llf-btn-o">Our Mission</div>
-              </div>
-            </div>
-            <div class="mv-llf-cards">
-              <div class="mv-llf-card"><div class="mv-llf-card-tag"></div><div class="mv-llf-card-line"></div><div class="mv-llf-card-line s"></div></div>
-              <div class="mv-llf-card"><div class="mv-llf-card-tag"></div><div class="mv-llf-card-line"></div><div class="mv-llf-card-line s"></div></div>
-              <div class="mv-llf-card"><div class="mv-llf-card-tag"></div><div class="mv-llf-card-line"></div><div class="mv-llf-card-line s"></div></div>
-              <div class="mv-llf-card"><div class="mv-llf-card-tag"></div><div class="mv-llf-card-line"></div><div class="mv-llf-card-line s"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <img class="port-img" src="screenshots/llf.webp" alt="Likoudis Legacy Foundation website homepage" width="1280" height="800" loading="lazy" decoding="async">
+      </a>
       <div class="port-tag">Nonprofit · Baltimore</div>
       <div class="port-name">Likoudis Legacy Foundation</div>
-      <div class="port-desc">Catholic ecumenical scholarship nonprofit. Full organizational site with programs, publications, conference listings, and donor pathways.</div>
-      <a href="https://www.likoudislegacy.com" target="_blank" class="port-link">View Live Site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-    </div>
-  </div>
-  <div class="port-more">
-    <div class="port-more-item">
-      <div class="port-more-thumb">AndrewLikoudis.com</div>
+      <div class="port-desc">Catholic ecumenical scholarship nonprofit. A full organizational site with programs, publications, conference listings, and donor pathways.</div>
+      <a href="https://www.likoudislegacy.com" target="_blank" rel="noopener" class="port-link">View Live Site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+    </article>
+    <article class="port-card">
+      <a class="port-shot" href="https://www.andrewlikoudis.com" target="_blank" rel="noopener" aria-label="Open Andrew Likoudis in a new tab">
+        <div class="port-chrome"><div class="p-dots"><div class="p-dot r"></div><div class="p-dot y"></div><div class="p-dot g"></div></div><div class="p-url">andrewlikoudis.com</div></div>
+        <img class="port-img" src="screenshots/andrew.webp" alt="Andrew Likoudis website homepage" width="1280" height="800" loading="lazy" decoding="async">
+      </a>
       <div class="port-tag">Personal Brand · Author</div>
-      <div class="port-name" style="font-size:1.2rem">Andrew Likoudis</div>
+      <div class="port-name">Andrew Likoudis</div>
       <div class="port-desc">Author and scholar portfolio. Writing, speaking, media, and press — editorial design built to establish credibility and drive speaking and publishing inquiries.</div>
-      <a href="https://www.andrewlikoudis.com" target="_blank" class="port-link">View Live Site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-    </div>
-    <div class="port-more-item">
-      <div class="port-more-thumb">Likoudis Ventures</div>
+      <a href="https://www.andrewlikoudis.com" target="_blank" rel="noopener" class="port-link">View Live Site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+    </article>
+    <article class="port-card">
+      <a class="port-shot" href="https://likoudisventures.vercel.app" target="_blank" rel="noopener" aria-label="Open Likoudis Ventures in a new tab">
+        <div class="port-chrome"><div class="p-dots"><div class="p-dot r"></div><div class="p-dot y"></div><div class="p-dot g"></div></div><div class="p-url">likoudisventures.com</div></div>
+        <img class="port-img" src="screenshots/ventures.webp" alt="Likoudis Ventures website homepage" width="1280" height="800" loading="lazy" decoding="async">
+      </a>
       <div class="port-tag">Brand Site · Baltimore</div>
-      <div class="port-name" style="font-size:1.2rem">Likoudis Ventures</div>
-      <div class="port-desc">A family-held house of enterprises — hospitality, services, web design, original art, and an Ionian pantry, gathered under one name. Editorial Next.js build with considered typography and a quiet, confident voice.</div>
-      <a href="https://likoudisventures.vercel.app" target="_blank" class="port-link">View Live Site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-    </div>
-    <div class="port-more-item">
-      <div class="port-more-thumb">brushandsoulstudio.com</div>
+      <div class="port-name">Likoudis Ventures</div>
+      <div class="port-desc">A family-held house of enterprises — hospitality, services, web design, original art, and an Ionian pantry under one name. Editorial Next.js build with considered typography.</div>
+      <a href="https://likoudisventures.vercel.app" target="_blank" rel="noopener" class="port-link">View Live Site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+    </article>
+    <article class="port-card">
+      <a class="port-shot" href="https://brushandsoulstudio.com" target="_blank" rel="noopener" aria-label="Open Brush & Soul Studio in a new tab">
+        <div class="port-chrome"><div class="p-dots"><div class="p-dot r"></div><div class="p-dot y"></div><div class="p-dot g"></div></div><div class="p-url">brushandsoulstudio.com</div></div>
+        <img class="port-img" src="screenshots/brushsoul.webp" alt="Brush &amp; Soul Studio website homepage" width="1280" height="800" loading="lazy" decoding="async">
+      </a>
       <div class="port-tag">E-Commerce · Artist Studio</div>
-      <div class="port-name" style="font-size:1.2rem">Brush &amp; Soul Studio</div>
-      <div class="port-desc">Original paintings and prints by Caroline Likoudis. A full Shopify storefront migrated from Wix — product catalog, secure checkout, and a gallery-grade browsing experience built to sell work.</div>
-      <a href="https://brushandsoulstudio.com" target="_blank" class="port-link">View Live Site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-    </div>
+      <div class="port-name">Brush &amp; Soul Studio</div>
+      <div class="port-desc">Original paintings and prints by Caroline Likoudis. A full Shopify storefront migrated from Wix — product catalog, secure checkout, and a gallery-grade browsing experience.</div>
+      <a href="https://brushandsoulstudio.com" target="_blank" rel="noopener" class="port-link">View Live Site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+    </article>
+    <article class="port-card">
+      <a class="port-shot" href="https://roxanesalonen.com" target="_blank" rel="noopener" aria-label="Open Roxane Salonen in a new tab">
+        <div class="port-chrome"><div class="p-dots"><div class="p-dot r"></div><div class="p-dot y"></div><div class="p-dot g"></div></div><div class="p-url">roxanesalonen.com</div></div>
+        <img class="port-img" src="screenshots/roxane.webp" alt="Roxane Salonen website homepage" width="1280" height="800" loading="lazy" decoding="async">
+      </a>
+      <div class="port-tag">Author · Speaker</div>
+      <div class="port-name">Roxane Salonen</div>
+      <div class="port-desc">Award-winning author, columnist, and radio host. &ldquo;Peace Garden Passage&rdquo; — a warm editorial home for her books, speaking, and her writing on faith and family.</div>
+      <a href="https://roxanesalonen.com" target="_blank" rel="noopener" class="port-link">View Live Site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+    </article>
   </div>
 </section>
 
