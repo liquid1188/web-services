@@ -228,6 +228,10 @@
     .port-third{margin-top:3.5rem;padding-top:3.5rem;border-top:1px solid var(--border-light);display:grid;grid-template-columns:200px 1fr;gap:2.5rem;align-items:center}
     @media(max-width:560px){.port-third{grid-template-columns:1fr}}
     .port-third-card{background:linear-gradient(145deg,#0d1f0d,#1a3a1a);border-radius:8px;height:130px;display:flex;align-items:center;justify-content:center;font-family:var(--font-body);font-size:.9rem;font-style:italic;color:rgba(141,184,122,.8);border:1px solid rgba(141,184,122,.1);box-shadow:var(--shadow-md)}
+    .port-more{margin-top:3.5rem;padding-top:3.5rem;border-top:1px solid var(--border-light);display:grid;grid-template-columns:1fr 1fr;gap:3.2rem 3rem}
+    @media(max-width:820px){.port-more{grid-template-columns:1fr}}
+    .port-more-item{display:flex;flex-direction:column}
+    .port-more-thumb{height:120px;border-radius:8px;margin-bottom:1.2rem;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 1.2rem;line-height:1.35;font-family:var(--font-body);font-size:.95rem;font-style:italic;color:rgba(141,184,122,.85);background:linear-gradient(145deg,#0d1f0d,#1a3a1a);border:1px solid rgba(141,184,122,.12);box-shadow:var(--shadow-md)}
 
     /* ── SUCCESS STORIES / BEFORE-AFTER ── */
     .success-section{background:var(--charcoal);padding:var(--section-pad)}
@@ -496,7 +500,7 @@
       <span class="hero-kicker-text">Baltimore Small Business Web Design</span>
     </div>
     <h1>Sites that load fast.<br>Look sharp.<br><span class="serif-line">Win customers.</span></h1>
-    <p class="hero-body">81% of customers research a business online before they call. If they can't find you, they call someone else. A professional site from Lickity Split starts at $499 and is live in 48 hours.</p>
+    <p class="hero-body">81% of customers research a business online before they call. If they can't find you, they call someone else. A professional site from Lickity Split starts at $299 and is live in 48 hours.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-accent">Get a Free Quote</a>
       <a href="#work" class="btn-ghost-light">See Live Work</a>
@@ -607,8 +611,8 @@
 <!-- PORTFOLIO -->
 <section class="portfolio" id="work">
   <div class="eyebrow">Client Portfolio · Live Sites</div>
-  <h2>Three real clients.<br><span class="serif">Three live websites you can visit right now.</span></h2>
-  <p class="section-body">Every site below was built for a real Baltimore client — click "View Live Site" to see it in your browser. A restaurant, a nonprofit, and a personal brand. No mockups. No demos. Real work.</p>
+  <h2>Six real clients.<br><span class="serif">Six live websites you can visit right now.</span></h2>
+  <p class="section-body">Every site below was built for a real client and is live right now — click "View Live Site" to open it in your browser. Restaurants, nonprofits, authors, an artist's storefront, and family brands. No mockups. No demos. Real work.</p>
   <div class="portfolio-items">
     <div class="port-item">
       <div class="port-with-mobile">
@@ -674,13 +678,34 @@
       <a href="https://www.likoudislegacy.com" target="_blank" class="port-link">View Live Site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
     </div>
   </div>
-  <div class="port-third">
-    <div class="port-third-card">AndrewLikoudis.com</div>
-    <div>
+  <div class="port-more">
+    <div class="port-more-item">
+      <div class="port-more-thumb">AndrewLikoudis.com</div>
       <div class="port-tag">Personal Brand · Author</div>
-      <div class="port-name" style="font-size:1.2rem">AndrewLikoudis.com</div>
+      <div class="port-name" style="font-size:1.2rem">Andrew Likoudis</div>
       <div class="port-desc">Author and scholar portfolio. Writing, speaking, media, and press — editorial design built to establish credibility and drive speaking and publishing inquiries.</div>
       <a href="https://www.andrewlikoudis.com" target="_blank" class="port-link">View Live Site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+    </div>
+    <div class="port-more-item">
+      <div class="port-more-thumb">Likoudis Ventures</div>
+      <div class="port-tag">Brand Site · Baltimore</div>
+      <div class="port-name" style="font-size:1.2rem">Likoudis Ventures</div>
+      <div class="port-desc">A family-held house of enterprises — hospitality, services, web design, original art, and an Ionian pantry, gathered under one name. Editorial Next.js build with considered typography and a quiet, confident voice.</div>
+      <a href="https://likoudisventures.vercel.app" target="_blank" class="port-link">View Live Site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+    </div>
+    <div class="port-more-item">
+      <div class="port-more-thumb">brushandsoulstudio.com</div>
+      <div class="port-tag">E-Commerce · Artist Studio</div>
+      <div class="port-name" style="font-size:1.2rem">Brush &amp; Soul Studio</div>
+      <div class="port-desc">Original paintings and prints by Caroline Likoudis. A full Shopify storefront migrated from Wix — product catalog, secure checkout, and a gallery-grade browsing experience built to sell work.</div>
+      <a href="https://brushandsoulstudio.com" target="_blank" class="port-link">View Live Site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+    </div>
+    <div class="port-more-item">
+      <div class="port-more-thumb">roxanesalonen.com</div>
+      <div class="port-tag">Personal Brand · Author</div>
+      <div class="port-name" style="font-size:1.2rem">Roxane Salonen</div>
+      <div class="port-desc">Award-winning author, columnist, and radio host. A warm editorial home for her books, speaking, and writing on faith and family — designed to welcome readers and grow her audience.</div>
+      <a href="https://roxanesalonen.com" target="_blank" class="port-link">View Live Site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
     </div>
   </div>
 </section>
@@ -785,15 +810,15 @@
     <div>
       <div class="eyebrow">Transparent Pricing</div>
       <h2>More site,<br><span class="serif">better rate.</span></h2>
-      <p class="section-body" style="margin-bottom:0">A $499 Starter site pays for itself fast. A plumber charges $300 a job — two calls and it's covered. A restaurant that lands one new regular who visits twice a month recoups the cost before the end of the first month. After that, the site works for free, every day, forever.</p>
+      <p class="section-body" style="margin-bottom:0">A $299 Starter site pays for itself fast. A plumber charges $300 a job — one call and it's covered. A restaurant that lands one new regular who visits twice a month recoups the cost in days. After that, the site works for free, every day, forever.</p>
     </div>
-    <div class="agency-note"><strong>The agency alternative</strong>Baltimore agencies charge $4,000–$10,000 for a Full Build, plus ~$1,200/year in maintenance fees. Then they're gone and you're paying someone new every time a button breaks. My Full Build is $1,999. One price. You own it. I'm still here.</div>
+    <div class="agency-note"><strong>The agency alternative</strong>Baltimore agencies charge $4,000–$10,000 for a Full Build, plus ~$1,200/year in maintenance fees. Then they're gone and you're paying someone new every time a button breaks. My Full Build is $999. One price. You own it. I'm still here.</div>
   </div>
   <div class="pricing-grid" id="pricing-grid">
     <div class="pricing-card" data-reveal>
       <div class="p-tier">Starter</div>
-      <div class="p-price">$499</div>
-      <div class="p-cadence">48-hr turnaround · $499/page</div>
+      <div class="p-price">$299</div>
+      <div class="p-cadence">48-hr turnaround · $299/page</div>
       <hr class="p-divider"/>
       <ul class="p-features">
         <li class="p-feature">One-page responsive site</li>
@@ -809,9 +834,9 @@
     <div class="pricing-card growth" data-reveal>
       <div class="p-badge badge-pop">Most Popular</div>
       <div class="p-tier">Growth</div>
-      <div class="p-price">$999</div>
-      <div class="p-was">$1,497 at Starter rate</div>
-      <div class="p-save">Save $498 — $333/page</div>
+      <div class="p-price">$599</div>
+      <div class="p-was">$897 at Starter rate</div>
+      <div class="p-save">Save $298 — $200/page</div>
       <div class="p-cadence">5-day turnaround</div>
       <hr class="p-divider"/>
       <ul class="p-features">
@@ -828,9 +853,9 @@
     <div class="pricing-card" data-reveal>
       <div class="p-badge badge-val">Best Value</div>
       <div class="p-tier">Full Build</div>
-      <div class="p-price">$1,999</div>
-      <div class="p-was">$3,493 at Starter rate</div>
-      <div class="p-save">Save $1,494 — $285/page</div>
+      <div class="p-price">$999</div>
+      <div class="p-was">$2,093 at Starter rate</div>
+      <div class="p-save">Save $1,094 — $143/page</div>
       <div class="p-cadence">2-week turnaround</div>
       <hr class="p-divider"/>
       <ul class="p-features">
@@ -929,7 +954,7 @@
       <p class="section-body">Tell me your business name and what you do. I'll respond within 24 hours with a specific recommendation and a flat price. No sales call required. No obligation. If you don't move forward, you paid nothing and learned something.</p>
       <div class="contact-reasons">
         <div class="contact-reason"><div class="cr-icon"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><div><div class="cr-title">Live in 48 hours, not 6 weeks</div><div class="cr-body">The average agency takes 4–8 weeks to launch a site. Starter sites from Lickity Split go live in 48 hours. Every day without a website is a day customers are finding someone else.</div></div></div>
-        <div class="contact-reason"><div class="cr-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="cr-title">One price. You know it upfront.</div><div class="cr-body">You know the exact cost before a single line is written. No discovery fees, no hourly billing, no "scope changes." $499, $999, or $1,999 — that's the number, that's the invoice.</div></div></div>
+        <div class="contact-reason"><div class="cr-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="cr-title">One price. You know it upfront.</div><div class="cr-body">You know the exact cost before a single line is written. No discovery fees, no hourly billing, no "scope changes." $299, $599, or $999 — that's the number, that's the invoice.</div></div></div>
         <div class="contact-reason"><div class="cr-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><div><div class="cr-title">88% of local searches end in a store visit</div><div class="cr-body">88% of people who search for a local business on their phone visit within 24 hours. A site that shows up in search doesn't just build brand awareness — it drives people through your door the same day.</div></div></div>
       </div>
     </div>
@@ -946,7 +971,7 @@
         <div class="form-row"><label for="bizname">Business Name</label><input type="text" id="bizname" placeholder="Maria's Salon" required/></div>
         <div class="form-2">
           <div><label for="biztype">Business Type</label><select id="biztype" required><option value="" disabled selected>Select...</option><option>Restaurant / Cafe</option><option>Barbershop / Salon</option><option>Contractor / Trade</option><option>Nonprofit / Ministry</option><option>Retail / Boutique</option><option>Professional Services</option><option>Medical / Wellness</option><option>Creative / Artist</option><option>Other</option></select></div>
-          <div><label for="budget">Budget Range</label><select id="budget"><option value="" disabled selected>Select...</option><option>$499 — Starter</option><option>$999 — Growth</option><option>$1,999 — Full Build</option><option>$150/mo — Retainer</option><option>Not sure yet</option></select></div>
+          <div><label for="budget">Budget Range</label><select id="budget"><option value="" disabled selected>Select...</option><option>$299 — Starter</option><option>$599 — Growth</option><option>$999 — Full Build</option><option>$150/mo — Retainer</option><option>Not sure yet</option></select></div>
         </div>
         <div class="form-row"><label for="currenturl">Current Website URL (if any)</label><input type="url" id="currenturl" placeholder="https://mysite.com or leave blank"/></div>
         <div class="form-row"><label for="message">Anything else?</label><textarea id="message" placeholder="Tell me about your business and what you need..."></textarea></div>
@@ -1051,7 +1076,7 @@
           <span class="faq-q-text">Why not just use Wix or Squarespace?</span>
           <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">You can. Wix runs ~$17/month ($204/year), scores 40–60 on PageSpeed, and you never own the code. <strong>A hand-coded site costs $499 once, scores 100/100 on PageSpeed, and loads in under a second.</strong> After year one, you're ahead financially. After year two, the gap is enormous. And you'll never be held hostage by a platform changing its pricing or shutting down.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">You can. Wix runs ~$17/month ($204/year), scores 40–60 on PageSpeed, and you never own the code. <strong>A hand-coded site costs $299 once, scores 100/100 on PageSpeed, and loads in under a second.</strong> After year one, you're ahead financially. After year two, the gap is enormous. And you'll never be held hostage by a platform changing its pricing or shutting down.</div></div>
       </div>
 
       <div class="faq-item">
@@ -1102,7 +1127,7 @@
 <!-- CTA FINAL -->
 <section class="cta-final">
   <h2>Your competitors have websites.<br><span class="serif">Now you can too.</span></h2>
-  <p class="section-body" style="margin-bottom:2.5rem">A $499 site. 48 hours. One flat price. If it doesn't bring in a single new customer in the first 30 days, email me and I'll tell you exactly why — free. That's how confident I am this works.</p>
+  <p class="section-body" style="margin-bottom:2.5rem">A $299 site. 48 hours. One flat price. If it doesn't bring in a single new customer in the first 30 days, email me and I'll tell you exactly why — free. That's how confident I am this works.</p>
   <a href="#contact" class="btn-accent">Get a Free Quote</a>
   <div class="cta-final-note">Or email: andrewlikoudis@gmail.com</div>
 </section>
