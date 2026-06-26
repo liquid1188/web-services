@@ -490,6 +490,34 @@
     .magnet-btn:hover{background:var(--accent-hover);transform:translateY(-1px)}
     .magnet-fine{font-family:var(--font-body);font-size:.62rem;color:rgba(255,255,255,.25);font-style:italic;text-align:center}
 
+    /* ── WEBSITE HEALTH CHECK ── */
+    .hc-panel{min-width:300px}
+    .hc-entry{display:flex;flex-direction:column;gap:.7rem;min-width:300px}
+    .hc-url{text-align:center}
+    .magnet-btn:disabled{opacity:.6;cursor:wait;transform:none}
+    .hc-results{margin-top:.2rem}
+    .hc-loading{display:flex;align-items:center;gap:.7rem;justify-content:center;font-family:var(--font-ui);font-size:.78rem;color:rgba(255,255,255,.6);padding:1.2rem 0}
+    .hc-spin{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.15);border-top-color:var(--accent);border-radius:50%;animation:hcspin .7s linear infinite;flex-shrink:0}
+    @keyframes hcspin{to{transform:rotate(360deg)}}
+    .hc-target{font-family:var(--font-ui);font-size:.7rem;color:rgba(255,255,255,.4);text-align:center;margin-bottom:.9rem;word-break:break-all}
+    .hc-target strong{color:rgba(255,255,255,.7)}
+    .hc-scoregrid{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;margin-bottom:1rem}
+    .hc-score{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-sm);padding:.85rem .6rem;text-align:center}
+    .hc-score-num{font-family:var(--font-head);font-size:1.9rem;font-weight:900;line-height:1}
+    .hc-score-lbl{font-family:var(--font-ui);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:.35rem}
+    .hc-good{color:#34c759}.hc-mid{color:#f0a020}.hc-bad{color:#ff5a4d}
+    .hc-metric{font-family:var(--font-ui);font-size:.72rem;color:rgba(255,255,255,.55);text-align:center;margin-bottom:1rem}
+    .hc-metric strong{color:rgba(255,255,255,.85)}
+    .hc-findings{list-style:none;padding:0;margin:0 0 1.1rem}
+    .hc-finding{display:flex;gap:.55rem;align-items:flex-start;font-family:var(--font-ui);font-size:.76rem;line-height:1.5;color:rgba(255,255,255,.72);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .hc-finding:last-child{border-bottom:none}
+    .hc-finding svg{width:14px;height:14px;flex-shrink:0;margin-top:2px;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .hc-finding.warn svg{stroke:#ff5a4d}.hc-finding.ok svg{stroke:#34c759}
+    .hc-cta-wrap{text-align:center}
+    .hc-cta-line{font-family:var(--font-body);font-size:.82rem;font-style:italic;color:rgba(255,255,255,.6);margin-bottom:.8rem;line-height:1.5}
+    .hc-again{display:block;background:none;border:none;color:rgba(255,255,255,.35);font-family:var(--font-ui);font-size:.68rem;cursor:pointer;margin:.7rem auto 0;text-decoration:underline}
+    .hc-error{font-family:var(--font-ui);font-size:.8rem;color:rgba(255,255,255,.7);line-height:1.6;text-align:center;padding:.5rem 0 1rem}
+
     /* ── CTA FINAL ── */
     .cta-final{background:var(--charcoal);padding:6rem 6vw;text-align:center;position:relative;overflow:hidden}
     .cta-final::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(196,154,42,.06) 0%,transparent 65%);top:-200px;left:50%;transform:translateX(-50%);pointer-events:none}
@@ -1141,26 +1169,26 @@
 </section>
 
 <!-- FOOTER LEAD MAGNET -->
-<div class="footer-magnet">
-  <div class="magnet-inner">
-    <div>
-      <div class="magnet-eyebrow">Free Resource</div>
-      <div class="magnet-title">Website Health Checklist</div>
-      <div class="magnet-desc">Not ready to buy yet? Use the same checklist I run on every Baltimore business site. 12 questions, 5 minutes. You'll know exactly why customers aren't calling — and what a fix would cost.</div>
+<div class="footer-magnet" id="healthcheck">
+  <div class="magnet-inner hc-inner">
+    <div class="hc-intro">
+      <div class="magnet-eyebrow">Free Instant Audit</div>
+      <div class="magnet-title">Website Health Check</div>
+      <div class="magnet-desc">Already have a site and wondering why it isn't bringing in customers? Drop your address below. In about 20 seconds I'll run the same checks I run before every rebuild — speed, mobile experience, SEO, and best practices — straight from Google's own tools, and show you in plain English what's costing you business.</div>
       <div class="magnet-checklist">
-        <div class="magnet-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>PageSpeed score check</div>
-        <div class="magnet-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Google Maps visibility test</div>
-        <div class="magnet-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Mobile responsiveness audit</div>
-        <div class="magnet-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>SEO basics checklist</div>
+        <div class="magnet-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Real Google PageSpeed score</div>
+        <div class="magnet-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Mobile experience check</div>
+        <div class="magnet-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>SEO &amp; visibility audit</div>
+        <div class="magnet-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Plain-English fixes</div>
       </div>
     </div>
-    <div>
-      <form class="magnet-form" onsubmit="handleMagnet(event)">
-        <input type="text" class="magnet-input" id="magnet-name" placeholder="Your name" required/>
-        <input type="email" class="magnet-input" id="magnet-email" placeholder="Your email" required/>
-        <button type="submit" class="magnet-btn">Send Me the Checklist</button>
-        <div class="magnet-fine">No spam. One email. Unsubscribe anytime.</div>
-      </form>
+    <div class="hc-panel">
+      <div class="hc-entry" id="hc-entry">
+        <input type="url" inputmode="url" class="magnet-input hc-url" id="hc-url" placeholder="yourwebsite.com" autocomplete="url"/>
+        <button type="button" class="magnet-btn" id="hc-run">Run My Free Health Check</button>
+        <div class="magnet-fine">Free · no email required · results in ~20 seconds</div>
+      </div>
+      <div class="hc-results" id="hc-results" hidden></div>
     </div>
   </div>
 </div>
@@ -1168,7 +1196,7 @@
 <!-- CTA FINAL -->
 <section class="cta-final">
   <h2>Your competitors have websites.<br><span class="serif">Now you can too.</span></h2>
-  <p class="section-body" style="margin-bottom:2.5rem">A $200 site. 48 hours. One flat price. If it doesn't bring in a single new customer in the first 30 days, email me and I'll tell you exactly why — free. That's how confident I am this works.</p>
+  <p class="section-body" style="margin-bottom:2.5rem">Starting at $200 — starter sites go live in as little as 48 hours, larger builds in a week or two. One flat price you know up front, no subscriptions, and you own every file. Let's make your business look as good online as it already is in person.</p>
   <a href="#contact" class="btn-accent">Get a Free Quote</a>
   <div class="cta-final-note">Or email: andrewlikoudis@gmail.com</div>
 </section>
@@ -1298,13 +1326,103 @@ function handleSubmit(e){
 }
 
 /* ── Lead magnet ── */
-function handleMagnet(e){
-  e.preventDefault();
-  const name=document.getElementById('magnet-name').value;
-  const email=document.getElementById('magnet-email').value;
-  window.location.href=`mailto:andrewlikoudis@gmail.com?subject=Website Health Checklist Request&body=${encodeURIComponent(`Checklist request from: ${name}\nEmail: ${email}`)}`;
-  e.target.innerHTML='<div style="color:#d4a843;font-family:var(--font-head);font-size:.82rem;font-weight:700;text-align:center;padding:1rem">Got it — check your inbox shortly.</div>';
-}
+/* ---- Website Health Check: live PageSpeed-powered audit ---- */
+(function(){
+  var PSI_KEY=""; /* optional: paste a Google PageSpeed Insights API key here for higher rate limits */
+  var runBtn=document.getElementById('hc-run');
+  if(!runBtn) return;
+  var urlInput=document.getElementById('hc-url'),
+      results=document.getElementById('hc-results');
+
+  function normUrl(v){
+    v=(v||'').trim();
+    if(!v) return '';
+    if(!/^https?:\/\//i.test(v)) v='https://'+v;
+    try{ var u=new URL(v); if(u.hostname.indexOf('.')<0) return ''; return u.href; }catch(e){ return ''; }
+  }
+  function band(s){ return s>=90?'hc-good':s>=50?'hc-mid':'hc-bad'; }
+  function pct(x){ return (x==null)?null:Math.round(x*100); }
+  function fetchTimeout(u,ms){ return Promise.race([ fetch(u), new Promise(function(_,rej){ setTimeout(function(){rej(new Error('timeout'));},ms); }) ]); }
+
+  function run(){
+    var url=normUrl(urlInput.value);
+    if(!url){ urlInput.focus(); urlInput.style.borderColor='#ff5a4d'; return; }
+    urlInput.style.borderColor='';
+    runBtn.disabled=true; runBtn.textContent='Scanning…';
+    results.hidden=false;
+    var host; try{ host=new URL(url).hostname.replace(/^www\./,''); }catch(e){ host=url; }
+    results.innerHTML='<div class="hc-loading"><div class="hc-spin"></div><div>Scanning <strong>'+host+'</strong> — speed, mobile, SEO…</div></div>';
+    var api='https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='+encodeURIComponent(url)
+      +'&strategy=mobile&category=performance&category=seo&category=accessibility&category=best-practices'
+      +(PSI_KEY?('&key='+PSI_KEY):'');
+    fetchTimeout(api,38000).then(function(r){ return r.json(); }).then(function(d){
+      if(!d||!d.lighthouseResult||!d.lighthouseResult.categories){ throw new Error('no data'); }
+      render(d, host);
+    }).catch(function(){ showError(host); });
+  }
+
+  function render(d, host){
+    var c=d.lighthouseResult.categories, a=d.lighthouseResult.audits||{};
+    var perf=pct(c.performance&&c.performance.score),
+        seo=pct(c.seo&&c.seo.score),
+        acc=pct(c.accessibility&&c.accessibility.score),
+        bp=pct(c['best-practices']&&c['best-practices'].score);
+    var lcp=(a['largest-contentful-paint']||{}).displayValue||null;
+    var weight=(a['total-byte-weight']||{}).displayValue||null;
+    function cell(n,lbl){ return n==null?'':'<div class="hc-score"><div class="hc-score-num '+band(n)+'">'+n+'</div><div class="hc-score-lbl">'+lbl+'</div></div>'; }
+    var f=[];
+    if(perf!=null&&perf<90) f.push(['warn','Your site loads slowly on phones. Most visitors leave a page that takes over 3 seconds — and most local searches happen on mobile.']);
+    if(lcp) f.push([(perf!=null&&perf>=90)?'ok':'warn','Largest content paints in '+lcp+'. Under 2.5s is what keeps visitors from bouncing.']);
+    if(seo!=null&&seo<90) f.push(['warn','Search engines aren\u2019t reading your site cleanly — lost Google visibility when customers look for you.']);
+    if(acc!=null&&acc<90) f.push(['warn','Parts of the site are hard to read or use, quietly turning customers away.']);
+    if(bp!=null&&bp<90) f.push(['warn','It\u2019s missing modern best practices — security, mobile, code health — that Google rewards.']);
+    if(weight) f.push([(perf!=null&&perf>=90)?'ok':'warn','The page weighs '+weight+'. My hand-built sites ship under 1MB and load almost instantly.']);
+    if(!f.length) f.push(['ok','Strong scores across the board. A few tweaks could still squeeze out more speed and conversions.']);
+    f=f.slice(0,4);
+    var ico={warn:'<svg viewBox="0 0 24 24"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
+             ok:'<svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>'};
+    var findHtml=f.map(function(x){ return '<li class="hc-finding '+x[0]+'">'+ico[x[0]]+'<span>'+x[1]+'</span></li>'; }).join('');
+    var weak=[perf,seo,acc,bp].filter(function(v){return v!=null&&v<90;});
+    var ctaLine=weak.length?'Want these fixed? I rebuild sites to score 90+ across the board — fast, mobile, and built to bring in customers.':'Even a strong site can convert better. Let\u2019s turn those scores into more calls and bookings.';
+    results.innerHTML=
+      '<div class="hc-target">Results for <strong>'+host+'</strong> · via Google PageSpeed</div>'
+      +'<div class="hc-scoregrid">'+cell(perf,'Speed')+cell(seo,'SEO')+cell(acc,'Accessibility')+cell(bp,'Best Practices')+'</div>'
+      +(lcp?'<div class="hc-metric">Loads its main content in <strong>'+lcp+'</strong></div>':'')
+      +'<ul class="hc-findings">'+findHtml+'</ul>'
+      +'<div class="hc-cta-wrap"><div class="hc-cta-line">'+ctaLine+'</div>'
+      +'<button type="button" class="magnet-btn" id="hc-fix">Get My Free Fix Quote</button>'
+      +'<button type="button" class="hc-again" id="hc-again">Check another site</button></div>';
+    document.getElementById('hc-fix').addEventListener('click',function(){ toQuote(host,{perf:perf,seo:seo,acc:acc,bp:bp}); });
+    document.getElementById('hc-again').addEventListener('click',reset);
+    runBtn.disabled=false; runBtn.textContent='Run My Free Health Check';
+  }
+
+  function showError(host){
+    results.innerHTML='<div class="hc-error">I couldn\u2019t reach <strong style="color:rgba(255,255,255,.85)">'+host+'</strong> automatically — some sites block scanners, or the address may be off. Send it over and I\u2019ll review it by hand, free.<br><br>'
+      +'<button type="button" class="magnet-btn" id="hc-fix">Get a Free Review</button>'
+      +'<button type="button" class="hc-again" id="hc-again">Try another address</button></div>';
+    document.getElementById('hc-fix').addEventListener('click',function(){ toQuote(host,null); });
+    document.getElementById('hc-again').addEventListener('click',reset);
+    runBtn.disabled=false; runBtn.textContent='Run My Free Health Check';
+  }
+
+  function toQuote(host,scores){
+    var cu=document.getElementById('currenturl'), msg=document.getElementById('message');
+    if(cu) cu.value=host;
+    if(msg){
+      var s=scores?(' My free health check scored it — Speed '+(scores.perf!=null?scores.perf:'?')+', SEO '+(scores.seo!=null?scores.seo:'?')+', Accessibility '+(scores.acc!=null?scores.acc:'?')+', Best Practices '+(scores.bp!=null?scores.bp:'?')+'.'):'';
+      msg.value='I ran the free health check on '+host+'.'+s+' I\u2019d like a quote to fix these and bring in more customers.';
+    }
+    var contact=document.getElementById('contact');
+    if(contact&&contact.scrollIntoView) contact.scrollIntoView({behavior:'smooth'});
+    setTimeout(function(){ var fn=document.getElementById('fname'); if(fn) fn.focus(); },650);
+  }
+
+  function reset(){ results.hidden=true; results.innerHTML=''; urlInput.value=''; urlInput.focus(); }
+
+  runBtn.addEventListener('click',run);
+  urlInput.addEventListener('keydown',function(e){ if(e.key==='Enter'){ e.preventDefault(); run(); } });
+})();
 
 /* ---- hero: live cycling browser of real client sites ---- */
 (function(){
