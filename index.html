@@ -84,7 +84,19 @@
     .b-dot{width:9px;height:9px;border-radius:50%}
     .b-dot.r{background:#ff5f57}.b-dot.y{background:#febc2e}.b-dot.g{background:#28c840}
     .b-urlbar{flex:1;background:rgba(255,255,255,.06);border-radius:4px;padding:.28rem .8rem;font-family:var(--font-ui);font-size:.62rem;color:rgba(255,255,255,.3)}
-    .browser-viewport{height:300px;overflow:hidden}
+    .browser-viewport{height:300px;overflow:hidden;position:relative}
+    .browser{display:block;text-decoration:none;cursor:pointer}
+    .live-shots{position:relative;width:100%;height:100%;background:var(--charcoal-mid)}
+    .live-shots img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;opacity:0;transition:opacity .9s ease}
+    .live-shots img.on{opacity:1}
+    .b-urlbar{display:flex;align-items:center;gap:1px}
+    .b-caret{display:inline-block;width:1px;height:.74rem;background:rgba(255,255,255,.55);margin-left:1px;animation:bcaret 1.05s steps(1) infinite}
+    @keyframes bcaret{50%{opacity:0}}
+    .live-tag{position:absolute;top:11px;right:11px;background:rgba(20,17,13,.72);backdrop-filter:blur(4px);color:rgba(255,255,255,.94);font-family:var(--font-ui);font-size:.6rem;font-weight:600;letter-spacing:.04em;padding:.32rem .62rem;border-radius:30px;border:1px solid rgba(255,255,255,.14);pointer-events:none;opacity:0;transform:translateY(-4px);transition:opacity .35s ease,transform .35s ease}
+    .hero-visual:hover .live-tag{opacity:1;transform:none}
+    .live-dots{position:absolute;bottom:11px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:2}
+    .live-dots span{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.4);transition:width .3s ease,background .3s ease}
+    .live-dots span.on{background:var(--accent);width:16px;border-radius:3px}
     .mv-ana{height:100%;background:linear-gradient(160deg,#0d1c3a 0%,#162d58 100%);font-family:var(--font-ui)}
     .mv-ana-flag{height:5px;background:linear-gradient(90deg,#002d62 25%,#fff 25% 28%,#c8102e 28% 72%,#fff 72% 75%,#002d62 75%)}
     .mv-ana-nav{display:flex;justify-content:space-between;align-items:center;padding:.8rem 1.4rem;background:rgba(0,45,98,.9)}
@@ -562,29 +574,24 @@
     </div>
   </div>
   <div class="hero-visual">
-    <div class="browser">
+    <a class="browser" id="liveBrowser" href="https://liquid1188.github.io/ana-restaurant/" target="_blank" rel="noopener" aria-label="View live client work — opens the current site in a new tab">
       <div class="browser-chrome">
         <div class="b-dots"><div class="b-dot r"></div><div class="b-dot y"></div><div class="b-dot g"></div></div>
-        <div class="b-urlbar">liquid1188.github.io/ana-restaurant</div>
+        <div class="b-urlbar"><span id="b-url">liquid1188.github.io/ana-restaurant</span><span class="b-caret" aria-hidden="true"></span></div>
       </div>
       <div class="browser-viewport">
-        <div class="mv-ana">
-          <div class="mv-ana-flag"></div>
-          <div class="mv-ana-nav">
-            <div class="mv-logo-box">ANA</div>
-            <div class="mv-nav-r"><div class="mv-nav-link"></div><div class="mv-nav-link"></div><div class="mv-nav-link"></div><div class="mv-cta-btn">Order</div></div>
-          </div>
-          <div class="mv-hero-body">
-            <div class="mv-eyebrow">Highlandtown · Baltimore</div>
-            <div class="mv-h1">Authentic Dominican<br><em>Food &amp; Community</em></div>
-            <div class="mv-sub">3314 Eastern Ave · Open Daily · (443) 555-0192</div>
-            <div class="mv-btns"><div class="mv-btn-p">Order Online</div><div class="mv-btn-o">View Menu</div></div>
-          </div>
-          <div class="mv-band"><div class="mv-band-t">Mon–Sat 11–10</div><div class="mv-band-t">Sun 12–8</div><div class="mv-band-t">Gallery</div><div class="mv-band-t">Contact</div></div>
-          <div class="mv-cards"><div class="mv-card"></div><div class="mv-card"></div><div class="mv-card"></div></div>
+        <div class="live-shots" id="liveShots">
+          <img class="on" src="screenshots/ana.webp" alt="Ana Restaurant — live client site" width="1280" height="800" fetchpriority="high">
+          <img src="screenshots/llf.webp" alt="Likoudis Legacy Foundation — live client site" width="1280" height="800" loading="lazy">
+          <img src="screenshots/ventures.webp" alt="Likoudis Ventures — live client site" width="1280" height="800" loading="lazy">
+          <img src="screenshots/brushsoul.webp" alt="Brush &amp; Soul Studio — live client site" width="1280" height="800" loading="lazy">
+          <img src="screenshots/roxane.webp" alt="Roxane Salonen — live client site" width="1280" height="800" loading="lazy">
+          <img src="screenshots/andrew.webp" alt="Andrew Likoudis — live client site" width="1280" height="800" loading="lazy">
         </div>
+        <div class="live-tag">Live client work ↗</div>
+        <div class="live-dots" id="liveDots" aria-hidden="true"></div>
       </div>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -1280,6 +1287,46 @@ function handleMagnet(e){
   window.location.href=`mailto:andrewlikoudis@gmail.com?subject=Website Health Checklist Request&body=${encodeURIComponent(`Checklist request from: ${name}\nEmail: ${email}`)}`;
   e.target.innerHTML='<div style="color:#d4a843;font-family:var(--font-head);font-size:.82rem;font-weight:700;text-align:center;padding:1rem">Got it — check your inbox shortly.</div>';
 }
+
+/* ---- hero: live cycling browser of real client sites ---- */
+(function(){
+  var shots=document.getElementById('liveShots');
+  if(!shots) return;
+  var link=document.getElementById('liveBrowser'),
+      urlEl=document.getElementById('b-url'),
+      dotsWrap=document.getElementById('liveDots'),
+      imgs=[].slice.call(shots.querySelectorAll('img'));
+  var data=[
+    ['https://liquid1188.github.io/ana-restaurant/','liquid1188.github.io/ana-restaurant'],
+    ['https://liquid1188.github.io/likoudis-legacy/','liquid1188.github.io/likoudis-legacy'],
+    ['https://liquid1188.github.io/likoudis-ventures/','liquid1188.github.io/likoudis-ventures'],
+    ['https://liquid1188.github.io/brush-and-soul-studio/','liquid1188.github.io/brush-and-soul-studio'],
+    ['https://liquid1188.github.io/roxane-salonen/','liquid1188.github.io/roxane-salonen'],
+    ['https://liquid1188.github.io/AndrewLikoudis/','liquid1188.github.io/AndrewLikoudis']
+  ];
+  data.forEach(function(_,k){var s=document.createElement('span');if(k===0)s.className='on';dotsWrap.appendChild(s);});
+  var dots=[].slice.call(dotsWrap.children);
+  var i=0, paused=false, typeTimer, holdTimer;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(link) link.href=data[0][0];
+  if(reduce){ urlEl.textContent=data[0][1]; return; }
+  function typeUrl(str){
+    urlEl.textContent=''; var j=0; clearInterval(typeTimer);
+    typeTimer=setInterval(function(){ urlEl.textContent=str.slice(0,++j); if(j>=str.length) clearInterval(typeTimer); }, 26);
+  }
+  function show(next){
+    imgs[i].classList.remove('on'); dots[i].classList.remove('on');
+    i=next;
+    imgs[i].classList.add('on'); dots[i].classList.add('on');
+    if(link) link.href=data[i][0];
+    typeUrl(data[i][1]);
+  }
+  function tick(){ if(!paused) show((i+1)%imgs.length); holdTimer=setTimeout(tick,3400); }
+  if(link){ link.addEventListener('mouseenter',function(){paused=true;}); link.addEventListener('mouseleave',function(){paused=false;}); }
+  document.addEventListener('visibilitychange',function(){ paused=document.hidden; });
+  typeUrl(data[0][1]);
+  holdTimer=setTimeout(tick,3400);
+})();
 </script>
 </body>
 </html>
