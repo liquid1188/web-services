@@ -4,6 +4,23 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lickity Split Web Design — Baltimore Small Business Websites</title>
+  <meta name="description" content="Professional small-business websites that load fast and look sharp. Built in Baltimore by Andrew Likoudis. Starter sites from $299, live in 48 hours."/>
+  <link rel="canonical" href="https://lickitysplit.andrewlikoudis.com/"/>
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://lickitysplit.andrewlikoudis.com/"/>
+  <meta property="og:title" content="Lickity Split Web Design — Baltimore Small Business Websites"/>
+  <meta property="og:description" content="Sites that load fast, look sharp, and win customers. Professional small-business websites built in Baltimore — from $299, live in 48 hours."/>
+  <meta property="og:image" content="https://lickitysplit.andrewlikoudis.com/og.jpg"/>
+  <meta property="og:image:width" content="2400"/>
+  <meta property="og:image:height" content="1260"/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:site_name" content="Lickity Split Web Design"/>
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Lickity Split Web Design — Baltimore Small Business Websites"/>
+  <meta name="twitter:description" content="Sites that load fast, look sharp, and win customers. From $299, live in 48 hours."/>
+  <meta name="twitter:image" content="https://lickitysplit.andrewlikoudis.com/og.jpg"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     :root{
@@ -582,6 +599,11 @@
       <div class="browser-viewport">
         <div class="live-shots" id="liveShots">
           <img class="on" src="screenshots/brushsoul.webp" alt="Brush &amp; Soul Studio — live client site" width="1280" height="800" fetchpriority="high">
+          <img src="screenshots/andrew.webp" alt="Andrew Likoudis — live client site" width="1280" height="800" loading="lazy">
+          <img src="screenshots/ana.webp" alt="Ana Restaurant — live client site" width="1280" height="800" loading="lazy">
+          <img src="screenshots/llf.webp" alt="Likoudis Legacy Foundation — live client site" width="1280" height="800" loading="lazy">
+          <img src="screenshots/ventures.webp" alt="Likoudis Ventures — live client site" width="1280" height="800" loading="lazy">
+          <img src="screenshots/roxane.webp" alt="Roxane Salonen — live client site" width="1280" height="800" loading="lazy">
         </div>
         <div class="live-tag">Live client work ↗</div>
         <div class="live-dots" id="liveDots" aria-hidden="true"></div>
@@ -1292,7 +1314,12 @@ function handleMagnet(e){
       dotsWrap=document.getElementById('liveDots'),
       imgs=[].slice.call(shots.querySelectorAll('img'));
   var data=[
-    ['https://brushandsoulstudio.com/','brushandsoulstudio.com']
+    ['https://brushandsoulstudio.com/','brushandsoulstudio.com'],
+    ['https://andrewlikoudis.com/','andrewlikoudis.com'],
+    ['https://liquid1188.github.io/ana-restaurant/','liquid1188.github.io/ana-restaurant'],
+    ['https://likoudislegacy.com/','likoudislegacy.com'],
+    ['https://liquid1188.github.io/likoudis-ventures/','liquid1188.github.io/likoudis-ventures'],
+    ['https://liquid1188.github.io/roxane-salonen/','liquid1188.github.io/roxane-salonen']
   ];
   if(data.length>1) data.forEach(function(_,k){var s=document.createElement('span');if(k===0)s.className='on';dotsWrap.appendChild(s);});
   var dots=[].slice.call(dotsWrap.children);
