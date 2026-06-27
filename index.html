@@ -1357,6 +1357,18 @@ function handleSubmit(e){
   function pct(x){ return (x==null)?null:Math.round(x*100); }
   function fetchTimeout(u,ms){ return Promise.race([ fetch(u), new Promise(function(_,rej){ setTimeout(function(){rej(new Error('timeout'));},ms); }) ]); }
 
+  function callPSI(api){
+    return fetchTimeout(api,38000).then(function(r){
+      if(r.status===429||r.status===403){ var e=new Error('quota'); e.code=r.status; throw e; }
+      return r.json();
+    }).then(function(d){
+      if(!d||!d.lighthouseResult||!d.lighthouseResult.categories){
+        var e=new Error('nodata'); if(d&&d.error&&d.error.code) e.code=d.error.code; throw e;
+      }
+      return d;
+    });
+  }
+
   function run(){
     var url=normUrl(urlInput.value);
     if(!url){ urlInput.focus(); urlInput.style.borderColor='#ff5a4d'; return; }
@@ -1368,10 +1380,13 @@ function handleSubmit(e){
     var api='https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='+encodeURIComponent(url)
       +'&strategy=mobile&category=performance&category=seo&category=accessibility&category=best-practices'
       +(PSI_KEY?('&key='+PSI_KEY):'');
-    fetchTimeout(api,38000).then(function(r){ return r.json(); }).then(function(d){
-      if(!d||!d.lighthouseResult||!d.lighthouseResult.categories){ throw new Error('no data'); }
-      render(d, host);
-    }).catch(function(){ showError(host); });
+    callPSI(api).then(function(d){ render(d, host); }).catch(function(){
+      // one retry after a short delay (clears transient rate limits)
+      results.innerHTML='<div class="hc-loading"><div class="hc-spin"></div><div>Still scanning <strong>'+host+'</strong>…</div></div>';
+      setTimeout(function(){
+        callPSI(api).then(function(d){ render(d, host); }).catch(function(){ showError(host); });
+      }, 2200);
+    });
   }
 
   function render(d, host){
@@ -1411,7 +1426,7 @@ function handleSubmit(e){
   }
 
   function showError(host){
-    results.innerHTML='<div class="hc-error">I couldn\u2019t reach <strong style="color:rgba(255,255,255,.85)">'+host+'</strong> automatically — some sites block scanners, or the address may be off. Send it over and I\u2019ll review it by hand, free.<br><br>'
+    results.innerHTML='<div class="hc-error">I couldn\u2019t pull an automated score for <strong style="color:rgba(255,255,255,.85)">'+host+'</strong> just now \u2014 the scan service is busy or the address may be off. Send it over and I\u2019ll run a full check by hand and get back to you, free.<br><br>'
       +'<button type="button" class="magnet-btn" id="hc-fix">Get a Free Review</button>'
       +'<button type="button" class="hc-again" id="hc-again">Try another address</button></div>';
     document.getElementById('hc-fix').addEventListener('click',function(){ toQuote(host,null); });
