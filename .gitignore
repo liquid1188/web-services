@@ -1,3 +1,6 @@
 node_modules/
 package.json
 package-lock.json
+qa_*/
+qa_*.mjs
+*.log
