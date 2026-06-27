@@ -75,7 +75,7 @@
     .nav-logo-sub{font-family:var(--font-ui);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:500}
     .lsmark{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-weight:700;font-size:.95rem;letter-spacing:0;text-transform:none;color:var(--white);white-space:nowrap}
     .lsmark .lsb{color:var(--accent)}
-    .hero-logo{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-weight:700;color:var(--white);font-size:clamp(1.55rem,4.6vw,3rem);letter-spacing:-.01em;line-height:1;margin-bottom:1.5rem;white-space:nowrap}
+    .hero-logo{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-weight:700;color:var(--white);font-size:clamp(1.55rem,5vw,3.45rem);letter-spacing:-.01em;line-height:1;margin-bottom:1.5rem;white-space:nowrap}
     .hero-logo .lsb{color:var(--accent)}
     .nav-items{display:flex;gap:2rem;align-items:center}
     .nav-items a{font-family:var(--font-ui);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
@@ -183,10 +183,11 @@
     .for-section{background:var(--white)}
     .for-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border-light)}
     @media(max-width:860px){.for-grid{grid-template-columns:1fr 1fr}}
-    .for-card{padding:.9rem 1.2rem;border-right:1px solid var(--border-light);border-bottom:1px solid var(--border-light);background:var(--white);transition:background .2s;display:flex;align-items:baseline;gap:.5rem;flex-wrap:nowrap}
+    .for-card{padding:.9rem 1.2rem;border-right:1px solid var(--border-light);border-bottom:1px solid var(--border-light);background:var(--white);transition:background .2s;display:flex;align-items:baseline;gap:.5rem;flex-wrap:nowrap;min-width:0}
     .for-card:hover{background:var(--parchment)}
     .for-card:nth-child(3n){border-right:none}
     @media(max-width:860px){.for-card:nth-child(3n){border-right:1px solid var(--border-light)}.for-card:nth-child(2n){border-right:none}}
+    @media(max-width:560px){.for-grid{grid-template-columns:1fr}.for-card{border-right:none!important}}
     .for-title{font-family:var(--font-head);font-size:.65rem;font-weight:700;color:var(--text-primary);letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;flex-shrink:0;line-height:1.6}
     .for-title::after{content:' —';color:var(--accent);font-weight:400}
     .for-desc{font-family:var(--font-body);font-size:.75rem;color:var(--text-secondary);line-height:1.6;min-width:0}
