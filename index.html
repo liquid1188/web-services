@@ -22,6 +22,13 @@
   <meta name="twitter:description" content="Sites that load fast, look sharp, and win customers. From $200, live in 48 hours."/>
   <meta name="twitter:image" content="https://lickitysplit.andrewlikoudis.com/og.jpg"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&text=%3C%2F%3Elickitysp%20&display=swap" rel="stylesheet"/>
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"/>
+  <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+  <link rel="shortcut icon" href="/favicon.ico"/>
   <style>
     :root{
       --charcoal:#161412;
@@ -66,6 +73,8 @@
     .nav-logo{text-decoration:none;display:flex;flex-direction:column;gap:.08rem}
     .nav-logo-name{font-family:var(--font-head);font-size:.88rem;font-weight:800;color:var(--white);letter-spacing:-.01em;line-height:1}
     .nav-logo-sub{font-family:var(--font-ui);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:500}
+    .lsmark{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-weight:700;font-size:.95rem;letter-spacing:0;text-transform:none;color:var(--white);white-space:nowrap}
+    .lsmark .lsb{color:var(--accent)}
     .nav-items{display:flex;gap:2rem;align-items:center}
     .nav-items a{font-family:var(--font-ui);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
     .nav-items a:hover{color:rgba(255,255,255,.9)}
@@ -582,7 +591,7 @@
 <!-- NAV -->
 <nav id="main-nav">
   <a href="#" class="nav-logo">
-    <span class="nav-logo-name">Lickity Split Web Design</span>
+    <span class="nav-logo-name lsmark"><span class="lsb">&lt;</span>lickity split <span class="lsb">/&gt;</span></span>
     <span class="nav-logo-sub">By Andrew Likoudis · Baltimore</span>
   </a>
   <div class="nav-items" id="nav-items">
