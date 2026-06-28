@@ -4,3 +4,5 @@ package-lock.json
 qa_*/
 qa_*.mjs
 *.log
+*.mjs
+build_pages.py
