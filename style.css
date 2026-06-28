@@ -607,7 +607,7 @@
     @media(max-width:700px){
       .nav-toggle{display:flex}
       .nav-logo-sub{display:none}
-      .nav-items{position:fixed;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(22,20,18,.99);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 24px 48px rgba(0,0,0,.45);padding:.4rem 6vw 1.6rem;transform:translateY(-14px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .24s ease,transform .24s ease,visibility .24s}
+      .nav-items{position:fixed;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#161412;backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 24px 48px rgba(0,0,0,.55);padding:.4rem 6vw 1.6rem;transform:translateY(-14px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .24s ease,transform .24s ease,visibility .24s}
       nav.open .nav-items{transform:translateY(0);opacity:1;visibility:visible;pointer-events:auto}
       .nav-items a:not(.nav-cta){display:block;padding:1rem .2rem;font-size:.82rem;letter-spacing:.06em;color:rgba(255,255,255,.78);border-bottom:1px solid rgba(255,255,255,.07)}
       .nav-items a:not(.nav-cta):hover{color:#fff}
