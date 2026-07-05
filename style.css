@@ -629,3 +629,5 @@
 
     h1.as-h2{font-family:var(--font-head);font-size:clamp(2rem,4vw,3rem);font-weight:900;line-height:1;letter-spacing:-.03em;color:var(--text-primary);margin-bottom:1.2rem}
     .pricing h1.as-h2{color:var(--white)}
+
+    nav + .footer-magnet{padding-top:7.5rem}
