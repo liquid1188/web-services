@@ -99,7 +99,7 @@ function handleSubmit(e){
   e.preventDefault();
   const v=id=>document.getElementById(id).value;
   const body=`New quote request from ${v('fname')} ${v('lname')}\n\nEmail: ${v('email')}\nPhone: ${v('phone')||'Not provided'}\nBusiness: ${v('bizname')}\nType: ${v('biztype')}\nBudget: ${v('budget')||'Not specified'}\nCurrent URL: ${v('currenturl')||'None'}\n\nMessage:\n${v('message')||'None'}`;
-  window.location.href=`mailto:andrewlikoudis@gmail.com?subject=Quote Request — ${v('bizname')}&body=${encodeURIComponent(body)}`;
+  window.location.href=`mailto:arlikoudis@gmail.com?subject=Quote Request — ${v('bizname')}&body=${encodeURIComponent(body)}`;
   document.getElementById('quote-form').style.display='none';
   document.getElementById('form-success').style.display='block';
 }
