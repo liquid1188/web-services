@@ -170,7 +170,7 @@ function handleSubmit(e){
     if(seo!=null&&seo<90) f.push(['warn','Search engines aren\u2019t reading your site cleanly — lost Google visibility when customers look for you.']);
     if(acc!=null&&acc<90) f.push(['warn','Parts of the site are hard to read or use, quietly turning customers away.']);
     if(bp!=null&&bp<90) f.push(['warn','It\u2019s missing modern best practices — security, mobile, code health — that Google rewards.']);
-    if(weight) f.push([(perf!=null&&perf>=90)?'ok':'warn','The page weighs '+weight+'. My hand-built sites ship under 1MB and load almost instantly.']);
+    if(weight) f.push([(perf!=null&&perf>=90)?'ok':'warn','The page weighs '+weight+'. My custom-built sites ship under 1MB and load almost instantly.']);
     if(!f.length) f.push(['ok','Strong scores across the board. A few tweaks could still squeeze out more speed and conversions.']);
     f=f.slice(0,4);
     var ico={warn:'<svg viewBox="0 0 24 24"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
@@ -192,7 +192,7 @@ function handleSubmit(e){
   }
 
   function showError(host){
-    results.innerHTML='<div class="hc-error">I couldn\u2019t pull an automated score for <strong style="color:rgba(255,255,255,.85)">'+host+'</strong> just now \u2014 the scan service is busy or the address may be off. Send it over and I\u2019ll run a full check by hand and get back to you, free.<br><br>'
+    results.innerHTML='<div class="hc-error">I couldn\u2019t pull an automated score for <strong style="color:rgba(255,255,255,.85)">'+host+'</strong> just now \u2014 the scan service is busy or the address may be off. Send it over and I\u2019ll run a full check myself and get back to you, free.<br><br>'
       +'<button type="button" class="magnet-btn" id="hc-fix">Get a Free Review</button>'
       +'<button type="button" class="hc-again" id="hc-again">Try another address</button></div>';
     document.getElementById('hc-fix').addEventListener('click',function(){ toQuote(host,null); });
