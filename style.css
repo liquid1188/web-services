@@ -144,7 +144,7 @@
     .eyebrow{display:inline-flex;align-items:center;gap:.8rem;font-family:var(--font-head);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:1.2rem}
     .eyebrow::before{content:'';width:20px;height:1.5px;background:var(--accent);flex-shrink:0}
     h2{font-family:var(--font-head);font-size:clamp(2rem,4vw,3rem);font-weight:900;line-height:1;letter-spacing:-.03em;color:var(--text-primary);margin-bottom:1.2rem}
-    h2 .serif{font-family:var(--font-body);font-weight:400;font-style:italic;letter-spacing:-.01em}
+    h2 .serif,h1.as-h2 .serif{font-family:var(--font-body);font-weight:400;font-style:italic;letter-spacing:-.01em}
     .section-body{font-family:var(--font-body);font-size:1rem;color:var(--text-secondary);line-height:1.9;max-width:520px;margin-bottom:3.5rem}
 
     /* ── SERVICES ── */
@@ -626,3 +626,6 @@
 .nav-items a:not(.nav-cta).active{color:#fff;position:relative}
 .nav-items a:not(.nav-cta).active::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--accent);border-radius:2px}
 @media(max-width:700px){.nav-items a:not(.nav-cta).active::after{display:none}.nav-items a:not(.nav-cta).active{color:var(--accent)}}
+
+    h1.as-h2{font-family:var(--font-head);font-size:clamp(2rem,4vw,3rem);font-weight:900;line-height:1;letter-spacing:-.03em;color:var(--text-primary);margin-bottom:1.2rem}
+    .pricing h1.as-h2{color:var(--white)}
