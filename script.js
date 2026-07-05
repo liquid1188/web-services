@@ -227,12 +227,14 @@ function handleSubmit(e){
       dotsWrap=document.getElementById('liveDots'),
       imgs=[].slice.call(shots.querySelectorAll('img'));
   var data=[
+    ['https://liquid1188.github.io/christa-dalmazio/','liquid1188.github.io/christa-dalmazio'],
+    ['https://liquid1188.github.io/collin-westerlund-site/','liquid1188.github.io/collin-westerlund-site'],
     ['https://brushandsoulstudio.com/','brushandsoulstudio.com'],
-    ['https://andrewlikoudis.com/','andrewlikoudis.com'],
-    ['https://liquid1188.github.io/ana-restaurant/','liquid1188.github.io/ana-restaurant'],
-    ['https://likoudislegacy.com/','likoudislegacy.com'],
+    ['https://liquid1188.github.io/roxane-salonen/','liquid1188.github.io/roxane-salonen'],
     ['https://liquid1188.github.io/likoudis-ventures/','liquid1188.github.io/likoudis-ventures'],
-    ['https://liquid1188.github.io/roxane-salonen/','liquid1188.github.io/roxane-salonen']
+    ['https://likoudislegacy.com/','likoudislegacy.com'],
+    ['https://andrewlikoudis.com/','andrewlikoudis.com'],
+    ['https://liquid1188.github.io/ana-restaurant/','liquid1188.github.io/ana-restaurant']
   ];
   if(data.length>1) data.forEach(function(_,k){var s=document.createElement('span');if(k===0)s.className='on';dotsWrap.appendChild(s);});
   var dots=[].slice.call(dotsWrap.children);
