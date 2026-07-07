@@ -460,6 +460,12 @@
     .hc-again{display:block;background:none;border:none;color:rgba(255,255,255,.35);font-family:var(--font-ui);font-size:.68rem;cursor:pointer;margin:.7rem auto 0;text-decoration:underline}
     .hc-error{font-family:var(--font-ui);font-size:.8rem;color:rgba(255,255,255,.7);line-height:1.6;text-align:center;padding:.5rem 0 1rem}
 
+    /* ── IN THEIR WORDS (home) ── */
+    .words-section{background:var(--parchment)}
+    .words-section .testi-wrap.home-testi{margin:0;max-width:640px}
+    .words-section .testi-card{background:var(--white)}
+    .words-section .testi-quote{font-size:.95rem}
+
     /* ── CTA FINAL ── */
     .cta-final{background:var(--charcoal);padding:6rem 6vw;text-align:center;position:relative;overflow:hidden}
     .cta-final::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(196,154,42,.06) 0%,transparent 65%);top:-200px;left:50%;transform:translateX(-50%);pointer-events:none}
