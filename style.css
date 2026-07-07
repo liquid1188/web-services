@@ -239,7 +239,7 @@
     .port-card{display:flex;flex-direction:column}
     .port-shot{display:block;border-radius:10px;overflow:hidden;text-decoration:none;margin-bottom:1.5rem;background:var(--charcoal-mid);box-shadow:var(--shadow-lg),0 0 0 1px rgba(0,0,0,.06);transition:transform .3s ease,box-shadow .3s ease}
     .port-shot:hover{transform:translateY(-6px);box-shadow:var(--shadow-xl),0 0 0 1px rgba(0,0,0,.08)}
-    .port-img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:top center}
+    .port-img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:top center}
     .port-third{margin-top:3.5rem;padding-top:3.5rem;border-top:1px solid var(--border-light);display:grid;grid-template-columns:200px 1fr;gap:2.5rem;align-items:center}
     @media(max-width:560px){.port-third{grid-template-columns:1fr}}
     .port-third-card{background:linear-gradient(145deg,#0d1f0d,#1a3a1a);border-radius:8px;height:130px;display:flex;align-items:center;justify-content:center;font-family:var(--font-body);font-size:.9rem;font-style:italic;color:rgba(141,184,122,.8);border:1px solid rgba(141,184,122,.1);box-shadow:var(--shadow-md)}
@@ -506,7 +506,7 @@
     .cs-media{position:relative;min-width:0}
     .cs-shot{display:block;border-radius:10px;overflow:hidden;text-decoration:none;background:var(--charcoal-mid);box-shadow:var(--shadow-lg),0 0 0 1px rgba(0,0,0,.06);transition:transform .35s ease,box-shadow .35s ease;position:relative}
     .cs-shot:hover{transform:translateY(-6px);box-shadow:var(--shadow-xl),0 0 0 1px rgba(0,0,0,.08)}
-    .cs-img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:top center}
+    .cs-img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:top center}
     .cs-view{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:flex-end;padding:1rem;background:linear-gradient(to top,rgba(22,20,18,.55),transparent 50%);opacity:0;transition:opacity .3s ease;pointer-events:none}
     .cs-shot:hover .cs-view{opacity:1}
     .cs-view span{font-family:var(--font-head);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(196,154,42,.94);padding:.42rem .85rem;border-radius:30px;display:inline-flex;align-items:center;gap:.4rem}
@@ -539,7 +539,7 @@
     .more-card{display:flex;flex-direction:column;min-width:0}
     .more-shot{position:relative;display:block;border-radius:8px;overflow:hidden;text-decoration:none;background:var(--charcoal-mid);box-shadow:var(--shadow-md),0 0 0 1px rgba(0,0,0,.06);margin-bottom:1.1rem;transition:transform .3s ease,box-shadow .3s ease}
     .more-shot:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg),0 0 0 1px rgba(0,0,0,.08)}
-    .more-img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:top center;transition:transform .5s ease}
+    .more-img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:top center;transition:transform .5s ease}
     .more-shot:hover .more-img{transform:scale(1.04)}
     .more-view{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:flex-end;padding:.8rem;background:linear-gradient(to top,rgba(22,20,18,.5),transparent 55%);opacity:0;transition:opacity .3s ease;pointer-events:none}
     .more-shot:hover .more-view{opacity:1}
