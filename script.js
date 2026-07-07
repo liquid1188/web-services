@@ -107,7 +107,7 @@ function handleSubmit(e){
 /* ── Lead magnet ── */
 /* ---- Website Health Check: live PageSpeed-powered audit ---- */
 (function(){
-  var PSI_KEY=""; /* optional: paste a Google PageSpeed Insights API key here for higher rate limits */
+  var PSI_KEY="AIzaSyCyzk0dHSfZ040q6KmyP3Fb-Im_N8IyK-w"; /* referrer-locked to lickitysplitweb.com; PSI API only */
   var runBtn=document.getElementById('hc-run');
   if(!runBtn) return;
   var urlInput=document.getElementById('hc-url'),
