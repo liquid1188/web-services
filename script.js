@@ -230,7 +230,6 @@ function handleSubmit(e){
     ['https://brushandsoulstudio.com/','brushandsoulstudio.com'],
     ['https://liquid1188.github.io/roxane-salonen/','liquid1188.github.io/roxane-salonen'],
     ['https://liquid1188.github.io/collin-westerlund-site/','liquid1188.github.io/collin-westerlund-site'],
-    ['https://christadalmazio.com/','christadalmazio.com'],
     ['https://likoudislegacy.com/','likoudislegacy.com'],
     ['https://andrewlikoudis.com/','andrewlikoudis.com'],
     ['https://liquid1188.github.io/ana-restaurant/','liquid1188.github.io/ana-restaurant']
