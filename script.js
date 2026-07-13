@@ -108,6 +108,7 @@ async function handleSubmit(e){
       body:JSON.stringify({
         _subject:`Quote Request \u2014 ${v('bizname')}`,
         _template:'table',
+        _replyto:v('email'),
         Name:`${v('fname')} ${v('lname')}`,
         Email:v('email'),
         Phone:v('phone')||'Not provided',
