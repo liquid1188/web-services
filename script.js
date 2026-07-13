@@ -95,14 +95,39 @@ function toggleFaq(btn){
 }
 
 /* ── Quote form ── */
-function handleSubmit(e){
+async function handleSubmit(e){
   e.preventDefault();
   const v=id=>document.getElementById(id).value;
-  const body=`New quote request from ${v('fname')} ${v('lname')}\n\nEmail: ${v('email')}\nPhone: ${v('phone')||'Not provided'}\nBusiness: ${v('bizname')}\nType: ${v('biztype')}\nBudget: ${v('budget')||'Not specified'}\nCurrent URL: ${v('currenturl')||'None'}\n\nMessage:\n${v('message')||'None'}`;
-  window.location.href=`mailto:arlikoudis@gmail.com?subject=Quote Request — ${v('bizname')}&body=${encodeURIComponent(body)}`;
-  document.getElementById('quote-form').style.display='none';
-  document.getElementById('form-success').style.display='block';
+  const btn=document.querySelector('#quote-form .form-btn');
+  const orig=btn.textContent;
+  btn.textContent='Sending\u2026'; btn.disabled=true;
+  try{
+    const res=await fetch('https://formsubmit.co/ajax/a5a47df98fb384d4876a60b247bca992',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        _subject:`Quote Request \u2014 ${v('bizname')}`,
+        _template:'table',
+        Name:`${v('fname')} ${v('lname')}`,
+        Email:v('email'),
+        Phone:v('phone')||'Not provided',
+        Business:v('bizname'),
+        Type:v('biztype'),
+        Budget:v('budget')||'Not specified',
+        'Current URL':v('currenturl')||'None',
+        Message:v('message')||'None'
+      })
+    });
+    const data=await res.json();
+    if(!res.ok||data.success==='false') throw new Error(data.message||'Send failed');
+    document.getElementById('quote-form').style.display='none';
+    document.getElementById('form-success').style.display='block';
+  }catch(err){
+    btn.textContent=orig; btn.disabled=false;
+    alert('Sorry \u2014 the form could not send. Please email arlikoudis@gmail.com directly.');
+  }
 }
+
 
 /* ── Lead magnet ── */
 /* ---- Website Health Check: live PageSpeed-powered audit ---- */
