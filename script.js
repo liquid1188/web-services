@@ -254,7 +254,7 @@ async function handleSubmit(e){
       imgs=[].slice.call(shots.querySelectorAll('img'));
   var data=[
     ['https://brushandsoulstudio.com/','brushandsoulstudio.com'],
-    ['https://liquid1188.github.io/roxane-salonen/','liquid1188.github.io/roxane-salonen'],
+    ['https://roxanesalonen.com/','roxanesalonen.com'],
     ['https://liquid1188.github.io/collin-westerlund-site/','liquid1188.github.io/collin-westerlund-site'],
     ['https://likoudislegacy.com/','likoudislegacy.com'],
     ['https://andrewlikoudis.com/','andrewlikoudis.com'],
