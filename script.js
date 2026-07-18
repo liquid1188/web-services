@@ -257,8 +257,7 @@ async function handleSubmit(e){
     ['https://roxanesalonen.com/','roxanesalonen.com'],
     ['https://collinwesterlundmusic.com/','collinwesterlundmusic.com'],
     ['https://likoudislegacy.com/','likoudislegacy.com'],
-    ['https://andrewlikoudis.com/','andrewlikoudis.com'],
-    ['https://liquid1188.github.io/ana-restaurant/','liquid1188.github.io/ana-restaurant']
+    ['https://andrewlikoudis.com/','andrewlikoudis.com']
   ];
   if(data.length>1) data.forEach(function(_,k){var s=document.createElement('span');if(k===0)s.className='on';dotsWrap.appendChild(s);});
   var dots=[].slice.call(dotsWrap.children);
