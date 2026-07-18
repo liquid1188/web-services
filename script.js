@@ -255,7 +255,7 @@ async function handleSubmit(e){
   var data=[
     ['https://brushandsoulstudio.com/','brushandsoulstudio.com'],
     ['https://roxanesalonen.com/','roxanesalonen.com'],
-    ['https://liquid1188.github.io/collin-westerlund-site/','liquid1188.github.io/collin-westerlund-site'],
+    ['https://collinwesterlundmusic.com/','collinwesterlundmusic.com'],
     ['https://likoudislegacy.com/','likoudislegacy.com'],
     ['https://andrewlikoudis.com/','andrewlikoudis.com'],
     ['https://liquid1188.github.io/ana-restaurant/','liquid1188.github.io/ana-restaurant']
