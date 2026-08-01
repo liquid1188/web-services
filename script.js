@@ -134,7 +134,7 @@ async function handleSubmit(e){
     document.getElementById('form-success').style.display='block';
   }catch(err){
     btn.textContent=orig; btn.disabled=false;
-    alert('Sorry \u2014 the form could not send. Please email arlikoudis@gmail.com directly.');
+    alert('Sorry \u2014 the form could not send. Please email hello@lickitysplitweb.com directly.');
   }
 }
 
