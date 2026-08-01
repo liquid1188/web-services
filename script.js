@@ -121,6 +121,15 @@ async function handleSubmit(e){
     });
     const data=await res.json();
     if(!res.ok||data.success==='false') throw new Error(data.message||'Send failed');
+    /* GA4 conversion — fires only on confirmed send.
+       No name, email, or phone is passed: GA4 prohibits PII. */
+    if(typeof gtag==='function'){
+      gtag('event','generate_lead',{
+        business_type: v('biztype')||'unspecified',
+        budget_range:  v('budget')||'unspecified',
+        has_existing_site: v('currenturl') ? 'yes' : 'no'
+      });
+    }
     document.getElementById('quote-form').style.display='none';
     document.getElementById('form-success').style.display='block';
   }catch(err){
