@@ -29,6 +29,20 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" href="style.css?v=7"/>
+  <!-- GA4 — cookieless (consent mode: storage denied by default, no banner required) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPPCZHKHC2"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      'ad_storage':'denied',
+      'ad_user_data':'denied',
+      'ad_personalization':'denied',
+      'analytics_storage':'denied'
+    });
+    gtag('js',new Date());
+    gtag('config','G-KPPCZHKHC2');
+  </script>
 </head>
 <body>
 

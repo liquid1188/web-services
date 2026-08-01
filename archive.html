@@ -23,6 +23,20 @@
     .arc-links a{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--charcoal,#161412);text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
     @media(max-width:640px){.arc-row{flex-direction:column;align-items:flex-start;gap:.6rem}}
   </style>
+  <!-- GA4 — cookieless (consent mode: storage denied by default, no banner required) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPPCZHKHC2"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      'ad_storage':'denied',
+      'ad_user_data':'denied',
+      'ad_personalization':'denied',
+      'analytics_storage':'denied'
+    });
+    gtag('js',new Date());
+    gtag('config','G-KPPCZHKHC2');
+  </script>
 </head>
 <body>
 <nav id="main-nav">
