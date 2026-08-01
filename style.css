@@ -640,12 +640,3 @@
     .pricing h1.as-h2{color:var(--white)}
 
     nav + .footer-magnet{padding-top:7.5rem}
-
-/* Local service-area line in footer */
-.footer-area{
-  font-size:.82rem;
-  opacity:.62;
-  margin:.35rem 0 .1rem;
-  max-width:46ch;
-  line-height:1.5;
-}
