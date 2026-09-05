@@ -264,6 +264,7 @@ async function handleSubmit(e){
   var data=[
     ['https://liquid1188.github.io/frank-larocca-site/','franklarocca.com'],
     ['https://www.traddyland.com/','traddyland.com'],
+    ['https://liquid1188.github.io/urban-sophisticate-collective/','urbansophisticatecollective.com'],
     ['https://brushandsoulstudio.com/','brushandsoulstudio.com'],
     ['https://roxanesalonen.com/','roxanesalonen.com'],
     ['https://collinwesterlundmusic.com/','collinwesterlundmusic.com'],
