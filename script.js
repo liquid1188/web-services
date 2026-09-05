@@ -262,6 +262,8 @@ async function handleSubmit(e){
       dotsWrap=document.getElementById('liveDots'),
       imgs=[].slice.call(shots.querySelectorAll('img'));
   var data=[
+    ['https://liquid1188.github.io/frank-larocca-site/','franklarocca.com'],
+    ['https://www.traddyland.com/','traddyland.com'],
     ['https://brushandsoulstudio.com/','brushandsoulstudio.com'],
     ['https://roxanesalonen.com/','roxanesalonen.com'],
     ['https://collinwesterlundmusic.com/','collinwesterlundmusic.com'],
