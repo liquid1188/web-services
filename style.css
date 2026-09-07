@@ -465,6 +465,20 @@
     .words-section .testi-author{border-top:1px solid var(--border-light);padding-top:1rem;margin-top:.3rem}
     @media(max-width:1020px){.words-section .testi-wrap.home-testi{grid-template-columns:1fr;max-width:640px;margin:0 auto}}
 
+
+    /* ── RECENT WORK (home) ── */
+    .recent-section{background:var(--parchment)}
+    .recent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;max-width:1160px}
+    .recent-card{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius-sm);overflow:hidden;box-shadow:0 1px 4px rgba(22,20,18,.04);transition:transform .2s,box-shadow .25s,border-color .2s}
+    .recent-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:rgba(196,154,42,.35)}
+    .recent-card img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:top;border-bottom:1px solid var(--border-light)}
+    .recent-body{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;gap:.4rem}
+    .recent-title{font-family:var(--font-head);font-size:1rem;font-weight:800;letter-spacing:-.01em;color:var(--text-primary)}
+    .recent-desc{font-family:var(--font-body);font-size:.92rem;line-height:1.65;color:var(--text-secondary)}
+    .recent-more{margin-top:2.4rem}
+    @media(max-width:1020px){.recent-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:680px){.recent-grid{grid-template-columns:1fr}}
+
     /* ── CTA FINAL ── */
     .cta-final{background:var(--charcoal);padding:6rem 6vw;text-align:center;position:relative;overflow:hidden}
     .cta-final::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(196,154,42,.06) 0%,transparent 65%);top:-200px;left:50%;transform:translateX(-50%);pointer-events:none}
