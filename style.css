@@ -466,6 +466,7 @@
     .words-section .testi-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:rgba(196,154,42,.35)}
     .words-section .testi-quote{font-size:.98rem;flex:1;padding-top:1.1rem}
     .words-section .testi-author{border-top:1px solid var(--border-light);padding-top:1rem;margin-top:.3rem}
+    .words-section .testi-wrap.home-testi .testi-card-wide{grid-column:1/-1;max-width:640px;width:100%;margin:0 auto}
     @media(max-width:1020px){.words-section .testi-wrap.home-testi{grid-template-columns:1fr;max-width:640px;margin:0 auto}}
 
 
