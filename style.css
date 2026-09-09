@@ -131,6 +131,11 @@
     }
 
     /* ── PERFORMANCE BAR ── */
+    .perf-stack{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.6rem 2rem;margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.06)}
+    .stack-label{font-family:var(--font-head);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:700}
+    .stack-item{display:inline-flex;align-items:center;gap:.55rem;color:rgba(255,255,255,.72);text-decoration:none;font-family:var(--font-ui);font-size:.8rem;transition:color .2s}
+    .stack-item:hover{color:#fff}
+    .stack-mark{width:18px;height:18px;flex:none}
     .perf-bar{background:var(--charcoal-mid);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:1.8rem 6vw;overflow:hidden}
     .perf-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(255,255,255,.07)}
     @media(max-width:900px){.perf-inner{grid-template-columns:1fr 1fr}.perf-ring{display:none}}
