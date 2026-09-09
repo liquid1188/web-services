@@ -472,7 +472,7 @@
 
     /* ── RECENT WORK (home) ── */
     .recent-section{background:var(--parchment)}
-    .recent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;max-width:820px}
+    .recent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;max-width:1080px}
     .recent-card{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius-sm);overflow:hidden;box-shadow:0 1px 4px rgba(22,20,18,.04);transition:transform .2s,box-shadow .25s,border-color .2s}
     .recent-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:rgba(196,154,42,.35)}
     .recent-card img{display:block;width:100%;height:auto;border-bottom:1px solid var(--border-light)}
