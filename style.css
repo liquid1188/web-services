@@ -183,7 +183,7 @@
     .for-proof::after{content:'\2192';margin-left:auto;color:var(--accent);transition:transform .2s}
     .for-card:hover .for-proof::after{transform:translateX(3px)}
     .for-also{margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border-light);display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1.2rem}
-    .for-also-label{font-family:var(--font-head);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-tertiary);font-weight:700}
+    .for-also-label{font-family:var(--font-head);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:#6f665c;font-weight:700}
     .for-chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
     .for-chips li{font-family:var(--font-ui);font-size:.8rem;color:var(--text-secondary);border:1px solid var(--border-light);background:var(--parchment);border-radius:999px;padding:.35rem .8rem}
     .for-any{font-family:var(--font-body);font-size:.92rem;color:var(--text-secondary);width:100%;margin:.4rem 0 0}
@@ -409,7 +409,7 @@
     .step{padding:2.2rem 1.8rem;background:var(--white);border-right:1px solid var(--border-light)}
     .step:last-child{border-right:none}
     @media(max-width:860px){.step{border-right:none;border-bottom:1px solid var(--border-light)}}
-    .step-num{font-family:var(--font-head);font-size:2.8rem;font-weight:900;color:var(--accent-dim);line-height:1;margin-bottom:1rem;letter-spacing:-.04em}
+    .step-num{font-family:var(--font-head);font-size:2.8rem;font-weight:900;color:#a58a3c;line-height:1;margin-bottom:1rem;letter-spacing:-.04em}
     .step-icon svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1rem;display:block}
     .step-title{font-family:var(--font-head);font-weight:700;font-size:.88rem;color:var(--text-primary);margin-bottom:.55rem}
     .step-desc{font-family:var(--font-body);font-size:.9rem;color:var(--text-secondary);line-height:1.75}
@@ -523,7 +523,7 @@
     .teaser-card{position:relative;display:flex;flex-direction:column;gap:.5rem;text-decoration:none;color:inherit;background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius-sm);padding:1.8rem 1.7rem 1.7rem;box-shadow:0 1px 4px rgba(22,20,18,.04);transition:transform .2s,box-shadow .25s,border-color .2s}
     .teaser-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:rgba(196,154,42,.35)}
     .teaser-card.featured{border-color:var(--accent)}
-    .teaser-tag{position:absolute;top:-.7rem;left:1.5rem;background:var(--accent);color:var(--white);font-family:var(--font-head);font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.3rem .7rem;border-radius:var(--radius-sm)}
+    .teaser-tag{position:absolute;top:-.7rem;left:1.5rem;background:var(--accent);color:#161412;font-family:var(--font-head);font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.3rem .7rem;border-radius:var(--radius-sm)}
     .teaser-name{font-family:var(--font-head);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-secondary)}
     .teaser-price{font-family:var(--font-head);font-size:2rem;font-weight:900;letter-spacing:-.03em;color:var(--text-primary);line-height:1.1}
     .teaser-desc{font-family:var(--font-body);font-size:.92rem;line-height:1.65;color:var(--text-secondary)}
@@ -545,7 +545,7 @@
     @media(max-width:520px){.footer-links{gap:.75rem 1.1rem}}
     .footer-links a{font-family:var(--font-ui);font-size:.75rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
     .footer-links a:hover{color:var(--accent)}
-    .footer-copy{font-family:var(--font-ui);font-size:.7rem;width:100%}
+    .footer-copy{font-family:var(--font-ui);font-size:.7rem;width:100%;color:#a3a09b}
 
     /* ── SECTION INTRO (polish: larger, calmer intros) ── */
     .section-intro{max-width:760px;margin-bottom:4.5rem}
@@ -704,3 +704,5 @@
     .pricing h1.as-h2{color:var(--white)}
 
     nav + .footer-magnet{padding-top:7.5rem}
+
+    footer .view-desktop{color:#a3a09b!important;opacity:1!important}
