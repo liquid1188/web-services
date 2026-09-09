@@ -57,6 +57,8 @@
     .hero-grain{position:absolute;inset:0;pointer-events:none;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
     .hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(196,154,42,.07) 0%,transparent 65%);top:-200px;right:-100px;pointer-events:none}
     .hero-text{position:relative;z-index:1}
+    br.mb{display:none}
+    @media(max-width:900px){br.mb{display:inline}}
     .hero-kicker{display:inline-flex;align-items:center;gap:.7rem;margin-bottom:2rem}
     .hero-kicker-line{width:28px;height:1px;background:var(--accent)}
     .hero-kicker-text{font-family:var(--font-ui);font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:500}
@@ -112,7 +114,21 @@
     .mv-band-t{font-size:.44rem;color:rgba(255,255,255,.55);letter-spacing:.08em;text-transform:uppercase;font-weight:500}
     .mv-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.45rem;padding:.7rem 1.4rem}
     .mv-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:3px;height:44px}
-    @media(max-width:900px){.hero{grid-template-columns:1fr;padding:8rem 6vw 4rem}.hero-visual{display:none}}
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;gap:2.5rem;min-height:0;padding:6.5rem 6vw 3rem;align-items:start}
+      .hero-logo{display:none}
+      .hero-kicker{margin-bottom:1.2rem}
+      h1{font-size:clamp(2.2rem,9.4vw,3.4rem);line-height:1;margin-bottom:1.2rem}
+      .hero-body{font-size:1rem;line-height:1.7;margin-bottom:1.6rem}
+      .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+      .hero-actions a{text-align:center;padding-left:.5rem;padding-right:.5rem;white-space:nowrap}
+      .hero-proof{gap:.6rem 1.4rem;margin-top:1.6rem;padding-top:1.3rem}
+      .proof-item span{font-size:.74rem}
+      .hero-visual{margin:0 -2vw}
+      .browser{transform:none;border-radius:8px}
+      .browser-viewport{height:auto;aspect-ratio:16/10}
+      .live-tag{opacity:1;transform:none}
+    }
 
     /* ── PERFORMANCE BAR ── */
     .perf-bar{background:var(--charcoal-mid);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:1.8rem 6vw;overflow:hidden}
