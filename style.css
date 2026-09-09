@@ -48,7 +48,7 @@
     .nav-items{display:flex;gap:2rem;align-items:center}
     .nav-items a{font-family:var(--font-ui);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:rgba(255,255,255,.62);text-decoration:none;transition:color .2s}
     .nav-items a:hover{color:rgba(255,255,255,.9)}
-    .nav-cta{font-family:var(--font-head)!important;background:var(--accent)!important;color:var(--white)!important;padding:.5rem 1.4rem!important;font-size:.68rem!important;font-weight:700!important;letter-spacing:.08em!important;text-transform:uppercase!important;border-radius:var(--radius-sm)!important;box-shadow:0 2px 12px var(--accent-glow)!important;transition:background .2s,transform .15s!important}
+    .nav-cta{font-family:var(--font-head)!important;background:var(--accent)!important;color:#161412!important;padding:.5rem 1.4rem!important;font-size:.68rem!important;font-weight:700!important;letter-spacing:.08em!important;text-transform:uppercase!important;border-radius:var(--radius-sm)!important;box-shadow:0 2px 12px var(--accent-glow)!important;transition:background .2s,transform .15s!important}
     .nav-cta:hover{background:var(--accent-hover)!important;transform:translateY(-1px)!important}
     @media(max-width:700px){.nav-items a:not(.nav-cta){display:none}}
 
