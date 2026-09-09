@@ -485,21 +485,24 @@
 
     /* ── IN THEIR WORDS (home) ── */
     .words-section{background:var(--parchment)}
-    .words-section .testi-wrap.home-testi{margin:0;max-width:920px;display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;align-items:stretch}
+    .words-section{text-align:center}
+    .words-section .eyebrow{justify-content:center}
+    .words-section .testi-wrap.home-testi{text-align:left;margin:0 auto;max-width:1080px;display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;align-items:stretch}
     .words-section .testi-card{background:var(--white);border:1px solid var(--border-light);border-left:1px solid var(--border-light);border-radius:var(--radius-sm);padding:1.8rem 1.7rem 1.6rem;margin-bottom:0;position:relative;display:flex;flex-direction:column;box-shadow:0 1px 4px rgba(22,20,18,.04);transition:transform .2s,box-shadow .25s,border-color .2s}
     .words-section .testi-card::before{content:"\201C";position:absolute;top:.55rem;left:1.5rem;font-family:var(--font-body);font-size:3.2rem;line-height:1;color:var(--accent);opacity:.35}
     .words-section .testi-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:rgba(196,154,42,.35)}
     .words-section .testi-quote{font-size:.98rem;flex:1;padding-top:1.1rem}
     .words-section .testi-author{border-top:1px solid var(--border-light);padding-top:1rem;margin-top:.3rem}
-    .words-section .testi-wrap.home-testi .testi-card-wide{grid-column:1/-1}
-    .words-section .testi-wrap.home-testi .testi-card-wide .testi-quote{column-count:2;column-gap:2.4rem;font-size:1rem}
-    @media(max-width:700px){.words-section .testi-wrap.home-testi .testi-card-wide .testi-quote{column-count:1}}
-    @media(max-width:1020px){.words-section .testi-wrap.home-testi{grid-template-columns:1fr;max-width:640px;margin:0 auto}}
+    .words-section .testi-wrap.home-testi .testi-card{display:flex;flex-direction:column;margin:0}
+    .words-section .testi-wrap.home-testi .testi-quote{flex:1;font-size:.92rem}
+    @media(max-width:1020px){.words-section .testi-wrap.home-testi{grid-template-columns:1fr;max-width:640px}}
 
 
     /* ── RECENT WORK (home) ── */
-    .recent-section{background:var(--parchment)}
-    .recent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;max-width:1080px}
+    .recent-section{background:var(--parchment);text-align:center}
+    .recent-section .eyebrow{justify-content:center}
+    .recent-section .section-body{margin-left:auto;margin-right:auto}
+    .recent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;max-width:1080px;margin:0 auto;text-align:left}
     .recent-card{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius-sm);overflow:hidden;box-shadow:0 1px 4px rgba(22,20,18,.04);transition:transform .2s,box-shadow .25s,border-color .2s}
     .recent-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:rgba(196,154,42,.35)}
     .recent-card img{display:block;width:100%;height:auto;border-bottom:1px solid var(--border-light)}
@@ -509,7 +512,7 @@
     .recent-title{font-family:var(--font-head);font-size:.82rem;font-weight:800;letter-spacing:-.01em;color:var(--text-primary)}
     .recent-desc{font-family:var(--font-body);font-size:.8rem;line-height:1.55;color:var(--text-secondary)}
     .recent-more{margin-top:2.4rem}
-    @media(max-width:680px){.recent-grid{grid-template-columns:1fr;max-width:340px}}
+    @media(max-width:680px){.recent-grid{grid-template-columns:1fr;max-width:340px;margin:0 auto}}
 
 
     /* ── HOME: process + pricing teaser ── */
