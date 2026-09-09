@@ -133,7 +133,7 @@
     /* ── PERFORMANCE BAR ── */
     .perf-bar{background:var(--charcoal-mid);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:1.8rem 6vw;overflow:hidden}
     .perf-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(255,255,255,.07)}
-    @media(max-width:900px){.perf-inner{grid-template-columns:1fr 1fr}}
+    @media(max-width:900px){.perf-inner{grid-template-columns:1fr 1fr}.perf-ring{display:none}}
     @media(max-width:480px){.perf-inner{grid-template-columns:1fr 1fr}}
     .perf-item{padding:1.4rem 1.6rem;border-right:1px solid rgba(255,255,255,.07);display:flex;flex-direction:column;gap:.4rem;position:relative}
     .perf-item:last-child{border-right:none}
