@@ -197,8 +197,8 @@
 
     /* ── STATS COUNTER ── */
     .stats-section{background:var(--navy);padding:5rem 6vw}
-    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid rgba(255,255,255,.07)}
-    @media(max-width:860px){.stats-grid{grid-template-columns:1fr}}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(255,255,255,.07)}
+    @media(max-width:860px){.stats-grid{grid-template-columns:1fr 1fr}}
     .stat-item{padding:1.6rem 1.4rem;border-right:1px solid rgba(255,255,255,.07);text-align:center}
     .stat-item:last-child{border-right:none}
     @media(max-width:860px){.stat-item:nth-child(2n){border-right:none}.stat-item:nth-child(1),.stat-item:nth-child(2){border-bottom:1px solid rgba(255,255,255,.07)}}
