@@ -22,14 +22,13 @@
   <meta name="twitter:description" content="Hand-coded websites for Catholic authors, composers, artists, and ministries. Most sites $500 to $2,000, starter pages from $200. Fast, mobile-first, no subscriptions, and you own every file."/>
   <meta name="twitter:image" content="https://lickitysplitweb.com/og.jpg"/>
   <link rel="preload" as="image" href="screenshots/hero-traddyland.webp" fetchpriority="high"/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&text=%3C%2F%3Elickitysp%20&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"/>
   <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png"/>
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
   <link rel="shortcut icon" href="/favicon.ico"/>
-  <link rel="stylesheet" href="style.css?v=17"/>
+  <link rel="stylesheet" href="fonts.css?v=1"/>
+  <link rel="stylesheet" href="style.css?v=18"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -448,7 +447,7 @@
 
 <!-- CTA FINAL -->
 <section class="cta-final">
-  <h2>Your work deserves a site<br><span class="serif">as good as the work.</span></h2>
+  <h2>Your work deserves a site<br><span class="serif">that does it justice.</span></h2>
   <p class="section-body" style="margin-bottom:2.5rem">Most sites $500 to $2,000, starter pages $200. You get an estimate before any work begins, no subscriptions, and you own every file. Tell me what you do and I'll tell you what it would take.</p>
   <a href="contact" class="btn-accent">Get a Free Quote</a>
   <div class="cta-final-note">Or email: hello@lickitysplitweb.com</div>
@@ -464,6 +463,7 @@
     <a href="about">About</a>
     <a href="contact">Get a Quote</a>
     <a href="archive">Archive</a>
+    <a href="https://buy.stripe.com/8x2cMX76k2QE6du9dBa3u0i" target="_blank" rel="noopener">Pay a deposit</a>
     <a href="mailto:hello@lickitysplitweb.com">hello@lickitysplitweb.com</a>
   </div>
   <div class="footer-copy">2026 Lickity Split Web Design</div>
@@ -488,7 +488,6 @@
     document.getElementById('cr-price').textContent=t.price;
     document.getElementById('cr-body').innerHTML=t.body+' See how this looks for '+c.name+'.';
     var a='<a class="btn-accent" href="contact">Get an estimate</a><a class="btn-ghost" href="'+c.href+'">See the case study</a>';
-    if(need==='full'){a+='<a class="btn-ghost" href="https://buy.stripe.com/8x2cMX76k2QE6du9dBa3u0i" target="_blank" rel="noopener">Book now with a $500 deposit</a>';}
     document.getElementById('cr-actions').innerHTML=a;
     document.getElementById('cq1').hidden=true;document.getElementById('cq2').hidden=true;
     document.getElementById('cresult').hidden=false;

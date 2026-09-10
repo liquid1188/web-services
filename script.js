@@ -128,7 +128,8 @@ async function handleSubmit(e){
       gtag('event','generate_lead',{
         business_type: v('biztype')||'unspecified',
         budget_range:  v('budget')||'unspecified',
-        has_existing_site: v('currenturl') ? 'yes' : 'no'
+        has_existing_site: v('currenturl') ? 'yes' : 'no',
+        edits_plan: (document.getElementById('editsplan')&&document.getElementById('editsplan').checked)?'yes':'no'
       });
     }
     document.getElementById('quote-form').style.display='none';
