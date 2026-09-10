@@ -29,7 +29,7 @@
   <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png"/>
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
   <link rel="shortcut icon" href="/favicon.ico"/>
-  <link rel="stylesheet" href="style.css?v=16"/>
+  <link rel="stylesheet" href="style.css?v=17"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -283,6 +283,40 @@
   <div class="recent-more"><a class="btn-accent" href="work">See all work</a></div>
 </section>
 
+
+<!-- WHICH SITE ARE YOU -->
+<section class="chooser-section" id="which-site">
+  <div class="chooser-inner">
+    <div class="eyebrow">Which site are you?</div>
+    <h2>Two questions.<br><span class="serif">Then the right starting point.</span></h2>
+    <div class="chooser-q" id="cq1">
+      <div class="chooser-label">1. What do you do?</div>
+      <div class="chooser-opts">
+        <button type="button" data-q="who" data-v="author">I write or speak</button>
+        <button type="button" data-q="who" data-v="music">I compose or perform</button>
+        <button type="button" data-q="who" data-v="art">I make art or objects</button>
+        <button type="button" data-q="who" data-v="ministry">I run a ministry, parish, or nonprofit</button>
+        <button type="button" data-q="who" data-v="business">I run a business or studio</button>
+      </div>
+    </div>
+    <div class="chooser-q" id="cq2" hidden>
+      <div class="chooser-label">2. What do you need online right now?</div>
+      <div class="chooser-opts">
+        <button type="button" data-q="need" data-v="starter">Just be findable: who I am, what I do, how to reach me</button>
+        <button type="button" data-q="need" data-v="custom">A real site with a few pages built around my work</button>
+        <button type="button" data-q="need" data-v="full">Everything: a catalog or archive, a store or donations, and pages that grow</button>
+      </div>
+    </div>
+    <div class="chooser-result" id="cresult" hidden>
+      <div class="chooser-result-tier" id="cr-tier"></div>
+      <div class="chooser-result-price" id="cr-price"></div>
+      <p class="chooser-result-body" id="cr-body"></p>
+      <div class="chooser-result-actions" id="cr-actions"></div>
+      <button type="button" class="chooser-reset" id="cr-reset">Start over</button>
+    </div>
+  </div>
+</section>
+
 <!-- SERVICES -->
 <section class="for-section" id="services">
   <div class="for-layout">
@@ -343,8 +377,8 @@
   <div class="eyebrow">How It Works</div>
   <h2>Simple from first contact<br><span class="serif">to launch day.</span></h2>
   <div class="process-steps">
-    <div class="step"><div class="step-num">01</div><div class="step-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><div class="step-title">Free Quote</div><div class="step-desc">Fill out the form or email me. I'll respond within 24 hours with a clear recommendation and an estimate.</div></div>
-    <div class="step"><div class="step-num">02</div><div class="step-icon"><svg viewBox="0 0 24 24"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg></div><div class="step-title">You Send the Assets</div><div class="step-desc">Photos, logo, services, hours. That's it. I handle design, copy, code, and hosting setup.</div></div>
+    <div class="step"><div class="step-num">01</div><div class="step-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><div class="step-title">Free Quote</div><div class="step-desc">Fill out the form or email me. I'll respond within 24 hours with a clear recommendation and an estimate, then we <a href="https://calendly.com/arlikoudis/30min" target="_blank" rel="noopener">book a 30 minute call</a>.</div></div>
+    <div class="step"><div class="step-num">02</div><div class="step-icon"><svg viewBox="0 0 24 24"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg></div><div class="step-title">You Send the Assets</div><div class="step-desc">A headshot or hero photo, a photo of your work or of you doing it, a banner or logo if you have one, and your CV or a short list of what you want the site to do. I handle design, copy, code, and hosting setup.</div></div>
     <div class="step"><div class="step-num">03</div><div class="step-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="step-title">Preview &amp; Revisions</div><div class="step-desc">I send a private live preview link. You give feedback, I make the changes — we get it exactly right before anything goes public.</div></div>
     <div class="step"><div class="step-num">04</div><div class="step-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div class="step-title">Launch</div><div class="step-desc">I connect your domain and your site goes live — tested on phones, tablets, and desktops before the switch is flipped. Full Build clients get 30 days of post-launch support included.</div></div>
   </div>
@@ -438,5 +472,40 @@
 <script src="script.js?v=6" defer></script>
 <!-- View desktop version toggle (Lickity Split) -->
 <script>(function(){var K='lsw-desktop',m=document.querySelector('meta[name="viewport"]');if(!m)return;var orig=m.getAttribute('content')||'width=device-width, initial-scale=1',on=sessionStorage.getItem(K)==='1',mobile=window.matchMedia('(max-width: 900px)').matches;if(!mobile&&!on)return;function apply(){m.setAttribute('content',on?'width=1200':orig)}apply();var a=document.createElement('a');a.href='#';a.className='view-desktop';a.textContent=on?'View mobile version':'View desktop version';a.style.cssText='display:block;text-align:center;font:inherit;font-size:.85rem;padding:1rem 1rem 1.25rem;opacity:.7;text-decoration:underline;color:inherit';a.addEventListener('click',function(e){e.preventDefault();on=!on;sessionStorage.setItem(K,on?'1':'0');apply();a.textContent=on?'View mobile version':'View desktop version';window.scrollTo(0,0)});var f=document.querySelector('footer');(f||document.body).appendChild(a)})();</script>
+
+<script>
+(function(){
+  var who=null,need=null;
+  var cases={author:{name:"Roxane Salonen and Traddyland",href:"work#roxane"},music:{name:"Frank La Rocca and Collin Westerlund",href:"work#larocca"},art:{name:"Brush &amp; Soul Studio",href:"work#brushsoul"},ministry:{name:"the Likoudis Legacy Foundation",href:"work#llf"},business:{name:"Traddyland",href:"work#traddyland"}};
+  var tiers={
+    starter:{tier:"Starter Site",price:"$200",body:"One page, or a couple of basic pages, live in about 48 hours. Enough to be found and contacted, and easy to grow into a full site later."},
+    custom:{tier:"Custom Website",price:"from $500",body:"Home, About, your work, and Contact, designed from scratch around what you do. Most of these land between $500 and $800 and take about a week."},
+    full:{tier:"The Full Build",price:"$1,000 to $2,000",body:"As many pages as your story needs: a catalog or archive, a store or donation path, a newsletter, and pages that update themselves when you publish. About two weeks, with 30 days of support after launch."}
+  };
+  function show(){
+    var t=tiers[need],c=cases[who];
+    document.getElementById('cr-tier').textContent=t.tier;
+    document.getElementById('cr-price').textContent=t.price;
+    document.getElementById('cr-body').innerHTML=t.body+' See how this looks for '+c.name+'.';
+    var a='<a class="btn-accent" href="contact">Get an estimate</a><a class="btn-ghost" href="'+c.href+'">See the case study</a>';
+    if(need==='full'){a+='<a class="btn-ghost" href="https://buy.stripe.com/8x2cMX76k2QE6du9dBa3u0i" target="_blank" rel="noopener">Book now with a $500 deposit</a>';}
+    document.getElementById('cr-actions').innerHTML=a;
+    document.getElementById('cq1').hidden=true;document.getElementById('cq2').hidden=true;
+    document.getElementById('cresult').hidden=false;
+  }
+  document.querySelectorAll('#which-site [data-q]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var q=b.getAttribute('data-q'),v=b.getAttribute('data-v');
+      b.parentNode.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');
+      if(q==='who'){who=v;document.getElementById('cq2').hidden=false;document.getElementById('cq2').scrollIntoView({behavior:'smooth',block:'nearest'});}
+      else{need=v;if(who){show();}}
+    });
+  });
+  document.getElementById('cr-reset').addEventListener('click',function(){
+    who=null;need=null;document.getElementById('cresult').hidden=true;document.getElementById('cq1').hidden=false;document.getElementById('cq2').hidden=true;
+    document.querySelectorAll('#which-site button.on').forEach(function(x){x.classList.remove('on')});
+  });
+})();
+</script>
 </body>
 </html>
