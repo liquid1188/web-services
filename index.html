@@ -264,19 +264,9 @@
 <section class="chooser-section" id="which-site">
   <div class="chooser-inner">
     <div class="eyebrow">Where to start</div>
-    <h2>Two questions.<br><span class="serif">Change your answers any time.</span></h2>
-    <div class="chooser-q" id="cq1">
-      <div class="chooser-label">1. What do you do?</div>
-      <div class="chooser-opts">
-        <button type="button" data-q="who" data-v="author">I write or speak</button>
-        <button type="button" data-q="who" data-v="music">I compose or perform</button>
-        <button type="button" data-q="who" data-v="art">I make art or objects</button>
-        <button type="button" data-q="who" data-v="ministry">I run a ministry, parish, or nonprofit</button>
-        <button type="button" data-q="who" data-v="business">I run a business or studio</button>
-      </div>
-    </div>
+    <h2>One question.<br><span class="serif">Then a starting point.</span></h2>
     <div class="chooser-q" id="cq2">
-      <div class="chooser-label">2. What do you need online right now?</div>
+      <div class="chooser-label">What do you need online right now?</div>
       <div class="chooser-opts">
         <button type="button" data-q="need" data-v="starter">Just be findable: who I am, what I do, how to reach me</button>
         <button type="button" data-q="need" data-v="custom">A real site with a few pages built around my work</button>
@@ -450,7 +440,7 @@
 
 <script>
 (function(){
-  var who=null,need=null;
+  var need=null;
   var lead={author:"For a writer or speaker, that usually means book pages, a searchable archive, and a press kit.",music:"For a composer or performer, that usually means a catalog with score and recording, a discography, and press.",art:"For an artist or maker, that usually means a gallery and a way to sell originals or take commissions.",ministry:"For a ministry or parish, that usually means mission, programs, events, and a donation path that works on a phone.",business:"For a business or studio, that usually means services, hours, and a clear way to book or get in touch."};
   var tiers={
     starter:{price:"Starter Site, $200",body:"One page, or a couple of basic pages, live in about 48 hours. Enough to be found and contacted, and easy to grow later."},
@@ -458,16 +448,16 @@
     full:{price:"The Full Build, $1,000 to $2,000",body:"As many pages as your story needs, with an archive or catalog, a store or donation path, a newsletter, and 30 days of support after launch."}
   };
   function show(){
-    if(!who||!need)return;
+    if(!need)return;
     document.getElementById('cr-price').textContent=tiers[need].price;
-    document.getElementById('cr-body').textContent=lead[who]+' '+tiers[need].body+' This is a starting point, not a verdict. The estimate is where we settle it together.';
+    document.getElementById('cr-body').textContent=tiers[need].body+' This is a starting point, not a verdict. The estimate is where we settle it together.';
     document.getElementById('cresult').hidden=false;
   }
   document.querySelectorAll('#which-site [data-q]').forEach(function(b){
     b.addEventListener('click',function(){
       var q=b.getAttribute('data-q'),v=b.getAttribute('data-v');
       b.parentNode.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');
-      if(q==='who')who=v;else need=v;
+      need=v;
       show();
     });
   });
