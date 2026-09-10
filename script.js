@@ -214,7 +214,7 @@ async function handleSubmit(e){
              ok:'<svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>'};
     var findHtml=f.map(function(x){ return '<li class="hc-finding '+x[0]+'">'+ico[x[0]]+'<span>'+x[1]+'</span></li>'; }).join('');
     var weak=[perf,seo,acc,bp].filter(function(v){return v!=null&&v<90;});
-    var ctaLine=weak.length?'Want these fixed? I rebuild sites to score 90+ across the board — fast, mobile, and built to bring in customers.':'Even a strong site can convert better. Let\u2019s turn those scores into more calls and bookings.';
+    var ctaLine=weak.length?'Want these fixed? I rebuild sites so they load fast on a phone, read cleanly to Google, and bring people to you.':'Even a strong site can convert better. Let\u2019s turn those scores into more calls and bookings.';
     results.innerHTML=
       '<div class="hc-target">Results for <strong>'+host+'</strong> · via Google PageSpeed</div>'
       +'<div class="hc-scoregrid">'+cell(perf,'Speed')+cell(seo,'SEO')+cell(acc,'Accessibility')+cell(bp,'Best Practices')+'</div>'
