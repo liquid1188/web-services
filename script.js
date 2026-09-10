@@ -285,6 +285,8 @@ async function handleSubmit(e){
   function show(next){
     imgs[i].classList.remove('on'); dots[i].classList.remove('on');
     i=next;
+    if(imgs[i].dataset.src){imgs[i].src=imgs[i].dataset.src;delete imgs[i].dataset.src;}
+    var nx=imgs[(i+1)%imgs.length]; if(nx&&nx.dataset.src){nx.src=nx.dataset.src;delete nx.dataset.src;}
     imgs[i].classList.add('on'); dots[i].classList.add('on');
     if(link) link.href=data[i][0];
     typeUrl(data[i][1]);
