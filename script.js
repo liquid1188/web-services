@@ -263,7 +263,11 @@ async function handleSubmit(e){
       urlEl=document.getElementById('b-url'),
       dotsWrap=document.getElementById('liveDots'),
       imgs=[].slice.call(shots.querySelectorAll('img'));
+  /* One entry per <img> in #liveShots, in the same order. The rotation is driven
+     by imgs.length, so an entry with no image never gets shown and just leaves a
+     dead dot in the row. */
   var data=[
+    ['https://dcsocialcollective.com/','dcsocialcollective.com'],
     ['https://www.franklarocca.com/','franklarocca.com'],
     ['https://www.traddyland.com/','traddyland.com'],
     ['https://brushandsoulstudio.com/','brushandsoulstudio.com'],
@@ -271,7 +275,7 @@ async function handleSubmit(e){
     ['https://collinwesterlundmusic.com/','collinwesterlundmusic.com'],
     ['https://likoudislegacy.com/','likoudislegacy.com'],
     ['https://andrewlikoudis.com/','andrewlikoudis.com']
-  ];
+  ].slice(0, imgs.length);
   if(data.length>1) data.forEach(function(_,k){var s=document.createElement('span');if(k===0)s.className='on';dotsWrap.appendChild(s);});
   var dots=[].slice.call(dotsWrap.children);
   var i=0, paused=false, typeTimer, holdTimer;
