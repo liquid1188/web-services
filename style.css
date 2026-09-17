@@ -136,7 +136,7 @@
     .client-logos{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem 2.2rem;max-width:1280px;margin:0 auto}
     .client-logo{display:inline-flex;align-items:center;opacity:.78;transition:opacity .2s,transform .2s}
     .client-logo:hover{opacity:1;transform:translateY(-1px)}
-    .client-logo img{height:27px;width:auto;display:block}
+    .client-logo img{height:30px;width:auto;display:block}
     @media(max-width:900px){
       .client-band{padding:1.3rem 0 1.5rem}
       .client-band-label{margin-bottom:.9rem}
