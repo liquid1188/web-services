@@ -29,7 +29,7 @@
   <link rel="preload" as="font" type="font/woff2" href="fonts/Montserrat-900.woff2" crossorigin/>
   <link rel="preload" as="font" type="font/woff2" href="fonts/Lora-400.woff2" crossorigin/>
   <link rel="stylesheet" href="fonts.css?v=1"/>
-  <link rel="stylesheet" href="style.css?v=32"/>
+  <link rel="stylesheet" href="style.css?v=33"/>
   <!-- GA4 — cookieless (consent mode: storage denied by default, no banner required) -->
   <script>window.addEventListener("load",function(){setTimeout(function(){var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-KPPCZHKHC2";document.head.appendChild(s);},2500);});</script>
   <script>
@@ -49,7 +49,8 @@
 {"@type":"Offer","name":"Starter Site","price":"200","priceCurrency":"USD","priceSpecification":{"@type":"PriceSpecification","minPrice":"200","maxPrice":"400","priceCurrency":"USD"},"url":"https://lickitysplitweb.com/pricing","description":"One page, or a few basic pages, live in about 48 hours."},
 {"@type":"Offer","name":"Custom Website","price":"500","priceCurrency":"USD","priceSpecification":{"@type":"PriceSpecification","minPrice":"500","maxPrice":"1000","priceCurrency":"USD"},"url":"https://lickitysplitweb.com/pricing","description":"Separate pages designed from scratch around your work, about a week."},
 {"@type":"Offer","name":"The Full Build","price":"1000","priceCurrency":"USD","priceSpecification":{"@type":"PriceSpecification","minPrice":"1000","maxPrice":"2500","priceCurrency":"USD"},"url":"https://lickitysplitweb.com/pricing","description":"As many pages as your story needs, with archive, store or donations, and 30 days of support."},
-{"@type":"Offer","name":"Edits Plan","price":"19.99","priceCurrency":"USD","url":"https://lickitysplitweb.com/pricing","description":"One round of edits every month, cancel anytime."}
+{"@type":"Offer","name":"Edits Plan","price":"19.99","priceCurrency":"USD","url":"https://lickitysplitweb.com/pricing","description":"One round of edits every month, cancel anytime."},
+{"@type":"Offer","name":"Care Plan","price":"49.99","priceCurrency":"USD","url":"https://lickitysplitweb.com/pricing","description":"Up to two rounds of edits a month plus uptime monitoring, priority turnaround, and 20% off larger jobs."}
 ]}
 </script>
 </head>
@@ -119,7 +120,7 @@
         <li class="p-feature">Newsletter signup, booking links, inquiry forms</li>
         <li class="p-feature">Full SEO + social share previews</li>
         <li class="p-feature">One revision round included</li>
-        <li class="p-feature">Optional: Edits Plan, $19.99/mo for a monthly round of edits</li>
+        <li class="p-feature">Optional: Edits Plan ($19.99/mo) or Care Plan ($49.99/mo)</li>
       </ul>
       <a href="contact" class="p-cta">Get Started</a>
     </div>
@@ -141,7 +142,7 @@
         <li class="p-feature">Custom interactive elements</li>
         <li class="p-feature">Google Analytics + advanced SEO</li>
         <li class="p-feature">Two revision rounds included</li>
-        <li class="p-feature">Optional: Edits Plan, $19.99/mo for a monthly round of edits</li>
+        <li class="p-feature">Optional: Edits Plan ($19.99/mo) or Care Plan ($49.99/mo)</li>
         <li class="p-feature">30-day post-launch support</li>
       </ul>
       <a href="contact" class="p-cta">Get Started</a>
@@ -150,31 +151,44 @@
     </div>
     <div class="pricing-card retainer" data-reveal>
       <div class="p-badge badge-ongoing">Ongoing</div>
-      <div class="p-tier">Care Plan</div>
-      <div class="p-price">$50<span style="font-size:1.1rem;font-family:var(--font-ui);font-weight:300">/mo</span></div>
-      <div class="p-cadence">or $500/year &mdash; two months free<br>Cancel anytime &middot; No contract, no setup fee</div>
-      <hr class="p-divider"/>
-      <ul class="p-features">
-        <li class="p-feature">Two quick edits a month, included</li>
-        <li class="p-feature">I watch the site — uptime &amp; monitoring</li>
-        <li class="p-feature">Priority: your changes jump the queue</li>
-        <li class="p-feature">A direct line to me — no tickets, no portal</li>
-        <li class="p-feature">Bigger jobs at your member rate (20% off)</li>
-      </ul>
-      <a href="contact" class="p-cta">Start a Care Plan</a>
+      <div class="p-tier">Two Care Plans</div>
+      <div class="plan-split">
+        <div class="plan-half">
+          <div class="plan-name">Edits Plan</div>
+          <div class="p-price">$19.99<span style="font-size:1rem;font-family:var(--font-ui);font-weight:300">/mo</span></div>
+          <div class="plan-sub">One round of edits a month</div>
+          <ul class="p-features">
+            <li class="p-feature">Send a batch of changes once a month, live within 48 hours</li>
+            <li class="p-feature">Costs less than a single $75 edit session</li>
+            <li class="p-feature">Cancel anytime</li>
+          </ul>
+        </div>
+        <div class="plan-half plan-half-b">
+          <div class="plan-name">Care Plan</div>
+          <div class="p-price">$49.99<span style="font-size:1rem;font-family:var(--font-ui);font-weight:300">/mo</span></div>
+          <div class="plan-sub">Edits plus I keep an eye on the site</div>
+          <ul class="p-features">
+            <li class="p-feature">Everything in the Edits Plan, up to two rounds a month</li>
+            <li class="p-feature">Uptime monitoring, domain and DNS watched</li>
+            <li class="p-feature">Priority turnaround and a direct line to me</li>
+            <li class="p-feature">Bigger jobs at 20% off</li>
+          </ul>
+        </div>
+      </div>
+      <div class="p-cadence">No contract, no setup fee. Most clients need neither. Ask on the call if you expect regular changes.</div>
+      <a href="contact" class="p-cta">Ask about a plan</a>
     </div>
   </div>
   <div class="edit-row">
     <div>
       <div class="edit-label">One-Time Edits</div>
       <div class="edit-title">Just need a change?</div>
-      <div class="edit-desc">No plan required. Pick the size that fits, it's scoped, done, and live, usually within 48 hours. If you expect changes most months, the Edits Plan costs less than a single session.</div>
+      <div class="edit-desc">No plan required. Pick the size that fits, it's scoped, done, and live, usually within 48 hours. If you expect changes most months, the Edits Plan or Care Plan above costs less than a single session.</div>
     </div>
     <div class="edit-tiers">
       <div class="edit-tier"><div class="edit-tier-name">Quick Fix</div><div class="edit-tier-price">$25</div><div class="edit-tier-desc">One change — a photo, your hours, a price, a typo</div></div>
       <div class="edit-tier"><div class="edit-tier-name">Edit Session</div><div class="edit-tier-price">$75</div><div class="edit-tier-desc">A batch of changes, knocked out in one sitting</div></div>
       <div class="edit-tier"><div class="edit-tier-name">Edit Day</div><div class="edit-tier-price">$150</div><div class="edit-tier-desc">A full day on your site — bigger reworks</div></div>
-      <div class="edit-tier edit-tier-plan"><div class="edit-tier-name">Edits Plan</div><div class="edit-tier-price">$19.99<span class="edit-tier-mo">/mo</span></div><div class="edit-tier-desc">One round of edits every month, instead of $50 to $100 each time. Request it with your quote. Cancel anytime.</div></div>
     </div>
   </div>
 </section>

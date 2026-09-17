@@ -328,7 +328,7 @@
     .edit-label{font-family:var(--font-head);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:.4rem}
     .edit-title{font-family:var(--font-head);font-size:1.1rem;font-weight:900;color:var(--white);margin-bottom:.3rem;letter-spacing:-.02em}
     .edit-desc{font-family:var(--font-body);font-size:.88rem;color:rgba(255,255,255,.62);line-height:1.65}
-    .edit-tiers{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:1px;background:rgba(255,255,255,.06)}
+    .edit-tiers{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(255,255,255,.06)}
     @media(max-width:700px){.edit-tiers{grid-template-columns:1fr 1fr}}
     .edit-tier-plan{outline:1px solid var(--accent);outline-offset:-1px}
     .edit-tier-mo{font-size:.8rem;font-weight:300;font-family:var(--font-ui)}
@@ -829,3 +829,12 @@
     .lp-card-dark{background:var(--charcoal);border-color:transparent}
     .lp-card-dark .lp-card-b{color:rgba(255,255,255,.78)}
     .lp-card-dark .p-deposit{margin-top:1rem}
+
+    /* ── Two care plans in one card ── */
+    .plan-split{display:grid;grid-template-columns:1fr;gap:0;margin:1rem 0 .6rem}
+    .plan-half{padding:1rem 0 1.2rem;border-top:1px solid rgba(255,255,255,.1)}
+    .plan-half-b{border-bottom:1px solid rgba(255,255,255,.1)}
+    .plan-name{font-family:var(--font-head);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem}
+    .plan-half .p-price{font-size:2rem;margin-bottom:.2rem}
+    .plan-sub{font-family:var(--font-ui);font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:.6rem}
+    .plan-half .p-features{margin:0}
