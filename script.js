@@ -115,6 +115,8 @@ async function handleSubmit(e){
         Business:v('bizname'),
         Type:v('biztype'),
         Budget:v('budget')||'Not specified',
+        Timeline:v('timeline')||'Not specified',
+        'Current platform':v('currentsite')||'Not specified',
         EditsPlan:(document.getElementById('editsplan')&&document.getElementById('editsplan').checked)?'Yes':'No',
         'Current URL':v('currenturl')||'None',
         Message:v('message')||'None'
