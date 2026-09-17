@@ -746,7 +746,7 @@
     /* deposit + send list */
     .p-deposit{display:block;margin-top:.7rem;text-align:center;font-family:var(--font-head);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--accent);text-decoration:none;border:1.5px solid var(--accent);border-radius:var(--radius-sm);padding:.85rem 1rem}
     .p-deposit:hover{background:var(--accent);color:#161412}
-    .p-deposit-note{font-family:var(--font-ui);font-size:.78rem;opacity:.65;margin-top:.6rem;line-height:1.5;text-align:center}
+    .p-deposit-note{font-family:var(--font-ui);font-size:.78rem;color:rgba(255,255,255,.7);margin-top:.6rem;line-height:1.5;text-align:center}
     .send-list{background:var(--parchment);border:1px solid var(--border-light);border-radius:var(--radius-sm);padding:1.5rem 1.6rem;margin-bottom:2rem}
     .send-title{font-family:var(--font-head);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#8a6a14;margin-bottom:.8rem}
     .send-list ul{margin:0 0 1rem 1.1rem;padding:0;font-family:var(--font-body);line-height:1.7;color:var(--text-secondary)}
