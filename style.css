@@ -561,6 +561,8 @@
     .words-section .testi-quote{font-size:.98rem;flex:1;padding-top:1.1rem}
     .words-section .testi-author{border-top:1px solid var(--border-light);padding-top:1rem;margin-top:.3rem}
     .words-section .testi-wrap.home-testi .testi-card{display:flex;flex-direction:column;margin:0}
+    .words-section .testi-wrap.home-testi .testi-card-wide{grid-column:1/-1}
+    .words-section .testi-wrap.home-testi .testi-card-wide .testi-quote{font-size:1.02rem;max-width:760px}
     .words-section .testi-wrap.home-testi .testi-quote{flex:1;font-size:.92rem}
     @media(max-width:1020px){.words-section .testi-wrap.home-testi{grid-template-columns:1fr;max-width:640px}}
 
