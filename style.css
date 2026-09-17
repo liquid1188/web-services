@@ -838,3 +838,21 @@
     .plan-half .p-price{font-size:2rem;margin-bottom:.2rem}
     .plan-sub{font-family:var(--font-ui);font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:.6rem}
     .plan-half .p-features{margin:0}
+
+    /* ── Footer (Sept 2026) ── */
+    footer{display:block;background:var(--charcoal);color:rgba(255,255,255,.55);padding:5rem 6vw 2rem;border-top:1px solid rgba(255,255,255,.06);position:relative}
+    footer::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent 60%)}
+    .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1.2fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.08)}
+    @media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:2.4rem 2rem}.foot-brand{grid-column:1/-1}}
+    @media(max-width:520px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem 1.5rem}.foot-grid .foot-col:nth-child(3){grid-column:1/-1}}
+    .foot-wordmark{font-family:'JetBrains Mono',var(--font-head);font-weight:700;font-size:1.05rem;color:var(--white);letter-spacing:.01em;margin-bottom:1rem}
+    .foot-tag{font-family:var(--font-body);font-size:.92rem;line-height:1.7;color:rgba(255,255,255,.55);max-width:340px;margin-bottom:1.4rem}
+    .foot-ig{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--font-ui);font-size:.82rem;color:rgba(255,255,255,.8);text-decoration:none;transition:color .2s}
+    .foot-ig svg{width:16px;height:16px}
+    .foot-ig:hover{color:var(--accent)}
+    .foot-h{font-family:var(--font-head);font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:1.1rem}
+    .foot-col a{display:block;font-family:var(--font-ui);font-size:.88rem;color:rgba(255,255,255,.62);text-decoration:none;padding:.32rem 0;transition:color .2s,transform .2s}
+    .foot-col a:hover{color:var(--white);transform:translateX(2px)}
+    .foot-col a.foot-quiet{color:rgba(255,255,255,.32);margin-top:.6rem}
+    .foot-bar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem 2rem;padding-top:1.4rem;font-family:var(--font-ui);font-size:.72rem;color:rgba(255,255,255,.38);letter-spacing:.02em}
+    footer .view-desktop{display:block;margin-top:1rem;font-family:var(--font-ui);font-size:.72rem;text-align:left}
