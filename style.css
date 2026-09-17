@@ -130,6 +130,22 @@
       .live-tag{opacity:1;transform:none}
     }
 
+    /* ── CLIENT LOGO BAND ── */
+    .client-band{background:var(--charcoal);padding:1.6rem 6vw 1.9rem;text-align:center}
+    .client-band-label{font-family:var(--font-head);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:700;margin-bottom:1.1rem}
+    .client-logos{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem 2.2rem;max-width:1280px;margin:0 auto}
+    .client-logo{display:inline-flex;align-items:center;opacity:.78;transition:opacity .2s,transform .2s}
+    .client-logo:hover{opacity:1;transform:translateY(-1px)}
+    .client-logo img{height:27px;width:auto;display:block}
+    @media(max-width:900px){
+      .client-band{padding:1.3rem 0 1.5rem}
+      .client-band-label{margin-bottom:.9rem}
+      .client-logos{flex-wrap:nowrap;justify-content:flex-start;gap:2rem;overflow-x:auto;padding:0 6vw;scrollbar-width:none;-webkit-overflow-scrolling:touch;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+      .client-logos::-webkit-scrollbar{display:none}
+      .client-logo{flex:none}
+      .client-logo img{height:26px}
+    }
+
     /* ── PERFORMANCE BAR ── */
     .perf-stack{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.6rem 2rem}
     .stack-label{font-family:var(--font-head);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:700}
