@@ -594,6 +594,11 @@
     .cs-shot:hover .cs-view{opacity:1}
     .cs-view span{font-family:var(--font-head);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(196,154,42,.94);padding:.42rem .85rem;border-radius:30px;display:inline-flex;align-items:center;gap:.4rem}
     .cs-body{min-width:0}
+    .cs-tier{display:inline-block;margin-right:.7rem;padding:.22rem .6rem;border-radius:4px;background:var(--text-primary);color:var(--text-inverse);letter-spacing:.14em;font-size:.56rem}
+    .tier-head{max-width:860px;margin:0 0 2.2rem;padding-top:1.2rem;border-top:1px solid rgba(22,20,18,.12)}
+    .tier-head-name{font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
+    .tier-head-sub{font-family:var(--font-body);font-size:.95rem;color:var(--text-secondary);line-height:1.6}
+    .case+.tier-head{margin-top:1rem}
     .cs-eyebrow{font-family:var(--font-head);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:.6rem}
     .cs-title{font-family:var(--font-head);font-size:1.7rem;font-weight:900;color:var(--text-primary);letter-spacing:-.02em;line-height:1.05;margin-bottom:1.3rem}
     @media(max-width:480px){.cs-title{font-size:1.45rem}}

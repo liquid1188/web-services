@@ -29,7 +29,7 @@
   <link rel="preload" as="font" type="font/woff2" href="fonts/Montserrat-900.woff2" crossorigin/>
   <link rel="preload" as="font" type="font/woff2" href="fonts/Lora-400.woff2" crossorigin/>
   <link rel="stylesheet" href="fonts.css?v=1"/>
-  <link rel="stylesheet" href="style.css?v=26"/>
+  <link rel="stylesheet" href="style.css?v=27"/>
   <!-- GA4 — cookieless (consent mode: storage denied by default, no banner required) -->
   <script>window.addEventListener("load",function(){setTimeout(function(){var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-KPPCZHKHC2";document.head.appendChild(s);},2500);});</script>
   <script>
@@ -70,11 +70,13 @@
   <div class="section-intro">
     <div class="eyebrow">Selected Work · Live Client Sites</div>
     <h1 class="as-h2">Real clients.<br><span class="serif">Real sites you can open right now.</span></h1>
-    <p class="section-body">Every site here was custom-built for a real client and is live today — open any screenshot to see it for yourself. Below, the brief, the build, and the result on a few of them.</p>
+    <p class="section-body">Every site here was custom-built for a real client and is live today — open any screenshot to see it for yourself. Below, the brief, the build, and the result, grouped by the pricing tier each one fits.</p>
   </div>
 
   <!-- Case studies -->
   <div class="case-studies">
+    <div class="tier-head reveal"><div class="tier-head-name">The Full Build</div><div class="tier-head-sub">$1,000 to $2,500. Custom design plus the systems that make a site run: archives, ticketing, self-updating pages, press kits.</div></div>
+
     <!-- DC Social Collective -->
     <div class="case reveal" id="dcsocial">
       <div class="cs-media">
@@ -85,7 +87,7 @@
         </a>
       </div>
       <div class="cs-body">
-        <div class="cs-eyebrow">Events &middot; Ticketing &amp; Archive</div>
+        <div class="cs-eyebrow"><span class="cs-tier">The Full Build</span>Events &middot; Ticketing &amp; Archive</div>
         <div class="cs-title">Five years of dance nights, from the next ticket link back to the first picnic.</div>
         <div class="cs-blocks">
           <div class="cs-block"><div class="cs-k">Brief</div><div class="cs-v">DC Social Collective has run the DMV's biggest nights out for young adults since 2021 — two hundred to five hundred people at a winery, a barn, or a hotel ballroom. They already had a site. What they wanted was one that could carry the whole thing at once: the next ticket link, every night they have thrown, the press, and the venues and sponsors who want in.</div></div>
@@ -113,7 +115,7 @@
         </a>
       </div>
       <div class="cs-body">
-        <div class="cs-eyebrow">Composer &middot; Catalog</div>
+        <div class="cs-eyebrow"><span class="cs-tier">The Full Build</span>Composer &middot; Catalog</div>
         <div class="cs-title">A composer's catalog, discography, and press, set in chant and vellum.</div>
         <div class="cs-blocks">
           <div class="cs-block"><div class="cs-k">Brief</div><div class="cs-v">Frank La Rocca, composer of the <em>Mass of the Americas</em>, wanted a site that gathered his catalog, recordings, and press in one place and looked like the music sounds.</div></div>
@@ -131,59 +133,33 @@
       </div>
     </div>
 
-    <!-- Traddyland -->
-    <div class="case reveal" id="traddyland">
+    <!-- LLF -->
+    <div class="case reveal" id="llf">
       <div class="cs-media">
-        <a class="cs-shot" href="https://www.traddyland.com/" target="_blank" rel="noopener" aria-label="Open Traddyland in a new tab">
-          <div class="port-chrome"><div class="p-dots"><div class="p-dot r"></div><div class="p-dot y"></div><div class="p-dot g"></div></div><div class="p-url">traddyland.com</div></div>
-          <img class="cs-img" src="screenshots/traddyland.webp" alt="Traddyland book website homepage" width="1280" height="853" loading="lazy" decoding="async">
+        <a class="cs-shot" href="https://likoudislegacy.com/" target="_blank" rel="noopener" aria-label="Open Likoudis Legacy Foundation in a new tab">
+          <div class="port-chrome"><div class="p-dots"><div class="p-dot r"></div><div class="p-dot y"></div><div class="p-dot g"></div></div><div class="p-url">likoudislegacy.com</div></div>
+          <img class="cs-img" src="screenshots/llf.webp" alt="Likoudis Legacy Foundation website homepage" width="1280" height="800" loading="lazy" decoding="async">
           <div class="cs-view"><span>View live ↗</span></div>
         </a>
       </div>
       <div class="cs-body">
-        <div class="cs-eyebrow">Author &middot; Book Launch</div>
-        <div class="cs-title">A book site that carries the press, the forum, and the newsletter under one roof.</div>
+        <div class="cs-eyebrow"><span class="cs-tier">The Full Build</span>Nonprofit · Multi-page</div>
+        <div class="cs-title">12× faster. ~$10/yr. More donors.</div>
         <div class="cs-blocks">
-          <div class="cs-block"><div class="cs-k">Brief</div><div class="cs-v">Lou Massett's memoir <em>Traddyland</em> had been quoted in Newsweek and reviewed in the National Catholic Reporter. He wanted a site that put that coverage front and center and brought his reader forum under the same roof.</div></div>
-          <div class="cs-block"><div class="cs-k">Built</div><div class="cs-v">A fast, editorial site with press logos linked to the articles, a Forum that carries twenty essays and their comments over from the old community, and a Speaking page with bios.</div></div>
-          <div class="cs-block"><div class="cs-k">Result</div><div class="cs-v">The domain moved off Wix the same week, with HTTPS, analytics, and indexing on from day one.</div></div>
+          <div class="cs-block"><div class="cs-k">Brief</div><div class="cs-v">A Catholic research nonprofit stuck on a slow WordPress site — paying every year for hosting and plugins while pages crawled and donors bounced.</div></div>
+          <div class="cs-block"><div class="cs-k">Built</div><div class="cs-v">A multi-page institutional site — programs, publications, conference listings, and donation pathways — that the foundation owns outright and hosts for the price of a domain.</div></div>
+          <div class="cs-block"><div class="cs-k">Result</div><div class="cs-v">Loads in a second or two instead of eight, costs about $10 a year instead of recurring platform fees, and reads like the institution it represents.</div></div>
         </div>
-        <div class="cs-attrib">Louis Massett &middot; Author of <em>Traddyland</em></div>
         <div class="cs-pills">
-          <span class="cs-pill">Domain migration from Wix</span>
-          <span class="cs-pill green">Press strip with real logos</span>
-          <span class="cs-pill">Forum with 20 posts</span>
-          <span class="cs-pill">Self-serve editor</span>
+          <span class="cs-pill green">12× faster load</span>
+          <span class="cs-pill">~$10/yr hosting</span>
+          <span class="cs-pill green">Sub-second desktop load</span>
         </div>
-        <a class="cs-link" href="https://www.traddyland.com/" target="_blank" rel="noopener">View live site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        <a class="cs-link" href="https://likoudislegacy.com/" target="_blank" rel="noopener">View live site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
       </div>
     </div>
 
-    <!-- Brush & Soul -->
-    <div class="case reveal" id="brushsoul">
-      <div class="cs-media">
-        <a class="cs-shot" href="https://brushandsoulstudio.com/" target="_blank" rel="noopener" aria-label="Open Brush & Soul Studio in a new tab">
-          <div class="port-chrome"><div class="p-dots"><div class="p-dot r"></div><div class="p-dot y"></div><div class="p-dot g"></div></div><div class="p-url">brushandsoulstudio.com</div></div>
-          <img class="cs-img" src="screenshots/brushsoul.webp" alt="Brush &amp; Soul Studio storefront homepage" width="1280" height="800" loading="lazy" decoding="async">
-          <div class="cs-view"><span>View live ↗</span></div>
-        </a>
-      </div>
-      <div class="cs-body">
-        <div class="cs-eyebrow">Artist Storefront · Shopify</div>
-        <div class="cs-title">An online storefront for original art — built to sell it.</div>
-        <div class="cs-blocks">
-          <div class="cs-block"><div class="cs-k">Brief</div><div class="cs-v">Caroline Likoudis needed somewhere to actually sell original paintings and prints — not just display them — without a stock template fighting her work.</div></div>
-          <div class="cs-block"><div class="cs-k">Built</div><div class="cs-v">A full Shopify storefront: a complete product catalog, a commissions inquiry flow, and a warm, gallery-style browsing experience designed around the art itself.</div></div>
-          <div class="cs-block"><div class="cs-k">Result</div><div class="cs-v">A live storefront where every painting and print can be purchased, with a clear path to commissioning new work.</div></div>
-        </div>
-        <div class="cs-pills">
-          <span class="cs-pill">Full Shopify storefront</span>
-          <span class="cs-pill green">Shoppable catalog</span>
-          <span class="cs-pill">Commissions flow</span>
-        </div>
-        <a class="cs-link" href="https://brushandsoulstudio.com/" target="_blank" rel="noopener">View live site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      </div>
-    </div>
+    <div class="tier-head reveal"><div class="tier-head-name">Custom Website</div><div class="tier-head-sub">$500 to $1,000. Separate pages designed from scratch around your work. Most sites land here.</div></div>
 
     <!-- Roxane -->
     <div class="case reveal" id="roxane">
@@ -195,7 +171,7 @@
         </a>
       </div>
       <div class="cs-body">
-        <div class="cs-eyebrow">Author &amp; Columnist · Fargo, ND</div>
+        <div class="cs-eyebrow"><span class="cs-tier">Custom Website</span>Author &amp; Columnist · Fargo, ND</div>
         <div class="cs-title">Twenty years of writing, finally in one place.</div>
         <div class="cs-blocks">
           <div class="cs-block"><div class="cs-k">Brief</div><div class="cs-v">An award-winning author and columnist whose work was scattered across an aging blog, a newspaper column, and a Substack &mdash; with 2,300+ &ldquo;Peace Garden Passage&rdquo; posts at risk of being lost in any redesign.</div></div>
@@ -213,29 +189,59 @@
       </div>
     </div>
 
-    <!-- LLF -->
-    <div class="case reveal" id="llf">
+    <!-- Andrew Likoudis -->
+    <div class="case reveal" id="andrew">
       <div class="cs-media">
-        <a class="cs-shot" href="https://likoudislegacy.com/" target="_blank" rel="noopener" aria-label="Open Likoudis Legacy Foundation in a new tab">
-          <div class="port-chrome"><div class="p-dots"><div class="p-dot r"></div><div class="p-dot y"></div><div class="p-dot g"></div></div><div class="p-url">likoudislegacy.com</div></div>
-          <img class="cs-img" src="screenshots/llf.webp" alt="Likoudis Legacy Foundation website homepage" width="1280" height="800" loading="lazy" decoding="async">
+        <a class="cs-shot" href="https://andrewlikoudis.com/" target="_blank" rel="noopener" aria-label="Open Andrew Likoudis in a new tab">
+          <div class="port-chrome"><div class="p-dots"><div class="p-dot r"></div><div class="p-dot y"></div><div class="p-dot g"></div></div><div class="p-url">andrewlikoudis.com</div></div>
+          <img class="cs-img" src="screenshots/andrew.webp" alt="Andrew Likoudis author and scholar website homepage" width="1280" height="853" loading="lazy" decoding="async">
           <div class="cs-view"><span>View live ↗</span></div>
         </a>
       </div>
       <div class="cs-body">
-        <div class="cs-eyebrow">Nonprofit · Multi-page</div>
-        <div class="cs-title">12× faster. ~$10/yr. More donors.</div>
+        <div class="cs-eyebrow"><span class="cs-tier">Custom Website</span>Scholar &amp; Author · Baltimore, MD</div>
+        <div class="cs-title">Books, articles, and speaking, with one door for inquiries.</div>
         <div class="cs-blocks">
-          <div class="cs-block"><div class="cs-k">Brief</div><div class="cs-v">A Catholic research nonprofit stuck on a slow WordPress site — paying every year for hosting and plugins while pages crawled and donors bounced.</div></div>
-          <div class="cs-block"><div class="cs-k">Built</div><div class="cs-v">A multi-page institutional site — programs, publications, conference listings, and donation pathways — that the foundation owns outright and hosts for the price of a domain.</div></div>
-          <div class="cs-block"><div class="cs-k">Result</div><div class="cs-v">Loads in a second or two instead of eight, costs about $10 a year instead of recurring platform fees, and reads like the institution it represents.</div></div>
+          <div class="cs-block"><div class="cs-k">Brief</div><div class="cs-v">A Catholic scholar and editor with thirteen volumes, sixty-plus articles across several outlets, and speaking and consulting work, all needing a single home that reads as serious to publishers, media, and clients.</div></div>
+          <div class="cs-block"><div class="cs-k">Built</div><div class="cs-v">A multi-page author site: books with buy links, a curated articles page, endorsements, speaking, a gallery, and a Work With Me page with an inquiry form. Designed from scratch around the work rather than a template.</div></div>
+          <div class="cs-block"><div class="cs-k">Result</div><div class="cs-v">One address for everything. Publishers find the books, editors find the writing, and prospective clients land on a page built to convert an inquiry.</div></div>
         </div>
         <div class="cs-pills">
-          <span class="cs-pill green">12× faster load</span>
-          <span class="cs-pill">~$10/yr hosting</span>
-          <span class="cs-pill green">Sub-second desktop load</span>
+          <span class="cs-pill">Books with buy links</span>
+          <span class="cs-pill green">Endorsements page</span>
+          <span class="cs-pill">Inquiry form</span>
         </div>
-        <a class="cs-link" href="https://likoudislegacy.com/" target="_blank" rel="noopener">View live site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        <a class="cs-link" href="https://andrewlikoudis.com/" target="_blank" rel="noopener">View live site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      </div>
+    </div>
+
+    <div class="tier-head reveal"><div class="tier-head-name">Starter Site</div><div class="tier-head-sub">$200 to $400. One page, or a few basic pages, live in about 48 hours.</div></div>
+
+    <!-- Traddyland -->
+    <div class="case reveal" id="traddyland">
+      <div class="cs-media">
+        <a class="cs-shot" href="https://www.traddyland.com/" target="_blank" rel="noopener" aria-label="Open Traddyland in a new tab">
+          <div class="port-chrome"><div class="p-dots"><div class="p-dot r"></div><div class="p-dot y"></div><div class="p-dot g"></div></div><div class="p-url">traddyland.com</div></div>
+          <img class="cs-img" src="screenshots/traddyland.webp" alt="Traddyland book website homepage" width="1280" height="853" loading="lazy" decoding="async">
+          <div class="cs-view"><span>View live ↗</span></div>
+        </a>
+      </div>
+      <div class="cs-body">
+        <div class="cs-eyebrow"><span class="cs-tier">Starter Site</span>Author &middot; Book Launch</div>
+        <div class="cs-title">A book site that carries the press, the forum, and the newsletter under one roof.</div>
+        <div class="cs-blocks">
+          <div class="cs-block"><div class="cs-k">Brief</div><div class="cs-v">Lou Massett's memoir <em>Traddyland</em> had been quoted in Newsweek and reviewed in the National Catholic Reporter. He wanted a site that put that coverage front and center and brought his reader forum under the same roof.</div></div>
+          <div class="cs-block"><div class="cs-k">Built</div><div class="cs-v">A fast, editorial site with press logos linked to the articles, a Forum that carries twenty essays and their comments over from the old community, and a Speaking page with bios.</div></div>
+          <div class="cs-block"><div class="cs-k">Result</div><div class="cs-v">The domain moved off Wix the same week, with HTTPS, analytics, and indexing on from day one.</div></div>
+        </div>
+        <div class="cs-attrib">Louis Massett &middot; Author of <em>Traddyland</em></div>
+        <div class="cs-pills">
+          <span class="cs-pill">Domain migration from Wix</span>
+          <span class="cs-pill green">Press strip with real logos</span>
+          <span class="cs-pill">Forum with 20 posts</span>
+          <span class="cs-pill">Self-serve editor</span>
+        </div>
+        <a class="cs-link" href="https://www.traddyland.com/" target="_blank" rel="noopener">View live site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
       </div>
     </div>
 
@@ -249,7 +255,7 @@
         </a>
       </div>
       <div class="cs-body">
-        <div class="cs-eyebrow">Musician &middot; Press Kit</div>
+        <div class="cs-eyebrow"><span class="cs-tier">Starter Site</span>Musician &middot; Press Kit</div>
         <div class="cs-title">A dark, editorial site for a songwriter and his label.</div>
         <div class="cs-blocks">
           <div class="cs-block"><div class="cs-k">Brief</div><div class="cs-v">A Baltimore songwriter, producer, and founder of Arkansas House Records &mdash; with a debut LP, a label story, film photography, and gigs to book &mdash; and no single place online that held any of it.</div></div>
@@ -267,6 +273,32 @@
       </div>
     </div>
 
+    <!-- Brush & Soul -->
+    <div class="case reveal" id="brushsoul">
+      <div class="cs-media">
+        <a class="cs-shot" href="https://brushandsoulstudio.com/" target="_blank" rel="noopener" aria-label="Open Brush & Soul Studio in a new tab">
+          <div class="port-chrome"><div class="p-dots"><div class="p-dot r"></div><div class="p-dot y"></div><div class="p-dot g"></div></div><div class="p-url">brushandsoulstudio.com</div></div>
+          <img class="cs-img" src="screenshots/brushsoul.webp" alt="Brush &amp; Soul Studio storefront homepage" width="1280" height="800" loading="lazy" decoding="async">
+          <div class="cs-view"><span>View live ↗</span></div>
+        </a>
+      </div>
+      <div class="cs-body">
+        <div class="cs-eyebrow"><span class="cs-tier">Starter Site</span>Artist Storefront · Shopify</div>
+        <div class="cs-title">An online storefront for original art — built to sell it.</div>
+        <div class="cs-blocks">
+          <div class="cs-block"><div class="cs-k">Brief</div><div class="cs-v">Caroline Likoudis needed somewhere to actually sell original paintings and prints — not just display them — without a stock template fighting her work.</div></div>
+          <div class="cs-block"><div class="cs-k">Built</div><div class="cs-v">A full Shopify storefront: a complete product catalog, a commissions inquiry flow, and a warm, gallery-style browsing experience designed around the art itself.</div></div>
+          <div class="cs-block"><div class="cs-k">Result</div><div class="cs-v">A live storefront where every painting and print can be purchased, with a clear path to commissioning new work.</div></div>
+        </div>
+        <div class="cs-pills">
+          <span class="cs-pill">Full Shopify storefront</span>
+          <span class="cs-pill green">Shoppable catalog</span>
+          <span class="cs-pill">Commissions flow</span>
+        </div>
+        <a class="cs-link" href="https://brushandsoulstudio.com/" target="_blank" rel="noopener">View live site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      </div>
+    </div>
+
   </div>
 
   <!-- More work -->
@@ -279,7 +311,7 @@
 <!-- CTA FINAL -->
 <section class="cta-final">
   <h2>Your work deserves a site<br><span class="serif">that does it justice.</span></h2>
-  <p class="section-body" style="margin-bottom:2.5rem">Most sites $500 to $2,000, starter pages $200. You get an estimate before any work begins, no platform fees beyond your domain, and you own every file. Tell me what you do and I'll tell you what it would take.</p>
+  <p class="section-body" style="margin-bottom:2.5rem">Most sites $500 to $2,500, starter sites from $200. You get an estimate before any work begins, no platform fees beyond your domain, and you own every file. Tell me what you do and I'll tell you what it would take.</p>
   <a href="contact" class="btn-accent">Get a Free Quote</a>
   <div class="cta-final-note">Or email: hello@lickitysplitweb.com</div>
 </section>
