@@ -138,12 +138,11 @@
     .client-logo:hover{opacity:1;transform:translateY(-1px)}
     .client-logo img{height:30px;width:auto;display:block}
     @media(max-width:900px){
-      .client-band{padding:1.3rem 0 1.5rem}
+      .client-band{padding:1.4rem 6vw 1.6rem}
       .client-band-label{margin-bottom:.9rem}
-      .client-logos{flex-wrap:nowrap;justify-content:flex-start;gap:2rem;overflow-x:auto;padding:0 6vw;scrollbar-width:none;-webkit-overflow-scrolling:touch;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
-      .client-logos::-webkit-scrollbar{display:none}
-      .client-logo{flex:none}
-      .client-logo img{height:26px}
+      .client-logos{display:grid;grid-template-columns:repeat(2,auto);justify-content:center;align-items:center;gap:1.1rem 2rem;max-width:none}
+      .client-logo{justify-content:center}
+      .client-logo img{height:24px}
     }
 
     /* ── CREDENTIALS BAND ── */
