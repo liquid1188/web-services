@@ -176,7 +176,8 @@
       .cred-band{padding:1.6rem 6vw}
       .cred-row{grid-template-columns:1fr;gap:.8rem}
       .cred-row-label{text-align:center}
-      .cred-logos{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem 1rem;align-items:center;justify-items:center}
+      .cred-logos{display:flex;flex-wrap:nowrap;justify-content:center;align-items:center;gap:1rem}
+      .cred-logo{flex:0 1 22%;justify-content:center}
       .cred-logo img{height:auto;width:100%;max-height:44px;object-fit:contain}
       .cred-logo img[alt="Goldman Sachs 10,000 Small Businesses Fellows"],.cred-logo img[alt="Johns Hopkins University"],.cred-logo img[alt="McKinsey Forward"],.cred-logo img[alt="Anthropic AI Fluency"],.cred-logo img[alt="Franciscan University of Steubenville"],.cred-logo img[alt="Community College of Baltimore County"],.cred-logo img[alt="Pearson Accelerated Pathways"],.cred-logo img[alt="EWTN News"],.cred-logo img[alt="Philosophy Now"],.cred-logo img[alt="Towson University"]{height:auto;max-height:44px}
       .cred-logo img[alt="Franciscan University of Steubenville"],.cred-logo img[alt="Pearson Accelerated Pathways"]{max-height:56px;width:auto}
