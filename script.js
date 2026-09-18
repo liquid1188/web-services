@@ -117,7 +117,7 @@ async function handleSubmit(e){
         Budget:v('budget')||'Not specified',
         Timeline:v('timeline')||'Not specified',
         'Current platform':v('currentsite')||'Not specified',
-        EditsPlan:(document.getElementById('editsplan')&&document.getElementById('editsplan').checked)?'Yes':'No',
+        'Monthly plan':(document.getElementById('editsplan')&&document.getElementById('editsplan').value)||'None',
         'Current URL':v('currenturl')||'None',
         Message:v('message')||'None'
       })
@@ -131,7 +131,7 @@ async function handleSubmit(e){
         business_type: v('biztype')||'unspecified',
         budget_range:  v('budget')||'unspecified',
         has_existing_site: v('currenturl') ? 'yes' : 'no',
-        edits_plan: (document.getElementById('editsplan')&&document.getElementById('editsplan').checked)?'yes':'no'
+        monthly_plan: (document.getElementById('editsplan')&&document.getElementById('editsplan').value)||'none'
       });
     }
     document.getElementById('quote-form').style.display='none';
@@ -302,4 +302,17 @@ async function handleSubmit(e){
   document.addEventListener('visibilitychange',function(){ paused=document.hidden; });
   typeUrl(data[0][1]);
   if(data.length>1) holdTimer=setTimeout(tick,3400);
+})();
+
+/* Contact form: monthly plan pick, one at a time, click again to clear */
+(function(){
+  var btns=document.querySelectorAll('.plan-btn'), hid=document.getElementById('editsplan');
+  if(!btns.length||!hid) return;
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var on=b.getAttribute('aria-pressed')==='true';
+      btns.forEach(function(x){x.setAttribute('aria-pressed','false');});
+      if(!on){ b.setAttribute('aria-pressed','true'); hid.value=b.dataset.plan; } else { hid.value=''; }
+    });
+  });
 })();
