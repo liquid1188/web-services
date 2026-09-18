@@ -156,7 +156,7 @@
     .cred-logo:hover{opacity:1;transform:translateY(-1px)}
     .cred-logo img{height:30px;width:auto;display:block}
     .cred-logo img[alt="Goldman Sachs 10,000 Small Businesses Fellows"]{height:46px}
-    .cred-logo img[alt="Johns Hopkins University"]{height:48px}
+    .cred-logo img[alt="Johns Hopkins University"]{height:40px}
     .cred-logo img[alt="Franciscan University of Steubenville"]{height:60px}
     .cred-logo img[alt="Towson University"]{height:28px}
     .cred-logo img[alt="Community College of Baltimore County"]{height:34px}
@@ -168,7 +168,7 @@
     .cred-band-slim{padding:1.8rem 6vw}
     .cred-band-slim .cred-logo img{height:24px}
     .cred-band-slim .cred-logo img[alt="Goldman Sachs 10,000 Small Businesses Fellows"]{height:40px}
-    .cred-band-slim .cred-logo img[alt="Johns Hopkins University"]{height:42px}
+    .cred-band-slim .cred-logo img[alt="Johns Hopkins University"]{height:34px}
     .cred-band-slim .cred-logo img[alt="McKinsey Forward"]{height:28px}
     .cred-band-slim .cred-logo img[alt="Anthropic AI Fluency"]{height:16px}
     .cred-band-slim .cred-logo img[alt="Philosophy Now"]{height:22px}
@@ -180,7 +180,7 @@
       .cred-logo img{height:auto;width:100%;max-height:44px;object-fit:contain}
       .cred-logo img[alt="Goldman Sachs 10,000 Small Businesses Fellows"],.cred-logo img[alt="Johns Hopkins University"],.cred-logo img[alt="McKinsey Forward"],.cred-logo img[alt="Anthropic AI Fluency"],.cred-logo img[alt="Franciscan University of Steubenville"],.cred-logo img[alt="Community College of Baltimore County"],.cred-logo img[alt="Pearson Accelerated Pathways"],.cred-logo img[alt="EWTN News"],.cred-logo img[alt="Philosophy Now"],.cred-logo img[alt="Towson University"]{height:auto;max-height:44px}
       .cred-logo img[alt="Franciscan University of Steubenville"],.cred-logo img[alt="Pearson Accelerated Pathways"]{max-height:56px;width:auto}
-      .cred-logo img[alt="Johns Hopkins University"]{max-height:52px;width:auto}
+      .cred-logo img[alt="Johns Hopkins University"]{max-height:42px;width:auto}
       .cred-logo img[alt="Anthropic AI Fluency"]{width:88%}
     }
 
