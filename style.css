@@ -31,6 +31,7 @@
       --shadow-lg:0 12px 56px rgba(22,20,18,.14);
       --shadow-xl:0 24px 80px rgba(22,20,18,.2);
     }
+    @media(max-width:640px){:root{--section-pad:4.5rem 6vw}}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{font-family:var(--font-ui);background:var(--warm-white);color:var(--text-primary);overflow-x:hidden;-webkit-font-smoothing:antialiased}
