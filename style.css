@@ -199,6 +199,8 @@
     .research-text{font-family:var(--font-body);font-size:1rem;line-height:1.65;color:var(--text-body,#3b362f)}
     .research-src{display:inline-block;margin-top:1rem;font-family:var(--font-ui);font-size:.8rem;letter-spacing:0;color:var(--text-muted,#8a8378);text-decoration:none;border-bottom:1px solid var(--border-light)}
     .research-src:hover{color:var(--accent);border-color:var(--accent)}
+    .research-src-row{display:flex;flex-wrap:wrap;justify-content:center;gap:.9rem}
+    .research-src-row .research-src{margin-top:0}
     .research-cta{max-width:640px;margin:3rem auto 0}
     .research-cta p{font-family:var(--font-body);font-size:1.08rem;line-height:1.7;margin-bottom:1.6rem;color:var(--text-body,#3b362f)}
     @media(max-width:900px){.research-grid{grid-template-columns:1fr;gap:1rem}.research-num{font-size:2.8rem}}
