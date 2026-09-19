@@ -190,8 +190,9 @@
 
     /* ── RESEARCH ── */
     .research-section{background:var(--parchment);text-align:center}
-    .research-head{max-width:720px;margin:0 auto 3rem}
-    .research-head .eyebrow{justify-content:center}
+    .research-head{max-width:1100px;margin:0 auto 3rem}
+    .research-h2{font-size:clamp(.95rem,1.9vw,1.3rem);white-space:nowrap}
+    @media(max-width:900px){.research-h2{white-space:normal;font-size:clamp(1.5rem,4.5vw,2rem)}}
     .research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1080px;margin:0 auto}
     .research-item{background:var(--white);border:1px solid var(--border-light);padding:2.2rem 1.8rem 1.8rem;border-radius:var(--radius-sm)}
     .research-num{font-family:var(--font-head);font-weight:700;font-size:3.4rem;line-height:1;color:var(--accent);margin-bottom:.9rem}
