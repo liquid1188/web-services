@@ -797,6 +797,7 @@
     .testi-avatar img{width:100%;height:100%;object-fit:cover}
     .testi-name{font-family:var(--font-head);font-size:.78rem;font-weight:700;color:var(--text-primary);line-height:1.2}
     .testi-biz{font-family:var(--font-ui);font-size:.72rem;color:var(--text-tertiary)}
+    .testi-site{font-family:var(--font-ui);font-size:.72rem;color:var(--text-tertiary);margin-top:.1rem}
 
     /* ── REVEAL ON SCROLL (generic) ── */
     .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.4,0,.2,1) var(--rd,0s),transform .7s cubic-bezier(.4,0,.2,1) var(--rd,0s)}
