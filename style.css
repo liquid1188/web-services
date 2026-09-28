@@ -1043,12 +1043,23 @@
     .tier-band .tier-head{padding-top:0}
     .more-band{background:var(--parchment);padding:var(--section-pad)}
     .more-band .more-work-head{padding-top:0;border-top:none}
-    .res-item.res-static:hover{border-color:var(--border-light);transform:none;box-shadow:none}
-    .res-item.res-static:hover .res-title{color:var(--text-primary)}
-    .cap-table{margin:0;border:1px solid var(--border-light);border-radius:var(--radius-sm);background:var(--parchment)}
-    .cap-table>div{display:grid;grid-template-columns:minmax(140px,.8fr) 2fr;gap:1rem;padding:.95rem 1.4rem;border-bottom:1px solid var(--border-light)}
+    /* ── TECHNOLOGY CONSULTING page ── */
+    .tc-hero.wallpaper-dark{padding:9rem 6vw 5.5rem}
+    @media(max-width:900px){.tc-hero.wallpaper-dark{padding:6.5rem 6vw 3.5rem}}
+    .tc-hero .hero-actions{display:flex;flex-wrap:wrap;gap:.8rem}
+    .tc-card{cursor:default}
+    .tc-card:hover{transform:none;box-shadow:none;border-color:var(--border-light)}
+    .tc-card:hover::before{transform:scaleX(0)}
+    @media(max-width:560px){.tc-card .for-title{display:block;margin-bottom:.35rem}}
+    .cap-section{background:var(--white);padding:var(--section-pad)}
+    .cap-main h2{margin-bottom:1rem}
+    .cap-main .section-body{margin-bottom:2rem}
+    .cap-table{margin:0;border:1px solid var(--border-light);border-radius:10px;background:var(--parchment);box-shadow:var(--shadow-sm);overflow:hidden}
+    .cap-table>div{display:grid;grid-template-columns:minmax(130px,.7fr) 2fr;gap:1.2rem;padding:1rem 1.5rem;border-bottom:1px solid var(--border-light)}
+    .cap-table>div:nth-child(even){background:var(--white)}
     .cap-table>div:last-child{border-bottom:none}
-    .cap-table dt{font-family:var(--font-ui);font-size:.82rem;color:#8a6a14}
-    .cap-table dd{margin:0;font-family:var(--font-body);font-size:.98rem;line-height:1.6;color:#2b2620}
+    .cap-table dt{font-family:var(--font-body);font-style:italic;font-size:.95rem;color:#8a6a14;padding-top:.05rem}
+    .cap-table dd{margin:0;font-family:var(--font-body);font-size:.98rem;line-height:1.7;color:var(--text-primary)}
     .cap-table dd a{color:#8a6a14}
-    @media(max-width:560px){.cap-table>div{grid-template-columns:1fr;gap:.2rem}}
+    .cap-code{display:inline-block;min-width:4.2em;font-family:var(--font-head);font-weight:700;font-size:.85rem;color:var(--text-primary)}
+    @media(max-width:560px){.cap-table>div{grid-template-columns:1fr;gap:.15rem;padding:.85rem 1.1rem}}
