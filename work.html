@@ -29,7 +29,7 @@
   <link rel="preload" as="font" type="font/woff2" href="fonts/Montserrat-900.woff2" crossorigin/>
   <link rel="preload" as="font" type="font/woff2" href="fonts/Lora-400.woff2" crossorigin/>
   <link rel="stylesheet" href="fonts.css?v=1"/>
-  <link rel="stylesheet" href="style.css?v=62"/>
+  <link rel="stylesheet" href="style.css?v=63"/>
   <!-- GA4 — cookieless (consent mode: storage denied by default, no banner required) -->
   <script>window.addEventListener("load",function(){setTimeout(function(){var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-KPPCZHKHC2";document.head.appendChild(s);},2500);});</script>
   <script>
@@ -66,14 +66,21 @@
 </nav>
 
 <!-- PORTFOLIO -->
-<section class="portfolio" id="work">
+<section class="work-hero wallpaper-dark" id="work">
   <div class="section-intro">
     <div class="eyebrow">Selected Work · Live Client Sites</div>
     <h1 class="as-h2">Real clients.<br><span class="serif">Real sites you can open right now.</span></h1>
     <p class="section-body">Every site here was custom-built for a real client and is live today — open any screenshot to see it for yourself. Below, the brief, the build, and the result, grouped by the pricing tier each one fits.</p>
+    <div class="work-jump" role="navigation" aria-label="Jump to a tier">
+      <a href="#tier-full">The Full Build<span>$1,000 to $2,500</span></a>
+      <a href="#tier-custom">Custom Website<span>$500 to $1,000</span></a>
+      <a href="#tier-starter">Starter Site<span>$200 to $400</span></a>
+    </div>
   </div>
+</section>
 
-  <!-- Case studies -->
+<!-- TIER 01 -->
+<section class="tier-band band-white" id="tier-full">
   <div class="case-studies">
     <div class="tier-head reveal">
       <div class="tier-head-top"><span class="tier-head-num">Tier 01</span><span class="tier-head-price">$1,000 to $2,500</span></div>
@@ -98,13 +105,14 @@
           <div class="cs-block"><div class="cs-k">Built</div><div class="cs-v">Every event on its own page with live ticketing, directions, and add-to-calendar; a photo archive of every night since 2021, forty-three galleries and just over six thousand images; twenty recap videos; a press page; a merch catalogue; and enquiry pages for hosting and sponsorship.</div></div>
           <div class="cs-block"><div class="cs-k">Result</div><div class="cs-v">One link carries the next date, five years of photographs, and the Washington Post coverage. Guests find the night, venues and sponsors find the booking forms, and every new night joins the archive as its own gallery.</div></div>
         </div>
-        <div class="cs-attrib">Christopher Byrne &middot; Founder and President, DC Social Collective</div>
         <div class="cs-pills">
           <span class="cs-pill">43 galleries, 6,000+ photos</span>
           <span class="cs-pill green">Live ticketing</span>
           <span class="cs-pill">Press: Washington Post</span>
           <span class="cs-pill">Venue &amp; sponsor booking</span>
         </div>
+        <blockquote class="cs-quote">He rebuilt the entire DC Social Collective website and has been a huge asset in making it more functional and user-friendly. He&rsquo;s extremely technically skilled, fast, and reliable, and whenever we need something changed or added, he gets it done.</blockquote>
+        <div class="cs-attrib">Christopher Byrne &middot; Founder and President, DC Social Collective</div>
         <a class="cs-link" href="https://dcsocialcollective.com/" target="_blank" rel="noopener">View live site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
       </div>
     </div>
@@ -164,6 +172,12 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- TIER 02 -->
+<section class="tier-band band-parchment wallpaper" id="tier-custom">
+  <div class="case-studies">
     <div class="tier-head reveal">
       <div class="tier-head-top"><span class="tier-head-num">Tier 02</span><span class="tier-head-price">$500 to $1,000</span></div>
       <h2 class="tier-head-name">Custom Website</h2>
@@ -252,6 +266,12 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- TIER 03 -->
+<section class="tier-band band-white" id="tier-starter">
+  <div class="case-studies">
     <div class="tier-head reveal">
       <div class="tier-head-top"><span class="tier-head-num">Tier 03</span><span class="tier-head-price">$200 to $400</span></div>
       <h2 class="tier-head-name">Starter Site</h2>
@@ -275,13 +295,14 @@
           <div class="cs-block"><div class="cs-k">Built</div><div class="cs-v">A fast, editorial site with press logos linked to the articles, a Forum that carries twenty essays and their comments over from the old community, and a Speaking page with bios.</div></div>
           <div class="cs-block"><div class="cs-k">Result</div><div class="cs-v">The domain moved off Wix the same week, with HTTPS, analytics, and indexing on from day one.</div></div>
         </div>
-        <div class="cs-attrib">Louis Massett &middot; Author of <em>Traddyland</em></div>
         <div class="cs-pills">
           <span class="cs-pill">Domain migration from Wix</span>
           <span class="cs-pill green">Press strip with real logos</span>
           <span class="cs-pill">Forum with 20 posts</span>
           <span class="cs-pill">Self-serve editor</span>
         </div>
+        <blockquote class="cs-quote">Andrew has taken my website to a new level through focused attention to my product and my needs. Well done!</blockquote>
+        <div class="cs-attrib">Lou Massett &middot; Author of <em>Traddyland</em></div>
         <a class="cs-link" href="https://www.traddyland.com/" target="_blank" rel="noopener">View live site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
       </div>
     </div>
@@ -303,19 +324,22 @@
           <div class="cs-block"><div class="cs-k">Built</div><div class="cs-v">A multi-page site with a dark editorial look: a discography with real cover art and a vinyl-slide hover, an Arkansas House Records page, a film-photo contact sheet, a notebook, a downloadable press kit, and a booking page.</div></div>
           <div class="cs-block"><div class="cs-k">Result</div><div class="cs-v">One address for everything &mdash; venues and collaborators can reach the music, the press kit, and the inquiry form in two clicks.</div></div>
         </div>
-        <blockquote class="cs-quote">Andrew gets what I&rsquo;m about and the site shows it. The streaming apps have my music but they&rsquo;re not mine &mdash; this is. My songs, my photos, my label, at my own address. I didn&rsquo;t lift a finger and it still came out better than if I&rsquo;d told him what to do.</blockquote>
-        <div class="cs-attrib">Collin Westerlund &middot; Musician &amp; Producer</div>
         <div class="cs-pills">
           <span class="cs-pill">Multi-page site</span>
           <span class="cs-pill green">Vinyl-hover discography</span>
           <span class="cs-pill">Downloadable press kit</span>
         </div>
+        <blockquote class="cs-quote">Andrew gets what I&rsquo;m about and the site shows it. The streaming apps have my music but they&rsquo;re not mine &mdash; this is. My songs, my photos, my label, at my own address. I didn&rsquo;t lift a finger and it still came out better than if I&rsquo;d told him what to do.</blockquote>
+        <div class="cs-attrib">Collin Westerlund &middot; Musician &amp; Producer</div>
         <a class="cs-link" href="https://collinwesterlundmusic.com/" target="_blank" rel="noopener">View live site <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
       </div>
     </div>
 
   </div>
+</section>
 
+<!-- MORE LIVE SITES -->
+<section class="more-band">
   <!-- More live sites, grouped by type. Add new sites here under the right heading; featured case studies above are not repeated. -->
   <div class="more-work-head">
     <div class="more-work-title">More live sites</div>
