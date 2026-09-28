@@ -1043,3 +1043,12 @@
     .tier-band .tier-head{padding-top:0}
     .more-band{background:var(--parchment);padding:var(--section-pad)}
     .more-band .more-work-head{padding-top:0;border-top:none}
+    .res-item.res-static:hover{border-color:var(--border-light);transform:none;box-shadow:none}
+    .res-item.res-static:hover .res-title{color:var(--text-primary)}
+    .cap-table{margin:0;border:1px solid var(--border-light);border-radius:var(--radius-sm);background:var(--parchment)}
+    .cap-table>div{display:grid;grid-template-columns:minmax(140px,.8fr) 2fr;gap:1rem;padding:.95rem 1.4rem;border-bottom:1px solid var(--border-light)}
+    .cap-table>div:last-child{border-bottom:none}
+    .cap-table dt{font-family:var(--font-ui);font-size:.82rem;color:#8a6a14}
+    .cap-table dd{margin:0;font-family:var(--font-body);font-size:.98rem;line-height:1.6;color:#2b2620}
+    .cap-table dd a{color:#8a6a14}
+    @media(max-width:560px){.cap-table>div{grid-template-columns:1fr;gap:.2rem}}
