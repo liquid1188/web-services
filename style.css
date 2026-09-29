@@ -1006,8 +1006,8 @@
     /* ── WALLPAPER: faint </> lattice, the logo's brackets tiled ── */
     .wallpaper,.wallpaper-dark{position:relative;isolation:isolate}
     .wallpaper::before,.wallpaper-dark::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-size:80px 80px;-webkit-mask-image:radial-gradient(ellipse 85% 75% at 50% 50%,#000 35%,transparent 100%);mask-image:radial-gradient(ellipse 85% 75% at 50% 50%,#000 35%,transparent 100%)}
-    .wallpaper::before{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'><g fill='none' stroke='%23a07e20' stroke-opacity='.17' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'><path d='M15 15L10 20L15 25M22 13L18 27M25 15L30 20L25 25'/><path d='M55 55L50 60L55 65M62 53L58 67M65 55L70 60L65 65'/></g><g fill='%23a07e20' fill-opacity='.17'><circle cx='60' cy='20' r='1.2'/><circle cx='20' cy='60' r='1.2'/></g></svg>")}
-    .wallpaper-dark::before{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'><g fill='none' stroke='%23c49a2a' stroke-opacity='.16' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'><path d='M15 15L10 20L15 25M22 13L18 27M25 15L30 20L25 25'/><path d='M55 55L50 60L55 65M62 53L58 67M65 55L70 60L65 65'/></g><g fill='%23c49a2a' fill-opacity='.16'><circle cx='60' cy='20' r='1.2'/><circle cx='20' cy='60' r='1.2'/></g></svg>")}
+    .wallpaper::before{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'><g fill='none' stroke='%23a07e20' stroke-opacity='.17' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'><path d='M15 15L10 20L15 25M22 13L18 27M25 15L30 20L25 25'/><path d='M55 55L50 60L55 65M62 53L58 67M65 55L70 60L65 65'/></g></svg>")}
+    .wallpaper-dark::before{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'><g fill='none' stroke='%23c49a2a' stroke-opacity='.16' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'><path d='M15 15L10 20L15 25M22 13L18 27M25 15L30 20L25 25'/><path d='M55 55L50 60L55 65M62 53L58 67M65 55L70 60L65 65'/></g></svg>")}
 
     /* Homepage rhythm: Recent (parchment) → Maker (dark wallpaper) → For (white); Words (parchment wallpaper) → Pricing teaser (white) */
     .maker-section.wallpaper-dark{background:var(--charcoal);padding:4.5rem 6vw}
@@ -1094,3 +1094,12 @@
     .tc-services .for-any a{color:#8a6a14}
     @media(max-width:700px){.tc-proj-grid{grid-template-columns:1fr;gap:.8rem}}
     @media(max-width:560px){.tc-proj.for-card{display:flex;padding:1.1rem 1.2rem}.tc-proj .for-title{display:block}}
+
+    /* ── Wallpaper only on dark sections; light bands stay plain ── */
+    .cred-band.wallpaper::before,.tier-band.wallpaper::before,.words-section.wallpaper::before{display:none}
+
+    /* ── Portfolio: hairline between case studies so each write-up sits with its own site ── */
+    .case+.case{position:relative}
+    .case+.case::before{content:"";position:absolute;left:0;right:0;top:-2.75rem;height:1px;background:rgba(22,20,18,.14)}
+    @media(max-width:820px){.case+.case::before{top:-2rem}}
+    @media(max-width:820px){.cs-media{order:0}}
