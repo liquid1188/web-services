@@ -987,7 +987,6 @@
     footer::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent 60%)}
     .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1.2fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.08)}
     @media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:2.4rem 2rem}.foot-brand{grid-column:1/-1}}
-    @media(max-width:520px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem 1.5rem}.foot-grid .foot-col:nth-child(3){grid-column:1/-1}}
     .foot-wordmark{font-family:'JetBrains Mono',var(--font-head);font-weight:700;font-size:1.05rem;color:var(--white);letter-spacing:.01em;margin-bottom:1rem}
     .foot-tag{font-family:var(--font-body);font-size:.92rem;line-height:1.7;color:rgba(255,255,255,.55);max-width:340px;margin-bottom:1.4rem}
     .foot-ig{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--font-ui);font-size:.82rem;color:rgba(255,255,255,.8);text-decoration:none;transition:color .2s}
@@ -1063,3 +1062,35 @@
     .cap-table dd a{color:#8a6a14}
     .cap-code{display:inline-block;min-width:4.2em;font-family:var(--font-head);font-weight:700;font-size:.85rem;color:var(--text-primary)}
     @media(max-width:560px){.cap-table>div{grid-template-columns:1fr;gap:.15rem;padding:.85rem 1.1rem}}
+
+    /* ── Wordmark: keep "/>" as two separate glyphs (no font ligature) ── */
+    .lsmark,.foot-wordmark{font-variant-ligatures:none;font-feature-settings:"calt" 0,"liga" 0}
+    .foot-wordmark .lsb{color:var(--accent)}
+
+    /* ── Mobile footer: brand, then Explore beside Services, then Start as buttons ── */
+    @media(max-width:600px){
+      footer{padding:3.2rem 6vw 1.4rem}
+      .foot-grid{grid-template-columns:auto 1fr;grid-template-areas:"brand brand" "explore services" "start start";gap:2.2rem 2.4rem;padding-bottom:2rem}
+      .foot-brand{grid-area:brand}
+      .foot-tag{font-size:.9rem;margin-bottom:1rem}
+      .foot-grid>.foot-col:nth-child(2){grid-area:explore}
+      .foot-grid>.foot-col:nth-child(3){grid-area:services}
+      .foot-grid>.foot-col:nth-child(4){grid-area:start;display:flex;flex-wrap:wrap;gap:.55rem}
+      .foot-grid>.foot-col:nth-child(4) .foot-h{width:100%;margin-bottom:.35rem}
+      .foot-grid>.foot-col:nth-child(4) a{padding:.5rem .95rem;border:1px solid rgba(255,255,255,.16);border-radius:999px;font-size:.8rem;color:rgba(255,255,255,.8)}
+      .foot-grid>.foot-col:nth-child(4) a:hover{border-color:var(--accent);color:var(--white);transform:none}
+      .foot-h{margin-bottom:.7rem}
+      .foot-col a{font-size:.85rem;padding:.26rem 0}
+      .foot-bar{grid-template-columns:1fr;justify-items:center;text-align:center;gap:.35rem;padding-top:1.2rem}
+      .foot-bar>span:last-child{text-align:center}
+      footer .view-desktop{text-align:center}
+    }
+
+    /* ── Technology Consulting: selected projects ── */
+    .tc-proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;max-width:1000px;margin:2.8rem auto 0;text-align:left}
+    .tc-proj-label{font-family:var(--font-head);font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+    .tc-projects .for-card{background:var(--white)}
+    .tc-services .for-also{margin-top:3rem}
+    .tc-services .for-any a{color:#8a6a14}
+    @media(max-width:700px){.tc-proj-grid{grid-template-columns:1fr;gap:.8rem}}
+    @media(max-width:560px){.tc-proj.for-card{display:flex;padding:1.1rem 1.2rem}.tc-proj .for-title{display:block}}
