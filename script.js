@@ -1,3 +1,6 @@
+// Web3Forms access key. Paste the key from the Web3Forms email between the quotes.
+window.W3F_KEY = "";
+window.w3fBody=function(o){var out={};for(var k in o){var v=o[k];if(k==='_subject')out.subject=v;else if(k==='_replyto')out.replyto=v;else if(k==='_honey'||k==='_gotcha'){if(v)out.botcheck=v;}else if(k.charAt(0)!=='_')out[k]=v;}if(window.W3F_KEY)out.access_key=window.W3F_KEY;return JSON.stringify(out);};
 /* ── Sticky nav ── */
 window.addEventListener('scroll',()=>{
   document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>40);
@@ -102,10 +105,10 @@ async function handleSubmit(e){
   const orig=btn.textContent;
   btn.textContent='Sending\u2026'; btn.disabled=true;
   try{
-    const res=await fetch('https://formsubmit.co/ajax/a5a47df98fb384d4876a60b247bca992',{
+    const res=await fetch('https://api.web3forms.com/submit',{
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify({
+      body:w3fBody({
         _subject:`Quote Request \u2014 ${v('bizname')}`,
         _template:'table',
         _replyto:v('email'),
