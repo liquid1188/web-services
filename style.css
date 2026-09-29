@@ -1107,3 +1107,19 @@
     .cred-band-center .cred-row{grid-template-columns:1fr;justify-items:center;gap:.9rem}
     .cred-band-center .cred-row-label{text-align:center}
     .cred-band-center .cred-logos{justify-content:center}
+    /* Technology consulting: AI section */
+    .tc-ai{background:var(--charcoal);padding:var(--section-pad)}
+    .tc-ai h2{color:#fff}
+    .tc-ai .section-body{color:rgba(255,255,255,.76);max-width:620px;margin-bottom:2.2rem}
+    .tc-ai .eyebrow{color:var(--accent)}
+    .tc-ai .lp-side{position:static}
+    .tc-ai .lp-card{box-shadow:none}
+    .tc-tools-g{font-family:var(--font-body);font-style:italic;font-size:.92rem;color:#8a6a14;margin-top:.9rem}
+    .tc-tools-g:first-child{margin-top:0}
+    .tc-tools p{font-family:var(--font-body);font-size:.93rem;line-height:1.6;color:var(--text-secondary);margin:.2rem 0 0}
+    .tc-writing-intro{margin-bottom:1rem}
+    .tc-ai .lp-ex-name{font-size:.84rem;line-height:1.35}
+    .tc-ai .lp-ex-desc{font-style:italic;margin-top:.15rem}
+    .tc-services .for-desc a{color:#8a6a14}
+    .mini-faq.tc-faq{background:var(--parchment)}
+    @media(max-width:900px){.tc-ai{padding:4.5rem 6vw}}
