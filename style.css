@@ -1103,3 +1103,8 @@
     .case+.case::before{content:"";position:absolute;left:0;right:0;top:-2.75rem;height:1px;background:rgba(22,20,18,.14)}
     @media(max-width:820px){.case+.case::before{top:-2rem}}
     @media(max-width:820px){.cs-media{order:0}}
+    /* Technology Consulting: no sticky columns; centered credential rows */
+    .tc-services .for-intro,#company-data .lp-side{position:static}
+    .cred-band-center .cred-row{grid-template-columns:1fr;justify-items:center;gap:.9rem}
+    .cred-band-center .cred-row-label{text-align:center}
+    .cred-band-center .cred-logos{justify-content:center}
