@@ -1,5 +1,5 @@
 // Web3Forms access key. Paste the key from the Web3Forms email between the quotes.
-window.W3F_KEY = "";
+window.W3F_KEY = "1c22e611-8b13-43bf-ab24-5af6f472a676";
 window.w3fBody=function(o){var out={};for(var k in o){var v=o[k];if(k==='_subject')out.subject=v;else if(k==='_replyto')out.replyto=v;else if(k==='_honey'||k==='_gotcha'){if(v)out.botcheck=v;}else if(k.charAt(0)!=='_')out[k]=v;}if(window.W3F_KEY)out.access_key=window.W3F_KEY;return JSON.stringify(out);};
 /* ── Sticky nav ── */
 window.addEventListener('scroll',()=>{
@@ -126,7 +126,7 @@ async function handleSubmit(e){
       })
     });
     const data=await res.json();
-    if(!res.ok||data.success==='false') throw new Error(data.message||'Send failed');
+    if(!res.ok||!(data.success===true||data.success==='true')) throw new Error(data.message||'Send failed');
     /* GA4 conversion — fires only on confirmed send.
        No name, email, or phone is passed: GA4 prohibits PII. */
     if(typeof gtag==='function'){
