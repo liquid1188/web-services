@@ -44,6 +44,26 @@
     gtag('js',new Date());
     gtag('config','G-KPPCZHKHC2');
   </script>
+<style>
+.est{margin:1.4rem 0 1.2rem;padding:1.25rem 1.25rem 1.1rem;border:1px solid var(--accent-dim,rgba(196,154,42,.25));border-radius:10px;background:rgba(196,154,42,.05)}
+.est-head{font-family:var(--font-head,inherit);font-weight:700;font-size:1.05rem}
+.est-sub{font-size:.88rem;opacity:.75;margin:.2rem 0 .9rem}
+.est-q{font-size:.8rem;font-weight:600;letter-spacing:.02em;margin:.9rem 0 .45rem}
+.est-chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.est-chip{font:inherit;font-size:.85rem;padding:.45rem .85rem;border-radius:999px;border:1px solid rgba(128,128,128,.4);background:transparent;color:inherit;cursor:pointer}
+.est-chip[aria-pressed="true"]{background:var(--accent,#c49a2a);border-color:var(--accent,#c49a2a);color:#161412;font-weight:600}
+.est-checks{display:grid;grid-template-columns:1fr 1fr;gap:.35rem .9rem}
+@media(max-width:640px){.est-checks{grid-template-columns:1fr}}
+#estimator label.est-check{display:flex;gap:.55rem;align-items:flex-start;font-family:var(--font-ui,inherit);font-size:.9rem;line-height:1.35;cursor:pointer;text-transform:none;letter-spacing:0;font-weight:500;color:var(--text-primary,#1c1916);margin:0}
+#estimator .est-check input[type=checkbox]{-webkit-appearance:checkbox;appearance:auto;flex:none;width:18px;height:18px;min-height:0;margin:.1rem 0 0;padding:0;border:0;background:none;box-shadow:none;accent-color:var(--accent,#c49a2a)}
+.est-check em{opacity:.7;font-style:normal}
+.est-result{margin-top:1.1rem;padding-top:1rem;border-top:1px solid rgba(128,128,128,.25)}
+.est-range{font-family:var(--font-head,inherit);font-size:1.7rem;font-weight:800;color:var(--accent,#c49a2a);line-height:1.1}
+.est-tier{font-size:.85rem;font-weight:600;margin-top:.2rem}
+.est-lines{list-style:none;margin:.6rem 0 0;padding:0;font-size:.82rem;opacity:.8}
+.est-lines li{display:flex;justify-content:space-between;gap:1rem;padding:.12rem 0}
+.est-note{font-size:.8rem;opacity:.7;margin-top:.7rem;line-height:1.45}
+</style>
 </head>
 <body>
 
@@ -86,7 +106,7 @@
     </div>
       <div class="contact-reasons">
         <div class="contact-reason"><div class="cr-icon"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><div><div class="cr-title">Weeks, not months</div><div class="cr-body">Most sites go live in a week or two, and a starter site in about 48 hours. You see a private preview before anything goes public, and nothing launches until you say so.</div></div></div>
-        <div class="contact-reason"><div class="cr-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="cr-title">Clear pricing. No surprises.</div><div class="cr-body">Packages start at $200. Custom sites start at $500, and larger builds run $1,000 to $2,000. You get an estimate before any work begins, so you know the price going in. No discovery fees, no hourly billing, no surprise scope charges.</div></div></div>
+        <div class="contact-reason"><div class="cr-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="cr-title">Clear pricing. No surprises.</div><div class="cr-body">Most sites land between $500 and $1,000. Starter sites from $200, full builds up to $2,500. You get an estimate before any work begins, so you know the price going in. No discovery fees, no hourly billing, no surprise scope charges.</div></div></div>
         <div class="contact-reason"><div class="cr-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><div><div class="cr-title">76% of local searches end in a visit within a day</div><div class="cr-body">When someone in your area searches for a business like yours on their phone, three out of four of them walk into one within 24 hours. If your site shows up in that search, the visit is yours. If it doesn't, it goes to a competitor. <span class="cr-src">Source: <a href="https://www.thinkwithgoogle.com/_qs/documents/620/mobile-search-trends-consumers-to-stores.pdf" target="_blank" rel="noopener">Google and Purchased, Digital Diary study of 1,000 US smartphone users, 2016, published by Think with Google</a>.</span></div></div></div>
       </div>
     </div>
@@ -103,7 +123,44 @@
         <div class="form-row"><label for="bizname">Business Name</label><input type="text" id="bizname" placeholder="Maria's Salon" required/></div>
         <div class="form-2">
           <div><label for="biztype">Business Type</label><select id="biztype" required><option value="" disabled selected>Select...</option><option>Author with a book launch</option><option>Author / Writer / Speaker</option><option>Composer / Musician</option><option>Artist / Maker</option><option>Parish / Diocese / Religious Community</option><option>Nonprofit / Ministry / Institute</option><option>Publisher / Journal / Magazine</option><option>Podcast / Media</option><option>Events / Community Group</option><option>Stylist / Studio / Boutique</option><option>Restaurant / Local Business</option><option>Other</option></select></div>
-          <div><label for="budget">Budget Range</label><select id="budget"><option value="" disabled selected>Select...</option><option>$500 to $1,000 — Custom Website</option><option>$200 to $400 — Starter Site</option><option>$1,000 to $2,500 — The Full Build</option><option>Not sure yet</option></select></div>
+          <div><label for="currentsite">Current site is on</label><select id="currentsite"><option value="" disabled selected>Select...</option><option>No website yet</option><option>Wix</option><option>Squarespace</option><option>WordPress</option><option>GoDaddy / Weebly / other builder</option><option>Custom built</option></select></div>
+        </div>
+        <div class="est" id="estimator">
+          <div class="est-head">Build your estimate</div>
+          <div class="est-sub">Pick what you need and the range updates as you go.</div>
+          <div class="est-q">How many pages?</div>
+          <div class="est-chips" data-group="pages" role="radiogroup" aria-label="How many pages">
+            <button type="button" class="est-chip" data-val="p1" aria-pressed="false">1 to 3</button>
+            <button type="button" class="est-chip" data-val="p2" aria-pressed="true">4 to 7</button>
+            <button type="button" class="est-chip" data-val="p3" aria-pressed="false">8 to 15</button>
+            <button type="button" class="est-chip" data-val="p4" aria-pressed="false">16 or more</button>
+          </div>
+          <div class="est-q">What should the site do?</div>
+          <div class="est-checks">
+            <label class="est-check"><input type="checkbox" data-add="editor" checked> <span>Edit it yourself <em>(self-serve editor)</em></span></label>
+            <label class="est-check"><input type="checkbox" data-add="gallery"> <span>Gallery or portfolio of your work</span></label>
+            <label class="est-check"><input type="checkbox" data-add="store"> <span>Sell books, prints, or products</span></label>
+            <label class="est-check"><input type="checkbox" data-add="press"> <span>Press kit page</span></label>
+            <label class="est-check"><input type="checkbox" data-add="events"> <span>Events calendar or ticket links</span></label>
+            <label class="est-check"><input type="checkbox" data-add="donate"> <span>Donations</span></label>
+            <label class="est-check"><input type="checkbox" data-add="catalog"> <span>Works catalog with audio or scores</span></label>
+            <label class="est-check"><input type="checkbox" data-add="auto"> <span>Pages that update when you publish <em>(Substack, podcast, YouTube)</em></span></label>
+          </div>
+          <div class="est-q">Bringing over an existing blog or archive?</div>
+          <div class="est-chips" data-group="archive" role="radiogroup" aria-label="Archive size">
+            <button type="button" class="est-chip" data-val="a0" aria-pressed="true">No</button>
+            <button type="button" class="est-chip" data-val="a1" aria-pressed="false">Under 100 posts</button>
+            <button type="button" class="est-chip" data-val="a2" aria-pressed="false">100 to 1,000</button>
+            <button type="button" class="est-chip" data-val="a3" aria-pressed="false">Over 1,000</button>
+          </div>
+          <div class="est-result" aria-live="polite">
+            <div class="est-range" id="est-range">$500 to $700</div>
+            <div class="est-tier" id="est-tier">Custom Website</div>
+            <ul class="est-lines" id="est-lines"></ul>
+            <div class="est-note">A ballpark, not a bill. Your written estimate comes after a free call, and nothing is due until you agree. Moving off Wix or Squarespace never adds a surcharge.</div>
+          </div>
+          <input type="hidden" id="budget" value="">
+          <input type="hidden" id="estimate" value="">
         </div>
         <div class="form-row plan-pick">
           <label>Add a monthly plan to my estimate <span class="plan-opt">(optional, cancel anytime)</span></label>
@@ -114,9 +171,8 @@
           <input type="hidden" id="editsplan" value="">
         </div>
         <div class="form-row"><label for="currenturl">Current Website URL (if any)</label><input type="url" id="currenturl" placeholder="https://mysite.com or leave blank"/></div>
-        <div class="form-2">
+        <div class="form-row">
           <div><label for="timeline">When do you need it live?</label><select id="timeline"><option value="" disabled selected>Select...</option><option>As soon as possible</option><option>Within a month</option><option>Tied to a launch or event date</option><option>No rush</option></select></div>
-          <div><label for="currentsite">Current site is on</label><select id="currentsite"><option value="" disabled selected>Select...</option><option>No website yet</option><option>Wix</option><option>Squarespace</option><option>WordPress</option><option>GoDaddy / Weebly / other builder</option><option>Custom built</option></select></div>
         </div>
         <div class="form-row"><label for="message">Anything else?</label><textarea id="message" placeholder="Tell me about your business and what you need..."></textarea></div>
         <button type="submit" class="form-btn">Send My Quote Request</button>
@@ -125,7 +181,7 @@
       <div class="form-success" id="form-success">
         <div class="form-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
         <h3>Got it — thank you.</h3>
-        <p>I'll review your request and get back to you within 24 hours with a clear recommendation and flat-rate quote.</p>
+        <p>I'll review your request and get back to you within 24 hours with a clear recommendation and a written estimate.</p>
       </div>
     </div>
   </div>
@@ -196,8 +252,50 @@
   </div>
 </footer>
 
-<script src="script.js?v=13" defer></script>
+<script src="script.js?v=14" defer></script>
 <!-- View desktop version toggle (Lickity Split) -->
 <script>(function(){var K='lsw-desktop',m=document.querySelector('meta[name="viewport"]');if(!m)return;var orig=m.getAttribute('content')||'width=device-width, initial-scale=1',on=sessionStorage.getItem(K)==='1',mobile=window.matchMedia('(max-width: 900px)').matches;if(!mobile&&!on)return;function apply(){m.setAttribute('content',on?'width=1200':orig)}apply();var a=document.createElement('a');a.href='#';a.className='view-desktop';a.textContent=on?'View mobile version':'View desktop version';a.style.cssText='display:block;text-align:center;font:inherit;font-size:.85rem;padding:1rem 1rem 1.25rem;opacity:.7;text-decoration:underline;color:inherit';a.addEventListener('click',function(e){e.preventDefault();on=!on;sessionStorage.setItem(K,on?'1':'0');apply();a.textContent=on?'View mobile version':'View desktop version';window.scrollTo(0,0)});var f=document.querySelector('footer');(f||document.body).appendChild(a)})();</script>
+<script>
+/* Quote estimator. Prices live in PRICES so they are easy to adjust. Each value is [low, high] in dollars. */
+(function(){
+  var PRICES={
+    pages:{p1:[200,400],p2:[500,700],p3:[700,1000],p4:[1000,1400]},
+    pageNames:{p1:'1 to 3 pages',p2:'4 to 7 pages',p3:'8 to 15 pages',p4:'16 or more pages'},
+    add:{editor:[0,0],gallery:[50,150],store:[150,300],press:[75,150],events:[100,200],donate:[50,100],catalog:[300,600],auto:[150,300]},
+    addNames:{editor:'Self-serve editor (included)',gallery:'Gallery or portfolio',store:'Store',press:'Press kit page',events:'Events or tickets',donate:'Donations',catalog:'Works catalog',auto:'Auto-updating feed'},
+    archive:{a0:[0,0],a1:[100,200],a2:[300,500],a3:[500,900]},
+    archiveNames:{a1:'Archive under 100 posts',a2:'Archive of 100 to 1,000 posts',a3:'Archive over 1,000 posts'},
+    customMin:500, cap:2500
+  };
+  var root=document.getElementById('estimator'); if(!root) return;
+  function fmt(n){return '$'+n.toLocaleString('en-US');}
+  function pick(group){var b=root.querySelector('[data-group="'+group+'"] [aria-pressed="true"]');return b?b.getAttribute('data-val'):null;}
+  root.querySelectorAll('.est-chips').forEach(function(g){
+    g.addEventListener('click',function(e){var b=e.target.closest('.est-chip');if(!b)return;
+      g.querySelectorAll('.est-chip').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});calc();});
+  });
+  root.querySelectorAll('input[type=checkbox]').forEach(function(c){c.addEventListener('change',calc);});
+  function calc(){
+    var p=pick('pages')||'p2', a=pick('archive')||'a0';
+    var lo=PRICES.pages[p][0], hi=PRICES.pages[p][1], lines=[[PRICES.pageNames[p],PRICES.pages[p]]];
+    var extras=0;
+    root.querySelectorAll('input[data-add]:checked').forEach(function(c){var k=c.getAttribute('data-add'),r=PRICES.add[k];lo+=r[0];hi+=r[1];lines.push([PRICES.addNames[k],r]);if(k!=='editor')extras++;});
+    if(a!=='a0'){var r=PRICES.archive[a];lo+=r[0];hi+=r[1];lines.push([PRICES.archiveNames[a],r]);extras++;}
+    var needsCustom=root.querySelector('input[data-add="editor"]:checked')||extras>0;
+    if(needsCustom&&lo<PRICES.customMin){var d=PRICES.customMin-lo;lo+=d;hi=Math.max(hi+d,lo+200);}
+    var over=hi>PRICES.cap; if(over){hi=PRICES.cap;} if(lo>=PRICES.cap){lo=PRICES.cap;}
+    var tier=hi<=400?'Starter Site':(lo>=1000?'Full Build':(hi<=1000?'Custom Website':'Custom Website or Full Build'));
+    if(!needsCustom&&p==='p1')tier='Starter Site';
+    var rangeTxt=lo>=PRICES.cap?fmt(PRICES.cap)+' and up':fmt(lo)+' to '+fmt(hi)+(over?'+':'');
+    document.getElementById('est-range').textContent=rangeTxt;
+    document.getElementById('est-tier').textContent=tier+(tier==='Starter Site'?' (no self-serve editor)':'');
+    document.getElementById('est-lines').innerHTML=lines.map(function(l){var r=l[1];var v=(r[0]===0&&r[1]===0)?'included':(r[0]===r[1]?fmt(r[0]):fmt(r[0])+' to '+fmt(r[1]));return '<li><span>'+l[0]+'</span><span>'+v+'</span></li>';}).join('');
+    var summary=rangeTxt+' ('+tier+'). '+lines.map(function(l){return l[0];}).join(', ');
+    document.getElementById('budget').value=rangeTxt+' ('+tier+')';
+    document.getElementById('estimate').value=summary;
+  }
+  calc();
+})();
+</script>
 </body>
 </html>

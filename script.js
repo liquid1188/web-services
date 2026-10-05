@@ -118,6 +118,7 @@ async function handleSubmit(e){
         Business:v('bizname'),
         Type:v('biztype'),
         Budget:v('budget')||'Not specified',
+        'Estimate details':(document.getElementById('estimate')&&document.getElementById('estimate').value)||'Not used',
         Timeline:v('timeline')||'Not specified',
         'Current platform':v('currentsite')||'Not specified',
         'Monthly plan':(document.getElementById('editsplan')&&document.getElementById('editsplan').value)||'None',
