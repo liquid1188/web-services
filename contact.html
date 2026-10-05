@@ -238,21 +238,21 @@
 (function(){
   var CAP=2500;
   var ITEMS=[
-    {id:'setup',   name:'Design, homepage, and mobile setup', price:150, fixed:true, note:'Every site starts here'},
-    {id:'pages',   name:'Extra pages', price:50, qty:true, max:30, note:'About, Books, Contact, and so on'},
-    {id:'editor',  name:'Edit it yourself (self-serve editor)', price:150},
-    {id:'seo',     name:'SEO setup so Google can find you', price:75},
-    {id:'gallery', name:'Gallery or portfolio of your work', price:100},
-    {id:'store',   name:'Sell books, prints, or products', price:200},
-    {id:'press',   name:'Press kit page', price:100},
-    {id:'events',  name:'Events calendar or ticket links', price:150},
-    {id:'news',    name:'Newsletter signup', price:50},
-    {id:'donate',  name:'Donations', price:75},
-    {id:'catalog', name:'Works catalog with audio or scores', price:400},
-    {id:'auto',    name:'Pages that update when you publish (Substack, podcast, YouTube)', price:200},
-    {id:'arch1',   name:'Bring over a blog, under 100 posts', price:150, group:'arch'},
-    {id:'arch2',   name:'Bring over a blog, 100 to 1,000 posts', price:400, group:'arch'},
-    {id:'arch3',   name:'Bring over a blog, over 1,000 posts', price:700, group:'arch'}
+    {id:'setup',   name:'Starter site: homepage plus two pages, mobile ready', price:200, fixed:true, note:'Every site starts here'},
+    {id:'pages',   name:'Extra pages', price:25, qty:true, max:30, note:'Books, Events, Press, and so on'},
+    {id:'editor',  name:'Edit it yourself (self-serve editor)', price:100},
+    {id:'seo',     name:'SEO setup so Google can find you', price:50},
+    {id:'gallery', name:'Gallery or portfolio of your work', price:75},
+    {id:'store',   name:'Sell books, prints, or products', price:150},
+    {id:'press',   name:'Press kit page', price:75},
+    {id:'events',  name:'Events calendar or ticket links', price:100},
+    {id:'news',    name:'Newsletter signup', price:25},
+    {id:'donate',  name:'Donations', price:50},
+    {id:'catalog', name:'Works catalog with audio or scores', price:300},
+    {id:'auto',    name:'Pages that update when you publish (Substack, podcast, YouTube)', price:150},
+    {id:'arch1',   name:'Bring over a blog, under 100 posts', price:100, group:'arch'},
+    {id:'arch2',   name:'Bring over a blog, 100 to 1,000 posts', price:300, group:'arch'},
+    {id:'arch3',   name:'Bring over a blog, over 1,000 posts', price:500, group:'arch'}
   ];
   var list=document.getElementById('est-list'); if(!list) return;
   function fmt(n){return '$'+n.toLocaleString('en-US');}
@@ -260,10 +260,10 @@
     var price='<span class="est-price">'+fmt(it.price)+(it.qty?' each':'')+'</span>';
     var note=it.note?'<em>'+it.note+'</em>':'';
     if(it.fixed) return '<div class="est-item est-fixed"><span class="est-name">'+it.name+note+'</span>'+price+'</div>';
-    if(it.qty) return '<div class="est-item est-pages"><span class="est-name">'+it.name+note+'</span><span class="est-qty"><button type="button" data-step="-1" aria-label="Fewer pages">&minus;</button><output id="est-pages">3</output><button type="button" data-step="1" aria-label="More pages">+</button></span>'+price+'</div>';
+    if(it.qty) return '<div class="est-item est-pages"><span class="est-name">'+it.name+note+'</span><span class="est-qty"><button type="button" data-step="-1" aria-label="Fewer pages">&minus;</button><output id="est-pages">0</output><button type="button" data-step="1" aria-label="More pages">+</button></span>'+price+'</div>';
     return '<label class="est-item est-check"><input type="checkbox" data-id="'+it.id+'"'+(it.group?' data-group="'+it.group+'"':'')+'><span class="est-name">'+it.name+'</span>'+price+'</label>';
   }).join('');
-  var pages=3, pagesItem=ITEMS.filter(function(x){return x.qty;})[0];
+  var pages=0, pagesItem=ITEMS.filter(function(x){return x.qty;})[0];
   list.addEventListener('click',function(e){var b=e.target.closest('[data-step]');if(!b)return;
     pages=Math.max(0,Math.min(pagesItem.max,pages+Number(b.getAttribute('data-step'))));document.getElementById('est-pages').textContent=pages;calc();});
   list.addEventListener('change',function(e){var c=e.target;if(c.checked&&c.dataset.group){
