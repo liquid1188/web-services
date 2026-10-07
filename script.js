@@ -213,14 +213,14 @@ async function handleSubmit(e){
     if(seo!=null&&seo<90) f.push(['warn','Search engines aren\u2019t reading your site cleanly — lost Google visibility when customers look for you.']);
     if(acc!=null&&acc<90) f.push(['warn','Parts of the site are hard to read or use, quietly turning customers away.']);
     if(bp!=null&&bp<90) f.push(['warn','It\u2019s missing modern best practices — security, mobile, code health — that Google rewards.']);
-    if(weight) f.push([(perf!=null&&perf>=90)?'ok':'warn','The page weighs '+String(weight).replace(/^Total size was\s*/i,'')+'. My custom-built sites ship under 1MB and load almost instantly.']);
+    if(weight) f.push([(perf!=null&&perf>=90)?'ok':'warn','The page weighs '+String(weight).replace(/^Total size was\s*/i,'')+'. Pages under 1MB tend to load much faster.']);
     if(!f.length) f.push(['ok','Strong scores across the board. A few tweaks could still squeeze out more speed and conversions.']);
     f=f.slice(0,4);
     var ico={warn:'<svg viewBox="0 0 24 24"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
              ok:'<svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>'};
     var findHtml=f.map(function(x){ return '<li class="hc-finding '+x[0]+'">'+ico[x[0]]+'<span>'+x[1]+'</span></li>'; }).join('');
     var weak=[perf,seo,acc,bp].filter(function(v){return v!=null&&v<90;});
-    var ctaLine=weak.length?'Want these fixed? I rebuild sites so they load fast on a phone, read cleanly to Google, and bring people to you.':'Even a strong site can convert better. Let\u2019s turn those scores into more calls and bookings.';
+    var ctaLine=weak.length?'Want these fixed? I rebuild sites with speed, search, and mobile in mind.':'Even a strong site can convert better. Let\u2019s turn those scores into more calls and bookings.';
     results.innerHTML=
       '<div class="hc-target">Results for <strong>'+host+'</strong> · via Google PageSpeed</div>'
       +'<div class="hc-scoregrid">'+cell(perf,'Speed')+cell(seo,'SEO')+cell(acc,'Accessibility')+cell(bp,'Best Practices')+'</div>'
