@@ -237,7 +237,7 @@
 /* Quote estimator. Each item has one price, the total is the sum, capped at CAP.
    To change a price, edit the number next to the item below. */
 (function(){
-  var CAP=2500, STARTER_MAX=400, CUSTOM_MIN=500;
+  var CAP=2500, CUSTOM_MIN=500, FULL_MIN=1000;
   var ITEMS=[
     {id:'setup',   name:'Starter site: homepage plus two pages, mobile ready', price:200, fixed:true, note:'Every site starts here'},
     {id:'pages',   name:'Extra pages', price:25, qty:true, max:30, note:'Books, Events, Press, and so on'},
@@ -277,7 +277,7 @@
       else{var c=list.querySelector('input[data-id="'+it.id+'"]');if(c&&c.checked){total+=it.price;picked.push(it.name+' '+fmt(it.price));}}
     });
     var capped=total>CAP, shown=capped?CAP:total;
-    var kind=shown>=CUSTOM_MIN?'Custom site':(shown<=STARTER_MAX?'Starter site':'');
+    var kind=shown>=FULL_MIN?'Full build':(shown>=CUSTOM_MIN?'Custom site':'Starter site');
     document.getElementById('est-total').textContent=fmt(shown);
     document.getElementById('est-cap').hidden=!capped;
     document.getElementById('est-kind').textContent=kind;
