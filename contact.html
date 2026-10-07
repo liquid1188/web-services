@@ -134,7 +134,6 @@
           <div class="est-list" id="est-list"></div>
           <div class="est-result" aria-live="polite">
             <div class="est-total-row"><span>Your estimate <span class="est-kind" id="est-kind">Starter site</span></span><span class="est-range" id="est-total">$0</span></div>
-            <div class="est-cap" id="est-floor" hidden>Custom sites start at $500, so that is your starting price.</div>
             <div class="est-cap" id="est-cap" hidden>Your picks add up past $2,500. Builds top out at $2,500, so that is your price.</div>
             <div class="est-note">This is the starting estimate. We confirm it together on a free call, and nothing is due until you agree. Moving off Wix or Squarespace never adds a surcharge.</div>
           </div>
@@ -277,15 +276,12 @@
       else if(it.qty){if(pages>0){total+=it.price*pages;picked.push(pages+' extra pages '+fmt(it.price*pages));}}
       else{var c=list.querySelector('input[data-id="'+it.id+'"]');if(c&&c.checked){total+=it.price;picked.push(it.name+' '+fmt(it.price));}}
     });
-    var anyFeature=!!list.querySelector('input[data-id]:checked');
-    var custom=anyFeature||total>STARTER_MAX;
-    var floored=custom&&total<CUSTOM_MIN;
-    var capped=total>CAP, shown=capped?CAP:(floored?CUSTOM_MIN:total);
+    var capped=total>CAP, shown=capped?CAP:total;
+    var kind=shown>=CUSTOM_MIN?'Custom site':(shown<=STARTER_MAX?'Starter site':'');
     document.getElementById('est-total').textContent=fmt(shown);
     document.getElementById('est-cap').hidden=!capped;
-    document.getElementById('est-floor').hidden=!floored;
-    document.getElementById('est-kind').textContent=custom?'Custom site':'Starter site';
-    document.getElementById('budget').value=fmt(shown)+' ('+(custom?'Custom':'Starter')+')'+(capped?', capped, items add up to '+fmt(total):'')+(floored?', custom minimum, items add up to '+fmt(total):'');
+    document.getElementById('est-kind').textContent=kind;
+    document.getElementById('budget').value=fmt(shown)+(kind?' ('+kind+')':'')+(capped?', capped, items add up to '+fmt(total):'');
     document.getElementById('estimate').value=picked.join(', ');
   }
   calc();
