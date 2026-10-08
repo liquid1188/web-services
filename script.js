@@ -138,8 +138,11 @@ async function handleSubmit(e){
         monthly_plan: (document.getElementById('editsplan')&&document.getElementById('editsplan').value)||'none'
       });
     }
-    document.getElementById('quote-form').style.display='none';
-    document.getElementById('form-success').style.display='block';
+    /* Send to the dedicated thank-you page (also usable as a Google Ads conversion page).
+       Wait briefly for the GA4 event to send, then go regardless. */
+    var go=function(){ if(go.done) return; go.done=true; window.location.href='thank-you'; };
+    if(typeof gtag==='function'){ gtag('event','form_complete',{event_callback:go}); }
+    setTimeout(go,800);
   }catch(err){
     btn.textContent=orig; btn.disabled=false;
     alert('Sorry \u2014 the form could not send. Please email hello@lickitysplitweb.com directly.');
