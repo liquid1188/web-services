@@ -1123,3 +1123,7 @@
     .tc-services .for-desc a{color:#8a6a14}
     .mini-faq.tc-faq{background:var(--parchment)}
     @media(max-width:900px){.tc-ai{padding:4.5rem 6vw}}
+
+/* homepage hero: secondary link to AI consulting */
+.hero-ai-link{display:inline-block;margin-top:1.1rem;font-family:var(--font-head);font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:.2rem;transition:border-color .2s,color .2s}
+.hero-ai-link:hover{border-color:var(--accent)}
