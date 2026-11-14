@@ -62,7 +62,7 @@
     @media(max-width:900px){br.mb{display:inline}}
     .hero-kicker{display:inline-flex;align-items:center;gap:.7rem;margin-bottom:2rem}
     .hero-kicker-line{width:28px;height:1px;background:var(--accent)}
-    .hero-kicker-text{font-family:var(--font-body);font-style:italic;font-size:1rem;letter-spacing:0;text-transform:none;color:var(--accent);font-weight:500}
+    .hero-kicker-text{font-family:var(--font-body);font-style:italic;font-size:1rem;letter-spacing:0;text-transform:none;color:var(--accent);font-weight:500;text-wrap:balance}
     h1{font-family:var(--font-head);font-size:clamp(2.6rem,4vw,4.4rem);font-weight:900;color:var(--white);line-height:1;letter-spacing:-.03em;margin-bottom:1.8rem}
     h1 .h1-line{white-space:nowrap}
     @media(max-width:900px){h1 .h1-line{white-space:normal}}
