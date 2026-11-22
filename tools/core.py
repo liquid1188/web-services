@@ -78,7 +78,7 @@ FOOTER = f'''<footer class="site-foot">
     </div>
     <div class="foot-bar">
       <span>&copy; 2026 Lickity Split Web Design &middot; Likoudis Legacy LLC dba Likoudis Ventures</span>
-      <span>Baltimore, Maryland</span>
+      <span>Baltimore, Maryland &middot; <a class="foot-arc" href="archive" rel="nofollow">Archive</a></span>
     </div>
   </div>
 </footer>'''
@@ -133,7 +133,7 @@ def page(fname, title, desc, body, cur="", ld="", scripts="", noindex=False):
   <link rel="preload" as="font" type="font/woff2" href="fonts/Manrope-var.woff2" crossorigin/>
   <link rel="preload" as="font" type="font/woff2" href="fonts/SourceSans3-var.woff2" crossorigin/>
   <link rel="stylesheet" href="fonts.css?v=1"/>
-  <link rel="stylesheet" href="v2.css?v=2"/>
+  <link rel="stylesheet" href="v2.css?v=3"/>
 {ld}</head>
 <body>
 {header(cur)}

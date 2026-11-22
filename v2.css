@@ -347,3 +347,5 @@ ol.steps{list-style:none;padding:0;margin:0}
 .feat[open] summary::after{content:"\2212"}
 .ex-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.5rem}
 @media (max-width:900px){.ex-grid{grid-template-columns:1fr;max-width:34rem}}
+.foot-bar a.foot-arc{color:inherit;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:.6rem 0}
+.foot-bar a.foot-arc:hover{color:#fff}
