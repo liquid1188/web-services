@@ -224,7 +224,6 @@ p{text-wrap:pretty}
 .shot{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--white);box-shadow:var(--shadow)}
 .shot img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:top center}
 a.shot{display:block}
-@media (min-width:901px){.project .media{position:sticky;top:96px}}
 @media (max-width:900px){.project{grid-template-columns:1fr;padding:3rem 0}}
 
 /* Before and after */
