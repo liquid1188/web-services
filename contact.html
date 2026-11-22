@@ -3,290 +3,216 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Get an Estimate — Lickity Split Web Design</title>
-  <meta name="description" content="Tell me about your work and I'll reply within 24 hours with a specific recommendation and an estimate. Free, no obligation."/>
+  <title>Get a Website Estimate | Lickity Split Web Design</title>
+  <meta name="description" content="Tell me about your website or technology project and get a clear estimate. Based in Baltimore, serving clients nationwide."/>
   <link rel="canonical" href="https://lickitysplitweb.com/contact"/>
-  <!-- Open Graph -->
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://lickitysplitweb.com/contact"/>
-  <meta property="og:title" content="Get an Estimate — Lickity Split Web Design"/>
-  <meta property="og:description" content="Tell me about your work and I'll reply within 24 hours with a specific recommendation and an estimate. Free, no obligation."/>
+  <meta property="og:title" content="Get a Website Estimate | Lickity Split Web Design"/>
+  <meta property="og:description" content="Tell me about your website or technology project and get a clear estimate. Based in Baltimore, serving clients nationwide."/>
   <meta property="og:image" content="https://lickitysplitweb.com/og.jpg"/>
   <meta property="og:image:width" content="2400"/>
   <meta property="og:image:height" content="1260"/>
-  <meta property="og:image:type" content="image/jpeg"/>
   <meta property="og:site_name" content="Lickity Split Web Design"/>
-  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Get an Estimate — Lickity Split Web Design"/>
-  <meta name="twitter:description" content="Tell me about your work and I'll reply within 24 hours with a specific recommendation and an estimate. Free, no obligation."/>
+  <meta name="twitter:title" content="Get a Website Estimate | Lickity Split Web Design"/>
+  <meta name="twitter:description" content="Tell me about your website or technology project and get a clear estimate. Based in Baltimore, serving clients nationwide."/>
   <meta name="twitter:image" content="https://lickitysplitweb.com/og.jpg"/>
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"/>
-  <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png"/>
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
-  <link rel="shortcut icon" href="/favicon.ico"/>
-  <link rel="preload" as="font" type="font/woff2" href="fonts/Montserrat-900.woff2" crossorigin/>
-  <link rel="preload" as="font" type="font/woff2" href="fonts/Lora-400.woff2" crossorigin/>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png"/>
+  <link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png"/>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/Manrope-var.woff2" crossorigin/>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/SourceSans3-var.woff2" crossorigin/>
   <link rel="stylesheet" href="fonts.css?v=1"/>
-  <link rel="stylesheet" href="style.css?v=75"/>
-  <!-- GA4 — cookieless (consent mode: storage denied by default, no banner required) -->
-  <script>window.addEventListener("load",function(){setTimeout(function(){var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-KPPCZHKHC2";document.head.appendChild(s);},2500);});</script>
-  <script>
-    window.dataLayer=window.dataLayer||[];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent','default',{
-      'ad_storage':'denied',
-      'ad_user_data':'denied',
-      'ad_personalization':'denied',
-      'analytics_storage':'denied'
-    });
-    gtag('js',new Date());
-    gtag('config','G-KPPCZHKHC2');
-  </script>
-<style>
-.est{margin:1.4rem 0 1.2rem;padding:1.25rem 1.25rem 1.1rem;border:1px solid var(--accent-dim,rgba(196,154,42,.25));border-radius:10px;background:rgba(196,154,42,.05)}
-.est-head{font-family:var(--font-head,inherit);font-weight:700;font-size:1.05rem}
-.est-sub{font-size:.88rem;opacity:.75;margin:.2rem 0 .9rem}
-.est-q{font-size:.8rem;font-weight:600;letter-spacing:.02em;margin:.9rem 0 .45rem}
-.est-list{display:flex;flex-direction:column;gap:.1rem}
-#estimator .est-item{display:flex;align-items:center;gap:.6rem;padding:.5rem 0;border-bottom:1px solid rgba(128,128,128,.18);font-family:var(--font-ui,inherit);font-size:.9rem;line-height:1.3;text-transform:none;letter-spacing:0;font-weight:500;color:var(--text-primary,#1c1916);margin:0;cursor:pointer}
-#estimator .est-fixed{cursor:default}
-.est-name{flex:1}
-.est-name em{display:block;font-style:normal;font-size:.78rem;opacity:.65;font-weight:400}
-.est-price{white-space:nowrap;font-weight:700;font-size:.88rem}
-#estimator .est-item input[type=checkbox]{-webkit-appearance:checkbox;appearance:auto;flex:none;width:18px;height:18px;min-height:0;margin:0;padding:0;border:0;background:none;box-shadow:none;accent-color:var(--accent,#c49a2a)}
-@media(max-width:640px){#estimator .est-pages{flex-wrap:wrap}.est-pages .est-name{flex-basis:100%}.est-pages .est-qty{margin-right:auto}}
-.est-qty{display:inline-flex;align-items:center;gap:.35rem}
-.est-qty button{font:inherit;width:30px;height:30px;border-radius:50%;border:1px solid rgba(128,128,128,.45);background:transparent;color:inherit;cursor:pointer;line-height:1}
-.est-qty output{min-width:1.6rem;text-align:center;font-weight:700}
-.est-result{margin-top:1rem}
-.est-total-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;font-weight:700}
-.est-range{font-family:var(--font-head,inherit);font-size:1.8rem;font-weight:800;color:var(--accent,#c49a2a);line-height:1.1}
-.est-kind{display:block;font-size:.78rem;font-weight:600;opacity:.7}
-.est-cap{font-size:.82rem;margin-top:.35rem;font-weight:600}
-.est-note{font-size:.8rem;opacity:.7;margin-top:.7rem;line-height:1.45}
-</style>
+  <link rel="stylesheet" href="v2.css?v=2"/>
 </head>
 <body>
-
-<!-- NAV -->
-<nav id="main-nav">
-  <a href="./" class="nav-logo">
-    <span class="nav-logo-name lsmark"><span class="lsb">&lt;</span>lickity split <span class="lsb">/&gt;</span></span>
-    <span class="nav-logo-sub">Web Design</span>
-  </a>
-  <div class="nav-items" id="nav-items">
-    <a href="./">Home</a>
-    <a href="work">Portfolio</a>
-    <a href="technology-consulting">AI for Business</a>
-    <a href="pricing">Pricing</a>
-    <a href="about">About</a>
-    <a href="contact" class="nav-cta active">Get a Quote</a>
-  </div>
-  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-items">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<!-- CONTACT FORM -->
-<section class="contact-section" id="contact">
-  <div class="contact-grid">
-    <div>
-      <div class="eyebrow">Get a Free Quote</div>
-      <h1 class="as-h2">Get a quote.<br><span class="serif">It takes 2 minutes.</span></h1>
-      <p class="section-body">Tell me your business name and what you do. I'll respond within 24 hours with a specific recommendation and an estimate. No sales call required. No obligation. If you don't move forward, you paid nothing and learned something.</p>
-      
-    <div class="send-list">
-      <div class="send-title">To get started, send me</div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="logo" href="./" aria-label="Lickity Split Web Design, home"><span class="lb">&lt;</span>lickity split&nbsp;<span class="lb">/&gt;</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
       <ul>
-        <li>A headshot or hero photo (the larger the file, the better)</li>
-        <li>A photo of your work, or of you doing it: performing, painting, speaking, serving</li>
-        <li>A banner, logo, or book cover if you have one</li>
-        <li>Your CV, bio, or a short document listing what you want the site to do</li>
+        <li><a href="work">Portfolio</a></li>
+        <li class="has-sub">
+          <button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-websites">Websites <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <ul class="sub" id="sub-websites">
+            <li><a href="website-design">Website Design</a></li>
+            <li><a href="author-website-design">Author Websites</a></li>
+            <li><a href="composer-musician-websites">Musician &amp; Composer Websites</a></li>
+            <li><a href="parish-ministry-websites">Parish &amp; Ministry Websites</a></li>
+            <li><a href="wix-to-custom-website">Website Migrations</a></li>
+          </ul>
+        </li>
+        <li><a href="technology-consulting">Technology Consulting</a></li>
+        <li><a href="pricing">Pricing</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="contact" aria-current="page">Contact</a></li>
+        <li class="nav-cta"><a class="btn btn-primary" href="contact">Get an Estimate</a></li>
       </ul>
-      <div class="send-call">Then <a href="https://calendly.com/arlikoudis/30min" target="_blank" rel="noopener">book a discovery call</a>, 15 to 30 minutes, free. We go through your material and I tell you what I would build.</div>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Tell me what you have in mind.</h1>
+      <p class="lead">Tell me a little about your project, whether you&rsquo;re starting a new website, replacing an old one, or looking for help with technology.</p>
+      <p class="lead">You don&rsquo;t need to have everything figured out before getting in touch.</p>
+      <p class="lead">I&rsquo;ll review your inquiry and let you know what I recommend and what it would cost.</p>
     </div>
-      <div class="contact-reasons">
-        <div class="contact-reason"><div class="cr-icon"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><div><div class="cr-title">Weeks, not months</div><div class="cr-body">Most sites go live in a week or two, and a starter site in about 48 hours. You see a private preview before anything goes public, and nothing launches until you say so.</div></div></div>
-        <div class="contact-reason"><div class="cr-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="cr-title">Clear pricing. No surprises.</div><div class="cr-body">Most sites land between $500 and $1,200. Starter sites from $300, and larger builds run $1,200 to $2,500. You get an estimate before any work begins, so you know the price going in. No discovery fees, no hourly billing, no surprise scope charges.</div></div></div>
-        <div class="contact-reason"><div class="cr-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><div><div class="cr-title">76% of local searches end in a visit within a day</div><div class="cr-body">When someone in your area searches for a business like yours on their phone, three out of four of them walk into one within 24 hours. If your site shows up in that search, the visit is yours. If it doesn't, it goes to a competitor. <span class="cr-src">Source: <a href="https://www.thinkwithgoogle.com/_qs/documents/620/mobile-search-trends-consumers-to-stores.pdf" target="_blank" rel="noopener">Google and Purchased, Digital Diary study of 1,000 US smartphone users, 2016, published by Think with Google</a>.</span></div></div></div>
-      </div>
-    </div>
-    <div class="lead-form-wrap" id="form-wrap">
-      <div class="form-head">Request a Quote</div>
-      <div class="form-sub">Fill out the form and I'll get back to you within 24 hours with a recommendation and an estimate. Prefer to talk first? <a href="https://calendly.com/arlikoudis/30min" target="_blank" rel="noopener">Book a 15 to 30 minute discovery call</a>.</div>
-      <form id="quote-form" onsubmit="handleSubmit(event)">
-        <div class="form-2">
-          <div><label for="fname">First Name</label><input type="text" id="fname" placeholder="Maria" required/></div>
-          <div><label for="lname">Last Name</label><input type="text" id="lname" placeholder="Rodriguez" required/></div>
-        </div>
-        <div class="form-row"><label for="email">Email Address</label><input type="email" id="email" placeholder="maria@mybusiness.com" required/></div>
-        <div class="form-row"><label for="phone">Phone (optional)</label><input type="tel" id="phone" placeholder="(410) 555-0100"/></div>
-        <div class="form-row"><label for="bizname">Business Name</label><input type="text" id="bizname" placeholder="Maria's Salon" required/></div>
-        <div class="form-2">
-          <div><label for="biztype">Business Type</label><select id="biztype" required><option value="" disabled selected>Select...</option><option>Author with a book launch</option><option>Author / Writer / Speaker</option><option>Composer / Musician</option><option>Artist / Maker</option><option>Parish / Diocese / Religious Community</option><option>Nonprofit / Ministry / Institute</option><option>Publisher / Journal / Magazine</option><option>Podcast / Media</option><option>Events / Community Group</option><option>Stylist / Studio / Boutique</option><option>Restaurant / Local Business</option><option>Other</option></select></div>
-          <div><label for="currentsite">Current site is on</label><select id="currentsite"><option value="" disabled selected>Select...</option><option>No website yet</option><option>Wix</option><option>Squarespace</option><option>WordPress</option><option>GoDaddy / Weebly / other builder</option><option>Custom built</option></select></div>
-        </div>
-        <div class="est" id="estimator">
-          <div class="est-head">Build your estimate</div>
-          <div class="est-sub">Every item has its own price. Pick what you need and the total adds up as you go.</div>
-          <div class="est-list" id="est-list"></div>
-          <div class="est-result" aria-live="polite">
-            <div class="est-total-row"><span>Your estimate <span class="est-kind" id="est-kind">Starter site</span></span><span class="est-range" id="est-total">$0</span></div>
-            <div class="est-cap" id="est-cap" hidden>Your picks add up past $2,500. Builds top out at $2,500, so that is your price.</div>
-            <div class="est-note">This is the starting estimate. We confirm it together on a free call, and nothing is due until you agree. Moving off Wix or Squarespace never adds a surcharge.</div>
-          </div>
-          <input type="hidden" id="budget" value="">
-          <input type="hidden" id="estimate" value="">
-        </div>
-        <div class="form-row plan-pick">
-          <label>Add a monthly plan to my estimate <span class="plan-opt">(optional, cancel anytime)</span></label>
-          <div class="plan-btns" role="group" aria-label="Monthly plan">
-            <button type="button" class="plan-btn" data-plan="Edits Plan" aria-pressed="false"><strong>Edits Plan</strong><span>$19.99/mo, one round of edits a month</span></button>
-            <button type="button" class="plan-btn" data-plan="Care Plan" aria-pressed="false"><strong>Care Plan</strong><span>$49.99/mo, three rounds plus monitoring</span></button>
-          </div>
-          <input type="hidden" id="editsplan" value="">
-        </div>
-        <div class="form-row"><label for="currenturl">Current Website URL (if any)</label><input type="url" id="currenturl" placeholder="https://mysite.com or leave blank"/></div>
-        <div class="form-row">
-          <div><label for="timeline">When do you need it live?</label><select id="timeline"><option value="" disabled selected>Select...</option><option>As soon as possible</option><option>Within a month</option><option>Tied to a launch or event date</option><option>No rush</option></select></div>
-        </div>
-        <div class="form-row"><label for="message">Anything else?</label><textarea id="message" placeholder="Tell me about your business and what you need..."></textarea></div>
-        <button type="submit" class="form-btn">Send My Quote Request</button>
-        <div class="form-legal">Response within 24 hours<br>No spam · No obligation</div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap two">
+      <form class="form" id="inquiry" novalidate>
+        <div class="field"><label for="name">Your name</label><input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required><p class="err">Please enter your name.</p></div>
+        <div class="field"><label for="email">Email address</label><input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required><p class="err">Please enter a valid email address.</p></div>
+        <div class="field"><label for="help">What do you need help with?</label><select id="help" name="help"><option value="">Choose one</option><option>New website</option><option>Website redesign or migration</option><option>Technology consulting</option><option>AI setup or training</option><option>Something else</option></select></div>
+        <div class="field"><label for="project">Tell me about your project</label><textarea id="project" name="project" placeholder="What do you do, and what would you like help with?" required></textarea><p class="err">Please add a sentence or two about your project.</p></div>
+        <div class="field"><label for="site">Existing website <span class="hint">(if you have one)</span></label><input type="url" id="site" name="site" inputmode="url" placeholder="https://"></div>
+        <div class="field"><label for="deadline">Deadline <span class="hint">(if any)</span></label><input type="text" id="deadline" name="deadline" placeholder="Is there a date you&rsquo;re working toward?"></div>
+        <p class="est-note" id="est-note" hidden>Your estimate from the calculator will be sent with this inquiry: <span></span></p>
+        <input type="hidden" id="estimate" name="estimate" value="">
+        <div class="hp" aria-hidden="true"><label>Leave this box unchecked <input type="checkbox" id="botcheck" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+        <p class="form-msg" id="form-msg" role="alert"></p>
+        <div><button class="btn btn-primary" type="submit">Send My Inquiry</button></div>
+        <p class="form-note">I usually reply within 24 to 48 hours. You can also <a href="https://calendly.com/arlikoudis/30min" target="_blank" rel="noopener">book a call</a> or write to <a href="mailto:hello@lickitysplitweb.com">hello@lickitysplitweb.com</a>.</p>
       </form>
-      <div class="form-success" id="form-success">
-        <div class="form-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <h3>Got it — thank you.</h3>
-        <p>I'll review your request and get back to you within 24 hours with a clear recommendation and a written estimate.</p>
+      <div class="prose">
+        <h2>What should I send?</h2>
+        <p>A few sentences are enough to start.</p>
+        <p>If you already have a website, include the address. You can send photographs, writing, and other material after we&rsquo;ve discussed the project.</p>
+        <p>If you&rsquo;d like a rough number first, the <a href="pricing#estimate">cost estimate on the Pricing page</a> lets you choose features and see an approximate starting price.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER LEAD MAGNET -->
-<div class="footer-magnet" id="healthcheck">
-  <div class="magnet-inner hc-inner">
-    <div class="hc-intro">
-      <div class="magnet-eyebrow">Free Instant Audit</div>
-      <div class="magnet-title">Website Health Check</div>
-      <div class="magnet-desc">Already have a site and wondering why it isn't bringing in customers? Drop your address below. In about 20 seconds I'll run the same checks I run before every rebuild — speed, mobile experience, SEO, and best practices — straight from Google's own tools, and show you in plain English what's costing you business.</div>
-      <div class="magnet-checklist">
-        <div class="magnet-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Real Google PageSpeed score</div>
-        <div class="magnet-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Mobile experience check</div>
-        <div class="magnet-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>SEO &amp; visibility audit</div>
-        <div class="magnet-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Plain-English fixes</div>
+  <section class="sec sec-stone" id="healthcheck">
+    <div class="wrap">
+      <div class="prose">
+        <h2>Check your website&rsquo;s performance</h2>
+        <p>Already have a website? Enter its address to see how it performs in Google&rsquo;s PageSpeed tools.</p>
+        <p>The report can help identify slow-loading elements and other technical issues.</p>
+        <p>It&rsquo;s a useful starting point, although it won&rsquo;t tell you everything about your site&rsquo;s design, accessibility, or search visibility.</p>
       </div>
+      <div class="hc-row"><label class="hp" for="hc-url">Website address</label><input type="url" id="hc-url" inputmode="url" placeholder="yourwebsite.com" autocomplete="url"><button class="btn btn-primary" type="button" id="hc-run">Check My Website</button></div>
+      <div class="hc-results" id="hc-results" aria-live="polite" hidden></div>
     </div>
-    <div class="hc-panel">
-      <div class="hc-entry" id="hc-entry">
-        <input type="url" inputmode="url" class="magnet-input hc-url" id="hc-url" placeholder="yourwebsite.com" autocomplete="url"/>
-        <button type="button" class="magnet-btn" id="hc-run">Run My Free Health Check</button>
-        <div class="magnet-fine">Free · no email required · results in ~20 seconds</div>
+  </section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <a class="logo" href="./" aria-label="Lickity Split Web Design, home"><span class="lb">&lt;</span>lickity split&nbsp;<span class="lb">/&gt;</span></a>
+        <p>Website design and technology consulting. Based in Baltimore, working with clients around the country.</p>
+        <a class="foot-ig" href="https://www.instagram.com/lickitysplitweb/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2M12 0C8.7 0 8.3 0 7.1.1 5.8.1 4.9.3 4.1.6c-.8.3-1.5.7-2.1 1.4C1.3 2.6.9 3.3.6 4.1.3 4.9.1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 3 .3.8.7 1.5 1.4 2.1.6.7 1.3 1.1 2.1 1.4.8.3 1.7.5 3 .6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.7 2.1-1.4.7-.6 1.1-1.3 1.4-2.1.3-.8.5-1.7.6-3 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-3-.3-.8-.7-1.5-1.4-2.1C21.4 1.3 20.7.9 19.9.6c-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg><span>Instagram</span></a>
       </div>
-      <div class="hc-results" id="hc-results" hidden></div>
+      <nav aria-label="Explore">
+        <div class="foot-h">Explore</div>
+        <ul>
+          <li><a href="work">Portfolio</a></li>
+          <li><a href="gallery">Gallery</a></li>
+          <li><a href="pricing">Pricing</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="resources">Resources</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Services">
+        <div class="foot-h">Services</div>
+        <ul>
+          <li><a href="website-design">Website Design</a></li>
+          <li><a href="author-website-design">Author Websites</a></li>
+          <li><a href="composer-musician-websites">Musician Websites</a></li>
+          <li><a href="parish-ministry-websites">Parish Websites</a></li>
+          <li><a href="wix-to-custom-website">Website Migrations</a></li>
+          <li><a href="technology-consulting">Technology Consulting</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Contact">
+        <div class="foot-h">Contact</div>
+        <ul>
+          <li><a href="contact">Get an Estimate</a></li>
+          <li><a href="https://calendly.com/arlikoudis/30min" target="_blank" rel="noopener">Book a Call</a></li>
+          <li><a href="mailto:hello@lickitysplitweb.com">hello@lickitysplitweb.com</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="foot-grid">
-    <div class="foot-brand">
-      <div class="foot-wordmark"><span class="lsb">&lt;</span>lickity split <span class="lsb">/&gt;</span></div>
-      <div class="foot-tag">Custom-coded websites and technology consulting for small businesses, authors, artists, creatives, and ministries. Built in Baltimore, serving clients nationwide.</div>
-      <a class="foot-ig" href="https://www.instagram.com/lickitysplitweb/" target="_blank" rel="noopener" aria-label="Follow Lickity Split on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2M12 0C8.7 0 8.3 0 7.1.1 5.8.1 4.9.3 4.1.6c-.8.3-1.5.7-2.1 1.4C1.3 2.6.9 3.3.6 4.1.3 4.9.1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 3 .3.8.7 1.5 1.4 2.1.6.7 1.3 1.1 2.1 1.4.8.3 1.7.5 3 .6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.7 2.1-1.4.7-.6 1.1-1.3 1.4-2.1.3-.8.5-1.7.6-3 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-3-.3-.8-.7-1.5-1.4-2.1C21.4 1.3 20.7.9 19.9.6c-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg><span>@lickitysplitweb</span></a>
+    <div class="foot-bar">
+      <span>&copy; 2026 Lickity Split Web Design &middot; Likoudis Legacy LLC dba Likoudis Ventures</span>
+      <span>Baltimore, Maryland</span>
     </div>
-    <div class="foot-col">
-      <div class="foot-h">Explore</div>
-      <a href="./">Home</a>
-      <a href="work">Portfolio</a>
-      <a href="gallery">Full Site Gallery</a>
-      <a href="pricing">Pricing</a>
-      <a href="about">About</a>
-      <a href="about#faq">FAQ</a>
-      <a href="resources">Resources</a>
-    </div>
-    <div class="foot-col">
-      <div class="foot-h">Services</div>
-      <a href="author-website-design">Author Websites</a>
-      <a href="composer-musician-websites">Musician &amp; Composer Websites</a>
-      <a href="parish-ministry-websites">Parish &amp; Ministry Websites</a>
-      <a href="wix-to-custom-website">Leave Wix or Squarespace</a>
-      <a href="technology-consulting">Technology and AI Consulting</a>
-      <a href="technology-consulting#ai-consulting">Implement AI in Your Business</a>
-    </div>
-    <div class="foot-col">
-      <div class="foot-h">Start</div>
-      <a href="contact">Get an Estimate</a>
-      <a href="https://calendly.com/arlikoudis/30min" target="_blank" rel="noopener">Book a Free Call</a>
-      <a href="mailto:hello@lickitysplitweb.com">hello@lickitysplitweb.com</a>
-    </div>
-  </div>
-  <div class="foot-bar">
-    <span>&copy; 2026 Lickity Split Web Design &middot; Likoudis Legacy LLC dba Likoudis Ventures</span>
-    <a href="archive" class="foot-archive">Archive</a>
-    <span>Baltimore, Maryland</span>
   </div>
 </footer>
-
-<script src="script.js?v=16" defer></script>
-<!-- View desktop version toggle (Lickity Split) -->
-<script>(function(){var K='lsw-desktop',m=document.querySelector('meta[name="viewport"]');if(!m)return;var orig=m.getAttribute('content')||'width=device-width, initial-scale=1',on=sessionStorage.getItem(K)==='1',mobile=window.matchMedia('(max-width: 900px)').matches;if(!mobile&&!on)return;function apply(){m.setAttribute('content',on?'width=1200':orig)}apply();var a=document.createElement('a');a.href='#';a.className='view-desktop';a.textContent=on?'View mobile version':'View desktop version';a.style.cssText='display:block;text-align:center;font:inherit;font-size:.85rem;padding:1rem 1rem 1.25rem;opacity:.7;text-decoration:underline;color:inherit';a.addEventListener('click',function(e){e.preventDefault();on=!on;sessionStorage.setItem(K,on?'1':'0');apply();a.textContent=on?'View mobile version':'View desktop version';window.scrollTo(0,0)});var f=document.querySelector('footer');(f||document.body).appendChild(a)})();</script>
+<script>(function(){var b=document.querySelector('.menu-btn'),n=document.getElementById('site-nav'),s=document.querySelector('.sub-btn');
+function sub(o){s.setAttribute('aria-expanded',o?'true':'false')}
+b.addEventListener('click',function(){var o=!n.classList.contains('open');n.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.textContent=o?'Close':'Menu'});
+s.addEventListener('click',function(){sub(s.getAttribute('aria-expanded')!=='true')});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(s.getAttribute('aria-expanded')==='true'){sub(false);s.focus()}else if(n.classList.contains('open')){b.click();b.focus()}}});
+document.addEventListener('click',function(e){if(!e.target.closest('.has-sub'))sub(false)});
+s.parentNode.addEventListener('focusout',function(e){if(!s.parentNode.contains(e.relatedTarget))sub(false)});
+})();</script>
+<script>if(/(^|\.)lickitysplitweb\.com$/.test(location.hostname)){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-KPPCZHKHC2');window.addEventListener('load',function(){setTimeout(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-KPPCZHKHC2';document.head.appendChild(s)},2500)})}</script>
 <script>
-/* Quote estimator. Each item has one price, the total is the sum, capped at CAP.
-   To change a price, edit the number next to the item below. */
+window.W3F_KEY="1c22e611-8b13-43bf-ab24-5af6f472a676";
 (function(){
-  var CAP=2500, CUSTOM_MIN=500, FULL_MIN=1200;
-  var ITEMS=[
-    {id:'setup',   name:'Starter site: homepage plus two pages, mobile ready', price:300, fixed:true, note:'Every site starts here'},
-    {id:'pages',   name:'Extra pages', price:25, qty:true, max:30, note:'Books, Events, Press, and so on'},
-    {id:'editor',  name:'Edit it yourself (self-serve editor)', price:100},
-    {id:'seo',     name:'SEO setup so Google can find you', price:50},
-    {id:'gallery', name:'Gallery or portfolio of your work', price:75},
-    {id:'store',   name:'Sell books, prints, or products', price:150},
-    {id:'press',   name:'Press kit page', price:75},
-    {id:'events',  name:'Events calendar or ticket links', price:150},
-    {id:'news',    name:'Newsletter signup', price:25},
-    {id:'donate',  name:'Donations', price:50},
-    {id:'catalog', name:'Works catalog with audio or scores', price:500},
-    {id:'auto',    name:'Pages that update when you publish (Substack, podcast, YouTube)', price:300},
-    {id:'arch1',   name:'Bring over a blog, under 100 posts', price:100, group:'arch'},
-    {id:'arch2',   name:'Bring over a blog, 100 to 1,000 posts', price:300, group:'arch'},
-    {id:'arch3',   name:'Bring over a blog, over 1,000 posts', price:600, group:'arch'}
-  ];
-  var list=document.getElementById('est-list'); if(!list) return;
-  function fmt(n){return '$'+n.toLocaleString('en-US');}
-  list.innerHTML=ITEMS.map(function(it){
-    var price='<span class="est-price">'+fmt(it.price)+(it.qty?' each':'')+'</span>';
-    var note=it.note?'<em>'+it.note+'</em>':'';
-    if(it.fixed) return '<div class="est-item est-fixed"><span class="est-name">'+it.name+note+'</span>'+price+'</div>';
-    if(it.qty) return '<div class="est-item est-pages"><span class="est-name">'+it.name+note+'</span><span class="est-qty"><button type="button" data-step="-1" aria-label="Fewer pages">&minus;</button><output id="est-pages">0</output><button type="button" data-step="1" aria-label="More pages">+</button></span>'+price+'</div>';
-    return '<label class="est-item est-check"><input type="checkbox" data-id="'+it.id+'"'+(it.group?' data-group="'+it.group+'"':'')+'><span class="est-name">'+it.name+'</span>'+price+'</label>';
-  }).join('');
-  var pages=0, pagesItem=ITEMS.filter(function(x){return x.qty;})[0];
-  list.addEventListener('click',function(e){var b=e.target.closest('[data-step]');if(!b)return;
-    pages=Math.max(0,Math.min(pagesItem.max,pages+Number(b.getAttribute('data-step'))));document.getElementById('est-pages').textContent=pages;calc();});
-  list.addEventListener('change',function(e){var c=e.target;if(c.checked&&c.dataset.group){
-    list.querySelectorAll('input[data-group="'+c.dataset.group+'"]').forEach(function(o){if(o!==c)o.checked=false;});}calc();});
-  function calc(){
-    var total=0, picked=[];
-    ITEMS.forEach(function(it){
-      if(it.fixed){total+=it.price;picked.push(it.name+' '+fmt(it.price));}
-      else if(it.qty){if(pages>0){total+=it.price*pages;picked.push(pages+' extra pages '+fmt(it.price*pages));}}
-      else{var c=list.querySelector('input[data-id="'+it.id+'"]');if(c&&c.checked){total+=it.price;picked.push(it.name+' '+fmt(it.price));}}
-    });
-    var capped=total>CAP, shown=capped?CAP:total;
-    var kind=shown>=FULL_MIN?'Full build':(shown>=CUSTOM_MIN?'Custom site':'Starter site');
-    document.getElementById('est-total').textContent=fmt(shown);
-    document.getElementById('est-cap').hidden=!capped;
-    document.getElementById('est-kind').textContent=kind;
-    document.getElementById('budget').value=fmt(shown)+(kind?' ('+kind+')':'')+(capped?', capped, items add up to '+fmt(total):'');
-    document.getElementById('estimate').value=picked.join(', ');
+  var f=document.getElementById('inquiry'); if(!f) return;
+  var est=new URLSearchParams(location.search).get('estimate');
+  if(est){document.getElementById('estimate').value=est;var n=document.getElementById('est-note');n.hidden=false;n.querySelector('span').textContent=est;}
+  function bad(id,on){document.getElementById(id).closest('.field').classList.toggle('bad',on);document.getElementById(id).setAttribute('aria-invalid',on?'true':'false')}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(id){return document.getElementById(id).value.trim()};
+    var okN=!!v('name'), okE=/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('email')), okP=!!v('project');
+    bad('name',!okN);bad('email',!okE);bad('project',!okP);
+    var msg=document.getElementById('form-msg');msg.textContent='';
+    if(!(okN&&okE&&okP)){(f.querySelector('.bad input, .bad textarea')||f).focus();return}
+    var btn=f.querySelector('button[type=submit]'),orig=btn.textContent;btn.textContent='Sending\u2026';btn.disabled=true;
+    var body={access_key:window.W3F_KEY,subject:'Website inquiry from '+v('name'),from_name:'Lickity Split website',replyto:v('email'),
+      Name:v('name'),Email:v('email'),'Help with':v('help')||'Not specified',Project:v('project'),'Existing website':v('site')||'None',Deadline:v('deadline')||'None',
+      'Estimate from calculator':v('estimate')||'Not used'};
+    if(document.getElementById('botcheck').checked) body.botcheck=true;
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(body)})
+    .then(function(r){return r.json().then(function(d){if(!r.ok||!(d.success===true||d.success==='true'))throw new Error('send');})})
+    .then(function(){if(typeof gtag==='function'){gtag('event','generate_lead',{help_with:v('help')||'unspecified',has_existing_site:v('site')?'yes':'no'})}
+      setTimeout(function(){location.href='thank-you'},300)})
+    .catch(function(){btn.textContent=orig;btn.disabled=false;msg.textContent='Sorry, the form could not send. Please email hello@lickitysplitweb.com instead.'});
+  });
+})();
+/* Website performance check, using Google PageSpeed Insights */
+(function(){
+  var PSI_KEY="AIzaSyCyzk0dHSfZ040q6KmyP3Fb-Im_N8IyK-w"; /* referrer-locked to lickitysplitweb.com; PSI API only */
+  var run=document.getElementById('hc-run'); if(!run) return;
+  var input=document.getElementById('hc-url'),out=document.getElementById('hc-results');
+  function norm(v){v=(v||'').trim();if(!v)return'';if(!/^https?:\/\//i.test(v))v='https://'+v;try{var u=new URL(v);return u.hostname.indexOf('.')<0?'':u.href}catch(e){return''}}
+  function band(s){return s>=90?'hc-good':s>=50?'hc-mid':'hc-bad'}
+  function pct(x){return x==null?null:Math.round(x*100)}
+  function call(api){return Promise.race([fetch(api),new Promise(function(_,rej){setTimeout(function(){rej(new Error('timeout'))},40000)})]).then(function(r){return r.json()}).then(function(d){if(!d||!d.lighthouseResult||!d.lighthouseResult.categories)throw new Error('nodata');return d})}
+  function go(){
+    var url=norm(input.value);
+    if(!url){input.focus();out.hidden=false;out.textContent='Enter a website address, such as example.com.';return}
+    var host=new URL(url).hostname.replace(/^www\./,'');
+    run.disabled=true;run.textContent='Checking\u2026';out.hidden=false;out.textContent='Checking '+host+'. This can take up to half a minute.';
+    var base='https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='+encodeURIComponent(url)+'&strategy=mobile&category=performance&category=seo&category=accessibility&category=best-practices';
+    var keyed=/(^|\.)lickitysplitweb\.com$/.test(location.hostname)?base+'&key='+PSI_KEY:base;
+    call(keyed).catch(function(){return new Promise(function(res){setTimeout(res,2200)}).then(function(){return call(base)})}).then(function(d){
+      var c=d.lighthouseResult.categories,a=d.lighthouseResult.audits||{};
+      var rows=[['Performance',pct(c.performance&&c.performance.score)],['Search basics',pct(c.seo&&c.seo.score)],['Accessibility',pct(c.accessibility&&c.accessibility.score)],['Best practices',pct(c['best-practices']&&c['best-practices'].score)]];
+      var lcp=(a['largest-contentful-paint']||{}).displayValue,w=(a['total-byte-weight']||{}).displayValue;
+      var h='<p>Results for <strong>'+host+'</strong> on a phone, from Google PageSpeed Insights.</p><div class="hc-grid">'+rows.map(function(r){return r[1]==null?'':'<div class="hc-score"><b class="'+band(r[1])+'">'+r[1]+'</b><span>'+r[0]+'</span></div>'}).join('')+'</div><ul class="hc-list">';
+      if(lcp)h+='<li>Main content appears in '+lcp+'. Google&rsquo;s benchmark is 2.5 seconds or less.</li>';
+      if(w)h+='<li>'+String(w).replace(/^Total size was\s*/i,'The page weighs ')+'.</li>';
+      h+='</ul><p class="small" style="margin-top:.8rem">Scores are out of 100. They&rsquo;re a useful starting point, although they won&rsquo;t tell you everything about a site&rsquo;s design, accessibility, or search visibility.</p>';
+      out.innerHTML=h;
+    }).catch(function(){out.textContent='The check could not be completed for '+host+'. You can run it directly at pagespeed.web.dev.'}).then(function(){run.disabled=false;run.textContent='Check My Website'});
   }
-  calc();
+  run.addEventListener('click',go);input.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();go()}});
 })();
 </script>
+<!-- View desktop version toggle (Lickity Split) -->
+<script>(function(){var K='lsw-desktop',m=document.querySelector('meta[name="viewport"]');if(!m)return;var orig=m.getAttribute('content')||'width=device-width, initial-scale=1',on=sessionStorage.getItem(K)==='1',mobile=window.matchMedia('(max-width: 900px)').matches;if(!mobile&&!on)return;function apply(){m.setAttribute('content',on?'width=1200':orig)}apply();var a=document.createElement('a');a.href='#';a.className='view-desktop';a.textContent=on?'View mobile version':'View desktop version';a.style.cssText='display:block;text-align:center;font:inherit;font-size:.85rem;padding:1rem 1rem 1.25rem;opacity:.7;text-decoration:underline;color:inherit';a.addEventListener('click',function(e){e.preventDefault();on=!on;sessionStorage.setItem(K,on?'1':'0');apply();a.textContent=on?'View mobile version':'View desktop version';window.scrollTo(0,0)});var f=document.querySelector('footer');(f||document.body).appendChild(a)})();</script>
 </body>
 </html>

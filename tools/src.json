@@ -1,0 +1,149 @@
+{
+ "cases": {
+  "dcsocial": {
+   "quote": "He rebuilt the entire DC Social Collective website and has been a huge asset in making it more functional and user-friendly. He&rsquo;s extremely technically skilled, fast, and reliable, and whenever we need something changed or added, he gets it done.",
+   "attrib": "Christopher Byrne &middot; Founder and President, DC Social Collective",
+   "url": "https://dcsocialcollective.com/",
+   "shot": "dcsocial.webp",
+   "w": 1280,
+   "h": 853,
+   "before": "dcsocial-before.webp"
+  },
+  "larocca": {
+   "quote": "My website has been transformed thanks to the excellent design and building services of Andrew Likoudis. Any other Catholic creatives looking to build or refresh their online presence should consider his services. The cost was very reasonable and his customer service was exemplary.",
+   "attrib": "Frank La Rocca &middot; Composer-in-Residence, Benedict XVI Institute",
+   "url": "https://www.franklarocca.com/",
+   "shot": "larocca.webp",
+   "w": 1280,
+   "h": 853,
+   "before": "larocca-before.webp"
+  },
+  "llf": {
+   "quote": "",
+   "attrib": "",
+   "url": "https://likoudislegacy.com/",
+   "shot": "llf.webp",
+   "w": 1280,
+   "h": 800,
+   "before": "llf-before.webp"
+  },
+  "icjf": {
+   "quote": "",
+   "attrib": "",
+   "url": "https://icjurist.org/",
+   "shot": "icjf.webp",
+   "w": 2560,
+   "h": 1706,
+   "before": "icjf-before.webp"
+  },
+  "adan": {
+   "quote": "Andrew&rsquo;s work reminds me of music composition. Every part of the website he built for me feels chosen with purpose. The result is a site where visitors want to stay a while, because the layout feels natural and intuitive. He works quickly and with real dedication, and he was a joy to work with.",
+   "attrib": "Adán Alejándro Fernández &middot; Organist &amp; Conductor",
+   "url": "https://adanfernandezmusic.com/",
+   "shot": "adan.webp",
+   "w": 1280,
+   "h": 853,
+   "before": ""
+  },
+  "roxane": {
+   "quote": "Andrew was a gem to work with! I&rsquo;d been putting off updating my website, dreading the weeks it might take to get it right. But Andrew accomplished the goal over a single weekend. Rather than drudgery, the process felt light, even enjoyable. He asked the right questions and applied my vision well, and yes, lickety split. I&rsquo;m very pleased with the results and would definitely recommend him to other authors and creatives looking for a fresh way to reach their audiences.",
+   "attrib": "Roxane B. Salonen &middot; Author, Speaker, Podcast Host",
+   "url": "https://roxanesalonen.com/",
+   "shot": "roxane.webp",
+   "w": 1280,
+   "h": 800,
+   "before": "roxane-before.webp"
+  },
+  "brushsoul": {
+   "quote": "",
+   "attrib": "",
+   "url": "https://brushandsoulstudio.com/",
+   "shot": "brushsoul.webp",
+   "w": 1280,
+   "h": 800,
+   "before": ""
+  },
+  "bruna": {
+   "quote": "I&rsquo;m very happy with the work! Andrew is attentive to every detail and truly dedicated to what he does. The whole process was handled with care, professionalism, and great attention to my needs. It was a pleasure working with him, and I highly recommend his work!",
+   "attrib": "Bruna Ribeiro &middot; Psychologist",
+   "url": "https://www.psicologabrunaribeiro.com/",
+   "shot": "bruna.webp",
+   "w": 1280,
+   "h": 853,
+   "before": ""
+  },
+  "traddyland": {
+   "quote": "Andrew has taken my website to a new level through focused attention to my product and my needs. Well done!",
+   "attrib": "Lou Massett &middot; Author of <em>Traddyland</em>",
+   "url": "https://www.traddyland.com/",
+   "shot": "traddyland.webp",
+   "w": 1280,
+   "h": 853,
+   "before": "traddyland-before.webp"
+  },
+  "collin": {
+   "quote": "Andrew gets what I&rsquo;m about and the site shows it. The streaming apps have my music but they&rsquo;re not mine &mdash; this is. My songs, my photos, my label, at my own address. I didn&rsquo;t lift a finger and it still came out better than if I&rsquo;d told him what to do.",
+   "attrib": "Collin Westerlund &middot; Musician &amp; Producer",
+   "url": "https://collinwesterlundmusic.com/",
+   "shot": "collin.webp",
+   "w": 1280,
+   "h": 800,
+   "before": ""
+  },
+  "lapenna": {
+   "quote": "",
+   "attrib": "",
+   "url": "https://michaellapenna.com/",
+   "shot": "lapenna.webp",
+   "w": 2560,
+   "h": 1706,
+   "before": ""
+  }
+ },
+ "tests": [
+  {
+   "quote": "&ldquo;Andrew is incredibly talented at what he does. He rebuilt the entire DC Social Collective website and has been a huge asset in making it more functional and user-friendly. He&rsquo;s extremely technically skilled, fast, and reliable, and whenever we need something changed or added, he gets it done. It&rsquo;s been great having someone we can consistently count on as our website continues to grow. I&rsquo;d highly recommend Andrew to anyone looking for a skilled and dependable web developer.&rdquo;",
+   "img": "chris-headshot.webp",
+   "name": "Christopher Byrne",
+   "role": "Founder &amp; President, DC Social Collective"
+  },
+  {
+   "quote": "&ldquo;Andrew&rsquo;s work reminds me of music composition. Every part of the website he built for me feels chosen with purpose. The result is a site where visitors want to stay a while, because the layout feels natural and intuitive. He works quickly and with real dedication, and he was a joy to work with.&rdquo;",
+   "img": "adan-headshot.webp",
+   "name": "Adán Alejándro Fernández",
+   "role": "Organist &amp; Conductor"
+  },
+  {
+   "quote": "&ldquo;Andrew was a gem to work with! I&rsquo;d been putting off updating my website, dreading the weeks it might take to get it right. But Andrew accomplished the goal over a single weekend&hellip; He asked the right questions and applied my vision well, and yes, lickety split. I&rsquo;m very pleased with the results and would definitely recommend him to other authors and creatives.&rdquo;",
+   "img": "roxane-headshot.webp",
+   "name": "Roxane B. Salonen",
+   "role": "Author &amp; Speaker"
+  },
+  {
+   "quote": "&ldquo;Andrew gets what I&rsquo;m about and the site shows it. The streaming apps have my music but they&rsquo;re not mine &mdash; this is. My songs, my photos, my label, at my own address. I didn&rsquo;t lift a finger and it still came out better than if I&rsquo;d told him what to do.&rdquo;",
+   "img": "collin-headshot-v2.webp",
+   "name": "Collin Westerlund",
+   "role": "Musician &amp; Producer"
+  },
+  {
+   "quote": "&ldquo;I&rsquo;m very happy with the work! Andrew is attentive to every detail and truly dedicated to what he does. The whole process was handled with care, professionalism, and great attention to my needs. It was a pleasure working with him, and I highly recommend his work!&rdquo;",
+   "img": "bruna-headshot.webp",
+   "name": "Bruna Ribeiro",
+   "role": "Psychologist, Maring&aacute;, Brazil"
+  },
+  {
+   "quote": "&ldquo;Andrew has taken my website to a new level through focused attention to my product and my needs. Well done!&rdquo;",
+   "img": "lou-headshot.webp",
+   "name": "Lou Massett",
+   "role": "Author of <em>Traddyland</em>"
+  },
+  {
+   "quote": "&ldquo;My website has been transformed thanks to the excellent design and building services of Andrew Likoudis. Any other Catholic creatives looking to build or refresh their online presence should consider his services. The cost was very reasonable and his customer service was exemplary.&rdquo;",
+   "img": "frank-headshot.webp",
+   "name": "Frank La Rocca",
+   "role": "Composer"
+  }
+ ],
+ "ig": "<svg viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2M12 0C8.7 0 8.3 0 7.1.1 5.8.1 4.9.3 4.1.6c-.8.3-1.5.7-2.1 1.4C1.3 2.6.9 3.3.6 4.1.3 4.9.1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 3 .3.8.7 1.5 1.4 2.1.6.7 1.3 1.1 2.1 1.4.8.3 1.7.5 3 .6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.7 2.1-1.4.7-.6 1.1-1.3 1.4-2.1.3-.8.5-1.7.6-3 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-3-.3-.8-.7-1.5-1.4-2.1C21.4 1.3 20.7.9 19.9.6c-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z\"/></svg>",
+ "toggle": "<script>(function(){var K='lsw-desktop',m=document.querySelector('meta[name=\"viewport\"]');if(!m)return;var orig=m.getAttribute('content')||'width=device-width, initial-scale=1',on=sessionStorage.getItem(K)==='1',mobile=window.matchMedia('(max-width: 900px)').matches;if(!mobile&&!on)return;function apply(){m.setAttribute('content',on?'width=1200':orig)}apply();var a=document.createElement('a');a.href='#';a.className='view-desktop';a.textContent=on?'View mobile version':'View desktop version';a.style.cssText='display:block;text-align:center;font:inherit;font-size:.85rem;padding:1rem 1rem 1.25rem;opacity:.7;text-decoration:underline;color:inherit';a.addEventListener('click',function(e){e.preventDefault();on=!on;sessionStorage.setItem(K,on?'1':'0');apply();a.textContent=on?'View mobile version':'View desktop version';window.scrollTo(0,0)});var f=document.querySelector('footer');(f||document.body).appendChild(a)})();</script>"
+}
