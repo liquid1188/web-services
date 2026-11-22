@@ -13,7 +13,7 @@ def home():
         card("dcsocial", "Events and Community", "A new website for DC Social Collective, with live ticketing, venue information, and an archive of more than 6,000 photographs from past events."),
         card("larocca", "Music and Publishing", "A composer&rsquo;s website with 59 works, individual pages for scores and recordings, and a downloadable press kit."),
         card("icjf", "Nonprofit and Publishing", "A redesign that brought over 99 pages and 535 news posts, with a searchable archive of the forum&rsquo;s publications, events, and documents."),
-        card("bruna", "Professional Services", "A Portuguese-language website for a psychologist in Brazil, with information about her practice, written reflections, and WhatsApp contact."),
+        card("roxane", "Writing and Publishing", "An author website that brings together her books, columns, and more than 2,300 migrated blog posts."),
     ])
     body = f'''
   <section class="hero">
