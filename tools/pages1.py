@@ -61,7 +61,7 @@ def home():
 
   <section class="sec sec-stone" id="about">
     <div class="wrap about-strip">
-      <img src="andrew.webp" alt="Andrew Likoudis" width="900" height="1200" loading="lazy" decoding="async">
+      <img src="andrew.webp?v=2" alt="Andrew Likoudis" width="760" height="950" loading="lazy" decoding="async">
       <div class="prose">
         <h2>You&rsquo;ll work directly with me.</h2>
         <p>I&rsquo;m Andrew, the person behind Lickity Split. My background is in writing, editing, communications, and nonprofit work, and I bring that experience to web design.</p>
@@ -157,10 +157,10 @@ CASES = [
    "The design emphasizes the artwork itself and makes it easy to browse what is available."],
   ["Shopify storefront", "Original artwork", "Prints", "Commission inquiries"], ""),
  ("bruna", "Professional Services",
-  "A Portuguese-language website for a psychologist in Maring&aacute;, Brazil, offering online therapy.",
+  "A Portuguese-language website, with an English toggle, for a psychologist in Maring&aacute;, Brazil, offering online therapy.",
   ["The website includes information about her practice, written reflections, frequently asked questions, a contact form, and a WhatsApp inquiry option.",
    "The design incorporates visual details connected to her existing identity."],
-  ["Portuguese-language website", "Reflections", "FAQ", "WhatsApp contact"], ""),
+  ["Portuguese and English", "Reflections", "FAQ", "WhatsApp contact"], ""),
  ("llf", "Nonprofit and Publishing",
   "A website for a Catholic nonprofit working in Christian unity, religious liberty, and related areas of research and public engagement.",
   ["The site brings together the foundation&rsquo;s programs, publications, events, organizational information, and giving options.",
@@ -268,7 +268,7 @@ def gallery():
     G = [("dcsocial", "Events, ticketing, venue information, and an archive of photo galleries and videos."),
          ("larocca", "A searchable catalog of 59 compositions, with scores, recordings, and press information."),
          ("icjf", "A nonprofit redesign with 99 pages and 535 news posts migrated into a searchable website."),
-         ("bruna", "A Portuguese-language website for a psychology practice in Brazil."),
+         ("bruna", "A Portuguese-language website, with an English toggle, for a psychology practice in Brazil."),
          ("adan", "A bilingual musician&rsquo;s website with recordings, a concert calendar, and an interactive pipe organ."),
          ("lapenna", "An author website featuring the LaRosa Sisters mystery series and visit inquiries."),
          ("traddyland", "A memoir website with press coverage, speaking information, and a migrated forum."),
