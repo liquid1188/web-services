@@ -24,6 +24,8 @@ def header(cur):
             <li><a href="website-design"{c("website-design")}>Website Design</a></li>
             <li><a href="author-website-design"{c("author")}>Author Websites</a></li>
             <li><a href="composer-musician-websites"{c("music")}>Musician &amp; Composer Websites</a></li>
+            <li><a href="publisher-website-design"{c("publisher")}>Publisher &amp; Journal Websites</a></li>
+            <li><a href="nonprofit-website-design"{c("nonprofit")}>Nonprofit Websites</a></li>
             <li><a href="parish-ministry-websites"{c("parish")}>Parish &amp; Ministry Websites</a></li>
             <li><a href="wix-to-custom-website"{c("migrate")}>Website Migrations</a></li>
           </ul>
@@ -62,6 +64,8 @@ FOOTER = f'''<footer class="site-foot">
           <li><a href="website-design">Website Design</a></li>
           <li><a href="author-website-design">Author Websites</a></li>
           <li><a href="composer-musician-websites">Musician Websites</a></li>
+          <li><a href="publisher-website-design">Publisher Websites</a></li>
+          <li><a href="nonprofit-website-design">Nonprofit Websites</a></li>
           <li><a href="parish-ministry-websites">Parish Websites</a></li>
           <li><a href="wix-to-custom-website">Website Migrations</a></li>
           <li><a href="technology-consulting">Technology Consulting</a></li>
@@ -103,13 +107,13 @@ def cta(h="Have a project in mind?", p="Tell me what you&rsquo;re working on and
     </div>
   </section>'''
 
-def page(fname, title, desc, body, cur="", ld="", scripts="", noindex=False):
+def page(fname, title, desc, body, cur="", ld="", scripts="", noindex=False, base=""):
     url = SITE + ("" if fname == "index.html" else fname[:-5])
     robots = '\n  <meta name="robots" content="noindex, nofollow"/>' if (STAGING or noindex) else ''
     doc = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8"/>{base and chr(10) + '  <base href="' + base + '"/>'}
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>{robots}
   <title>{title}</title>
   <meta name="description" content="{desc}"/>
@@ -130,13 +134,14 @@ def page(fname, title, desc, body, cur="", ld="", scripts="", noindex=False):
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png"/>
   <link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png"/>
   <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/Lora-500.woff2" crossorigin/>
   <link rel="preload" as="font" type="font/woff2" href="fonts/Manrope-var.woff2" crossorigin/>
   <link rel="preload" as="font" type="font/woff2" href="fonts/SourceSans3-var.woff2" crossorigin/>
   <link rel="stylesheet" href="fonts.css?v=1"/>
-  <link rel="stylesheet" href="v2.css?v=4"/>
+  <link rel="stylesheet" href="v2.css?v=6"/>
 {ld}</head>
 <body>
-{header(cur)}
+{header(cur).replace('href="#main"', 'href="' + fname[:-5] + '#main"') if base else header(cur)}
 <main id="main">
 {body}
 </main>
@@ -148,6 +153,7 @@ def page(fname, title, desc, body, cur="", ld="", scripts="", noindex=False):
 </body>
 </html>
 '''
+    os.makedirs(os.path.dirname(os.path.join(ROOT, fname)), exist_ok=True)
     io.open(os.path.join(ROOT, fname), "w", encoding="utf-8").write(doc)
     return fname
 
@@ -186,8 +192,13 @@ P = {
 }
 for k, v in P.items(): v.update(SRC["cases"][k])
 
+# Case study pages, one per featured project
+CASEURL = {"dcsocial": "projects/dc-social-collective", "larocca": "projects/frank-la-rocca",
+           "icjf": "projects/international-catholic-jurists-forum", "roxane": "projects/roxane-salonen"}
+
 def card(pid, cat, desc, link_label="View Project", href=None, name=None):
-    p = P[pid]; href = href or f"work#{pid}"; name = name or p["name"]
+    p = P[pid]; href = href or CASEURL.get(pid, f"work#{pid}"); name = name or p["name"]
+    if pid in CASEURL and link_label == "View Project": link_label = "Read the Case Study"
     plain = html.unescape(name)
     return f'''        <article class="proj">
           <a class="proj-shot" href="{href}" tabindex="-1" aria-hidden="true"><img src="screenshots/{p["shot"]}" alt="" width="{p["w"]}" height="{p["h"]}" loading="lazy" decoding="async"></a>

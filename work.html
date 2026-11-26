@@ -22,10 +22,11 @@
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png"/>
   <link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png"/>
   <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/Lora-500.woff2" crossorigin/>
   <link rel="preload" as="font" type="font/woff2" href="fonts/Manrope-var.woff2" crossorigin/>
   <link rel="preload" as="font" type="font/woff2" href="fonts/SourceSans3-var.woff2" crossorigin/>
   <link rel="stylesheet" href="fonts.css?v=1"/>
-  <link rel="stylesheet" href="v2.css?v=4"/>
+  <link rel="stylesheet" href="v2.css?v=6"/>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -42,6 +43,8 @@
             <li><a href="website-design">Website Design</a></li>
             <li><a href="author-website-design">Author Websites</a></li>
             <li><a href="composer-musician-websites">Musician &amp; Composer Websites</a></li>
+            <li><a href="publisher-website-design">Publisher &amp; Journal Websites</a></li>
+            <li><a href="nonprofit-website-design">Nonprofit Websites</a></li>
             <li><a href="parish-ministry-websites">Parish &amp; Ministry Websites</a></li>
             <li><a href="wix-to-custom-website">Website Migrations</a></li>
           </ul>
@@ -60,42 +63,14 @@
     <div class="wrap">
       <h1>Selected projects</h1>
       <p class="lead">I&rsquo;ve built websites for authors, musicians, artists, businesses, and nonprofit organizations. Some projects began with a simple idea. Others involved redesigning an existing website or moving a substantial archive.</p>
-      <p class="lead">Here are some examples.</p>
+      <p class="lead">The work is grouped by the kind of client. Four projects have full case studies.</p>
+      <div class="hero-actions"><nav class="jump" aria-label="Project types"><a href="work#music-arts">Music and the arts</a><a href="work#organizations">Organizations and events</a><a href="work#authors">Authors and writers</a><a href="work#professional">Professional services</a></nav></div>
     </div>
   </section>
 
-  <section class="sec">
+  <section class="sec work-group" id="music-arts">
     <div class="wrap">
-      <article class="project" id="dcsocial">
-        <div class="media">
-          <div class="shot" data-ba style="--p:50%">
-            <div class="ba-stage">
-              <img src="screenshots/dcsocial.webp" alt="DC Social Collective homepage after the rebuild" width="1280" height="853" loading="lazy" decoding="async">
-              <div class="ba-before"><img src="screenshots/dcsocial-before.webp" alt="DC Social Collective homepage before the rebuild" width="2560" height="1706" loading="lazy" decoding="async"></div>
-              <span class="ba-tag ba-tag-b" aria-hidden="true">Before</span><span class="ba-tag ba-tag-a" aria-hidden="true">After</span>
-              <div class="ba-handle" aria-hidden="true"><span></span></div>
-              <input class="ba-range" type="range" min="0" max="100" value="50" step="1" aria-label="Compare DC Social Collective before and after. Use the arrow keys or drag.">
-            </div>
-          </div>
-          <p class="ba-help">Drag the handle, or use the arrow keys, to compare before and after.</p>
-          <details class="ba-static"><summary>Show both versions side by side</summary>
-            <div class="ba-pair">
-              <figure><img src="screenshots/dcsocial-before.webp" alt="DC Social Collective homepage before the rebuild" width="2560" height="1706" loading="lazy"><figcaption>Before</figcaption></figure>
-              <figure><img src="screenshots/dcsocial.webp" alt="DC Social Collective homepage after the rebuild" width="1280" height="853" loading="lazy"><figcaption>After</figcaption></figure>
-            </div>
-          </details>
-        </div>
-        <div>
-          <p class="label">Events, Ticketing, and Community</p>
-          <h2>DC Social Collective</h2>
-          <p class="intro">DC Social Collective hosts social events for young adults around Washington, DC. Its website needed to handle upcoming events and ticketing while making several years of photographs, videos, and press coverage accessible.</p>
-          <div class="built"><h3>What I built</h3><p>I moved the organization from Squarespace to a custom website with individual event pages, ticketing links, directions, calendar integration, and inquiry forms for venues and sponsors.</p><p>The archive now includes 43 photo galleries, more than 6,000 photographs, and 20 recap videos.</p><p>Each new event can be added to the site and incorporated into the archive afterward.</p></div>
-          <ul class="facts-row"><li>43 galleries</li><li>6,000+ photographs</li><li>Live ticketing</li><li>Venue and sponsor inquiries</li></ul>
-          <blockquote>He rebuilt the entire DC Social Collective website and has been a huge asset in making it more functional and user-friendly. He&rsquo;s extremely technically skilled, fast, and reliable, and whenever we need something changed or added, he gets it done.</blockquote>
-          <p class="by">Christopher Byrne, Founder and President, DC Social Collective</p>
-          <a class="btn btn-ghost" href="https://dcsocialcollective.com/" target="_blank" rel="noopener">Visit Website</a>
-        </div>
-      </article>
+      <div class="sec-head group-head"><h2>Music and the arts</h2><p>Composers, performers, songwriters, and artists.</p></div>
       <article class="project" id="larocca">
         <div class="media">
           <div class="shot" data-ba style="--p:50%">
@@ -123,9 +98,57 @@
           <ul class="facts-row"><li>59 compositions</li><li>Recordings and scores</li><li>Discography</li><li>Press kit</li></ul>
           <blockquote>My website has been transformed thanks to the excellent design and building services of Andrew Likoudis. Any other Catholic creatives looking to build or refresh their online presence should consider his services. The cost was very reasonable and his customer service was exemplary.</blockquote>
           <p class="by">Frank La Rocca, Composer-in-Residence, Benedict XVI Institute</p>
-          <a class="btn btn-ghost" href="https://www.franklarocca.com/" target="_blank" rel="noopener">Visit Website</a>
+          <div class="proj-actions"><a class="btn btn-primary" href="projects/frank-la-rocca">Read the Case Study</a><a class="btn btn-ghost" href="https://www.franklarocca.com/" target="_blank" rel="noopener">Visit Website</a></div>
         </div>
       </article>
+      <article class="project" id="adan">
+        <div class="media">
+          <a class="shot" href="https://adanfernandezmusic.com/" target="_blank" rel="noopener" aria-label="Visit the Adán Fernández website"><img src="screenshots/adan.webp" alt="Adán Fernández homepage" width="1280" height="853" loading="lazy" decoding="async"></a>
+        </div>
+        <div>
+          <p class="label">Music and Performance</p>
+          <h2>Ad&aacute;n Fern&aacute;ndez</h2>
+          <p class="intro">A bilingual website for an organist, conductor, and music director, bringing together recordings, concerts, scholarship, and teaching.</p>
+          <div class="built"><h3>What I built</h3><p>The site includes English and Spanish content, recordings, a concert calendar, a press kit, photographs, and an interactive pipe organ on the homepage.</p><p>It also provides a central place for presenters, parishes, and students to learn about his work.</p></div>
+          <ul class="facts-row"><li>English and Spanish</li><li>Interactive pipe organ</li><li>Recordings</li><li>Concert calendar</li></ul>
+          <blockquote>Andrew&rsquo;s work reminds me of music composition. Every part of the website he built for me feels chosen with purpose. The result is a site where visitors want to stay a while, because the layout feels natural and intuitive. He works quickly and with real dedication, and he was a joy to work with.</blockquote>
+          <p class="by">Adán Alejándro Fernández, Organist &amp; Conductor</p>
+          <div class="proj-actions"><a class="btn btn-ghost" href="https://adanfernandezmusic.com/" target="_blank" rel="noopener">Visit Website</a></div>
+        </div>
+      </article>
+      <article class="project" id="collin">
+        <div class="media">
+          <a class="shot" href="https://collinwesterlundmusic.com/" target="_blank" rel="noopener" aria-label="Visit the Collin Westerlund website"><img src="screenshots/collin.webp" alt="Collin Westerlund homepage" width="1280" height="800" loading="lazy" decoding="async"></a>
+        </div>
+        <div>
+          <p class="label">Music and Publishing</p>
+          <h2>Collin Westerlund</h2>
+          <p class="intro">A website for a Baltimore songwriter and producer, bringing together his recordings, record label, photographs, and press material.</p>
+          <div class="built"><h3>What I built</h3><p>The site includes a discography, an Arkansas House Records page, photographs, a notebook, a downloadable press kit, and booking information.</p></div>
+          <ul class="facts-row"><li>Discography</li><li>Record label</li><li>Photography</li><li>Press kit</li></ul>
+          <blockquote>Andrew gets what I&rsquo;m about and the site shows it. The streaming apps have my music but they&rsquo;re not mine &mdash; this is. My songs, my photos, my label, at my own address. I didn&rsquo;t lift a finger and it still came out better than if I&rsquo;d told him what to do.</blockquote>
+          <p class="by">Collin Westerlund, Musician &amp; Producer</p>
+          <div class="proj-actions"><a class="btn btn-ghost" href="https://collinwesterlundmusic.com/" target="_blank" rel="noopener">Visit Website</a></div>
+        </div>
+      </article>
+      <article class="project" id="brushsoul">
+        <div class="media">
+          <a class="shot" href="https://brushandsoulstudio.com/" target="_blank" rel="noopener" aria-label="Visit the Brush &amp; Soul Studio website"><img src="screenshots/brushsoul.webp" alt="Brush and Soul Studio storefront" width="1280" height="800" loading="lazy" decoding="async"></a>
+        </div>
+        <div>
+          <p class="label">Art and E-commerce</p>
+          <h2>Brush &amp; Soul Studio</h2>
+          <p class="intro">An online store for an artist selling original paintings and prints.</p>
+          <div class="built"><h3>What I built</h3><p>I set up and designed a Shopify storefront with individual product listings, galleries, and a way for prospective buyers to inquire about commissions.</p><p>The design emphasizes the artwork itself and makes it easy to browse what is available.</p></div>
+          <ul class="facts-row"><li>Shopify storefront</li><li>Original artwork</li><li>Prints</li><li>Commission inquiries</li></ul>
+          <div class="proj-actions"><a class="btn btn-ghost" href="https://brushandsoulstudio.com/" target="_blank" rel="noopener">Visit Website</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="sec work-group sec-stone" id="organizations">
+    <div class="wrap">
+      <div class="sec-head group-head"><h2>Organizations and events</h2><p>Nonprofits, research institutes, and an events company.</p></div>
       <article class="project" id="icjf">
         <div class="media">
           <div class="shot" data-ba style="--p:50%">
@@ -153,80 +176,37 @@
           <ul class="facts-row"><li>99 pages migrated</li><li>535 news posts</li><li>Site search</li><li>Before-and-after redesign</li></ul>
           <blockquote>Andrew understands the Jurists Forum&rsquo;s work, and it shows in his redesign of our website. The new design is beautiful and dignified, and it represents the Jurists Forum and its mission well. I am glad to recommend him.</blockquote>
           <p class="by">Jane Adolphe</p>
-          <a class="btn btn-ghost" href="https://icjurist.org/" target="_blank" rel="noopener">Visit Website</a>
+          <div class="proj-actions"><a class="btn btn-primary" href="projects/international-catholic-jurists-forum">Read the Case Study</a><a class="btn btn-ghost" href="https://icjurist.org/" target="_blank" rel="noopener">Visit Website</a></div>
         </div>
       </article>
-      <article class="project" id="adan">
-        <div class="media">
-          <a class="shot" href="https://adanfernandezmusic.com/" target="_blank" rel="noopener" aria-label="Visit the Adán Fernández website"><img src="screenshots/adan.webp" alt="Adán Fernández homepage" width="1280" height="853" loading="lazy" decoding="async"></a>
-        </div>
-        <div>
-          <p class="label">Music and Performance</p>
-          <h2>Ad&aacute;n Fern&aacute;ndez</h2>
-          <p class="intro">A bilingual website for an organist, conductor, and music director, bringing together recordings, concerts, scholarship, and teaching.</p>
-          <div class="built"><h3>What I built</h3><p>The site includes English and Spanish content, recordings, a concert calendar, a press kit, photographs, and an interactive pipe organ on the homepage.</p><p>It also provides a central place for presenters, parishes, and students to learn about his work.</p></div>
-          <ul class="facts-row"><li>English and Spanish</li><li>Interactive pipe organ</li><li>Recordings</li><li>Concert calendar</li></ul>
-          <blockquote>Andrew&rsquo;s work reminds me of music composition. Every part of the website he built for me feels chosen with purpose. The result is a site where visitors want to stay a while, because the layout feels natural and intuitive. He works quickly and with real dedication, and he was a joy to work with.</blockquote>
-          <p class="by">Adán Alejándro Fernández, Organist &amp; Conductor</p>
-          <a class="btn btn-ghost" href="https://adanfernandezmusic.com/" target="_blank" rel="noopener">Visit Website</a>
-        </div>
-      </article>
-      <article class="project" id="roxane">
+      <article class="project" id="dcsocial">
         <div class="media">
           <div class="shot" data-ba style="--p:50%">
             <div class="ba-stage">
-              <img src="screenshots/roxane.webp" alt="Roxane Salonen homepage after the rebuild" width="1280" height="800" loading="lazy" decoding="async">
-              <div class="ba-before"><img src="screenshots/roxane-before.webp" alt="Roxane Salonen homepage before the rebuild" width="2560" height="1706" loading="lazy" decoding="async"></div>
+              <img src="screenshots/dcsocial.webp" alt="DC Social Collective homepage after the rebuild" width="1280" height="853" loading="lazy" decoding="async">
+              <div class="ba-before"><img src="screenshots/dcsocial-before.webp" alt="DC Social Collective homepage before the rebuild" width="2560" height="1706" loading="lazy" decoding="async"></div>
               <span class="ba-tag ba-tag-b" aria-hidden="true">Before</span><span class="ba-tag ba-tag-a" aria-hidden="true">After</span>
               <div class="ba-handle" aria-hidden="true"><span></span></div>
-              <input class="ba-range" type="range" min="0" max="100" value="50" step="1" aria-label="Compare Roxane Salonen before and after. Use the arrow keys or drag.">
+              <input class="ba-range" type="range" min="0" max="100" value="50" step="1" aria-label="Compare DC Social Collective before and after. Use the arrow keys or drag.">
             </div>
           </div>
           <p class="ba-help">Drag the handle, or use the arrow keys, to compare before and after.</p>
           <details class="ba-static"><summary>Show both versions side by side</summary>
             <div class="ba-pair">
-              <figure><img src="screenshots/roxane-before.webp" alt="Roxane Salonen homepage before the rebuild" width="2560" height="1706" loading="lazy"><figcaption>Before</figcaption></figure>
-              <figure><img src="screenshots/roxane.webp" alt="Roxane Salonen homepage after the rebuild" width="1280" height="800" loading="lazy"><figcaption>After</figcaption></figure>
+              <figure><img src="screenshots/dcsocial-before.webp" alt="DC Social Collective homepage before the rebuild" width="2560" height="1706" loading="lazy"><figcaption>Before</figcaption></figure>
+              <figure><img src="screenshots/dcsocial.webp" alt="DC Social Collective homepage after the rebuild" width="1280" height="853" loading="lazy"><figcaption>After</figcaption></figure>
             </div>
           </details>
         </div>
         <div>
-          <p class="label">Writing and Publishing</p>
-          <h2>Roxane Salonen</h2>
-          <p class="intro">Roxane Salonen&rsquo;s writing was spread across a long-running blog, newspaper columns, and Substack. She needed a website that brought the material together without losing her existing archive.</p>
-          <div class="built"><h3>What I built</h3><p>I migrated more than 2,300 blog posts into a new author website with book information, writing archives, speaking information, and contact details.</p><p>The site also includes an editor for new content and an automatic feed of recent Substack writing.</p></div>
-          <ul class="facts-row"><li>2,300+ posts migrated</li><li>Author website</li><li>Substack integration</li><li>Content editor</li></ul>
-          <blockquote>Andrew was a gem to work with! I&rsquo;d been putting off updating my website, dreading the weeks it might take to get it right. But Andrew accomplished the goal over a single weekend. Rather than drudgery, the process felt light, even enjoyable. He asked the right questions and applied my vision well, and yes, lickety split. I&rsquo;m very pleased with the results and would definitely recommend him to other authors and creatives looking for a fresh way to reach their audiences.</blockquote>
-          <p class="by">Roxane B. Salonen, Author, Speaker, Podcast Host</p>
-          <a class="btn btn-ghost" href="https://roxanesalonen.com/" target="_blank" rel="noopener">Visit Website</a>
-        </div>
-      </article>
-      <article class="project" id="brushsoul">
-        <div class="media">
-          <a class="shot" href="https://brushandsoulstudio.com/" target="_blank" rel="noopener" aria-label="Visit the Brush &amp; Soul Studio website"><img src="screenshots/brushsoul.webp" alt="Brush and Soul Studio storefront" width="1280" height="800" loading="lazy" decoding="async"></a>
-        </div>
-        <div>
-          <p class="label">Art and E-commerce</p>
-          <h2>Brush &amp; Soul Studio</h2>
-          <p class="intro">An online store for an artist selling original paintings and prints.</p>
-          <div class="built"><h3>What I built</h3><p>I set up and designed a Shopify storefront with individual product listings, galleries, and a way for prospective buyers to inquire about commissions.</p><p>The design emphasizes the artwork itself and makes it easy to browse what is available.</p></div>
-          <ul class="facts-row"><li>Shopify storefront</li><li>Original artwork</li><li>Prints</li><li>Commission inquiries</li></ul>
-          <a class="btn btn-ghost" href="https://brushandsoulstudio.com/" target="_blank" rel="noopener">Visit Website</a>
-        </div>
-      </article>
-      <article class="project" id="bruna">
-        <div class="media">
-          <a class="shot" href="https://www.psicologabrunaribeiro.com/" target="_blank" rel="noopener" aria-label="Visit the Bruna Ribeiro website"><img src="screenshots/bruna.webp" alt="Bruna Ribeiro homepage" width="1280" height="853" loading="lazy" decoding="async"></a>
-        </div>
-        <div>
-          <p class="label">Professional Services</p>
-          <h2>Bruna Ribeiro</h2>
-          <p class="intro">A Portuguese-language website, with an English toggle, for a psychologist in Maring&aacute;, Brazil, offering online therapy.</p>
-          <div class="built"><h3>What I built</h3><p>The website includes information about her practice, written reflections, frequently asked questions, a contact form, and a WhatsApp inquiry option.</p><p>The design incorporates visual details connected to her existing identity.</p></div>
-          <ul class="facts-row"><li>Portuguese and English</li><li>Reflections</li><li>FAQ</li><li>WhatsApp contact</li></ul>
-          <blockquote>I&rsquo;m very happy with the work! Andrew is attentive to every detail and truly dedicated to what he does. The whole process was handled with care, professionalism, and great attention to my needs. It was a pleasure working with him, and I highly recommend his work!</blockquote>
-          <p class="by">Bruna Ribeiro, Psychologist</p>
-          <a class="btn btn-ghost" href="https://www.psicologabrunaribeiro.com/" target="_blank" rel="noopener">Visit Website</a>
+          <p class="label">Events, Ticketing, and Community</p>
+          <h2>DC Social Collective</h2>
+          <p class="intro">DC Social Collective hosts social events for young adults around Washington, DC. Its website needed to handle upcoming events and ticketing while making several years of photographs, videos, and press coverage accessible.</p>
+          <div class="built"><h3>What I built</h3><p>I moved the organization from Squarespace to a custom website with individual event pages, ticketing links, directions, calendar integration, and inquiry forms for venues and sponsors.</p><p>The archive now includes 43 photo galleries, more than 6,000 photographs, and 20 recap videos.</p><p>Each new event can be added to the site and incorporated into the archive afterward.</p></div>
+          <ul class="facts-row"><li>43 galleries</li><li>6,000+ photographs</li><li>Live ticketing</li><li>Venue and sponsor inquiries</li></ul>
+          <blockquote>He rebuilt the entire DC Social Collective website and has been a huge asset in making it more functional and user-friendly. He&rsquo;s extremely technically skilled, fast, and reliable, and whenever we need something changed or added, he gets it done.</blockquote>
+          <p class="by">Christopher Byrne, Founder and President, DC Social Collective</p>
+          <div class="proj-actions"><a class="btn btn-primary" href="projects/dc-social-collective">Read the Case Study</a><a class="btn btn-ghost" href="https://dcsocialcollective.com/" target="_blank" rel="noopener">Visit Website</a></div>
         </div>
       </article>
       <article class="project" id="llf">
@@ -255,7 +235,42 @@
           <p class="note">I founded the Likoudis Legacy Foundation, so this is my own organization&rsquo;s website.</p>
           <div class="built"><h3>What I built</h3><p>The site brings together the foundation&rsquo;s programs, publications, events, organizational information, and giving options.</p><p>It also provides space for the foundation&rsquo;s continuing work as new projects and publications are introduced.</p></div>
           <ul class="facts-row"><li>Programs</li><li>Publications</li><li>Events</li><li>Donations</li></ul>
-          <a class="btn btn-ghost" href="https://likoudislegacy.com/" target="_blank" rel="noopener">Visit Website</a>
+          <div class="proj-actions"><a class="btn btn-ghost" href="https://likoudislegacy.com/" target="_blank" rel="noopener">Visit Website</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="sec work-group" id="authors">
+    <div class="wrap">
+      <div class="sec-head group-head"><h2>Authors and writers</h2><p>Writers with books to launch, archives to keep, and readers to reach.</p></div>
+      <article class="project" id="roxane">
+        <div class="media">
+          <div class="shot" data-ba style="--p:50%">
+            <div class="ba-stage">
+              <img src="screenshots/roxane.webp" alt="Roxane Salonen homepage after the rebuild" width="1280" height="800" loading="lazy" decoding="async">
+              <div class="ba-before"><img src="screenshots/roxane-before.webp" alt="Roxane Salonen homepage before the rebuild" width="2560" height="1706" loading="lazy" decoding="async"></div>
+              <span class="ba-tag ba-tag-b" aria-hidden="true">Before</span><span class="ba-tag ba-tag-a" aria-hidden="true">After</span>
+              <div class="ba-handle" aria-hidden="true"><span></span></div>
+              <input class="ba-range" type="range" min="0" max="100" value="50" step="1" aria-label="Compare Roxane Salonen before and after. Use the arrow keys or drag.">
+            </div>
+          </div>
+          <p class="ba-help">Drag the handle, or use the arrow keys, to compare before and after.</p>
+          <details class="ba-static"><summary>Show both versions side by side</summary>
+            <div class="ba-pair">
+              <figure><img src="screenshots/roxane-before.webp" alt="Roxane Salonen homepage before the rebuild" width="2560" height="1706" loading="lazy"><figcaption>Before</figcaption></figure>
+              <figure><img src="screenshots/roxane.webp" alt="Roxane Salonen homepage after the rebuild" width="1280" height="800" loading="lazy"><figcaption>After</figcaption></figure>
+            </div>
+          </details>
+        </div>
+        <div>
+          <p class="label">Writing and Publishing</p>
+          <h2>Roxane Salonen</h2>
+          <p class="intro">Roxane Salonen&rsquo;s writing was spread across a long-running blog, newspaper columns, and Substack. She needed a website that brought the material together without losing her existing archive.</p>
+          <div class="built"><h3>What I built</h3><p>I migrated more than 2,300 blog posts into a new author website with book information, writing archives, speaking information, and contact details.</p><p>The site also includes an editor for new content and an automatic feed of recent Substack writing.</p></div>
+          <ul class="facts-row"><li>2,300+ posts migrated</li><li>Author website</li><li>Substack integration</li><li>Content editor</li></ul>
+          <blockquote>Andrew was a gem to work with! I&rsquo;d been putting off updating my website, dreading the weeks it might take to get it right. But Andrew accomplished the goal over a single weekend. Rather than drudgery, the process felt light, even enjoyable. He asked the right questions and applied my vision well, and yes, lickety split. I&rsquo;m very pleased with the results and would definitely recommend him to other authors and creatives looking for a fresh way to reach their audiences.</blockquote>
+          <p class="by">Roxane B. Salonen, Author, Speaker, Podcast Host</p>
+          <div class="proj-actions"><a class="btn btn-primary" href="projects/roxane-salonen">Read the Case Study</a><a class="btn btn-ghost" href="https://roxanesalonen.com/" target="_blank" rel="noopener">Visit Website</a></div>
         </div>
       </article>
       <article class="project" id="traddyland">
@@ -285,22 +300,7 @@
           <ul class="facts-row"><li>Wix migration</li><li>Book launch</li><li>Press</li><li>Reader forum</li></ul>
           <blockquote>Andrew has taken my website to a new level through focused attention to my product and my needs. Well done!</blockquote>
           <p class="by">Lou Massett, Author of <em>Traddyland</em></p>
-          <a class="btn btn-ghost" href="https://www.traddyland.com/" target="_blank" rel="noopener">Visit Website</a>
-        </div>
-      </article>
-      <article class="project" id="collin">
-        <div class="media">
-          <a class="shot" href="https://collinwesterlundmusic.com/" target="_blank" rel="noopener" aria-label="Visit the Collin Westerlund website"><img src="screenshots/collin.webp" alt="Collin Westerlund homepage" width="1280" height="800" loading="lazy" decoding="async"></a>
-        </div>
-        <div>
-          <p class="label">Music and Publishing</p>
-          <h2>Collin Westerlund</h2>
-          <p class="intro">A website for a Baltimore songwriter and producer, bringing together his recordings, record label, photographs, and press material.</p>
-          <div class="built"><h3>What I built</h3><p>The site includes a discography, an Arkansas House Records page, photographs, a notebook, a downloadable press kit, and booking information.</p></div>
-          <ul class="facts-row"><li>Discography</li><li>Record label</li><li>Photography</li><li>Press kit</li></ul>
-          <blockquote>Andrew gets what I&rsquo;m about and the site shows it. The streaming apps have my music but they&rsquo;re not mine &mdash; this is. My songs, my photos, my label, at my own address. I didn&rsquo;t lift a finger and it still came out better than if I&rsquo;d told him what to do.</blockquote>
-          <p class="by">Collin Westerlund, Musician &amp; Producer</p>
-          <a class="btn btn-ghost" href="https://collinwesterlundmusic.com/" target="_blank" rel="noopener">Visit Website</a>
+          <div class="proj-actions"><a class="btn btn-ghost" href="https://www.traddyland.com/" target="_blank" rel="noopener">Visit Website</a></div>
         </div>
       </article>
       <article class="project" id="lapenna">
@@ -313,13 +313,33 @@
           <p class="intro">An author website for the LaRosa Sisters mystery series, including book information and school, library, and bookstore visit inquiries.</p>
           <div class="built"><h3>What I built</h3><p>The site has every book in the series, a page for arranging school, library, and bookstore visits, creative writing workshops, and a contact form that goes straight to Michael.</p></div>
           <ul class="facts-row"><li>Book series</li><li>Author visits</li><li>Workshops</li><li>Content editor</li></ul>
-          <a class="btn btn-ghost" href="https://michaellapenna.com/" target="_blank" rel="noopener">Visit Website</a>
+          <div class="proj-actions"><a class="btn btn-ghost" href="https://michaellapenna.com/" target="_blank" rel="noopener">Visit Website</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="sec work-group sec-stone" id="professional">
+    <div class="wrap">
+      <div class="sec-head group-head"><h2>Professional services</h2><p>Independent professionals who need a clear, trustworthy first impression.</p></div>
+      <article class="project" id="bruna">
+        <div class="media">
+          <a class="shot" href="https://www.psicologabrunaribeiro.com/" target="_blank" rel="noopener" aria-label="Visit the Bruna Ribeiro website"><img src="screenshots/bruna.webp" alt="Bruna Ribeiro homepage" width="1280" height="853" loading="lazy" decoding="async"></a>
+        </div>
+        <div>
+          <p class="label">Professional Services</p>
+          <h2>Bruna Ribeiro</h2>
+          <p class="intro">A Portuguese-language website, with an English toggle, for a psychologist in Maring&aacute;, Brazil, offering online therapy.</p>
+          <div class="built"><h3>What I built</h3><p>The website includes information about her practice, written reflections, frequently asked questions, a contact form, and a WhatsApp inquiry option.</p><p>The design incorporates visual details connected to her existing identity.</p></div>
+          <ul class="facts-row"><li>Portuguese and English</li><li>Reflections</li><li>FAQ</li><li>WhatsApp contact</li></ul>
+          <blockquote>I&rsquo;m very happy with the work! Andrew is attentive to every detail and truly dedicated to what he does. The whole process was handled with care, professionalism, and great attention to my needs. It was a pleasure working with him, and I highly recommend his work!</blockquote>
+          <p class="by">Bruna Ribeiro, Psychologist</p>
+          <div class="proj-actions"><a class="btn btn-ghost" href="https://www.psicologabrunaribeiro.com/" target="_blank" rel="noopener">Visit Website</a></div>
         </div>
       </article>
     </div>
   </section>
 
-  <section class="sec sec-stone" id="smaller-projects">
+  <section class="sec" id="smaller-projects">
     <div class="wrap">
       <div class="sec-head"><h2>Smaller projects</h2></div>
       <div class="mini-grid">
@@ -339,7 +359,7 @@
     </div>
   </section>
 
-  <section class="sec">
+  <section class="sec sec-stone">
     <div class="wrap">
       <div class="sec-head"><h2>More of my work</h2><p>The gallery includes additional websites and smaller projects, including author sites, music portfolios, online stores, and nonprofit websites.</p></div>
       <a class="btn btn-ghost" href="gallery">View Full Gallery</a>
@@ -377,6 +397,8 @@
           <li><a href="website-design">Website Design</a></li>
           <li><a href="author-website-design">Author Websites</a></li>
           <li><a href="composer-musician-websites">Musician Websites</a></li>
+          <li><a href="publisher-website-design">Publisher Websites</a></li>
+          <li><a href="nonprofit-website-design">Nonprofit Websites</a></li>
           <li><a href="parish-ministry-websites">Parish Websites</a></li>
           <li><a href="wix-to-custom-website">Website Migrations</a></li>
           <li><a href="technology-consulting">Technology Consulting</a></li>

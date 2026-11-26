@@ -85,14 +85,14 @@ def pricing():
                "Most of my projects fall into this category."],
               ["Custom design", "Multiple pages", "Publications, books, or portfolio listings", "Galleries", "Contact and inquiry forms", "Newsletter and other integrations", "Content editor", "One consolidated revision round", "30 days of post-launch support"],
               "Usually around a week, depending on the project.", "Discuss a Website"),
-        pcard("Full Build", "$1,200&ndash;$2,500",
+        pcard("Full Build", "$1,200&ndash;$2,500+",
               ["For larger websites that need a more involved structure or additional features.",
                "This might include a substantial archive, searchable catalog, event system, online store, or content migration.",
                "The price depends on what needs to be built and how much existing material needs to be transferred."],
               ["Everything relevant from the Custom Website tier", "Large archives", "Searchable catalogs", "E-commerce or donation integrations", "Event registration or ticketing", "More complex content management", "Custom interactive features", "Two consolidated revision rounds", "30 days of post-launch support"],
               "Determined by scope, often around two weeks for projects in this range.", "Discuss a Larger Project"),
     ])
-    body = f'''{hero("A website doesn&rsquo;t have to cost thousands.", ["Most of the websites I build cost between $500 and $1,200. That includes custom design, the pages you need, and help getting everything online.", "If you only need something simple, I offer starter websites for $300 to $500. Larger projects, particularly those involving archives, online stores, or custom features, generally cost between $1,200 and $2,500.", "I&rsquo;ll give you a written estimate before any work begins."])}
+    body = f'''{hero("A website doesn&rsquo;t have to cost thousands.", ["Most of the websites I build cost between $500 and $1,200. That includes custom design, the pages you need, and help getting everything online.", "If you only need something simple, I offer starter websites for $300 to $500. Larger projects, particularly those involving archives, online stores, or custom features, start at $1,200 and are priced by scope. Most of them land under $2,500.", "I&rsquo;ll give you a written estimate before any work begins."])}
 
   <section class="sec">
     <div class="wrap">
@@ -156,8 +156,8 @@ def pricing():
       </div>
       <div class="prose">
         <h2>Hosting and ongoing costs</h2>
-        <p>Hosting is currently included for the straightforward websites I build.</p>
-        <p>You&rsquo;ll still need a domain name, and some projects may involve separate charges for email, online stores, booking software, newsletters, or other services.</p>
+        <p>Hosting is included for the custom websites I build, with no platform fees.</p>
+        <p>You&rsquo;ll still need a domain name. Third-party services carry their own costs, such as a Shopify store, paid email, a premium domain, booking software, a newsletter platform, or certain integrations.</p>
         <p>I&rsquo;ll identify those costs before we begin.</p>
       </div>
     </div>
@@ -185,7 +185,7 @@ def pricing():
 
 FAQ = [
  ("Who owns the website?", ["You do. Once the project is complete, the website files are yours. I can continue hosting the site, or help you move it elsewhere.", "Some features may depend on third-party services with their own accounts or terms. I&rsquo;ll identify those before we begin."]),
- ("Can I update it myself?", ["Yes. Custom Websites and Full Builds include an editor for routine updates, such as changing text, adding a post, or replacing a photograph. I&rsquo;ll show you how to use it."]),
+ ("Can I update it myself?", ["Yes. Custom Websites and Full Builds include an editor set up for your site, with presets for the things you add most, such as an event, a book, or a post. You fill in a short form and the site handles the layout.", "You can also change text, replace photographs, and save drafts. I&rsquo;ll show you how to use it before launch."]),
  ("How long does a website take?", ["A small starter site can sometimes be ready in about 48 hours once I have the material. Custom websites usually take about a week, while larger projects take longer.", "I&rsquo;ll give you an expected timeline with the estimate."]),
  ("What does it cost to maintain?", ["Hosting is currently included for the straightforward websites I build.", "You&rsquo;ll still need a domain name, and some projects may involve separate costs for email, e-commerce, newsletters, booking services, or other integrations.", "I&rsquo;ll explain any recurring costs in advance."]),
  ("Can you move an existing website?", ["Yes. I&rsquo;ve moved websites from Wix, Squarespace, and older blogging platforms, including archives with thousands of posts.", "I&rsquo;ll review the existing site before giving you an estimate."]),
@@ -210,7 +210,8 @@ def about():
       <div>
         <h1>I&rsquo;m Andrew, and you&rsquo;ll work directly with me.</h1>
         <p class="lead">Lickity Split is my web design business, based in Baltimore. I work directly with clients on everything from the first conversation to the finished website, including the design, writing, and technical setup.</p>
-        <p class="lead">My background is in writing, editing, communications, and nonprofit work. That experience has influenced the way I approach websites. I care about how they look, but also about how the information is organized, whether the writing is clear, and how easy they are to use.</p>
+        <p class="lead">My background is in business, communications, and publishing. I&rsquo;ve founded a nonprofit, edited books, and written for national publications. That experience shapes how I approach websites, particularly for people and organizations with a large body of work to present.</p>
+        <p class="lead">I care about how a site looks, and just as much about how the information is organized, whether the writing is clear, and how easy it is to keep up to date.</p>
       </div>
       <img src="andrew-about.webp?v=3" alt="Andrew Likoudis" width="880" height="1100" decoding="async">
     </div>

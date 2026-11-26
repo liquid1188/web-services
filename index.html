@@ -22,12 +22,13 @@
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png"/>
   <link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png"/>
   <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/Lora-500.woff2" crossorigin/>
   <link rel="preload" as="font" type="font/woff2" href="fonts/Manrope-var.woff2" crossorigin/>
   <link rel="preload" as="font" type="font/woff2" href="fonts/SourceSans3-var.woff2" crossorigin/>
   <link rel="stylesheet" href="fonts.css?v=1"/>
-  <link rel="stylesheet" href="v2.css?v=4"/>
+  <link rel="stylesheet" href="v2.css?v=6"/>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://lickitysplitweb.com/#business","name":"Lickity Split Web Design","url":"https://lickitysplitweb.com/","image":"https://lickitysplitweb.com/og.jpg","description":"Custom websites for authors, musicians, small businesses, and nonprofits. Based in Baltimore, serving clients nationwide. Starter sites from $300.","email":"hello@lickitysplitweb.com","priceRange":"$300-$2500","founder":{"@type":"Person","name":"Andrew Likoudis"},"address":{"@type":"PostalAddress","addressLocality":"Baltimore","addressRegion":"MD","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Baltimore"},{"@type":"Country","name":"United States"}],"knowsAbout":["Web design","Website migrations","Website accessibility","Technology consulting","AI consulting"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://lickitysplitweb.com/#business","name":"Lickity Split Web Design","url":"https://lickitysplitweb.com/","image":"https://lickitysplitweb.com/og.jpg","description":"Custom websites for authors, musicians, small businesses, and nonprofits. Based in Baltimore, serving clients nationwide. Starter sites from $300.","email":"hello@lickitysplitweb.com","priceRange":"$300+","founder":{"@type":"Person","name":"Andrew Likoudis"},"address":{"@type":"PostalAddress","addressLocality":"Baltimore","addressRegion":"MD","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Baltimore"},{"@type":"Country","name":"United States"}],"knowsAbout":["Web design","Website migrations","Website accessibility","Technology consulting","AI consulting"]}
 </script>
 </head>
 <body>
@@ -45,6 +46,8 @@
             <li><a href="website-design">Website Design</a></li>
             <li><a href="author-website-design">Author Websites</a></li>
             <li><a href="composer-musician-websites">Musician &amp; Composer Websites</a></li>
+            <li><a href="publisher-website-design">Publisher &amp; Journal Websites</a></li>
+            <li><a href="nonprofit-website-design">Nonprofit Websites</a></li>
             <li><a href="parish-ministry-websites">Parish &amp; Ministry Websites</a></li>
             <li><a href="wix-to-custom-website">Website Migrations</a></li>
           </ul>
@@ -63,14 +66,14 @@
   <section class="hero">
     <div class="wrap hero-in">
       <div class="hero-copy">
+        <p class="label hero-eyebrow">Independent web design and technology consulting</p>
         <h1>Websites built around your work.</h1>
-        <p>I design and build websites for authors, musicians, small businesses, and nonprofits. Some need a few pages and a contact form. Others need years of writing, music, photographs, or events organized in one place.</p>
-        <p>I&rsquo;m based in Baltimore and work with clients around the country. Most projects cost between $500 and $1,200, with smaller websites starting at $300.</p>
+        <p>Custom websites for authors, artists, musicians, businesses, and nonprofits. From the writing and design to the technical details, I handle the whole project myself.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="work">View My Work</a>
           <a class="btn btn-ghost" href="contact">Get an Estimate</a>
         </div>
-        <p class="hero-note">Custom website design and practical technology help.</p>
+        <p class="hero-note">Projects from $300 &middot; Working with clients nationwide</p>
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="frame frame-a"><img src="screenshots/dcsocial.webp" alt="" width="1280" height="853" fetchpriority="high"></div>
@@ -87,32 +90,32 @@
       </div>
       <div class="proj-grid">
         <article class="proj">
-          <a class="proj-shot" href="work#dcsocial" tabindex="-1" aria-hidden="true"><img src="screenshots/dcsocial.webp" alt="" width="1280" height="853" loading="lazy" decoding="async"></a>
+          <a class="proj-shot" href="projects/dc-social-collective" tabindex="-1" aria-hidden="true"><img src="screenshots/dcsocial.webp" alt="" width="1280" height="853" loading="lazy" decoding="async"></a>
           <p class="label">Events and Community</p>
-          <h3><a href="work#dcsocial">DC Social Collective</a></h3>
+          <h3><a href="projects/dc-social-collective">DC Social Collective</a></h3>
           <p class="desc">A new website for DC Social Collective, with live ticketing, venue information, and an archive of more than 6,000 photographs from past events.</p>
-          <a class="tlink" href="work#dcsocial" aria-label="View Project, DC Social Collective">View Project</a>
+          <a class="tlink" href="projects/dc-social-collective" aria-label="Read the Case Study, DC Social Collective">Read the Case Study</a>
         </article>
         <article class="proj">
-          <a class="proj-shot" href="work#larocca" tabindex="-1" aria-hidden="true"><img src="screenshots/larocca.webp" alt="" width="1280" height="853" loading="lazy" decoding="async"></a>
+          <a class="proj-shot" href="projects/frank-la-rocca" tabindex="-1" aria-hidden="true"><img src="screenshots/larocca.webp" alt="" width="1280" height="853" loading="lazy" decoding="async"></a>
           <p class="label">Music and Publishing</p>
-          <h3><a href="work#larocca">Frank La Rocca</a></h3>
+          <h3><a href="projects/frank-la-rocca">Frank La Rocca</a></h3>
           <p class="desc">A composer&rsquo;s website with 59 works, individual pages for scores and recordings, and a downloadable press kit.</p>
-          <a class="tlink" href="work#larocca" aria-label="View Project, Frank La Rocca">View Project</a>
+          <a class="tlink" href="projects/frank-la-rocca" aria-label="Read the Case Study, Frank La Rocca">Read the Case Study</a>
         </article>
         <article class="proj">
-          <a class="proj-shot" href="work#icjf" tabindex="-1" aria-hidden="true"><img src="screenshots/icjf.webp" alt="" width="2560" height="1706" loading="lazy" decoding="async"></a>
+          <a class="proj-shot" href="projects/international-catholic-jurists-forum" tabindex="-1" aria-hidden="true"><img src="screenshots/icjf.webp" alt="" width="2560" height="1706" loading="lazy" decoding="async"></a>
           <p class="label">Nonprofit and Publishing</p>
-          <h3><a href="work#icjf">International Catholic Jurists Forum</a></h3>
+          <h3><a href="projects/international-catholic-jurists-forum">International Catholic Jurists Forum</a></h3>
           <p class="desc">A redesign that brought over 99 pages and 535 news posts, with a searchable archive of the forum&rsquo;s publications, events, and documents.</p>
-          <a class="tlink" href="work#icjf" aria-label="View Project, International Catholic Jurists Forum">View Project</a>
+          <a class="tlink" href="projects/international-catholic-jurists-forum" aria-label="Read the Case Study, International Catholic Jurists Forum">Read the Case Study</a>
         </article>
         <article class="proj">
-          <a class="proj-shot" href="work#roxane" tabindex="-1" aria-hidden="true"><img src="screenshots/roxane.webp" alt="" width="1280" height="800" loading="lazy" decoding="async"></a>
+          <a class="proj-shot" href="projects/roxane-salonen" tabindex="-1" aria-hidden="true"><img src="screenshots/roxane.webp" alt="" width="1280" height="800" loading="lazy" decoding="async"></a>
           <p class="label">Writing and Publishing</p>
-          <h3><a href="work#roxane">Roxane Salonen</a></h3>
+          <h3><a href="projects/roxane-salonen">Roxane Salonen</a></h3>
           <p class="desc">An author website that brings together her books, columns, and more than 2,300 migrated blog posts.</p>
-          <a class="tlink" href="work#roxane" aria-label="View Project, Roxane Salonen">View Project</a>
+          <a class="tlink" href="projects/roxane-salonen" aria-label="Read the Case Study, Roxane Salonen">Read the Case Study</a>
         </article>
       </div>
       <div class="sec-foot"><a class="btn btn-ghost" href="work">See All Projects</a></div>
@@ -130,30 +133,64 @@
     </div>
   </section>
 
-  <section class="sec sec-stone" id="about">
+
+  <section class="sec sec-stone" id="editor">
+    <div class="wrap ed-wrap">
+      <div class="prose">
+        <h2>Update it yourself, without learning a website builder</h2>
+        <p>Custom Websites and Full Builds come with an editor made for your site. It has presets for the things you add most, so a new event, book, concert, album, or post is a short form to fill in, not a blank page to design.</p>
+        <p>The fields match your content. An event asks for a date, a venue, and a ticket link. A book asks for a publication date, a description, and where to buy it. The site handles the layout, so every new page looks like it belongs.</p>
+        <p>You can save a draft before it goes live, and earlier versions of the site can be restored. If you&rsquo;d rather send me the change, that works too.</p>
+      </div>
+      <figure class="ed-demo">
+        <div class="ed-win">
+          <div class="ed-bar"><span>Example editor</span><span class="ed-hint">Try it. Nothing here is saved.</span></div>
+          <div class="ed-body">
+            <div class="ed-side" role="group" aria-label="Choose a preset">
+              <button type="button" class="on" data-preset="event" aria-pressed="true">Event</button>
+              <button type="button" data-preset="book" aria-pressed="false">Book</button>
+              <button type="button" data-preset="post" aria-pressed="false">Post</button>
+            </div>
+            <form class="ed-form" id="ed-form" onsubmit="return false">
+              <p class="ed-h" id="ed-h">New event</p>
+              <div id="ed-fields"></div>
+              <div class="ed-foot"><label class="ed-toggle"><input type="checkbox" id="ed-draft"> Save as draft</label><button type="button" class="ed-pub" id="ed-pub">Publish</button></div>
+            </form>
+          </div>
+        </div>
+        <div class="ed-prev" aria-live="polite">
+          <p class="ed-prev-lbl">How it appears on your site</p>
+          <article class="ed-card" id="ed-card"></article>
+        </div>
+        <figcaption>An example of the kind of editor I set up. Each site gets presets built around what that client publishes.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec" id="about">
     <div class="wrap about-strip">
       <img src="andrew.webp?v=3" alt="Andrew Likoudis" width="780" height="975" loading="lazy" decoding="async">
       <div class="prose">
         <h2>You&rsquo;ll work directly with me.</h2>
-        <p>I&rsquo;m Andrew, the person behind Lickity Split. My background is in writing, editing, communications, and nonprofit work, and I bring that experience to web design.</p>
+        <p>I&rsquo;m Andrew, the person behind Lickity Split. My background is in business, communications, and publishing, and I bring that experience to web design.</p>
         <p>I handle the design, development, and launch myself. I also help with the writing, which can be just as important as getting the technical details right.</p>
         <a class="btn btn-ghost" href="about">More About Me</a>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="research">
+  <section class="sec sec-stone" id="research">
     <div class="wrap">
       <div class="sec-head"><h2>A few things I pay attention to</h2></div>
       <div class="cols3">
         <div class="col"><h3>Speed</h3><p>In Portent&rsquo;s 2022 research, B2B websites loading in one second had three times the conversion rate of sites loading in five seconds.</p><p>That doesn&rsquo;t mean every faster website will triple its business, but it is a good reason to take loading performance seriously.</p><p class="src"><a href="https://portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" target="_blank" rel="noopener">Portent, 2022</a></p></div>
         <div class="col"><h3>Accessibility</h3><p>WebAIM&rsquo;s 2026 analysis found automatically detectable accessibility failures on 95.9% of one million homepages.</p><p>I pay attention to readable text, properly labeled forms, keyboard navigation, and other basics that make websites easier to use.</p><p class="src"><a href="https://webaim.org/projects/million/" target="_blank" rel="noopener">WebAIM, 2026</a></p></div>
-        <div class="col"><h3>Easy updates</h3><p>A website shouldn&rsquo;t become difficult to maintain as soon as it launches.</p><p>Custom Websites and Full Builds include an editor for routine changes, and I&rsquo;ll show you how to use it.</p></div>
+        <div class="col"><h3>Search</h3><p>Each page gets its own title and description, written so people searching can tell what they&rsquo;ll find.</p><p>When a site moves, I keep existing page addresses where I can and redirect the rest.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="sec sec-stone" id="testimonials">
+  <section class="sec" id="testimonials">
     <div class="wrap">
       <div class="sec-head"><h2>What clients have said</h2></div>
       <div class="quotes">
@@ -174,23 +211,23 @@
     </div>
   </section>
 
-  <section class="sec" id="pricing">
+  <section class="sec sec-stone" id="pricing">
     <div class="wrap">
       <div class="sec-head">
         <h2>What does a website cost?</h2>
-        <p>A simple starter website costs $300 to $500. Most custom websites cost between $500 and $1,200, while larger projects with archives, event systems, or other features generally cost $1,200 to $2,500.</p>
+        <p>A simple starter website costs $300 to $500. Most custom websites cost between $500 and $1,200. Larger projects with archives, event systems, or other features start at $1,200 and are priced by scope.</p>
         <p>I&rsquo;ll give you an estimate before any work begins.</p>
       </div>
       <div class="cols3">
         <div class="col"><h3>Starter Site</h3><p class="price-tag">$300&ndash;$500</p><p>A single page or a few simple pages for a professional online presence.</p></div>
         <div class="col"><h3>Custom Website</h3><p class="price-tag">$500&ndash;$1,200</p><p>A more complete website designed around your work. Most projects fall here.</p></div>
-        <div class="col"><h3>Full Build</h3><p class="price-tag">$1,200&ndash;$2,500</p><p>Larger websites with archives, catalogs, event systems, or online stores.</p></div>
+        <div class="col"><h3>Full Build</h3><p class="price-tag">$1,200&ndash;$2,500+</p><p>Larger websites with archives, catalogs, event systems, or online stores.</p></div>
       </div>
       <div class="sec-foot"><a class="btn btn-ghost" href="pricing">View Pricing</a></div>
     </div>
   </section>
 
-  <section class="sec sec-stone" id="process">
+  <section class="sec" id="process">
     <div class="wrap">
       <div class="sec-head"><h2>How we get started</h2></div>
       <ol class="steps"><li><h3>Tell me what you need</h3><p>Send a short description of your project and any website you already have.</p></li><li><h3>Get an estimate</h3><p>I&rsquo;ll review the scope, ask any questions that need answering, and give you a price.</p></li><li><h3>Review the site</h3><p>You&rsquo;ll see a private preview and have a chance to request revisions before launch.</p></li><li><h3>Go live</h3><p>I&rsquo;ll connect the domain, check that everything is working, and explain how to make updates.</p></li></ol>
@@ -228,6 +265,8 @@
           <li><a href="website-design">Website Design</a></li>
           <li><a href="author-website-design">Author Websites</a></li>
           <li><a href="composer-musician-websites">Musician Websites</a></li>
+          <li><a href="publisher-website-design">Publisher Websites</a></li>
+          <li><a href="nonprofit-website-design">Nonprofit Websites</a></li>
           <li><a href="parish-ministry-websites">Parish Websites</a></li>
           <li><a href="wix-to-custom-website">Website Migrations</a></li>
           <li><a href="technology-consulting">Technology Consulting</a></li>
@@ -257,7 +296,23 @@ document.addEventListener('click',function(e){if(!e.target.closest('.has-sub'))s
 s.parentNode.addEventListener('focusout',function(e){if(!s.parentNode.contains(e.relatedTarget))sub(false)});
 })();</script>
 <script>if(/(^|\.)lickitysplitweb\.com$/.test(location.hostname)){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-KPPCZHKHC2');window.addEventListener('load',function(){setTimeout(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-KPPCZHKHC2';document.head.appendChild(s)},2500)})}</script>
-
+<script>(function(){
+var P={event:{h:'New event',lbl:'Upcoming event',btn:'Get tickets',f:[['title','Title','Autumn Concert'],['date','Date and time','Saturday, October 24, 7:30 pm'],['place','Venue','Parish Hall'],['text','Description','An evening of choral music for the season, with a reception to follow.']]},
+book:{h:'New book',lbl:'New release',btn:'Order the book',f:[['title','Title','The Quiet Season'],['date','Publication date','Spring 2027'],['place','Publisher','Riverside Press'],['text','Description','A collection of essays on faith, family, and the small hours of ordinary life.']]},
+post:{h:'New post',lbl:'From the blog',btn:'Read more',f:[['title','Title','Notes from the Road'],['date','Date','November 26, 2026'],['place','Category','Reflections'],['text','Excerpt','A few thoughts from a week of speaking at schools and libraries.']]}};
+var cur='event',fields=document.getElementById('ed-fields');if(!fields)return;
+var card=document.getElementById('ed-card'),draft=document.getElementById('ed-draft'),pub=document.getElementById('ed-pub');
+function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML}
+function val(k){var e=document.getElementById('ed-'+k);return e?e.value:''}
+function render(){var p=P[cur];card.className='ed-card'+(draft.checked?' is-draft':'');
+card.innerHTML=(draft.checked?'<span class="ed-badge">Draft, only you can see this</span>':'')+'<p class="ed-c-lbl">'+p.lbl+'</p><h3>'+esc(val('title')||'Untitled')+'</h3><p class="ed-c-meta">'+esc(val('date'))+(val('place')?' &middot; '+esc(val('place')):'')+'</p><p class="ed-c-text">'+esc(val('text'))+'</p><span class="ed-c-btn">'+p.btn+'</span>'}
+function load(k){cur=k;var p=P[k];document.getElementById('ed-h').textContent=p.h;
+fields.innerHTML=p.f.map(function(f){var tag=f[0]==='text'?'textarea':'input';return '<div class="ed-f"><label for="ed-'+f[0]+'">'+f[1]+'</label><'+tag+' id="ed-'+f[0]+'"'+(tag==='input'?' type="text" value="'+esc(f[2]).replace(/"/g,'&quot;')+'">':' rows="3">'+esc(f[2])+'</textarea>')+'</div>'}).join('');
+document.querySelectorAll('[data-preset]').forEach(function(b){var on=b.getAttribute('data-preset')===k;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false')});pub.textContent='Publish';render()}
+fields.addEventListener('input',render);draft.addEventListener('change',function(){pub.textContent=draft.checked?'Save draft':'Publish';render()});
+document.querySelectorAll('[data-preset]').forEach(function(b){b.addEventListener('click',function(){load(b.getAttribute('data-preset'))})});
+pub.addEventListener('click',function(){var t=pub.textContent;pub.textContent=draft.checked?'Draft saved':'Published';pub.disabled=true;setTimeout(function(){pub.textContent=t;pub.disabled=false},1400)});
+load('event')})();</script>
 <!-- View desktop version toggle (Lickity Split) -->
 <script>(function(){var K='lsw-desktop',m=document.querySelector('meta[name="viewport"]');if(!m)return;var orig=m.getAttribute('content')||'width=device-width, initial-scale=1',on=sessionStorage.getItem(K)==='1',mobile=window.matchMedia('(max-width: 900px)').matches;if(!mobile&&!on)return;function apply(){m.setAttribute('content',on?'width=1200':orig)}apply();var a=document.createElement('a');a.href='#';a.className='view-desktop';a.textContent=on?'View mobile version':'View desktop version';a.style.cssText='display:block;text-align:center;font:inherit;font-size:.85rem;padding:1rem 1rem 1.25rem;opacity:.7;text-decoration:underline;color:inherit';a.addEventListener('click',function(e){e.preventDefault();on=!on;sessionStorage.setItem(K,on?'1':'0');apply();a.textContent=on?'View mobile version':'View desktop version';window.scrollTo(0,0)});var f=document.querySelector('footer');(f||document.body).appendChild(a)})();</script>
 </body>
