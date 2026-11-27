@@ -99,7 +99,13 @@ p{text-wrap:pretty}
 /* Showreel */
 .sec-reel{padding:0 0 clamp(3.5rem,6vw,6rem)}
 .reel{margin:0}
-.reel .frame{background:var(--ink)}
+.reel .frame{position:relative;background:var(--ink)}
+.reel-play{position:absolute;left:50%;top:81%;transform:translate(-50%,-50%);display:grid;place-items:center;width:clamp(3.5rem,6vw,4.75rem);aspect-ratio:1;padding:0;border:0;border-radius:50%;background:var(--ivory);color:var(--petrol);box-shadow:0 8px 26px rgba(0,0,0,.5);cursor:pointer}
+.reel-play[hidden]{display:none}
+.reel-play svg{width:46%;height:46%;margin-left:6%}
+.reel-play:hover{background:var(--white)}
+.reel-play:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.reel-tall .reel-play{top:67%}
 .reel video{display:block;width:100%;height:auto}
 .reel-tall{display:none}
 .reel figcaption{margin-top:.9rem;font-size:1rem}

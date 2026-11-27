@@ -24,6 +24,10 @@ document.querySelectorAll('[data-preset]').forEach(function(b){b.addEventListene
 pub.addEventListener('click',function(){var t=pub.textContent;pub.textContent=draft.checked?'Draft saved':'Published';pub.disabled=true;setTimeout(function(){pub.textContent=t;pub.disabled=false},1400)});
 load('event')})();</script>"""
 
+REELPLAY = '<button class="reel-play" type="button" hidden aria-label="Play the video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4.8v14.4L20 12z" fill="currentColor"/></svg></button>'
+REELJS = r"""<script>(function(){document.querySelectorAll('.reel .frame').forEach(function(f){var v=f.querySelector('video'),b=f.querySelector('.reel-play');if(!v||!b)return;b.hidden=false;b.addEventListener('click',function(){v.play()});v.addEventListener('play',function(){b.hidden=true})})})();</script>"""
+
+
 def home():
     T = {t["name"]: t for t in SRC["tests"]}
     three = [T["Christopher Byrne"], T["Roxane B. Salonen"], T["Adán Alejándro Fernández"]]
@@ -56,10 +60,11 @@ def home():
   <section class="sec-reel" id="showreel">
     <div class="wrap">
       <figure class="reel">
-        <div class="frame reel-wide"><video controls playsinline preload="none" poster="reel/showreel-poster.webp?v=2" width="1920" height="1080" aria-label="Lickity Split Web showreel, under a minute, with music"><source src="reel/showreel.mp4?v=2" type="video/mp4"></video></div>
-        <div class="frame reel-tall"><video controls playsinline preload="none" poster="reel/showreel-vertical-poster.webp?v=2" width="1080" height="1920" aria-label="Lickity Split Web showreel, under a minute, with music"><source src="reel/showreel-vertical.mp4?v=2" type="video/mp4"></video></div>
-        <figcaption class="label">A 48-second look at recent client sites.</figcaption>
+        <div class="frame reel-wide"><video controls playsinline preload="none" poster="reel/showreel-poster.webp?v=2" width="1920" height="1080" aria-label="Lickity Split Web showreel, under a minute, with music"><source src="reel/showreel.mp4?v=2" type="video/mp4"></video>{REELPLAY}</div>
+        <div class="frame reel-tall"><video controls playsinline preload="none" poster="reel/showreel-vertical-poster.webp?v=2" width="1080" height="1920" aria-label="Lickity Split Web showreel, under a minute, with music"><source src="reel/showreel-vertical.mp4?v=2" type="video/mp4"></video>{REELPLAY}</div>
+        <figcaption class="label">A look at recent client sites.</figcaption>
       </figure>
+      {REELJS}
     </div>
   </section>
 
