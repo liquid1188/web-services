@@ -42,6 +42,9 @@ p{text-wrap:pretty}
 .head-in{display:flex;align-items:center;gap:2rem;min-height:72px}
 .logo{font:700 1.05rem/1 var(--mono);color:var(--ink);text-decoration:none;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
 .logo .lb{color:var(--coral)}
+.logo img{display:block;height:40px;width:auto}
+.site-foot .logo img{height:42px}
+@media (max-width:560px){.logo img{height:34px}.site-foot .logo img{height:38px}}
 .site-nav{margin-left:auto}
 .site-nav>ul{display:flex;align-items:center;gap:.35rem}
 .site-nav a,.sub-btn{font:600 .98rem/1.2 var(--head);color:var(--ink);text-decoration:none;background:none;border:0;cursor:pointer;padding:.6rem .7rem;border-radius:6px;display:inline-flex;align-items:center;gap:.35rem;min-height:44px}

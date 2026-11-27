@@ -5,7 +5,8 @@ SRC = json.load(io.open(os.path.join(ROOT, "tools", "src.json"), encoding="utf-8
 STAGING = os.environ.get("STAGING", "1") == "1"
 SITE = "https://lickitysplitweb.com/"
 CHEV = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-LOGO = '<span class="lb">&lt;</span>lickity split&nbsp;<span class="lb">/&gt;</span>'
+LOGO = '<img src="logo.svg" alt="" width="218" height="40"/>'
+LOGO_FOOT = '<img src="logo-light.svg" alt="" width="218" height="40" loading="lazy"/>'
 CALL = "https://calendly.com/arlikoudis/30min"
 
 def header(cur):
@@ -44,7 +45,7 @@ FOOTER = f'''<footer class="site-foot">
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-about">
-        <a class="logo" href="./" aria-label="Lickity Split Web Design, home">{LOGO}</a>
+        <a class="logo" href="./" aria-label="Lickity Split Web Design, home">{LOGO_FOOT}</a>
         <p>Website design and technology consulting. Based in Baltimore, working with clients around the country.</p>
         <a class="foot-ig" href="https://www.instagram.com/lickitysplitweb/" target="_blank" rel="noopener">{SRC["ig"]}<span>Instagram</span></a>
       </div>
@@ -138,7 +139,7 @@ def page(fname, title, desc, body, cur="", ld="", scripts="", noindex=False, bas
   <link rel="preload" as="font" type="font/woff2" href="fonts/Manrope-var.woff2" crossorigin/>
   <link rel="preload" as="font" type="font/woff2" href="fonts/SourceSans3-var.woff2" crossorigin/>
   <link rel="stylesheet" href="fonts.css?v=1"/>
-  <link rel="stylesheet" href="v2.css?v=6"/>
+  <link rel="stylesheet" href="v2.css?v=7"/>
 {ld}</head>
 <body>
 {header(cur).replace('href="#main"', 'href="' + fname[:-5] + '#main"') if base else header(cur)}
