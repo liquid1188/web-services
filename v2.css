@@ -97,7 +97,8 @@ p{text-wrap:pretty}
 @media (max-width:900px){.hero-in{grid-template-columns:1fr}.hero-art{margin-right:4%}}
 
 /* Showreel */
-.reel{margin:0 0 var(--s5)}
+.sec-reel{padding:0 0 clamp(3.5rem,6vw,6rem)}
+.reel{margin:0}
 .reel .frame{background:var(--ink)}
 .reel video{display:block;width:100%;height:auto}
 .reel-tall{display:none}
