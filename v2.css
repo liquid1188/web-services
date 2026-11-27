@@ -96,6 +96,14 @@ p{text-wrap:pretty}
 .hero-art .frame-a{width:92%}
 @media (max-width:900px){.hero-in{grid-template-columns:1fr}.hero-art{margin-right:4%}}
 
+/* Showreel */
+.reel{margin:0 0 var(--s5)}
+.reel .frame{background:var(--ink)}
+.reel video{display:block;width:100%;height:auto}
+.reel-tall{display:none}
+.reel figcaption{margin-top:.9rem;font-size:1rem}
+@media (max-width:700px){.reel-wide{display:none}.reel-tall{display:block;max-width:22rem;margin-inline:auto}.reel figcaption{text-align:center}}
+
 /* Projects */
 .proj-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3.5rem 3rem}
 .proj-shot{display:block;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--white);box-shadow:0 1px 2px rgba(32,37,34,.06);transition:box-shadow .2s,transform .2s}

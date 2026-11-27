@@ -185,6 +185,7 @@ def pricing():
 
 FAQ = [
  ("Who owns the website?", ["You do. Once the project is complete, the website files are yours. I can continue hosting the site, or help you move it elsewhere.", "Some features may depend on third-party services with their own accounts or terms. I&rsquo;ll identify those before we begin."]),
+ ("Will my site appear in your portfolio?", ["Yes, unless you ask me not to. Websites I build may be shown in my portfolio, on social media, and in advertising for Lickity Split Web. That can include screenshots and recordings of the site with the name, logo, photographs, and text that appear on it.", "If you would rather keep yours private, tell me before we start or at any point afterward, and I&rsquo;ll leave it out of anything new."]),
  ("Can I update it myself?", ["Yes. Custom Websites and Full Builds include an editor set up for your site, with presets for the things you add most, such as an event, a book, or a post. You fill in a short form and the site handles the layout.", "You can also change text, replace photographs, and save drafts. I&rsquo;ll show you how to use it before launch."]),
  ("How long does a website take?", ["A small starter site can sometimes be ready in about 48 hours once I have the material. Custom websites usually take about a week, while larger projects take longer.", "I&rsquo;ll give you an expected timeline with the estimate."]),
  ("What does it cost to maintain?", ["Hosting is currently included for the straightforward websites I build.", "You&rsquo;ll still need a domain name, and some projects may involve separate costs for email, e-commerce, newsletters, booking services, or other integrations.", "I&rsquo;ll explain any recurring costs in advance."]),
@@ -332,6 +333,7 @@ def contact():
         <p class="form-msg" id="form-msg" role="alert"></p>
         <div><button class="btn btn-primary" type="submit">Send My Inquiry</button></div>
         <p class="form-note">I usually reply within 24 to 48 hours. You can also <a href="{CALL}" target="_blank" rel="noopener">book a call</a> or write to <a href="mailto:hello@lickitysplitweb.com">hello@lickitysplitweb.com</a>.</p>
+        <p class="form-note">Websites I build may be shown in my portfolio and advertising unless you ask me not to. <a href="about#faq">See the FAQ</a>.</p>
       </form>
       <div class="prose">
         <h2>What should I send?</h2>

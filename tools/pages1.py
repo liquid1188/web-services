@@ -59,6 +59,11 @@ def home():
         <h2>Recent work</h2>
         <p>A few of the websites I&rsquo;ve built, from a composer&rsquo;s catalog to an events platform with thousands of photographs and years of material to organize.</p>
       </div>
+      <figure class="reel">
+        <div class="frame reel-wide"><video controls playsinline preload="none" poster="reel/showreel-poster.webp" width="1920" height="1080" aria-label="Lickity Split Web showreel, under a minute, with music"><source src="reel/showreel.mp4" type="video/mp4"></video></div>
+        <div class="frame reel-tall"><video controls playsinline preload="none" poster="reel/showreel-vertical-poster.webp" width="1080" height="1920" aria-label="Lickity Split Web showreel, under a minute, with music"><source src="reel/showreel-vertical.mp4" type="video/mp4"></video></div>
+        <figcaption class="label">The sites in motion, in under a minute. Real pages, clicked and scrolled the way a visitor would.</figcaption>
+      </figure>
       <div class="proj-grid">
 {cards}
       </div>
