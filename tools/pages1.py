@@ -60,7 +60,7 @@ def home():
   <section class="sec-reel" id="showreel">
     <div class="wrap">
       <figure class="reel">
-        <a class="frame reel-open" href="reel/showreel.mp4?v=3" data-wide="reel/showreel.mp4?v=3" data-tall="reel/showreel-vertical.mp4?v=3" aria-label="Play the video">
+        <a class="frame reel-open" href="reel/showreel.mp4?v=4" data-wide="reel/showreel.mp4?v=4" data-tall="reel/showreel-vertical.mp4?v=4" aria-label="Play the video">
           <picture>
             <source media="(max-width:700px)" srcset="reel/preview-tall.webp?v=3" width="1080" height="864">
             <img src="reel/preview-wide.webp?v=3" alt="" width="1920" height="768" decoding="async">
