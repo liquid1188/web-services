@@ -24,8 +24,8 @@ document.querySelectorAll('[data-preset]').forEach(function(b){b.addEventListene
 pub.addEventListener('click',function(){var t=pub.textContent;pub.textContent=draft.checked?'Draft saved':'Published';pub.disabled=true;setTimeout(function(){pub.textContent=t;pub.disabled=false},1400)});
 load('event')})();</script>"""
 
-REELPLAY = '<button class="reel-play" type="button" hidden aria-label="Play the video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4.8v14.4L20 12z" fill="currentColor"/></svg></button>'
-REELJS = r"""<script>(function(){document.querySelectorAll('.reel .frame').forEach(function(f){var v=f.querySelector('video'),b=f.querySelector('.reel-play');if(!v||!b)return;b.hidden=false;b.addEventListener('click',function(){v.play()});v.addEventListener('play',function(){b.hidden=true})})})();</script>"""
+REELPLAY = '<span class="reel-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4.8v14.4L20 12z" fill="currentColor"/></svg></span>'
+REELJS = r"""<script>(function(){var a=document.querySelector('.reel-open'),d=document.querySelector('.reel-dialog');if(!a||!d||!d.showModal)return;var v=d.querySelector('video');a.addEventListener('click',function(e){e.preventDefault();var tall=window.innerHeight>window.innerWidth,src=tall?a.getAttribute('data-tall'):a.getAttribute('data-wide');if(v.getAttribute('src')!==src){v.setAttribute('src',src)}d.classList.toggle('is-tall',tall);d.showModal();var p=v.play();if(p&&p.catch){p.catch(function(){})}});function shut(){if(d.open){d.close()}}d.querySelector('.reel-close').addEventListener('click',shut);d.addEventListener('click',function(e){if(e.target===d){shut()}});d.addEventListener('close',function(){v.pause()});v.addEventListener('ended',shut)})();</script>"""
 
 
 def home():
@@ -60,10 +60,19 @@ def home():
   <section class="sec-reel" id="showreel">
     <div class="wrap">
       <figure class="reel">
-        <div class="frame reel-wide"><video controls playsinline preload="none" poster="reel/showreel-poster.webp?v=2" width="1920" height="1080" aria-label="Lickity Split Web showreel, under a minute, with music"><source src="reel/showreel.mp4?v=2" type="video/mp4"></video>{REELPLAY}</div>
-        <div class="frame reel-tall"><video controls playsinline preload="none" poster="reel/showreel-vertical-poster.webp?v=2" width="1080" height="1920" aria-label="Lickity Split Web showreel, under a minute, with music"><source src="reel/showreel-vertical.mp4?v=2" type="video/mp4"></video>{REELPLAY}</div>
+        <a class="frame reel-open" href="reel/showreel.mp4?v=3" data-wide="reel/showreel.mp4?v=3" data-tall="reel/showreel-vertical.mp4?v=3" aria-label="Play the video">
+          <picture>
+            <source media="(max-width:700px)" srcset="reel/preview-tall.webp?v=3" width="1080" height="864">
+            <img src="reel/preview-wide.webp?v=3" alt="" width="1920" height="768" decoding="async">
+          </picture>
+          {REELPLAY}
+        </a>
         <figcaption class="label">A look at recent client sites.</figcaption>
       </figure>
+      <dialog class="reel-dialog" aria-label="Lickity Split Web video">
+        <video controls playsinline preload="none"></video>
+        <button class="reel-close" type="button" aria-label="Close the video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+      </dialog>
       {REELJS}
     </div>
   </section>

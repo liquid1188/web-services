@@ -26,7 +26,7 @@
   <link rel="preload" as="font" type="font/woff2" href="fonts/Manrope-var.woff2" crossorigin/>
   <link rel="preload" as="font" type="font/woff2" href="fonts/SourceSans3-var.woff2" crossorigin/>
   <link rel="stylesheet" href="fonts.css?v=1"/>
-  <link rel="stylesheet" href="v2.css?v=10"/>
+  <link rel="stylesheet" href="v2.css?v=11"/>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://lickitysplitweb.com/#business","name":"Lickity Split Web Design","url":"https://lickitysplitweb.com/","image":"https://lickitysplitweb.com/og.jpg","description":"Custom websites for authors, musicians, small businesses, and nonprofits. Based in Baltimore, serving clients nationwide. Starter sites from $300.","email":"hello@lickitysplitweb.com","priceRange":"$300+","founder":{"@type":"Person","name":"Andrew Likoudis"},"address":{"@type":"PostalAddress","addressLocality":"Baltimore","addressRegion":"MD","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Baltimore"},{"@type":"Country","name":"United States"}],"knowsAbout":["Web design","Website migrations","Website accessibility","Technology consulting","AI consulting"]}
 </script>
@@ -85,11 +85,20 @@
   <section class="sec-reel" id="showreel">
     <div class="wrap">
       <figure class="reel">
-        <div class="frame reel-wide"><video controls playsinline preload="none" poster="reel/showreel-poster.webp?v=2" width="1920" height="1080" aria-label="Lickity Split Web showreel, under a minute, with music"><source src="reel/showreel.mp4?v=2" type="video/mp4"></video><button class="reel-play" type="button" hidden aria-label="Play the video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4.8v14.4L20 12z" fill="currentColor"/></svg></button></div>
-        <div class="frame reel-tall"><video controls playsinline preload="none" poster="reel/showreel-vertical-poster.webp?v=2" width="1080" height="1920" aria-label="Lickity Split Web showreel, under a minute, with music"><source src="reel/showreel-vertical.mp4?v=2" type="video/mp4"></video><button class="reel-play" type="button" hidden aria-label="Play the video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4.8v14.4L20 12z" fill="currentColor"/></svg></button></div>
+        <a class="frame reel-open" href="reel/showreel.mp4?v=3" data-wide="reel/showreel.mp4?v=3" data-tall="reel/showreel-vertical.mp4?v=3" aria-label="Play the video">
+          <picture>
+            <source media="(max-width:700px)" srcset="reel/preview-tall.webp?v=3" width="1080" height="864">
+            <img src="reel/preview-wide.webp?v=3" alt="" width="1920" height="768" decoding="async">
+          </picture>
+          <span class="reel-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4.8v14.4L20 12z" fill="currentColor"/></svg></span>
+        </a>
         <figcaption class="label">A look at recent client sites.</figcaption>
       </figure>
-      <script>(function(){document.querySelectorAll('.reel .frame').forEach(function(f){var v=f.querySelector('video'),b=f.querySelector('.reel-play');if(!v||!b)return;b.hidden=false;b.addEventListener('click',function(){v.play()});v.addEventListener('play',function(){b.hidden=true})})})();</script>
+      <dialog class="reel-dialog" aria-label="Lickity Split Web video">
+        <video controls playsinline preload="none"></video>
+        <button class="reel-close" type="button" aria-label="Close the video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+      </dialog>
+      <script>(function(){var a=document.querySelector('.reel-open'),d=document.querySelector('.reel-dialog');if(!a||!d||!d.showModal)return;var v=d.querySelector('video');a.addEventListener('click',function(e){e.preventDefault();var tall=window.innerHeight>window.innerWidth,src=tall?a.getAttribute('data-tall'):a.getAttribute('data-wide');if(v.getAttribute('src')!==src){v.setAttribute('src',src)}d.classList.toggle('is-tall',tall);d.showModal();var p=v.play();if(p&&p.catch){p.catch(function(){})}});function shut(){if(d.open){d.close()}}d.querySelector('.reel-close').addEventListener('click',shut);d.addEventListener('click',function(e){if(e.target===d){shut()}});d.addEventListener('close',function(){v.pause()});v.addEventListener('ended',shut)})();</script>
     </div>
   </section>
 
