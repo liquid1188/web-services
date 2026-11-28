@@ -48,7 +48,7 @@ def home():
           <a class="btn btn-primary" href="work">View My Work</a>
           <a class="btn btn-ghost" href="contact">Get an Estimate</a>
         </div>
-        <p class="hero-note">Projects from $300 &middot; Working with clients nationwide</p>
+        <p class="hero-note">Projects from $500 &middot; Working with clients nationwide</p>
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="frame frame-a"><img src="screenshots/dcsocial.webp" alt="" width="1280" height="853" fetchpriority="high"></div>
@@ -193,11 +193,11 @@ def home():
 
 {cta("Have a website in mind?", "Tell me what you&rsquo;re working on and what you need the site to do. I&rsquo;ll let you know what I recommend and what it would cost.")}'''
     ld = '''<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://lickitysplitweb.com/#business","name":"Lickity Split Web Design","url":"https://lickitysplitweb.com/","image":"https://lickitysplitweb.com/og.jpg","description":"Custom websites for authors, musicians, small businesses, and nonprofits. Based in Baltimore, serving clients nationwide. Starter sites from $300.","email":"hello@lickitysplitweb.com","priceRange":"$300+","founder":{"@type":"Person","name":"Andrew Likoudis"},"address":{"@type":"PostalAddress","addressLocality":"Baltimore","addressRegion":"MD","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Baltimore"},{"@type":"Country","name":"United States"}],"knowsAbout":["Web design","Website migrations","Website accessibility","Technology consulting","AI consulting"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://lickitysplitweb.com/#business","name":"Lickity Split Web Design","url":"https://lickitysplitweb.com/","image":"https://lickitysplitweb.com/og.jpg","description":"Custom websites for authors, musicians, small businesses, and nonprofits. Based in Baltimore, serving clients nationwide. Starter sites from $500.","email":"hello@lickitysplitweb.com","priceRange":"$500+","founder":{"@type":"Person","name":"Andrew Likoudis"},"address":{"@type":"PostalAddress","addressLocality":"Baltimore","addressRegion":"MD","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Baltimore"},{"@type":"Country","name":"United States"}],"knowsAbout":["Web design","Website migrations","Website accessibility","Technology consulting","AI consulting"]}
 </script>
 '''
     return page("index.html", "Affordable Custom Website Design | Lickity Split Web Design",
-                "Custom websites for authors, musicians, small businesses, and nonprofits. Based in Baltimore, serving clients nationwide. Starter sites from $300.", body, cur="home", ld=ld, scripts=EDJS)
+                "Custom websites for authors, musicians, small businesses, and nonprofits. Based in Baltimore, serving clients nationwide. Starter sites from $500.", body, cur="home", ld=ld, scripts=EDJS)
 
 # ---------- Portfolio ----------
 CASES = [
